@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=474ad82c-56bd-4125-8bf5-ce1861cdf28e
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=474ad82c-56bd-4125-8bf5-ce1861cdf28e">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Deck — Crypto Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #12141a;
+    --bg-raised: #1a1d26;
+    --bg-raised-2: #20232e;
+    --hairline: #2c303c;
+    --text: #e9e8e3;
+    --text-dim: #9296a3;
+    --text-faint: #676c7a;
+    --gold: #c9a24b;
+    --gold-dim: #8a7238;
+    --jade: #4bb583;
+    --jade-dim: #2c5f45;
+    --rust: #c1523b;
+    --rust-dim: #6b3226;
+    --slate: #8b93a7;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.5;
+    padding: 0 0 64px 0;
+  }
+  a{color:var(--gold);}
+
+  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- Header ---------- */
+  header{
+    border-bottom: 1px solid var(--hairline);
+    padding: 36px 0 26px 0;
+  }
+  .header-row{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size: 2.15rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px 0;
+    color: var(--text);
+  }
+  .subhead{
+    color: var(--text-dim);
+    font-size: 0.98rem;
+    max-width: 520px;
+  }
+  .meta-col{
+    text-align:right;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-faint);
+  }
+  #refreshBtn{
+    margin-top:10px;
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    padding: 7px 14px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  #refreshBtn:hover{ border-color: var(--gold); background: rgba(201,162,75,0.08); }
+  #refreshBtn:disabled{ opacity:0.5; cursor:default; }
+
+  .disclaimer-band{
+    margin-top: 22px;
+    padding: 12px 16px;
+    background: var(--bg-raised);
+    border-left: 3px solid var(--gold-dim);
+    font-size: 0.83rem;
+    color: var(--text-dim);
+  }
+  .disclaimer-band strong{ color: var(--text); }
+
+  /* ---------- Macro strip ---------- */
+  section.macro{
+    padding: 28px 0 8px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .macro h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size: 1.15rem;
+    margin: 0 0 14px 0;
+    color: var(--gold);
+  }
+  .macro-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px;
+    background: var(--hairline);
+    border: 1px solid var(--hairline);
+    margin-bottom: 18px;
+  }
+  .macro-cell{
+    background: var(--bg);
+    padding: 14px 16px;
+  }
+  .macro-cell .label{
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    margin-bottom: 5px;
+  }
+  .macro-cell .value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+  .macro-cell .value.warn{ color: var(--rust); }
+  .macro-cell .value.ok{ color: var(--jade); }
+
+  .catalysts-row{
+    display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 22px;
+  }
+  .catalyst-chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--text-dim);
+    border: 1px solid var(--hairline);
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+  .catalyst-chip b{ color: var(--gold); font-weight:600; }
+
+  /* ---------- Asset grid ---------- */
+  section.assets{ padding-top: 30px; }
+  .assets h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size: 1.15rem;
+    margin: 0 0 16px 0;
+    color: var(--gold);
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 18px;
+  }
+  .card{
+    background: var(--bg-raised);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--slate);
+    padding: 18px 20px 16px 18px;
+  }
+  .card.bullish{ border-left-color: var(--jade); }
+  .card.bearish{ border-left-color: var(--rust); }
+  .card.neutral{ border-left-color: var(--gold-dim); }
+
+  .card-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
+  }
+  .name-block .sym{
+    font-family:'Fraunces', serif; font-size:1.3rem; font-weight:600; color: var(--text);
+  }
+  .name-block .full{
+    font-size:0.78rem; color: var(--text-faint);
+  }
+  .price-block{ text-align:right; }
+  .price-block .px{
+    font-family:'IBM Plex Mono', monospace; font-size:1.15rem; color: var(--text);
+  }
+  .price-block .chg{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; margin-top:2px;
+  }
+  .chg.up{ color: var(--jade); }
+  .chg.down{ color: var(--rust); }
+
+  .spark{ margin: 12px 0 10px 0; height: 40px; }
+
+  .signal-row{
+    display:flex; align-items:center; justify-content:space-between;
+    margin: 10px 0 14px 0;
+    padding: 10px 12px;
+    background: var(--bg-raised-2);
+  }
+  .signal-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .signal-label.bullish{ color: var(--jade); }
+  .signal-label.bearish{ color: var(--rust); }
+  .signal-label.neutral{ color: var(--gold); }
+  .signal-pct{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+
+  .bars{ display:flex; flex-direction:column; gap:8px; margin-bottom: 12px; }
+  .bar-row{ display:flex; align-items:center; gap:8px; }
+  .bar-row .bar-label{ font-size:0.7rem; color:var(--text-faint); width:78px; flex-shrink:0; }
+  .bar-track{ flex:1; height:5px; background:var(--bg); position:relative; }
+  .bar-fill{ position:absolute; left:0; top:0; height:100%; background: var(--gold); }
+  .bar-row .bar-val{ font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--text-dim); width:32px; text-align:right; }
+
+  details{ margin-top: 4px; }
+  summary{
+    cursor:pointer; font-size:0.8rem; color: var(--slate);
+    list-style: none;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary:before{ content:"+ "; color: var(--gold); }
+  details[open] summary:before{ content:"– "; }
+  .detail-body{ margin-top:10px; padding-top:10px; border-top:1px solid var(--hairline); font-size:0.82rem; color: var(--text-dim); }
+  .detail-body ul{ margin:6px 0 10px 0; padding-left:18px; }
+  .detail-body li{ margin-bottom:3px; }
+  .detail-body .sect-label{ color: var(--text-faint); font-size:0.7rem; text-transform:none; margin-top:8px; }
+
+  .card-footer-note{
+    margin-top:10px; font-size:0.68rem; color: var(--text-faint);
+  }
+
+  /* ---------- Rotation watch ---------- */
+  section.rotation{ padding-top: 34px; }
+  .rotation h2{
+    font-family:'Fraunces', serif; font-weight:500; font-size:1.15rem;
+    margin: 0 0 6px 0; color: var(--gold);
+  }
+  .rotation .rot-intro{
+    font-size:0.84rem; color: var(--text-dim); max-width: 780px; margin-bottom:16px;
+  }
+  .rot-verdict{
+    background: var(--bg-raised); border:1px solid var(--hairline);
+    border-left:3px solid var(--gold-dim);
+    padding: 14px 16px; margin-bottom:18px;
+  }
+  .rot-verdict .vlabel{
+    font-family:'IBM Plex Mono', monospace; font-size:0.8rem; font-weight:600;
+    letter-spacing:0.03em; color: var(--gold); margin-bottom:5px;
+  }
+  .rot-verdict .vtext{ font-size:0.86rem; color: var(--text-dim); }
+  .rot-table-wrap{ overflow-x:auto; margin-bottom: 20px; border:1px solid var(--hairline); }
+  table.rot{
+    border-collapse: collapse; width:100%; min-width: 640px;
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+  }
+  table.rot th, table.rot td{
+    padding: 9px 12px; text-align:right; border-bottom:1px solid var(--hairline);
+    white-space:nowrap;
+  }
+  table.rot th{
+    color: var(--text-faint); font-weight:500; font-size:0.7rem;
+    background: var(--bg-raised-2); text-align:right;
+  }
+  table.rot th:first-child, table.rot td:first-child{ text-align:left; color: var(--text-dim); }
+  table.rot tr:last-child td{ border-bottom:none; }
+  table.rot td.lead{ color: var(--text); }
+  table.rot .tok{ font-family:'Fraunces', serif; font-size:0.95rem; color: var(--text); }
+  table.rot .best{ color: var(--jade); }
+  table.rot .worst{ color: var(--rust); }
+
+  .trigger{
+    border:1px solid var(--hairline); background: var(--bg-raised);
+    padding: 12px 14px; margin-bottom:10px;
+    display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap;
+  }
+  .trigger .tstate{
+    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600;
+    letter-spacing:0.05em; padding:3px 8px; flex-shrink:0; border:1px solid;
+  }
+  .tstate.hold{ color: var(--jade); border-color: var(--jade-dim); }
+  .tstate.fired{ color: var(--rust); border-color: var(--rust-dim); }
+  .trigger .tbody{ flex:1; min-width:240px; }
+  .trigger .tname{ font-size:0.85rem; color: var(--text); margin-bottom:3px; }
+  .trigger .tdesc{ font-size:0.78rem; color: var(--text-faint); }
+  .trigger .tnums{
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
+    color: var(--text-dim); margin-top:5px;
+  }
+  .rot-method{
+    border:1px solid var(--hairline); background: var(--bg-raised);
+    padding: 13px 16px; margin-top: 4px;
+  }
+  .rot-method summary{ font-size:0.84rem; color: var(--gold); }
+  .rot-method .detail-body{ font-size:0.82rem; }
+  .rot-method h4{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; font-weight:600;
+    letter-spacing:0.03em; color: var(--text-faint); margin:14px 0 5px 0;
+  }
+  .rot-method h4:first-child{ margin-top:0; }
+  .rot-method p{ margin:0 0 8px 0; }
+  .rot-method .rule{ display:flex; gap:10px; margin-bottom:4px; align-items:baseline; }
+  .rot-method .rule b{
+    font-family:'IBM Plex Mono', monospace; font-size:0.74rem; color: var(--gold);
+    flex-shrink:0; width:70px;
+  }
+  .rot-method .cliff{ margin-bottom:6px; }
+  .rot-method .cliff b{ font-family:'Fraunces', serif; color: var(--text); font-size:0.9rem; }
+  .rot-method .flag{
+    border-left:2px solid var(--rust-dim); padding-left:10px; color: var(--text-dim);
+  }
+  .rot-method .watch{
+    border-left:2px solid var(--jade-dim); padding-left:10px; color: var(--text-dim);
+  }
+  .rot-note{ font-size:0.72rem; color: var(--text-faint); margin-top:14px; max-width:820px; }
+
+  .loading-row{ color: var(--text-faint); font-family:'IBM Plex Mono', monospace; font-size:0.85rem; padding: 30px 0; text-align:center; }
+  .error-row{ color: var(--rust); font-family:'IBM Plex Mono', monospace; font-size:0.85rem; padding: 16px 0; }
+
+  footer{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--hairline);
+    font-size: 0.76rem;
+    color: var(--text-faint);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="header-row">
+      <div>
+        <h1>Signal Deck</h1>
+        <div class="subhead">A composite read across six majors — live technical structure blended with a dated macro &amp; news layer.</div>
+      </div>
+      <div class="meta-col">
+        <div id="lastUpdated">loading prices…</div>
+        <button id="refreshBtn">Refresh live data</button>
+      </div>
+    </div>
+    <div class="disclaimer-band">
+      <strong>Not financial advice.</strong> Every score below is a heuristic — a weighted mix of technical indicators and Claude's own qualitative reading of macro, geopolitical and news factors as of the date shown. It is not a statistically calibrated probability of price movement, not a recommendation to buy or sell, and it can be wrong. Crypto markets are highly volatile — size positions and manage risk accordingly, and treat this as one input among your own research.
+    </div>
+  </header>
+
+  <section class="macro">
+    <h2>Macro &amp; geopolitical backdrop — as of Sept 21, 2026 (01:00 UTC)</h2>
+    <div class="macro-grid" id="macroGrid"></div>
+    <div class="catalysts-row" id="catalystsRow"></div>
+  </section>
+
+  <section class="assets">
+    <h2>Signals</h2>
+    <div id="statusRow"></div>
+    <div class="grid" id="assetGrid"></div>
+  </section>
+
+  <section class="rotation">
+    <h2>Rotation watch — perp DEX narrative</h2>
+    <div class="rot-intro">
+      When to rotate HYPE into a same-narrative challenger (ASTER, LIT). The logic: you rotate out of the leader when
+      the leader's <em>moat</em> is measurably eroding — not when a challenger's price is rising. Price momentum in a
+      challenger is usually just higher beta on the same trade. Market data below is live; volume and fee figures are a
+      dated research layer refreshed with the rest of the deck.
+    </div>
+    <div id="rotVerdict"></div>
+    <div class="rot-table-wrap"><table class="rot" id="rotTable"></table></div>
+    <div id="rotTriggers"></div>
+    <div id="rotMethod"></div>
+    <div class="rot-note" id="rotNote"></div>
+  </section>
+
+  <footer>
+    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko's public API on load and on refresh. The macro/fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts, and similar — reflects research current as of 01:00 UTC on September 21, 2026 and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores. Not investment advice.
+  </footer>
+</div>
+
+<script>
+const COINS = [
+  {
+    id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
+    macroScore: -0.3,
+    summary: "Held at -0.3. Both legs were checkable this run and neither fired. The flow leg was restored yesterday on the Sept 18 print of +$433.0M, and its re-cut bar is one session below -$300M or two consecutive sessions each below -$150M. No new session has settled, because Farside has still not posted Sept 19 two days on, so that bar is untested rather than cleared. The Fed leg is the replacement branch written yesterday: October priced above 75% on two independently routed instruments cuts 0.1, and back below 40% on two restores it. Polymarket reads 55% for a 25bp increase against 44% no change, and centralbank.watch has finally thawed its October table to 57.9 / 42.1 / 0.0 from the 95.2 / 4.9 / 0.0 it had carried unchanged since before the Sept 16 FOMC. Those two agree with each other and with the Sept 18 fed monitor read of 59.7%, and all three sit squarely between the triggers. One independent confirmation did arrive, from a direction this deck was not looking: 24/7 Wall St, citing SoSoValue, puts Bitcoin ETFs at +$6.2M for the week ending Sept 18 and calls it the smallest weekly figure in 141 weeks of trading. The five daily rows carried here sum to +$6.1M, which reconciles to within $0.1M and independently confirms the +$433.0M print the restore fired on. BTC trades 5.58% above the pre-break level, 0.41% off its Sept 19 high of 81,925, and rose 0.40% on the day - the smallest gain of the six by 0.84pt over Solana, on a day when every one of them rose.",
+    catalysts: [
+      {date:'Hold', text:'Flow re-cut bar untested - Farside has still not posted the Sept 19 session two days on'},
+      {date:'Fed', text:'October at 55% on Polymarket and 57.9% on centralbank.watch - neither trigger is in reach'},
+      {date:'Sept 18', text:'Weekly BTC ETF total +$6.2M, smallest in 141 weeks, reconciling with the five daily rows here'}
+    ]
+  },
+  {
+    id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
+    macroScore: 0.4,
+    summary: "Held at +0.4 after yesterday restored the flow leg on the Sept 18 print of +$143.7M. The re-cut bar is two consecutive sessions each below -$150M, and no session has settled since, so nothing has tested it. The roadmap leg is unchanged: Devnet-11 cleared its Gloas transition on Sept 16 and then raised gas from 60M to 200M with finality intact, and the All Core Developers Consensus call of Sept 17 set the Glamsterdam Sepolia fork for Oct 6 at 13:53 UTC. A fresh search this run returned nothing newer than that cluster, so the branch stands exactly as written: activation and finality on Oct 6 adds 0.1, while a slip or a failure to finalise - including via the builder-griefing vector on enshrined proposer-builder separation that the same call surfaced - cuts 0.1. Hoodi still has no activation date, and mainnet has no epoch, no timestamp and no final client release schedule. The tape is where ETH actually moved. It gained 2.38% over the 24 hours into this stamp, ahead of HYPE at +2.30% by 0.08pt - a margin far inside the noise floor of this deck, so no ordering claim is published on it. More to the point, it printed 2,706.51 in the hour this stamp closes: a fresh seven-day high and a fresh twenty-one-day high at once, clearing its own Sept 19 print of 2,667.53. ETH is 7.21% above the pre-break level and 0.66% below that high.",
+    catalysts: [
+      {date:'Hold', text:'Re-cut bar is two consecutive sessions below -$150M; none has settled since Sept 18'},
+      {date:'Oct 6', text:'Glamsterdam on Sepolia at 13:53 UTC, set by the ACDC call of Sept 17; nothing newer found'},
+      {date:'Fresh high', text:'2,706.51 in the hour this stamp closes, clearing the Sept 19 print of 2,667.53'}
+    ]
+  },
+  {
+    id: 'solana', symbol: 'SOL', name: 'Solana',
+    macroScore: 0.4,
+    summary: "Held at +0.4, and this is the run that tested it. The threshold was written down explicitly: a weekly ETF print above $50M restores the remaining 0.1, below $5M re-cuts it, next print due around Sept 21. It landed. Citing SoSoValue, 24/7 Wall St puts Solana spot ETFs at $13.2M of net inflows for the week ending Sept 18. That is neither, so the score does not move - a branch resolving negative in both directions at once, which costs one lookup and is worth as much as one that fires. It is also a second consecutive weekly improvement off the trough: $153.87M for the week to Aug 28, then $6.18M, then $10.30M, now $13.2M. So the small-base half of the original cut still stands and the unknown-and-possibly-worsening half stays retired, which is where yesterday left them. Two cautions travel with that figure. It is a WEEKLY instrument, so neither the +12.15% day of Sept 19, nor the -2.40% day of Sept 20, nor today's +1.24% touches it. And $13.2M is not the -$13.2M that Bitcoin ETFs printed on Sept 11, nor the $6.18M Solana week of early September - three unrelated quantities, two of them sharing a number, all three in reach of one paragraph. SOL is 10.84% above the pre-break level and 2.02% below its Sept 19 high of 114.59, which is both its seven-day and its twenty-one-day high.",
+    catalysts: [
+      {date:'Sept 18', text:'Solana ETF weekly net inflow $13.2M per SoSoValue - a second consecutive improvement off the $6.18M trough'},
+      {date:'Branch', text:'Bar was above $50M to restore or below $5M to re-cut; $13.2M does neither, so the score holds'},
+      {date:'Careful', text:'Weekly instrument - no single day touches it, and $13.2M is not the -$13.2M BTC daily print'}
+    ]
+  },
+  {
+    id: 'binancecoin', symbol: 'BNB', name: 'BNB',
+    macroScore: 0.0,
+    summary: "Held at 0.0 for a twelfth consecutive run, on the reasoning recent runs have applied: the fundamentals on this card keep improving and the price will not pay for them, in either direction. Tokenized-stock monthly volume went from $237M in January to $7.9B in August, a 33.3-fold expansion. CryptoRank via ZyCrypto puts BNB Chain first for RWA value added year to date at +$3.6B, ahead of Solana at +$2.6B, Stellar at +$2.5B and Ethereum at +$1.6B. Binance Research gives an 88.2% September share - but that figure is BNB Chain and Robinhood Chain COMBINED, against 32.7% of a $3.1B market for BNB Chain alone, and a growth-in-value figure is not a share at all. None of the three substitutes for another. The object check that has held this score still holds: the SEC Innovation Exemption of Sept 17 creates a US venue category for tokenized NMS stock and names no blockchain and no company, while the 88.2% describes a largely non-US market. Two different objects sharing a topic, and this deck does not score one with the other. Searches for BNB continue to return mostly presale promotion and were filtered hard again. On the tape BNB rose 2.13% and set a twenty-one-day high of 782.69 in the hour this stamp closes, clearing the Sept 5 print of 780.71; it trades 8.07% above the pre-break level and 0.42% below that high.",
+    catalysts: [
+      {date:'Unchanged', text:'Twelfth run of real fundamental gains with no price response in either direction'},
+      {date:'Object', text:'The SEC exemption names no chain; the 88.2% is a combined, largely non-US share'},
+      {date:'Fresh high', text:'782.69 twenty-one-day high in the hour this stamp closes, clearing the Sept 5 print of 780.71'}
+    ]
+  },
+  {
+    id: 'ripple', symbol: 'XRP', name: 'XRP',
+    macroScore: 0.0,
+    summary: "Held at 0.0, with the branch unfired in both directions: a second cloture vote passing adds 0.2, while the motion failing or the window closing unused cuts 0.1. Cloture on H.R. 3633 failed on Sept 15 at 49-50, short not merely of the 60 needed but of a simple majority. Four Republicans voted no - Collins, Hawley and Moran on the merits, Tillis procedurally, so that he could remain on the prevailing side and file a motion to reconsider - which leaves 49 Republican yes votes against a total of 49 yes, and therefore not one Democrat voting for cloture. That motion is still preserved and no second vote is scheduled, confirmed again this run. Cryptonews on Sept 17 supplies the clearest statement of the path so far, quoting Adrian Wall of the Digital Sovereignty Alliance that another attempt could be considered before this Congress ends but would be complicated and a long shot, and naming the lame-duck session after the midterms as the realistic slot rather than the few days before the Senate leaves on Oct 1. The same piece puts Kalshi at an 8% probability of passage before Jan 1, 2027 - a cleanly mapped market, but on a different question from this branch, which asks about a cloture vote rather than passage, and a four-day-old reading in any case. XRP is 5.05% above the pre-break level and 4.43% below its Sept 14 high, the furthest below its own window highs of the six by 2.41pt over Solana.",
+    catalysts: [
+      {date:'Fourth run', text:'No second cloture vote scheduled; the Tillis motion to reconsider is still preserved'},
+      {date:'Sept 17', text:'Kalshi at 8% for passage before Jan 1 - a different question from this branch, which asks cloture'},
+      {date:'Window', text:'The lame duck after the midterms is now named as the realistic slot, not the days before Oct 1'}
+    ]
+  },
+  {
+    id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
+    macroScore: -0.1,
+    summary: "Held at -0.1 again, and the one written watch item is still unanswered. This score handicaps a single object: HIP-3 builder-deployed markets went from about 2% of volume in early 2026 to roughly half by mid-year, the builder keeps most of the fee, and protocol revenue fell from $356.7M in Q3 2025 to $201.8M in Q2 2026, down 43% from peak, while volume and open interest set records. What would move it is a disclosed fee split or a protocol revenue term on the Payward deployment - Payward, the parent of Kraken, INTENDS to become the first registered US exchange and clearinghouse operating on Hyperliquid, with Bitnomial Exchange as the CFTC designated contract market and Bitnomial Clearinghouse as the registered clearing organisation, subject to regulatory approval. No such term has been published. One new item arrived and is logged rather than scored: Pluang, dated Sept 20, reports platform-wide perpetual open interest at $8.1B, calls it an all-time high, and puts it at about 10.9% of the global perpetual futures market, with over 30% of that open interest in tokenized traditional assets. The all-time-high framing cannot stand as written, because The Block reported platform-wide open interest at a record $14.3B on Sept 8. That makes a fourth reading of a quantity this deck already carries at three different values, so it is published attributed and adopted as none of them. HYPE is 20.15% above the pre-break level, the strongest of the six by 9.31pt over Solana, and 0.24% below its Sept 19 high of 94.55.",
+    catalysts: [
+      {date:'Unanswered', text:'Still no disclosed fee split or protocol revenue term on the Payward and Bitnomial deployment'},
+      {date:'Sept 20', text:'Pluang puts platform-wide open interest at $8.1B and calls it a record - The Block said $14.3B Sept 8'},
+      {date:'Logged', text:'Over 30% of that open interest sits in tokenized traditional assets; no HIP-3 fee terms disclosed'}
+    ]
+  }
+];
+
+const MACRO_SNAPSHOT = [
+  {label:'Fed / October', value:'Polymarket 55% hike vs 44% no change; centralbank.watch table thawed to 57.9 / 42.1 / 0.0', cls:'warn'},
+  {label:'CLARITY cloture', value:'FAILED 49-50 Sept 15; no second vote scheduled; Kalshi 8% for passage by Jan 1', cls:'warn'},
+  {label:'BTC ETF flows', value:'Sept 18 +$433.0M; the Sept 19 row has still not posted two days on', cls:'ok'},
+  {label:'Brent crude', value:'$102.17 Actual, an in-progress Sept 21 read; Previous advanced to $103.87', cls:'ok'},
+  {label:'US diesel', value:'AAA national average $6.5050 on 9/20, a fresh record, up 75.80% year on year', cls:'warn'},
+  {label:'Hormuz', value:'CENTCOM says the past two weeks of crude, cargo and LNG are the highest in six months', cls:'ok'}
+];
+
+const GLOBAL_CATALYSTS = [
+  {date:'Sept 21', text:'All six rose over the 24 hours into this stamp - ETH most at +2.38%, BTC least at +0.40%'},
+  {date:'Fresh high', text:'ETH printed 2,706.51 in the hour this stamp closes, a seven-day and twenty-one-day high at once'},
+  {date:'Fresh high', text:'BNB printed 782.69 in the same hour, a twenty-one-day high clearing the Sept 5 print of 780.71'},
+  {date:'Fed, Polymarket', text:'October priced 55% for a 25bp increase against 44% no change, unmoved from the Sept 19 read'},
+  {date:'Fed, thawed', text:'centralbank.watch October table moved to 57.9 / 42.1 / 0.0 from 95.2 / 4.9 / 0.0, frozen since before the FOMC'},
+  {date:'Fed, caveat', text:'That table is stamped Sept 18, so it corroborates the Sept 18 fed monitor read of 59.7%, not the book as it stands today'},
+  {date:'Fed, anchor', text:'The same page states the policy rate correctly at 3.88%; the table caught up on its own, uncertified by that'},
+  {date:'Fed, overtaken', text:'CME FedWatch at 50.9% and Polymarket at 44.5% are Sept 17 reads and are superseded'},
+  {date:'Branch', text:'The BTC Fed leg needs above 75% or below 40% on two routes; 55% and 57.9% fire neither'},
+  {date:'Sept 18', text:'Solana ETFs took $13.2M for the week per SoSoValue, a second consecutive improvement off the $6.18M trough'},
+  {date:'Branch', text:'The SOL bar was above $50M to restore or below $5M to re-cut - $13.2M resolves it negative both ways'},
+  {date:'Careful', text:'That $13.2M is not the -$13.2M BTC daily print of Sept 11, nor the $6.18M Solana week of early September'},
+  {date:'Sept 18', text:'Bitcoin ETFs took +$6.2M for the week, called the smallest in 141 weeks of trading'},
+  {date:'Reconciled', text:'The five daily rows here sum to +$6.1M against that +$6.2M, confirming the +$433.0M Sept 18 print'},
+  {date:'Unposted', text:'The Sept 19 BTC and ETH rows have still not settled two days on, so both re-cut bars stay untested'},
+  {date:'Brent', text:'$102.17 Actual, down 1.63% - an in-progress read of the Sept 21 session, not a settle'},
+  {date:'Resolved', text:'Previous finally advanced to $103.87, confirming that as the Sept 18 settle and retiring the $103.21 read'},
+  {date:'Sept 19', text:'CENTCOM commander Brad Cooper says crude, cargo and LNG over the past two weeks are the highest in six months'},
+  {date:'Scope', text:'The Washington Examiner dates the war to a Feb 28 strike, so that is a war-period high, not a pre-war baseline'},
+  {date:'Unreconciled', text:'Cooper cites over 1 billion barrels in a couple of months, an implied daily rate many times the satellite read of 2.8M a day'},
+  {date:'Sept 20', text:'AAA national diesel average $6.5050, a fresh record, up 75.80% on a year ago at $3.7002'}
+];
+
+function renderMacro(){
+  const grid = document.getElementById('macroGrid');
+  grid.innerHTML = MACRO_SNAPSHOT.map(m => `
+    <div class="macro-cell">
+      <div class="label">${m.label}</div>
+      <div class="value ${m.cls}">${m.value}</div>
+    </div>
+  `).join('');
+  const row = document.getElementById('catalystsRow');
+  row.innerHTML = GLOBAL_CATALYSTS.map(c => `<div class="catalyst-chip"><b>${c.date}</b> — ${c.text}</div>`).join('');
+}
+
+function average(arr){ return arr.reduce((a,b)=>a+b,0) / arr.length; }
+
+function computeRSI(closes, period){
+  if (closes.length < period + 1) return null;
+  let gains = 0, losses = 0;
+  for (let i = closes.length - period; i < closes.length; i++){
+    const diff = closes[i] - closes[i-1];
+    if (diff >= 0) gains += diff; else losses -= diff;
+  }
+  const avgGain = gains / period, avgLoss = losses / period;
+  if (avgLoss === 0) return 100;
+  const rs = avgGain / avgLoss;
+  return 100 - (100 / (1 + rs));
+}
+
+function emaFull(values, period){
+  const result = new Array(values.length).fill(null);
+  if (values.length < period) return result;
+  const k = 2/(period+1);
+  let sum = 0;
+  for (let i=0;i<period;i++) sum += values[i];
+  let prev = sum/period;
+  result[period-1] = prev;
+  for (let i=period;i<values.length;i++){
+    prev = values[i]*k + prev*(1-k);
+    result[i] = prev;
+  }
+  return result;
+}
+
+function computeMACD(closes){
+  if (closes.length < 35) return null;
+  const ema12 = emaFull(closes, 12);
+  const ema26 = emaFull(closes, 26);
+  const macdLine = closes.map((_, i) => (ema12[i]!=null && ema26[i]!=null) ? ema12[i]-ema26[i] : null);
+  const macdValues = macdLine.filter(v => v!=null);
+  if (macdValues.length < 9) return null;
+  const signalArr = emaFull(macdValues, 9);
+  const macdLatest = macdValues[macdValues.length-1];
+  const signalLatest = signalArr[signalArr.length-1];
+  if (signalLatest == null) return null;
+  return { macd: macdLatest, signal: signalLatest, histogram: macdLatest - signalLatest };
+}
+
+function computeTechnical(closes){
+  const last = closes[closes.length-1];
+  const sma20 = closes.length>=20 ? average(closes.slice(-20)) : null;
+  const sma50 = closes.length>=50 ? average(closes.slice(-50)) : null;
+  const rsi14 = computeRSI(closes, 14);
+  const macd = computeMACD(closes);
+  const change7d = closes.length>=8 ? ((closes[closes.length-1]-closes[closes.length-8])/closes[closes.length-8])*100 : null;
+
+  let score = 0, max = 0;
+  const notes = [];
+
+  if (sma20 != null){
+    max += 1;
+    if (last > sma20){ score += 1; notes.push('Price above its 20-day average'); }
+    else notes.push('Price below its 20-day average');
+  }
+  if (sma50 != null){
+    max += 1;
+    if (last > sma50){ score += 1; notes.push('Price above its 50-day average'); }
+    else notes.push('Price below its 50-day average');
+    max += 1;
+    if (sma20 > sma50){ score += 1; notes.push('Short-term trend running above the long-term trend'); }
+    else notes.push('Short-term trend running below the long-term trend — caution');
+  }
+  if (rsi14 != null){
+    max += 1;
+    if (rsi14 >= 50 && rsi14 <= 70){ score += 1; notes.push(`RSI ${rsi14.toFixed(0)} — healthy bullish momentum`); }
+    else if (rsi14 > 70){ score += 0.3; notes.push(`RSI ${rsi14.toFixed(0)} — overbought, pullback risk`); }
+    else if (rsi14 >= 30){ score += 0.5; notes.push(`RSI ${rsi14.toFixed(0)} — neutral`); }
+    else { score += 0.6; notes.push(`RSI ${rsi14.toFixed(0)} — oversold, possible bounce`); }
+  }
+  if (macd != null){
+    max += 1;
+    if (macd.histogram > 0){ score += 1; notes.push('MACD momentum positive'); }
+    else notes.push('MACD momentum negative');
+  }
+  if (change7d != null){
+    max += 1;
+    if (change7d > 0){ score += 1; notes.push(`Up ${change7d.toFixed(1)}% over the last 7 days`); }
+    else notes.push(`Down ${Math.abs(change7d).toFixed(1)}% over the last 7 days`);
+  }
+
+  const pct = max > 0 ? (score/max)*100 : 50;
+  return { pct, notes, rsi14, change7d };
+}
+
+function combine(techPct, macroScore){
+  const macroPct = ((macroScore + 2) / 4) * 100;
+  const composite = techPct * 0.55 + macroPct * 0.45;
+  let label, cls;
+  if (composite >= 62){ label = 'Bullish'; cls = 'bullish'; }
+  else if (composite <= 42){ label = 'Bearish'; cls = 'bearish'; }
+  else { label = 'Neutral'; cls = 'neutral'; }
+  return { composite, label, cls, macroPct };
+}
+
+function sparkSVG(closes){
+  const w = 300, h = 40, pad = 2;
+  const slice = closes.slice(-30);
+  const min = Math.min(...slice), max = Math.max(...slice);
+  const range = (max - min) || 1;
+  const pts = slice.map((v,i) => {
+    const x = pad + (i/(slice.length-1)) * (w - pad*2);
+    const y = h - pad - ((v - min)/range) * (h - pad*2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const up = slice[slice.length-1] >= slice[0];
+  const color = up ? 'var(--jade)' : 'var(--rust)';
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%" preserveAspectRatio="none">
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.6"/>
+  </svg>`;
+}
+
+function fmtPrice(p){
+  if (p >= 1000) return '$' + p.toLocaleString('en-US', {maximumFractionDigits:0});
+  if (p >= 1) return '$' + p.toLocaleString('en-US', {maximumFractionDigits:2});
+  return '$' + p.toFixed(4);
+}
+
+async function fetchMarkets(){
+  const ids = COINS.map(c=>c.id).join(',');
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}&price_change_percentage=24h,7d`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('markets fetch failed: ' + res.status);
+  return res.json();
+}
+
+async function fetchChart(id){
+  const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=100&interval=daily`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('chart fetch failed for ' + id + ': ' + res.status);
+  const data = await res.json();
+  return data.prices.map(p => p[1]);
+}
+
+function renderCard(coin, marketRow, closes){
+  const price = marketRow ? marketRow.current_price : (closes ? closes[closes.length-1] : null);
+  const chg24 = marketRow ? marketRow.price_change_percentage_24h_in_currency : null;
+  const chg7 = marketRow ? marketRow.price_change_percentage_7d_in_currency : null;
+
+  let tech = { pct: 50, notes: ['Not enough history to compute indicators'], rsi14: null, change7d: null };
+  if (closes && closes.length >= 20) tech = computeTechnical(closes);
+
+  const combined = combine(tech.pct, coin.macroScore);
+
+  const chg24Str = chg24 != null ? `${chg24>=0?'+':''}${chg24.toFixed(2)}% (24h)` : '';
+  const chg7Str = chg7 != null ? `${chg7>=0?'+':''}${chg7.toFixed(2)}% (7d)` : '';
+
+  const macroPctDisplay = combined.macroPct.toFixed(0);
+  const techPctDisplay = tech.pct.toFixed(0);
+
+  return `
+  <div class="card ${combined.cls}">
+    <div class="card-top">
+      <div class="name-block">
+        <div class="sym">${coin.symbol}</div>
+        <div class="full">${coin.name}</div>
+      </div>
+      <div class="price-block">
+        <div class="px">${price!=null ? fmtPrice(price) : '—'}</div>
+        <div class="chg ${chg24>=0?'up':'down'}">${chg24Str}${chg7Str ? ' · '+chg7Str : ''}</div>
+      </div>
+    </div>
+
+    <div class="spark">${closes && closes.length>1 ? sparkSVG(closes) : ''}</div>
+
+    <div class="signal-row">
+      <span class="signal-label ${combined.cls}">${combined.label}</span>
+      <span class="signal-pct">${combined.composite.toFixed(0)}%</span>
+    </div>
+
+    <div class="bars">
+      <div class="bar-row">
+        <span class="bar-label">Technical</span>
+        <span class="bar-track"><span class="bar-fill" style="width:${techPctDisplay}%; background:var(--gold);"></span></span>
+        <span class="bar-val">${techPctDisplay}</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Fundamental</span>
+        <span class="bar-track"><span class="bar-fill" style="width:${macroPctDisplay}%; background:var(--slate);"></span></span>
+        <span class="bar-val">${macroPctDisplay}</span>
+      </div>
+    </div>
+
+    <details>
+      <summary>Why this read</summary>
+      <div class="detail-body">
+        <div class="sect-label">Technical (live)</div>
+        <ul>${tech.notes.map(n=>`<li>${n}</li>`).join('')}</ul>
+        <div class="sect-label">Fundamental / macro (as of Sept 21, 2026, 01:00 UTC)</div>
+        <p>${coin.summary}</p>
+        <div class="sect-label">Catalysts to watch</div>
+        <ul>${coin.catalysts.map(c=>`<li><b>${c.date}</b> — ${c.text}</li>`).join('')}</ul>
+      </div>
+    </details>
+    <div class="card-footer-note">Composite = 55% live technical + 45% dated fundamental read. Heuristic, not a statistical forecast.</div>
+  </div>
+  `;
+}
+
+async function loadAll(){
+  const btn = document.getElementById('refreshBtn');
+  const status = document.getElementById('statusRow');
+  const grid = document.getElementById('assetGrid');
+  btn.disabled = true;
+  status.innerHTML = '<div class="loading-row">Fetching live prices &amp; computing indicators…</div>';
+
+  try {
+    const markets = await fetchMarkets();
+    const byId = {};
+    markets.forEach(m => byId[m.id] = m);
+
+    const chartResults = await Promise.allSettled(COINS.map(c => fetchChart(c.id)));
+
+    status.innerHTML = '';
+    grid.innerHTML = COINS.map((coin, i) => {
+      const marketRow = byId[coin.id];
+      const chartRes = chartResults[i];
+      const closes = chartRes.status === 'fulfilled' ? chartRes.value : null;
+      return renderCard(coin, marketRow, closes);
+    }).join('');
+
+    document.getElementById('lastUpdated').textContent = 'prices updated ' + new Date().toLocaleTimeString();
+  } catch (err) {
+    status.innerHTML = `<div class="error-row">Couldn't fetch live data (${err.message}). Check your connection and try refreshing.</div>`;
+    document.getElementById('lastUpdated').textContent = 'fetch failed';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* =========================================================
+   ROTATION WATCH — perp DEX narrative
+   Live: CoinGecko market data + DefiLlama TVL.
+   Dated research layer (30d volume / fees / revenue): DefiLlama, Sept 5 2026.
+   ========================================================= */
+const ROTATION_ASOF = 'Sept 5, 2026';
+const RIVALS = [
+  { key:'HYPE',  cgId:'hyperliquid', llama:'hyperliquid', name:'Hyperliquid',
+    vol30d: 213.86e9, fees30d: 72.03e6, rev30d: 55.45e6,
+    unlock:'Core-contributor vesting opens 2027–28 (~23.8% of supply)' },
+  { key:'ASTER', cgId:'aster-2', llama:'aster', name:'Aster',
+    vol30d: 53.17e9, fees30d: 5.33e6, rev30d: 4.38e6,
+    unlock:'Team cliff pushed to Sept 17, 2027 (400M, 5% of max)' },
+  { key:'LIT',   cgId:'lighter', llama:'lighter', name:'Lighter',
+    vol30d: 46.35e9, fees30d: 4.75e6, rev30d: 3.57e6,
+    unlock:'Team + investor cliff (~50% of supply) from Dec 30, 2026 TGE anniversary' }
+];
+
+function fmtUsd(v){
+  if (v == null || !isFinite(v)) return '—';
+  if (v >= 1e9) return '$' + (v/1e9).toFixed(2) + 'B';
+  if (v >= 1e6) return '$' + (v/1e6).toFixed(1) + 'M';
+  if (v >= 1e3) return '$' + (v/1e3).toFixed(1) + 'K';
+  return '$' + v.toFixed(2);
+}
+function pct(v){ return (v == null || !isFinite(v)) ? '—' : v.toFixed(1) + '%'; }
+
+async function fetchRotationLive(){
+  const ids = RIVALS.map(r => r.cgId).join(',');
+  const mkRes = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=' + ids);
+  if (!mkRes.ok) throw new Error('market data ' + mkRes.status);
+  const markets = await mkRes.json();
+  const byId = {}; markets.forEach(m => byId[m.id] = m);
+
+  const tvls = await Promise.allSettled(
+    RIVALS.map(r => fetch('https://api.llama.fi/tvl/' + r.llama).then(x => x.ok ? x.json() : null))
+  );
+
+  return RIVALS.map((r, i) => {
+    const m = byId[r.cgId] || {};
+    const tvl = tvls[i].status === 'fulfilled' ? Number(tvls[i].value) : null;
+    const annRev = r.rev30d * (365/30);
+    return {
+      ...r,
+      price: m.current_price ?? null,
+      mcap: m.market_cap ?? null,
+      fdv: m.fully_diluted_valuation ?? null,
+      circPct: (m.circulating_supply && m.total_supply) ? (m.circulating_supply/m.total_supply)*100 : null,
+      fromAth: m.ath_change_percentage ?? null,
+      tvl: (tvl && isFinite(tvl)) ? tvl : null,
+      takeBps: (r.fees30d / r.vol30d) * 10000,
+      annRev,
+      mcapRev: m.market_cap ? m.market_cap / annRev : null
+    };
+  });
+}
+
+function renderRotation(rows){
+  const sum = (f) => rows.reduce((a,r) => a + (r[f] || 0), 0);
+  const volTot = sum('vol30d'), revTot = sum('rev30d'), tvlTot = sum('tvl');
+  rows.forEach(r => {
+    r.volShare = volTot ? (r.vol30d/volTot)*100 : null;
+    r.revShare = revTot ? (r.rev30d/revTot)*100 : null;
+    r.tvlShare = tvlTot ? (r.tvl/tvlTot)*100 : null;
+    r.monet = (r.volShare && r.revShare) ? r.revShare / r.volShare : null;
+  });
+  const lead = rows[0];
+
+  /* ---- table ---- */
+  const cols = [
+    ['Token',            r => `<span class="tok">${r.key}</span>`],
+    ['Price',            r => r.price != null ? '$' + (r.price >= 1 ? r.price.toFixed(2) : r.price.toFixed(4)) : '—'],
+    ['Mkt cap',          r => fmtUsd(r.mcap)],
+    ['FDV',              r => fmtUsd(r.fdv)],
+    ['Circ/total',       r => pct(r.circPct)],
+    ['TVL',              r => fmtUsd(r.tvl)],
+    ['TVL share',        r => pct(r.tvlShare)],
+    ['Perp vol 30d',     r => fmtUsd(r.vol30d)],
+    ['Vol share',        r => pct(r.volShare)],
+    ['Fees 30d',         r => fmtUsd(r.fees30d)],
+    ['Take rate',        r => r.takeBps.toFixed(2) + ' bps'],
+    ['Rev share',        r => pct(r.revShare)],
+    ['Monetisation',     r => r.monet != null ? r.monet.toFixed(2) + 'x' : '—'],
+    ['Mcap/ann. rev',    r => r.mcapRev != null ? r.mcapRev.toFixed(1) + 'x' : '—'],
+    ['From ATH',         r => pct(r.fromAth)]
+  ];
+  document.getElementById('rotTable').innerHTML =
+    '<thead><tr><th>Metric</th>' + rows.map(r => `<th>${r.key}</th>`).join('') + '</tr></thead><tbody>' +
+    cols.slice(1).map(([label, fn]) =>
+      `<tr><td>${label}</td>` + rows.map(r => `<td class="${r.key==='HYPE'?'lead':''}">${fn(r)}</td>`).join('') + '</tr>'
+    ).join('') + '</tbody>';
+
+  /* ---- triggers ---- */
+  const challengers = rows.slice(1);
+  const bestMonet = Math.max(...challengers.map(c => c.monet || 0));
+  const bestTake  = Math.max(...challengers.map(c => c.takeBps || 0));
+  const bestTvl   = Math.max(...challengers.map(c => c.tvlShare || 0));
+  const cheapest  = Math.min(...challengers.map(c => c.mcapRev || Infinity));
+
+  const triggers = [
+    {
+      name: 'Share erosion',
+      desc: "Hyperliquid's share of perp volume across the three falls below 55%. Above that, the leader is still setting the terms.",
+      fired: lead.volShare < 55,
+      nums: `HYPE volume share ${pct(lead.volShare)} — threshold 55%`
+    },
+    {
+      name: 'Monetisation convergence',
+      desc: 'A challenger earns at least as large a share of revenue as it does of volume (ratio ≥ 1.0). Below 1.0 it is buying volume it cannot charge for.',
+      fired: bestMonet >= 1.0,
+      nums: challengers.map(c => `${c.key} ${c.monet != null ? c.monet.toFixed(2)+'x' : '—'}`).join('  ·  ') + '  — threshold 1.00x'
+    },
+    {
+      name: 'Take-rate convergence',
+      desc: 'A challenger sustains a take rate above 2.5 bps. That would mean it can charge real fees rather than rent volume with incentives — the actual moat test.',
+      fired: bestTake > 2.5,
+      nums: rows.map(c => `${c.key} ${c.takeBps.toFixed(2)}bps`).join('  ·  ') + '  — threshold 2.50 bps'
+    },
+    {
+      name: 'Valuation gap',
+      desc: 'A challenger trades below half of HYPE’s market cap per dollar of annualised revenue. Cheap on revenue, not cheap versus its old high.',
+      fired: lead.mcapRev != null && cheapest < lead.mcapRev * 0.5,
+      nums: rows.map(c => `${c.key} ${c.mcapRev != null ? c.mcapRev.toFixed(1)+'x' : '—'}`).join('  ·  ') +
+            `  — threshold ${lead.mcapRev != null ? (lead.mcapRev*0.5).toFixed(1)+'x' : '—'}`
+    },
+    {
+      name: 'Liquidity migration',
+      desc: 'A challenger holds more than 25% of the trio’s TVL. Capital moves before volume does, so this one tends to lead the others.',
+      fired: bestTvl > 25,
+      nums: rows.map(c => `${c.key} ${pct(c.tvlShare)}`).join('  ·  ') + '  — threshold 25.0%'
+    }
+  ];
+
+  document.getElementById('rotTriggers').innerHTML = triggers.map(t => `
+    <div class="trigger">
+      <div class="tstate ${t.fired ? 'fired' : 'hold'}">${t.fired ? 'FIRED' : 'HOLD'}</div>
+      <div class="tbody">
+        <div class="tname">${t.name}</div>
+        <div class="tdesc">${t.desc}</div>
+        <div class="tnums">${t.nums}</div>
+      </div>
+    </div>`).join('');
+
+  const firedCount = triggers.filter(t => t.fired).length;
+  const verdict = firedCount === 0
+    ? { label:'HOLD HYPE — 0 of 5 triggers fired',
+        text:`Hyperliquid still takes ${pct(lead.revShare)} of the revenue on ${pct(lead.volShare)} of the volume, and monetises every dollar traded at ${lead.takeBps.toFixed(2)} bps against ${challengers.map(c=>c.takeBps.toFixed(2)).join(' and ')} bps for the challengers. Neither ASTER nor LIT is cheaper per dollar of earnings. Nothing here says rotate.` }
+    : { label:`REVIEW — ${firedCount} of 5 triggers fired`,
+        text:'At least one moat condition has changed. Re-read the table before acting — one trigger is a prompt to look, not a signal to rotate. Two or more firing together is the case for trimming.' };
+
+  document.getElementById('rotVerdict').innerHTML =
+    `<div class="rot-verdict"><div class="vlabel">${verdict.label}</div><div class="vtext">${verdict.text}</div></div>`;
+
+  document.getElementById('rotMethod').innerHTML = `
+    <details class="rot-method">
+      <summary>Methodology &amp; standing notes</summary>
+      <div class="detail-body">
+
+        <h4>How to read the triggers</h4>
+        <div class="rule"><b>0 fired</b><span>Hold. The leader is still setting the terms of the market.</span></div>
+        <div class="rule"><b>1 fired</b><span>A prompt to re-read the table — not a signal to act.</span></div>
+        <div class="rule"><b>2+ fired</b><span>The case for trimming into whichever challenger fired them.</span></div>
+
+        <h4>Why these watch the leader, not the challenger</h4>
+        <p>A challenger rallying inside the same narrative is higher beta on a trade you already own. ASTER and
+        LIT move with the same driver as HYPE — perp-DEX volume and the same liquidity cycle — so buying one
+        alongside HYPE adds correlation and execution risk rather than diversification. Rotating on a
+        challenger's price momentum concentrates the bet. Rotating on measurable erosion in the leader's moat
+        is the only version that actually changes what you own.</p>
+
+        <h4>Supply cliffs — independent of every trigger above</h4>
+        ${RIVALS.map(r => `<div class="cliff"><b>${r.key}</b> — ${r.unlock}</div>`).join('')}
+        <p class="flag">Do not rotate into LIT ahead of Dec 30, 2026 without pricing that cliff in. Roughly half
+        of supply becomes claimable on the TGE anniversary — buying in front of known supply is the same mistake
+        as buying a challenger because it looks cheap against its old high.</p>
+
+        <h4>Live watch item — LIT</h4>
+        <p class="watch">The February 2026 Circle partnership on ~$920M of USDC deposits was projected to add
+        roughly $40M of annualised revenue against a base near $43M. If that shows up in the fee data it would
+        roughly halve LIT's market cap per dollar of revenue and move the valuation-gap trigger materially.
+        Aster has no equivalent catalyst. This is the single development most likely to turn a HOLD into a REVIEW.</p>
+
+        <h4>What the numbers mean</h4>
+        <p>Take rate = fees ÷ perp volume, in basis points: what the venue actually earns per dollar traded.
+        Monetisation = revenue share ÷ volume share; below 1.0x a venue is buying volume it cannot charge for.
+        Mcap/ann. revenue annualises the trailing 30-day figure — a rough multiple, not a forecast.</p>
+
+      </div>
+    </details>`;
+
+  document.getElementById('rotNote').innerHTML =
+    `Market cap, FDV, supply and TVL are live on page load. Perp volume, fees and revenue are a dated research ` +
+    `layer (DefiLlama, as of ${ROTATION_ASOF}) — DefiLlama moved those series behind a paid plan, so they refresh ` +
+    `when the deck is refreshed, not on page load. Heuristic framework, not investment advice.`;
+}
+
+async function loadRotation(){
+  try {
+    const rows = await fetchRotationLive();
+    renderRotation(rows);
+  } catch (err) {
+    document.getElementById('rotVerdict').innerHTML =
+      `<div class="error-row">Couldn't load rotation data (${err.message}).</div>`;
+  }
+}
+
+document.getElementById('refreshBtn').addEventListener('click', () => { loadAll(); loadRotation(); });
+renderMacro();
+loadAll();
+loadRotation();
+</script>
+</body>
+</html>
