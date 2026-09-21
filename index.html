@@ -349,7 +349,7 @@
   </header>
 
   <section class="macro">
-    <h2>Macro &amp; geopolitical backdrop — as of Sept 16, 2026 (13:30 UTC)</h2>
+    <h2>Macro &amp; geopolitical backdrop — as of Sept 21, 2026 (06:00 UTC)</h2>
     <div class="macro-grid" id="macroGrid"></div>
     <div class="catalysts-row" id="catalystsRow"></div>
   </section>
@@ -376,7 +376,7 @@
   </section>
 
   <footer>
-    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko's public API on load and on refresh. The macro/fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts, and similar — reflects research current as of 13:30 UTC on September 16, 2026 and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores. Not investment advice.
+    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko's public API on load and on refresh. The macro/fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts, and similar — reflects research current as of 06:00 UTC on September 21, 2026 and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores. Not investment advice.
   </footer>
 </div>
 
@@ -384,97 +384,97 @@
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
-    macroScore: -0.4,
-    summary: "Cut to -0.4, because the thing that justified holding it at -0.3 twelve hours ago has been erased. That hold rested on two large moves cancelling: a hawkish Fed repricing against Farside unfreezing at +$159.9M for Sept 14. Sept 15 has now settled at -$450.4M - the largest single-day outflow in this deck's series, bigger than the -$282.7M of Sept 10 - which makes the Monday inflow a one-day blip inside a larger exit rather than a reversal. Worse, the composition changed character. This deck has read the bleed since Sept 8 as rotation between wrappers rather than an institutional exit, because ARKB and GBTC carried it while IBIT barely moved. On Sept 15 the two largest and most institutional wrappers took the brunt: FBTC -$214.8M and IBIT -$161.7M, against GBTC -$44.1M, ARKB -$17.4M and BITB -$12.4M, five lines summing exactly to the total. That is not rotation, and the read that survived a sign change on Monday does not survive this. Into that, the Fed. The futures meeting table has firmed again to 95.2 / 4.9 / 0.0 against 91.4 / 8.6 / 0.0 yesterday, while the venue board eased the other way to an 87.3 aggregate on a band of 86.5 to 90.0. The two instruments are moving in opposite directions five hours before the decision, and the futures table now sits 5.2pt above the dearest venue. BTC is 2.01% below the pre-break level and 5.88% off its Sept 7 high, essentially unchanged over twelve hours - the price is waiting.",
+    macroScore: -0.3,
+    summary: "Held at -0.3, and this run both legs were checkable. The flow leg is untested, but not for the reason yesterday gave. Yesterday recorded that Farside had still not posted the Sept 19 session two days on, and carried that as a pending observation. Sept 19 was a Saturday and Sept 20 a Sunday, so no US ETF session settled over the weekend and no Sept 19 row will ever post. Farside itself is the evidence: its table carries trading days only, skipping Sept 5 through Sept 7 and Sept 12 through Sept 13 in exactly the same way. The last settled session remains Sept 18 at +$433.0M, and the next is Sept 21, which will not settle until after the US close roughly thirteen hours from this stamp. So the re-cut bar of one session below -$300M or two consecutive sessions each below -$150M is untested by construction rather than by a data lag, and that watch item is retired rather than carried forward. The Fed leg was tested properly. The branch needs October above 75% on two independently routed instruments to cut, or below 40% on two to restore. Polymarket, read live from its own API at 05:57 UTC, prices a 25bp increase at 54.5% against 44.5% for no change; centralbank.watch, which derives its table from fed funds futures, reads 55.9 / 44.1 / 0.0. Two different routes agreeing inside a point and a half, and both sit squarely between the triggers. One caveat travels with the second: that table has moved from 57.9 to 55.9 since yesterday while keeping the same Sept 18 stamp, so the stamp does not date the figure. BTC printed 82,087.11 at 01:00, a seven-day high clearing the Sept 19 print of 81,925 - but its twenty-one-day high is still 82,283.00 from Sept 3, so this is a seven-day high only. It trades 5.52% above the pre-break level and rose 1.35%, the smallest gain of the six by 1.43pt over Solana.",
     catalysts: [
-      {date:'Sept 15', text:'BTC ETF flow -$450.4M, the largest single-day outflow in this series'},
-      {date:'Broke', text:'FBTC -214.8 and IBIT -161.7 led it - the wrapper-rotation read no longer holds'},
-      {date:'Sept 16', text:'FOMC 18:00 UTC, five hours from this price stamp; futures table 95.2%'}
+      {date:'Retired', text:'The Sept 19 Farside watch item is withdrawn - Sept 19 was a Saturday, so that row cannot exist'},
+      {date:'Fed', text:'Polymarket 54.5% and centralbank.watch 55.9% - the branch needs above 75 or below 40 on two routes'},
+      {date:'Fresh high', text:'82,087.11 at 01:00 clears the Sept 19 print of 81,925, but only over the seven-day window'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
-    macroScore: 0.3,
-    summary: "Held at +0.3 for a fifth consecutive run, and for the same reason each time: the restore condition is testable, it was tested, and neither branch fired. The condition is that Devnet-11 completes cleanly and the next All Core Devs call describes the Oct 6 Sepolia fork as scheduled rather than tentative. Devnet-11 was due Sept 14. No primary source has confirmed that it completed, and a direct search for its status returned, ranking first for the second consecutive day, the same third-party GitHub release this deck already logged as a scope trap - its headline reads like the downside branch firing, but its nine failed devnets are Devnet-1 through Devnet-9 and its only mention of Devnet-11 is in the future tense. The Oct 6 13:53 UTC target remains explicitly tentative and conditional on further testing; Hoodi has no activation date, and mainnet has no epoch, no timestamp and no final client release schedule. Flow gave and took back, and held there: Farside settled Sept 14 at +$121.1M and Sept 15 at -$49.5M, with no newer session as of this build, the latter from ETHW -$34.4M and ETHE -$17.5M against TETH +$2.4M, three lines summing exactly to the total. For the week to Sept 11, SoSoValue puts Ethereum ETFs at +$197.11M against this deck's own four Farside rows summing to +$196.9M - two product universes, close but not identical, and neither adopted over the other. ETH is 4.30% below the pre-break level and 10.02% off its Sept 11 high, which remains the only case of the six where the seven-day and twenty-one-day highs are the same print.",
+    macroScore: 0.4,
+    summary: "Held at +0.4. The flow leg is untested for the same calendar reason as Bitcoin: Farside settled Sept 18 at +$143.7M, Sept 19 and Sept 20 were the weekend, and the re-cut bar of two consecutive sessions each below -$150M cannot be tested until Sept 21 settles after the US close. One correction to the record while that bar sits idle. When this deck first read Sept 15 it saw three lines summing to -$49.5M and published that as the session total. Farside now carries Sept 15 at -$142.0M across seven lines, because the rest posted afterwards. The lesson is worth more than the number: a Farside row settles incrementally, and an early read can be materially incomplete. The number still does not fire the bar, because -$142.0M sits above -$150M. The roadmap leg is where the news is. Glamsterdam on Sepolia is confirmed for Oct 6 at 13:53:36 UTC, at epoch 353024 and slot 11296768, set by the All Core Developers Consensus call of Sept 17. Devnet-11 ran the transition on Sept 16 across about 84,000 validators while approaching the 200 million gas target. Two items are new against yesterday. Hoodi now carries a provisional date of Oct 27, contingent on how Sepolia performs, which retires the no-activation-date item this deck has carried for several runs. And the buffer is thin: seven days between client releases and the fork, against the fourteen Ethereum normally allows for audit. The griefing vector has a name and an author now - Potuz, on the Sept 17 call, describing spinning up a thousand builders, rotating them, bidding high and never producing payloads. Mainnet still has no epoch and no timestamp beyond a Q4 2026 designation. ETH is 6.25% above the pre-break level and 1.55% below the 2,706.51 it printed at 00:00, which remains both its seven-day and its twenty-one-day high.",
     catalysts: [
-      {date:'Untested', text:'Devnet-11 completion still unconfirmed by any primary source; Oct 6 remains tentative'},
-      {date:'Trap', text:'The same third-party slips-again release ranked first again; its nine devnets are 1 to 9'},
-      {date:'Flow', text:'ETH ETFs +$121.1M on Sept 14, then -$49.5M on Sept 15'}
+      {date:'Oct 27', text:'Hoodi now carries a provisional Glamsterdam date, retiring the no-date item held here for several runs'},
+      {date:'Oct 6', text:'Sepolia at 13:53:36 UTC, epoch 353024, slot 11296768; seven days of buffer against the usual fourteen'},
+      {date:'Revision', text:'Farside restated Sept 15 from -$49.5M to -$142.0M as the remaining lines posted - still above the bar'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.4,
-    summary: "Raised to +0.4, restoring half the flow cut, because the number that caused it has finally been superseded. The -0.2 rested on Solana ETF weekly inflows collapsing from $153.87M to $6.18M for the week ending Sept 4 - a 96% fall - with the deck refusing to size it larger because CryptoSlate stated plainly that the percentage does not measure a fall in fund assets, SOL's price or the number of investors. What was missing was the next observation, and Monday US hours passed without one. It has now landed twice from the same underlying data: KuCoin reports $10.3048M of net inflow and news.bitcoin.com reports $10.30M, both citing SoSoValue, both published Sept 14. They disagree on how to label the week - Sept 7 to 11 against Sept 8 to 11, the latter calling it holiday-shortened - which is a convention difference rather than a contradiction, so this deck publishes it as the week ending Sept 11. The read is stabilisation, not recovery: $10.30M is 67% above the prior week and still 93% below $153.87M. That retires the unknown-and-possibly-worsening half of the cut and leaves the small-base half standing. The same SoSoValue table independently reconciles this deck's Bitcoin series at -$462.73M against its own -$462.7M. SOL is 4.04% below the pre-break level and 9.21% off its Sept 7 high. Nothing further surfaced this run; the next weekly print is the test.",
+    summary: "Held at +0.4, and the branch was tested by two sources that disagree. The bar is a weekly ETF print above $50M to restore the remaining 0.1, or below $5M to re-cut it. 24/7 Wall St, citing SoSoValue and published Sept 19, puts Solana spot ETFs at $13.2M for the week ending Sept 18 - below $50M and above $5M, so neither branch fires. Solana Compass, citing CryptoBriefing and published Sept 20, puts the same week at $60.7M and calls it the strongest of the run, which would clear the restore bar on its own. The two reconcile, and that is what settles it. The SoSoValue daily rows for that week are Sept 14 at $11.01M, Sept 15 at $1.35M, Sept 16 at $836,926 and Sept 17 at no change, summing to $13.20M. CryptoBriefing puts $47.6M into the Thursday of that week, which is Sept 17 - the one session SoSoValue records as flat. $13.2M plus $47.6M is $60.8M against the $60.7M published. So this is not a week-definition difference and not a rounding difference; it is one disputed session between two vendors. This deck adopts neither and publishes both attributed, as it does with every quantity carrying more than one publisher. The score stays where it is because the branch was written against a SoSoValue weekly print, and the $153.87M, $6.18M and $10.30M readings behind it are made of that same series; swapping vendor mid-series would break the comparison the bar depends on rather than resolve it. Under either read the streak stands at twelve consecutive weekly inflows. SOL is 10.32% above the pre-break level and 2.49% below its Sept 19 high of 114.59.",
     catalysts: [
-      {date:'Resolved', text:'Weekly SOL ETF flow for the week to Sept 11 came in at $10.30M, up from $6.18M'},
-      {date:'Still small', text:'That is 67% above the prior week and 93% below the $153.87M week'},
-      {date:'Next', text:'A weekly print above $50M restores the rest; back below $5M re-cuts it'}
+      {date:'Conflict', text:'Week to Sept 18 reads $13.2M on SoSoValue and $60.7M on CryptoBriefing - neither is adopted'},
+      {date:'Reconciled', text:'The gap is one disputed Thursday: $13.2M plus the $47.6M SoSoValue calls flat is $60.8M'},
+      {date:'Branch', text:'The bar is a SoSoValue weekly print; at $13.2M it clears neither $50M nor $5M, so the score holds'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'BNB',
     macroScore: 0.0,
-    summary: "Held at 0.0 for an eighth consecutive run under the same rule, and this run the tape made that rule concrete in the opposite direction from last time. The fundamental case has not weakened at all: BNB Chain added $3.6B of RWA value year to date, ahead of Solana at $2.6B, Stellar at $2.5B and Ethereum at $1.6B; tokenized-stock monthly volume went from $237M in January to $7.9B in August, a 33.3-fold expansion; and Binance Research puts the combined BNB Chain plus Robinhood Chain share at 88.2% for September against 2.3% in June. None of those three figures substitutes for another - a combined share is not a single-entity share, and a growth-in-dollars figure is not a share at all - and nothing new surfaced this run beyond the same syndications. Yesterday the point was that BNB was the only one of the six to have lost the pre-break level while its fundamentals improved. All six have now lost it, and the two smallest declines against that level have swapped places inside twelve hours: HYPE -0.62% and BNB -1.33%, a margin of 0.71pt. A pair that reorders overnight is why this deck publishes the figures rather than an ordering claim. A fundamental improvement the price will not pay for is a finding about the tape; so is the same asset holding up best on the way down. Neither is a reason to move a macro score, and the score has not moved. BNB is 6.50% off its Sept 8 high and 8.85% off its Sept 5 high.",
+    summary: "Held at 0.0 for a thirteenth consecutive run, on the reasoning every recent run has applied: the fundamentals on this card keep improving and the price will not pay for them in either direction. Nothing new surfaced this run beyond further syndication of the same figures, and the searches were again dominated by presale promotion for an unrelated token, which was filtered out. One phrasing is sharper than this deck had it. The Binance Research 88.2% figure for September is a share of tokenized stock DEX volume specifically, and it covers BNB Chain and Robinhood Chain combined rather than either alone; against that, BNB Chain by itself holds roughly $1B of issuance inside a tokenized-stock market capitalisation of about $3.1B. Tokenized-stock monthly volume went from $237M in January to $7.9B in August, a 33.3-fold expansion, and CryptoRank puts BNB Chain first for RWA value added year to date at about $3.6B, ahead of Solana at $2.6B, Stellar at $2.5B and Ethereum at $1.6B. None of those substitutes for another: a combined DEX-volume share is not a single-chain share, and a growth-in-value figure is not a share at all. The object check that has held this score still holds - the SEC Innovation Exemption of Sept 17 creates a US venue category for tokenized NMS stock and names no blockchain and no company, while the 88.2% describes a largely non-US market. On the tape BNB printed 784.89 at 01:00, clearing the 782.69 this deck published yesterday; it trades 7.20% above the pre-break level and 1.50% below that fresh high.",
     catalysts: [
-      {date:'Unchanged', text:'Nothing new an eighth run: $3.6B RWA added YTD, 88.2% combined September share'},
-      {date:'Flipped', text:'All six below the pre-break level; HYPE -0.62% and BNB -1.33% are the two smallest, margin 0.71pt'},
-      {date:'Sept 30', text:'BNB zero-fee stablecoin campaign ends'}
+      {date:'Unchanged', text:'Thirteenth run of real fundamental gains with no price response in either direction'},
+      {date:'Object', text:'The 88.2% is tokenized stock DEX volume, BNB Chain and Robinhood Chain combined, largely non-US'},
+      {date:'Fresh high', text:'784.89 at 01:00, clearing the 782.69 published here yesterday'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: 0.0,
-    summary: "Cut to 0.0, and this is a pre-committed branch firing exactly as written rather than a judgement made after the fact. The published condition was that a named Democratic commitment would add another +0.1 and that the caucus announcing opposition, or cloture failing, would return the score to flat. Cloture failed on Sept 15. The score returns to flat and no further, because flat is the destination the branch named. The tally has now settled at 49 to 50 - short not just of 60 but of a simple majority - and the arithmetic says something starker than the headlines did. Four Republicans voted no: Collins, Hawley and Moran on the merits, and Thom Tillis procedurally, having voted yes first so he could file a motion to reconsider. That leaves 49 Republican yes votes and a total of 49, which means NOT ONE Democrat voted for cloture. The seven who negotiated the text - Gillibrand, Warner, Booker, Warnock, Gallego, Alsobrooks and Cortez Masto - all voted against it. Tillis keeps a procedural path open without restarting the process, but no second vote has been scheduled as of this build, and floor time before the November midterms is scarce. That is a third list of names, overlapping but matching neither the seven who signed the July 22 opposition statement nor the six named in the September negotiation. Lummis called the effort finished after more than a year of work and over 120 accommodations; Brad Garlinghouse called for a post mortem. XRP is now the worst of the six on all three measures - 5.99% below the pre-break level, 14.47% off the Sept 14 high and 17.70% off the Aug 25 high - on margins of 1.69pt, 2.77pt and 4.72pt over the next name. That claim was withheld yesterday as a one-run reading; it has now held above the bar for two consecutive runs against the same runners-up, which is what this deck requires before publishing an ordering claim. One run before that, XRP held the largest reclaim of the six.",
+    summary: "Held at 0.0, with the branch unfired in both directions: a second cloture vote passing adds 0.2, while the motion failing or the window closing unused cuts 0.1. Cloture on H.R. 3633 failed on Sept 15 at 49-50, short not merely of the 60 needed but of a simple majority, and no second vote is scheduled, confirmed again this run. The Tillis motion to reconsider is still preserved - he changed his vote to the prevailing side precisely so that he could file it. What is clearer this run is why the vote failed rather than merely who voted no. Reporting on the failure puts the blocker on the ethics language governing crypto holdings by public officials, with Democrats holding that the revised text does not effectively apply to the president and first family. That is a drafting dispute rather than a count problem, and the distinction matters for this branch: a whip count can move over a weekend, a contested ethics title generally does not. Thune can move to reconsider if a deal on that text emerges, and the lame-duck session after the midterms remains the named realistic slot rather than the few days before the Senate leaves on Oct 1. One item is logged and not scored: the CFTC sent new crypto rules to the White House around Sept 19, which is a different instrument from this branch and does not substitute for it. XRP posted the highest 24-hour reading of the six at +3.46%, but the top four are separated by 0.53pt and the top two by 0.07pt, so this deck publishes the figures rather than an ordering claim on them. XRP is 5.38% above the pre-break level and 4.13% below its Sept 14 high of 1.4914 - the furthest below its own window highs of the six, by 1.64pt over Solana.",
     catalysts: [
-      {date:'Sept 15', text:'CLARITY cloture FAILED; the pre-committed branch fires and the score returns to flat'},
-      {date:'Open', text:'Tillis filed to reconsider, but no second vote is scheduled and floor time is scarce'},
-      {date:'Zero', text:'49-50, below even a simple majority; GOP no votes Collins, Hawley, Moran, Tillis; no Democrat voted yes'}
+      {date:'Fifth run', text:'No second cloture vote scheduled; the Tillis motion to reconsider is still preserved'},
+      {date:'Why', text:'The blocker is the ethics text on crypto holdings by public officials, not the whip count'},
+      {date:'Logged', text:'The CFTC sent new crypto rules to the White House around Sept 19 - a different instrument'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Held at -0.1 for a fifth consecutive run with no fresh fundamental item, and the level this score is written against is now close enough to matter. The published trigger is a daily close below $76. It has not fired. But HYPE is $78.01, which is 2.64% clear, against 1.66% twelve hours ago and 5.53% the run before - and a level being approached is a watch item, not a downgrade, which is precisely what writing a size into a trigger is for. The case itself is unchanged and it is a revenue case, not a price case: revenue fell 43% from its peak, $356.7M in Q3 2025 to $201.8M in Q2 2026, while volume and open interest set records, because HIP-3 builder-deployed markets went from about 2% of volume in early 2026 to roughly half by mid-year and the builder keeps most of the fee, with 95 to 99% of HIP-3 volume flowing through a single counterparty, Trade.xyz. CoinDesk put it most directly in August: the RWA perps boom is eating into the revenue that backs HYPE. Nothing this run changes that, and the one new-looking item, a Hyperliquid Strategies quarterly slide deck, is a treasury company rather than the protocol - a different object, logged and not adopted. HYPE has also lost the superlative it held for four runs: it is no longer the deepest drawdown of the six on either window, having been passed by XRP on both. It is 11.70% off its Sept 7 high and 12.98% off the Sept 6 high of $89.65, the figure that makes the widely cited $88 all-time high wrong against both windows for a seventh derivation.",
+    summary: "Held at -0.1, and the one written watch item is still unanswered - now explicitly so. This score handicaps a single object: HIP-3 builder-deployed markets went from about 2% of volume in early 2026 to roughly half by mid-year, the builder keeps most of the fee, and protocol revenue fell from $356.7M in Q3 2025 to $201.8M in Q2 2026, down 43% from peak, while volume and open interest set records. What would move it is a disclosed fee split or a protocol revenue term on the Payward deployment. Reporting on that deal now states the absence directly rather than leaving it unmentioned: Payward disclosed no fee schedule, no expected trading volumes, no economic arrangement with Hyperliquid and no launch date; no fee-sharing arrangement with the HYPE buyback mechanism has been disclosed; and a Kraken spokesperson declined to speculate on the revenue it might bring. An absence confirmed by the counterparty is a stronger fact than an absence this deck merely failed to find, but it is still an absence, so the score does not move. The structure is clearer this run: Bitnomial Exchange and Bitnomial Clearinghouse act as the HIP-3 deployer, creating, owning and administering the market and clearing and settling the contracts, while NinjaTrader Clearing, the registered futures commission merchant of Payward, carries client accounts, and the permissioned variant runs on deployer-controlled onchain allowlists. All of it remains subject to regulatory approval. HYPE is 19.45% above the pre-break level, the strongest of the six by 9.13pt over Solana, and 0.82% below its Sept 19 high of 94.55.",
     catalysts: [
-      {date:'Watch', text:'$76 daily-close trigger not fired; clearance widened back to 2.64% from 1.66%'},
-      {date:'Unchanged', text:'Revenue down 43% from peak on record volume; HIP-3 passthrough is the cause'},
-      {date:'Retired', text:'No longer the deepest of the six on either window; XRP passed it on both'}
+      {date:'Confirmed absent', text:'Payward disclosed no fee schedule, no economic arrangement with Hyperliquid and no launch date'},
+      {date:'Structure', text:'Bitnomial is the HIP-3 deployer; NinjaTrader Clearing, the FCM of Payward, carries client accounts'},
+      {date:'Unanswered', text:'Still no fee split or protocol revenue term, and all of it stays subject to regulatory approval'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'Fed / FOMC today', value:'Futures table 95.2%; venues 86.5-90.0, aggregate 87.3', cls:'warn'},
-  {label:'CLARITY cloture', value:'FAILED 49-50 Sept 15; no second vote scheduled', cls:'warn'},
-  {label:'BTC ETF flows', value:'Sept 15 -$450.4M, the largest daily outflow in this series', cls:'warn'},
-  {label:'Brent crude', value:'$108.39 Actual, a new high for this series; Previous $108.75', cls:'warn'},
-  {label:'US diesel', value:'EIA weekly $6.285, up 31.8c, the highest in its history', cls:'warn'},
-  {label:'Hormuz', value:'Still postponed, no new date; CENTCOM sixth quiet day', cls:'warn'}
+  {label:'Fed / October', value:'Polymarket live 54.5% hike vs 44.5% no change; centralbank.watch 55.9 / 44.1 / 0.0', cls:'warn'},
+  {label:'CLARITY cloture', value:'FAILED 49-50 Sept 15; no second vote scheduled; the blocker is the ethics text', cls:'warn'},
+  {label:'BTC ETF flows', value:'Sept 18 +$433.0M is the last settled session - Sept 19 and 20 were the weekend', cls:'ok'},
+  {label:'Brent crude', value:'$102.398 Actual, an in-progress Sept 21 read; Previous holds at $103.87', cls:'ok'},
+  {label:'US diesel', value:'AAA national average $6.5050 on 9/20, still the record, up 75.80% year on year', cls:'warn'},
+  {label:'Hormuz', value:'CENTCOM says the past two weeks of crude, cargo and LNG are the highest in six months', cls:'ok'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'Sept 16', text:'FOMC decision 18:00 UTC with the dot plot, presser about 18:30 - five hours after this price stamp'},
-  {date:'Fed, futures', text:'centralbank.watch meeting table firmed to 95.2 / 4.9 / 0.0 from 91.4 / 8.6 / 0.0, stamped Sept 15'},
-  {date:'Fed, prose', text:'The same page still reads 91% in prose against 95.2% in its table - two instruments on one page, now 4.2pt apart'},
-  {date:'Fed, venues', text:'DeFi Rate eased to an 87.3 aggregate on a band of 86.5-90.0, down from 88.2 - the two boards are diverging into the decision'},
-  {date:'Gap', text:'The futures table now sits 5.2pt ABOVE the dearest venue, having been 0.4pt above it twelve hours ago and 1.8pt below the cheapest a day before'},
-  {date:'Arithmetic', text:'That table sums to 100.1, not 100 - the first time this run has seen it fail its own check'},
-  {date:'Dec 9', text:'The same page puts the target rate at 4.18% by the December meeting, on 56bp or about 2.2 hikes'},
-  {date:'Sept 15', text:'CLARITY cloture FAILED 49-50, short of a simple majority let alone 60'},
-  {date:'Zero', text:'Four Republicans voted no - Collins, Hawley and Moran on the merits, Tillis procedurally - which means no Democrat voted yes at all'},
-  {date:'Reconsider', text:'Tillis voted yes then switched to no to file a motion to reconsider; no second vote is scheduled and floor time before the midterms is scarce'},
-  {date:'Reaction', text:'Lummis called the effort finished after more than a year and over 120 accommodations; Garlinghouse called for a post mortem'},
-  {date:'Sept 15', text:'Bitcoin ETFs shed $450.4M - FBTC -214.8, IBIT -161.7, GBTC -44.1, ARKB -17.4, BITB -12.4'},
-  {date:'Changed', text:'The two largest wrappers led that outflow, which breaks the rotation-between-wrappers read this deck has carried since Sept 8'},
-  {date:'Sept 14', text:'The prior session was +$159.9M, now visible as a one-day blip rather than a reversal'},
-  {date:'Sept 15', text:'Ethereum ETF flow -$49.5M: ETHW -34.4 and ETHE -17.5 against TETH +2.4, unchanged as of this build'},
-  {date:'Week to Sept 11', text:'SoSoValue weekly: BTC -$462.73M, ETH +$197.11M, XRP +$18.98M, SOL +$10.30M'},
-  {date:'Tape', text:'All six majors remain below the Sept 12 pre-break level, and the two shallowest swapped places overnight - HYPE -0.62%, BNB -1.33%'},
-  {date:'Brent', text:'$108.39 Actual against $108.75 Previous - the three-fall streak broke and made a new high for this sampled series'},
-  {date:'Diesel', text:'EIA weekly on-highway $6.285, up 31.8 cents, the highest in its history; it now prints ABOVE the AAA daily at $6.2694'},
-  {date:'CENTCOM 200', text:'Sixth consecutive day without a published command action and eighth operational period with nothing ashore engaged; Hormuz talks still postponed'},
-  {date:'Oct 6', text:'Glamsterdam Sepolia fork still tentative at 13:53 UTC; Devnet-11 completion remains unconfirmed by any primary source'}
+  {date:'Sept 21', text:'All six rose again - a second consecutive 24-hour window with every name up'},
+  {date:'Noise floor', text:'The top four are separated by 0.53pt and the top two by 0.07pt, so no ordering claim is published'},
+  {date:'Publishable', text:'BTC rose least at +1.35%, a margin of 1.43pt over Solana, which is outside that floor'},
+  {date:'Fresh high', text:'BTC printed 82,087.11 at 01:00, a seven-day high clearing the Sept 19 print of 81,925'},
+  {date:'Scope', text:'That is a seven-day high only - the twenty-one-day high is still 82,283.00 from Sept 3'},
+  {date:'Fresh high', text:'BNB printed 784.89 at 01:00, clearing the 782.69 published here yesterday'},
+  {date:'Calendar', text:'Sept 19 was a Saturday and Sept 20 a Sunday, so no US ETF session settled over the weekend'},
+  {date:'Retired', text:'The watch item waiting on a Farside Sept 19 row is withdrawn - that row cannot exist'},
+  {date:'Evidence', text:'Farside carries trading days only, skipping Sept 5 to Sept 7 and Sept 12 to Sept 13 alike'},
+  {date:'Untested', text:'Both re-cut bars stay untested; the next settled session is Sept 21, after the US close'},
+  {date:'Fed, live', text:'Polymarket read from its own API at 05:57 UTC: 54.5% for a 25bp increase, 44.5% no change'},
+  {date:'Fed, second route', text:'centralbank.watch, derived from fed funds futures, reads 55.9 / 44.1 / 0.0'},
+  {date:'Branch', text:'The BTC Fed leg needs above 75% or below 40% on two routes; 54.5 and 55.9 fire neither'},
+  {date:'Fed, caveat', text:'That table moved from 57.9 to 55.9 while keeping its Sept 18 stamp - the stamp does not date it'},
+  {date:'Conflict', text:'Solana ETFs for the week to Sept 18 read $13.2M on SoSoValue and $60.7M on CryptoBriefing'},
+  {date:'Reconciled', text:'The gap is a $47.6M Thursday that SoSoValue records as flat: 13.2 plus 47.6 is 60.8 against 60.7'},
+  {date:'Branch', text:'The SOL bar is a SoSoValue print; $13.2M clears neither $50M nor $5M, so the score holds'},
+  {date:'Oct 27', text:'Hoodi now carries a provisional Glamsterdam date, contingent on how Sepolia performs on Oct 6'},
+  {date:'Sept 16', text:'Devnet-11 ran the Glamsterdam transition across about 84,000 validators toward the 200M gas target'},
+  {date:'Brent', text:'$102.398 Actual, down 1.42% - an in-progress read of the Sept 21 session rather than a settle'},
+  {date:'Sept 20', text:'AAA national diesel average $6.5050, still the record, up 75.80% on a year ago at $3.7002'}
 ];
 
 function renderMacro(){
@@ -682,7 +682,7 @@ function renderCard(coin, marketRow, closes){
       <div class="detail-body">
         <div class="sect-label">Technical (live)</div>
         <ul>${tech.notes.map(n=>`<li>${n}</li>`).join('')}</ul>
-        <div class="sect-label">Fundamental / macro (as of Sept 16, 2026, 13:30 UTC)</div>
+        <div class="sect-label">Fundamental / macro (as of Sept 21, 2026, 06:00 UTC)</div>
         <p>${coin.summary}</p>
         <div class="sect-label">Catalysts to watch</div>
         <ul>${coin.catalysts.map(c=>`<li><b>${c.date}</b> — ${c.text}</li>`).join('')}</ul>
