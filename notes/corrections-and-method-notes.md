@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-09-22 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-09-22 07:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -26,15 +26,15 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
-As published 2026-09-22 02:00 UTC (SOL +0.1; five holds):
+As published 2026-09-22 07:00 UTC (six holds, no moves):
 
 | Asset | Score | Held since |
 |-------|-------|-----------|
 | BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print) |
 | ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print) |
-| SOL   | **+0.5**  | **Sept 22** (remaining 0.1 restored on the completed $60.7M week to Sept 18) |
-| BNB   |  0.0  | 14 consecutive runs |
-| XRP   |  0.0  | 6 consecutive runs |
+| SOL   | +0.5  | Sept 22, 02:00 (remaining 0.1 restored on the completed $60.7M week to Sept 18) |
+| BNB   |  0.0  | 15 consecutive runs |
+| XRP   |  0.0  | 7 consecutive runs |
 | HYPE  | -0.1  | unchanged since the HIP-3 revenue cut |
 
 Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
@@ -139,6 +139,19 @@ An early read of a same-day or previous-day row can be materially incomplete. Re
 each run; do not assume a published row is final. (The revised -$142.0M still sits above the -$150M
 bar, so no leg fired retroactively — but it could have.)
 
+**Measured on 2026-09-22 (the cleanest example yet).** The 02:00 build published the Sept 21 rows as
+floors and named the funds that had not posted. Re-read at 07:00, **five hours later**:
+
+| Row | 02:00 | 07:00 | Change | Filled in |
+|-----|-------|-------|--------|-----------|
+| BTC Sept 21 | +$617.6M | +$999.0M | **+61.7%** | IBIT +$381.4M |
+| ETH Sept 21 | +$147.1M | +$270.0M | **+83.6%** | ETHA +$110.1M, ETHB +$12.8M |
+
+So the size of the incompleteness is not marginal: **a floor can be 60-84% low within one morning.**
+Two rules follow. Publish an incomplete row as a floor *and name the missing funds* — doing that is
+what let this run measure the gap instead of discovering it. And never let an incomplete row be the
+thing that fires or withholds a branch if the missing fund could cross it on its own.
+
 ### 5.3 centralbank.watch updates its table without advancing its stamp
 Read **57.9 / 42.1 / 0.0** on Sept 21 01:00 and **55.9 / 44.1 / 0.0** on Sept 21 06:00 — both
 displaying the **same "Sept 18" stamp**. The stamp does not date the figure. Quote the read and the
@@ -157,9 +170,13 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
 ### 5.5 Object checks that keep recurring
 - **BNB 88.2%** — a share of *tokenized stock DEX volume*, for **BNB Chain + Robinhood Chain
   combined**, in a largely **non-US** market. It is not a single-chain share and not a share of the
-  RWA market. BNB Chain alone holds ~$1B issuance inside a ~$3.1B tokenized-stock market cap.
-  The **SEC Innovation Exemption (Sept 17)** names no blockchain and no company — do not score it
-  against the 88.2%.
+  RWA market. The **SEC Innovation Exemption (Sept 17)** names no blockchain and no company — do not
+  score it against the 88.2%. **Superseded for most purposes 2026-09-22:** reporting dated Sept 21
+  gives the like-for-like figure directly — tokenized stocks **$3.5B** of market value, **BNB Chain
+  $1.0B = 32.7%**, Ethereum $770.1M, Solana $715.9M (market was $3.1B on Sept 6). Quote **32.7% of
+  market value** when the question is "how much of the tokenized-stock market is BNB Chain", and keep
+  the 88.2% only when the subject really is DEX volume across the two chains. The lead survives; the
+  magnitude was never seven eighths.
 - **BNB search pollution** — queries return presale promotion for unrelated tokens. Filter hard.
 - **HYPE open interest** is carried at four different published values ($14.3B The Block Sept 8;
   $8.1B Pluang Sept 20 also called a record; and two earlier). Publish attributed, adopt none.
@@ -182,6 +199,17 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
   pre-crisis baseline** do not contradict each other — one is a change against a collapsed base, the
   other a level. Do not let a relative improvement read as a normal strait. Also: the best transit
   count available is typically **a week or more old**; attach its date.
+- **"Since October 2025" is attached to two different objects** (2026-09-22). Searching the Sept 21
+  BTC ETF session returned, from several publishers at once, both *"single-day high since October
+  2025"* and *"strongest **weekly** inflows since October 2025"* at **$1.92B** — and that weekly
+  figure does not match the week this deck can verify from Farside rows (**+$6.1M** for Sept 14-18).
+  When a superlative circulates with two different windows attached and the arithmetic does not
+  reconcile, publish neither. Say what your own source supports: Farside's `Maximum` row carries a
+  larger daily total at **$1,373.8M**, so Sept 21 was big and not a record.
+- **Overlapping windows are not consecutive observations** (2026-09-22). The 02:00 build said "a
+  third consecutive 24-hour window with every name up". A build five hours later is tempted to write
+  "fourth" — but the two windows share nineteen hours, so it is not a new observation. Either compare
+  like for like against the previous build, or wait a full window before extending a streak count.
 - **Article recency trap, live example** (2026-09-22). A search for the CLARITY Act returned a Yahoo
   piece headlined "The Senate Has 5 Working Days Left" ranked near the top; it was published
   **Aug 2** and its "five working days" ran to the **Aug 7 recess**. Publishing it would have
@@ -192,6 +220,13 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
 - **Prices: Coinbase Exchange public API only** (`api.exchange.coinbase.com`), **completed candles
   only**. Hourly granularity 3600. The candle opening at `H` closes at `H+1`; at 05:56 UTC the last
   *complete* candle is the one opening 04:00. Exclude the in-progress hour.
+- **Which field: highs come from `high`, everything else from `close`** (established 2026-09-22 —
+  do not re-derive). A Coinbase candle is `[time, low, high, open, close, volume]`. The published
+  "Close" and the 24h change use `close` (index 4); the 7-day and 21-day **high** columns use `high`
+  (index 2), and the timestamp quoted beside a high is that candle's opening hour. A rebuild that
+  used `close` for the highs returned 2,784.09 for ETH where the baseline says 2,807.10; switching to
+  `high` reproduced all six of the previous build's highs exactly. 21 days of hourly candles needs
+  paging — Coinbase caps a response at 300 candles, so fetch in two chunks with `start`/`end`.
 - **The build stamp is the close time of the last completed candle.**
 - State the **7-day and 21-day window** next to every drawdown. They often differ and the difference
   is load-bearing: on Sept 21 BTC set a fresh *seven-day* high (82,087.11) while its *twenty-one-day*
@@ -226,20 +261,35 @@ commented constant so no future run has to reverse-engineer them again.
 5. `cls` is only `ok` or `warn`.
 6. Every `macroScore` within -2..+2.
 7. **Blanked-array diff**: blank the three arrays in both old and new, diff, and assert the *only*
-   differences are the as-of lines. This catches design/JS drift — and it caught a real bug this
-   run (see 8).
+   differences are the as-of line. This catches design/JS drift — and it caught a real bug on the
+   2026-09-21 run (see 8).
+   **When the design change is intentional, swap this check, do not skip it** (established
+   2026-09-22). On a run that deliberately changes layout the diff fails by construction and tells
+   you nothing. Replace it with the stronger assertion it was standing in for: extract every
+   computation and live-data block from both builds and require them **byte-identical** —
+   `average`, `computeRSI`, `emaFull`, `computeMACD`, `computeTechnical`, `combine`, `sparkSVG`,
+   `fmtPrice`, `fetchMarkets`, `fetchChart`, `loadAll`, `fmtUsd`, `pct`, `fetchRotationLive`,
+   `loadRotation`, `ROTATION_ASOF`, `RIVALS` — plus a grep asserting the five rotation thresholds
+   (`volShare < 55`, `bestMonet >= 1.0`, `bestTake > 2.5`, `lead.mcapRev * 0.5`, `bestTvl > 25`) are
+   unchanged. A block extractor must stop at the *next* top-level declaration **or comment**; the
+   first version of it ran past the end of a function and reported a new neighbouring comment as
+   drift in `fetchChart`.
 8. Stale-string checks scoped to the *previous build's* phrasing, not to generic words.
 9. **Superlative / count / margin grep** over every published string; verify each claim against the
    tape. This caught a false "oldest high of the six" this run (see 8).
 10. **Headless Chromium render**: `#macroGrid` 6, `#catalystsRow` 21, `#assetGrid` 6, and
     **zero uncaught JS exceptions**.
 
-### Three "as of" labels, not one
-They live at three places and a run that updates only the visible heading will ship a stale page:
-- the `<h2>` macro heading — `Sept 21, 2026 (06:00 UTC)`
-- the footer disclaimer — `06:00 UTC on September 21, 2026`
-- **a `.sect-label` inside a JS template literal** in `renderAssets` — `Sept 21, 2026, 06:00 UTC`.
-  This one is easy to miss: it is inside a backtick string, not in the HTML body.
+### One "as of" constant — the three-label trap is designed out (2026-09-22)
+There used to be three separate as-of strings (the macro `<h2>`, the footer, and a `.sect-label`
+inside a backtick template in the card renderer), and a run that updated only the visible heading
+shipped a stale page. **They are now one `const AS_OF` at the top of the inline script**, injected
+into the two `<span class="asOf">` placeholders by `renderMacro()` and interpolated directly in
+`renderCard()`. To restamp a build, edit that one line.
+
+Assert in validation: `const AS_OF = '` present, exactly **2** `class="asOf"` spans, at least **3**
+`AS_OF` references in the script, and — in the headless render — that both spans contain the new
+value. Both spans reading `—` means `renderMacro()` did not run.
 
 `ROTATION_ASOF` (`'Sept 5, 2026'`) is **not** an as-of label. Do not touch it.
 
@@ -282,37 +332,70 @@ They live at three places and a run that updates only the visible heading will s
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — RESOLVED, reconfirmed 2026-09-22.** Earlier notes referenced a push
-      blocker for this routine. It pushed to `main` cleanly on 2026-09-21 and again on 2026-09-22
-      with the ambient credentials. **Two clean runs — treat this as settled and stop carrying it.**
-      Note the session starts checked out on a `claude/…` branch that is even with `origin/main`;
-      that is normal, not a blocker.
-- [x] **Sept 21 (Mon) ETF session — SETTLED, both flow legs tested.** BTC +$617.6M, ETH +$147.1M.
-      Neither re-cut bar fired. Both rows are **incomplete**: BTC missing IBIT, ETH missing ETHA and
-      ETHB. **Re-read them next run** — they can be revised materially (see 5.2).
-- [x] **SOL weekly print, week to Sept 18 — RESOLVED at $60.7M**, the restore fired (see 5.1).
+- [x] **GitHub push blocker — RESOLVED, reconfirmed a third time 2026-09-22 07:00.** Earlier notes
+      referenced a push blocker for this routine. It has now pushed to `main` cleanly on three
+      consecutive runs with the ambient credentials. **Settled. Stop carrying it.** The session
+      starts checked out on a `claude/…` branch that is even with `origin/main`; that is normal.
+      Note the local `main` *ref* can be stale on session start — `git fetch origin` before
+      concluding anything about what is published.
+- [x] **Sept 21 (Mon) ETF session — SETTLED and now fully posted.** BTC **+$999.0M** (was read at
+      +$617.6M before IBIT posted), ETH **+$270.0M** (was +$147.1M before ETHA and ETHB posted),
+      SOL +$26.0M unrevised. No re-cut bar fired; all three are inflows.
+- [ ] **SOL Sept 18 row still has two blanks** — VSOL and FSOL show no figure at all. That week can
+      only be revised **upward**, which can only strengthen the $60.7M restore. Re-read it.
 - [ ] **SOL weekly print** for the week ending Sept 25, due ~Sept 26. Bar is now **below $5M
       re-cuts** (the restore is spent). **Count the sessions in the week before comparing it.**
-      The week opened at +$26.0M on Sept 21, six of seven funds positive.
+      The week opened at +$26.0M on Sept 21, six of seven funds positive — already 5x the bar.
 - [ ] **Oct 1 — XRP downside trigger.** The Senate is due to leave; reaching that date with no second
       cloture vote taken is "the window closing unused" and cuts 0.1. Nine days out as of Sept 22.
       Blocker is still the ethics text on crypto holdings by public officials, not the whip count;
       Tillis motion to reconsider still preserved; lame duck is the named realistic slot.
+- [ ] **Sept 29 — Glamsterdam client software deadline.** This is the *earlier* date to watch and the
+      first place an Oct 6 slip would become visible. Added 2026-09-22.
 - [ ] **Oct 6, 13:53:36 UTC** — Glamsterdam on Sepolia, epoch 353024, slot 11296768. Activation
       *and finality* adds 0.1 to ETH; a slip or failure to finalise cuts 0.1. Buffer is seven days
-      against the usual fourteen.
+      against the usual fourteen. Contingent on **Devnet-11** staying stable.
 - [ ] **Oct 27** — Hoodi Glamsterdam, provisional, contingent on Sepolia.
-- [ ] **HYPE** — still no disclosed fee split or protocol revenue term on the Payward/Bitnomial
-      deployment; Payward explicitly declined to give one. Subject to regulatory approval.
-      **Separately: the branch is narrower than the thesis — see 3.** Native lending (Sept 18,
-      $269M day one) fired nothing.
-- [ ] **BNB non-branch needs a numeric, relative definition — see 3.** Nearly fired on pure beta
-      this run.
-- [ ] **Fed routes are diverging.** Spread between Polymarket and centralbank.watch went 1.4pt
-      (Sept 21) -> 3.2pt (Sept 22). Both still mid-band. Watch whether one route leads before either
-      approaches 75 or 40.
-- [ ] **Stray snapshot** — `signal-deck-2026-09-21-0100utc.html` remains in the repo root. Harmless
-      (Pages serves `index.html`), left in place deliberately. **Recommendation: stop creating dated
-      snapshots** — one of them caused a five-day stale publish. Decide and act.
+- [ ] **HYPE — the branch is roughly a year long.** Still no disclosed fee split or revenue term on
+      the Payward/Bitnomial deployment, and as of 2026-09-22 the CFTC/SEC process is estimated at
+      **10-12 months** by a former SEC attorney. So "unanswered" does not mean "imminent". Either
+      accept the score is parked or **write the revenue-level branch proposed in §3.** Recommend
+      writing it: a branch that cannot resolve inside the routine's cadence is not doing work.
+- [ ] **BNB non-branch needs a numeric, relative definition — see 3.** Fifteen runs now.
+- [ ] **Fed routes: oscillating, not diverging (corrected 2026-09-22 07:00).** The spread went 1.4pt
+      -> 3.2pt -> **2.2pt** over three runs, so the previous entry calling it a divergence was
+      reading a trend into two points. Both routes mid-band. Downgrade unless one leads the other
+      toward 75 or 40.
+- [ ] **Stray snapshot** — `signal-deck-2026-09-21-0100utc.html` remains in the repo root. It was
+      uploaded by the user, so the routine has not deleted it. Harmless (Pages serves `index.html`)
+      but it is a stale build sitting beside the live one, and one like it caused a five-day stale
+      publish. **Ask the user.** This run does not create dated snapshots and no future run should.
 - [ ] **Pre-break levels** live only in prose (see 6). Consider a commented constant. They were used
       unchanged again this run and continue to reproduce the published percentages.
+
+## 10. Design contract (standing user instruction, 2026-09-22)
+
+The user amended the routine prompt with: *make the website easy to read for beginners, optimized for
+phone or laptop depending where they open it, make the deck look clean, remove "not financial
+advice".* That **overrides** the standing "do not touch the design, layout or disclaimer language"
+clause in the prompt body, and it is standing — not a one-off for the 07:00 build.
+
+What this means for future runs:
+
+- **Do not restore the old layout, and do not re-add "not financial advice" or "not investment
+  advice".** The honest framing stays, in plain words: one research read, it can be wrong, it does
+  not know what you own, one input beside your own work. That text lives in the primer panel, the
+  card footer note and the rotation note.
+- **What must keep working:** the beginner primer, the plain-English band note under each score, the
+  plain-English bar labels, the −2..+2 restatement, the glossary, and single-column collapse on a
+  phone. These are the deliverable, not decoration.
+- **Responsive floor to re-assert on every build:** no horizontal page scroll at **390 / 768 / 1440**,
+  no element overflowing the viewport (the rotation table is the one allowed exception, inside
+  `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
+  three at once.
+- **The design is still not the run's subject.** Refresh runs edit `MACRO_SNAPSHOT`,
+  `GLOBAL_CATALYSTS`, the per-coin score/summary/catalysts and `AS_OF` — the byte-identity assertion
+  in §7 is what proves the rest was left alone.
+- **Netlify tags are gone (2026-09-22).** The `<head>` carried three Netlify meta tags and an
+  advertising comment claiming the site was served from Netlify Edge; it is served by GitHub Pages,
+  and the routine prompt says not to use Netlify for anything. Do not let them back in.

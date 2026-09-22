@@ -2,330 +2,342 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=474ad82c-56bd-4125-8bf5-ce1861cdf28e
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-<meta name="hosting-provider" content="Netlify">
-<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=474ad82c-56bd-4125-8bf5-ce1861cdf28e">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Signal Deck — a plain-English read on six major crypto assets: live chart signals blended with a dated macro and news layer.">
 <title>Signal Deck — Crypto Read</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #12141a;
-    --bg-raised: #1a1d26;
-    --bg-raised-2: #20232e;
-    --hairline: #2c303c;
-    --text: #e9e8e3;
-    --text-dim: #9296a3;
-    --text-faint: #676c7a;
-    --gold: #c9a24b;
+    --bg: #0f1116;
+    --surface: #171a23;
+    --surface-2: #1e2230;
+    --line: #2a2f3d;
+    --line-soft: #222634;
+    --text: #edece7;
+    --text-2: #b4b9c7;
+    --text-3: #888e9f;
+    --gold: #d4af61;
     --gold-dim: #8a7238;
-    --jade: #4bb583;
-    --jade-dim: #2c5f45;
-    --rust: #c1523b;
-    --rust-dim: #6b3226;
-    --slate: #8b93a7;
+    --jade: #5ac795;
+    --jade-dim: #2f6b4d;
+    --rust: #e0674c;
+    --rust-dim: #7a382a;
+    --slate: #98a0b5;
+
+    --step--1: clamp(0.78rem, 0.76rem + 0.10vw, 0.84rem);
+    --step-0:  clamp(0.94rem, 0.91rem + 0.15vw, 1.02rem);
+    --step-1:  clamp(1.05rem, 1.00rem + 0.25vw, 1.20rem);
+    --step-2:  clamp(1.25rem, 1.15rem + 0.50vw, 1.55rem);
+    --step-3:  clamp(1.75rem, 1.45rem + 1.50vw, 2.60rem);
+
+    --gap: clamp(14px, 2.2vw, 20px);
+    --section-gap: clamp(38px, 6vw, 68px);
+    --radius: 10px;
   }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
+  *{ box-sizing: border-box; }
+  html{ -webkit-text-size-adjust: 100%; }
+  html, body{ margin:0; padding:0; }
   body{
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.5;
-    padding: 0 0 64px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.6;
+    padding-bottom: clamp(48px, 8vw, 88px);
+    overflow-x: hidden;
   }
-  a{color:var(--gold);}
+  a{ color: var(--gold); }
+  h1, h2, h3{ font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+  .mono{ font-family: 'IBM Plex Mono', ui-monospace, monospace; }
 
-  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4.5vw, 32px);
+  }
 
   /* ---------- Header ---------- */
-  header{
-    border-bottom: 1px solid var(--hairline);
-    padding: 36px 0 26px 0;
-  }
+  header{ padding: clamp(28px, 5vw, 46px) 0 0 0; }
   .header-row{
-    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: clamp(14px, 3vw, 28px); flex-wrap: wrap;
   }
-  h1{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size: 2.15rem;
-    letter-spacing: -0.01em;
-    margin: 0 0 6px 0;
-    color: var(--text);
-  }
-  .subhead{
-    color: var(--text-dim);
-    font-size: 0.98rem;
-    max-width: 520px;
-  }
+  h1{ font-size: var(--step-3); margin: 0 0 8px 0; }
+  .subhead{ color: var(--text-2); font-size: var(--step-0); max-width: 46ch; margin: 0; }
   .meta-col{
-    text-align:right;
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--text-faint);
+    display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); color: var(--text-3);
   }
   #refreshBtn{
-    margin-top:10px;
     background: transparent;
     border: 1px solid var(--gold-dim);
     color: var(--gold);
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.78rem;
-    padding: 7px 14px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1);
+    padding: 11px 16px;
+    min-height: 44px;
+    border-radius: 999px;
     cursor: pointer;
-    letter-spacing: 0.02em;
     transition: border-color .15s ease, background .15s ease;
   }
-  #refreshBtn:hover{ border-color: var(--gold); background: rgba(201,162,75,0.08); }
-  #refreshBtn:disabled{ opacity:0.5; cursor:default; }
+  #refreshBtn:hover{ border-color: var(--gold); background: rgba(212,175,97,0.10); }
+  #refreshBtn:disabled{ opacity: 0.5; cursor: default; }
 
-  .disclaimer-band{
-    margin-top: 22px;
-    padding: 12px 16px;
-    background: var(--bg-raised);
-    border-left: 3px solid var(--gold-dim);
-    font-size: 0.83rem;
-    color: var(--text-dim);
+  /* ---------- Panels ---------- */
+  .panel{
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    padding: clamp(16px, 2.6vw, 22px);
   }
-  .disclaimer-band strong{ color: var(--text); }
+  details.panel > summary{
+    cursor: pointer; list-style: none;
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Fraunces', Georgia, serif; font-size: var(--step-1);
+    color: var(--text); min-height: 32px;
+  }
+  details.panel > summary::-webkit-details-marker{ display: none; }
+  details.panel > summary::before{
+    content: "+"; color: var(--gold); font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; width: 1rem; text-align: center; flex-shrink: 0;
+  }
+  details.panel[open] > summary::before{ content: "–"; }
+  details.panel[open] > summary{ margin-bottom: 14px; }
+
+  .primer{ margin-top: clamp(18px, 3vw, 26px); }
+  .primer-grid{
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  }
+  .primer-item h3{ font-size: var(--step-0); margin: 0 0 4px 0; color: var(--gold); }
+  .primer-item p{ margin: 0; color: var(--text-2); font-size: var(--step--1); line-height: 1.65; }
+  .primer-note{
+    margin: 16px 0 0 0; padding-top: 14px; border-top: 1px solid var(--line-soft);
+    color: var(--text-3); font-size: var(--step--1);
+  }
+
+  /* ---------- Section headings ---------- */
+  section{ margin-top: var(--section-gap); }
+  .sect-head{ margin-bottom: clamp(16px, 2.5vw, 22px); }
+  .sect-head h2{ font-size: var(--step-2); margin: 0 0 6px 0; color: var(--text); }
+  .sect-head .lede{ margin: 0; color: var(--text-2); font-size: var(--step--1); max-width: 68ch; }
+  .stamp{
+    display: inline-block; margin-top: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); color: var(--gold);
+  }
 
   /* ---------- Macro strip ---------- */
-  section.macro{
-    padding: 28px 0 8px 0;
-    border-bottom: 1px solid var(--hairline);
-  }
-  .macro h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size: 1.15rem;
-    margin: 0 0 14px 0;
-    color: var(--gold);
-  }
   .macro-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
-    margin-bottom: 18px;
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    margin-bottom: clamp(18px, 3vw, 26px);
   }
   .macro-cell{
-    background: var(--bg);
-    padding: 14px 16px;
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-radius: var(--radius); padding: 14px 16px;
   }
   .macro-cell .label{
-    font-size: 0.72rem;
-    color: var(--text-faint);
-    margin-bottom: 5px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 6px;
   }
-  .macro-cell .value{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 1.05rem;
-    color: var(--text);
-  }
+  .macro-cell .value{ font-size: var(--step--1); line-height: 1.55; color: var(--text); }
   .macro-cell .value.warn{ color: var(--rust); }
   .macro-cell .value.ok{ color: var(--jade); }
 
-  .catalysts-row{
-    display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 22px;
-  }
+  .catalysts-row{ display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); }
   .catalyst-chip{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.74rem;
-    color: var(--text-dim);
-    border: 1px solid var(--hairline);
-    padding: 5px 10px;
-    white-space: nowrap;
+    display: flex; gap: 10px; align-items: baseline;
+    border-left: 2px solid var(--line); padding: 7px 0 7px 12px;
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.55;
   }
-  .catalyst-chip b{ color: var(--gold); font-weight:600; }
+  .catalyst-chip b{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    color: var(--gold); font-weight: 600; font-size: 0.74rem;
+    white-space: nowrap; flex-shrink: 0; padding-top: 1px;
+  }
 
-  /* ---------- Asset grid ---------- */
-  section.assets{ padding-top: 30px; }
-  .assets h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size: 1.15rem;
-    margin: 0 0 16px 0;
-    color: var(--gold);
-  }
+  /* ---------- Asset cards ---------- */
   .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 18px;
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
   }
   .card{
-    background: var(--bg-raised);
-    border: 1px solid var(--hairline);
-    border-left: 3px solid var(--slate);
-    padding: 18px 20px 16px 18px;
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-top: 3px solid var(--slate); border-radius: var(--radius);
+    padding: clamp(16px, 2.4vw, 20px);
+    display: flex; flex-direction: column;
   }
-  .card.bullish{ border-left-color: var(--jade); }
-  .card.bearish{ border-left-color: var(--rust); }
-  .card.neutral{ border-left-color: var(--gold-dim); }
+  .card.bullish{ border-top-color: var(--jade); }
+  .card.bearish{ border-top-color: var(--rust); }
+  .card.neutral{ border-top-color: var(--gold-dim); }
 
-  .card-top{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:12px;
-  }
-  .name-block .sym{
-    font-family:'Fraunces', serif; font-size:1.3rem; font-weight:600; color: var(--text);
-  }
-  .name-block .full{
-    font-size:0.78rem; color: var(--text-faint);
-  }
-  .price-block{ text-align:right; }
-  .price-block .px{
-    font-family:'IBM Plex Mono', monospace; font-size:1.15rem; color: var(--text);
-  }
+  .card-top{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .name-block .sym{ font-family: 'Fraunces', Georgia, serif; font-size: var(--step-1); font-weight: 600; }
+  .name-block .full{ font-size: var(--step--1); color: var(--text-3); }
+  .price-block{ text-align: right; }
+  .price-block .px{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step-1); }
   .price-block .chg{
-    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; margin-top:2px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); margin-top: 2px; color: var(--text-3);
   }
   .chg.up{ color: var(--jade); }
   .chg.down{ color: var(--rust); }
 
-  .spark{ margin: 12px 0 10px 0; height: 40px; }
+  .spark{ margin: 14px 0 12px 0; height: 44px; }
 
   .signal-row{
-    display:flex; align-items:center; justify-content:space-between;
-    margin: 10px 0 14px 0;
-    padding: 10px 12px;
-    background: var(--bg-raised-2);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 12px 14px; background: var(--surface-2); border-radius: 8px;
   }
   .signal-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.82rem;
-    font-weight:600;
-    letter-spacing:0.02em;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step-0); font-weight: 600; letter-spacing: 0.02em;
   }
   .signal-label.bullish{ color: var(--jade); }
   .signal-label.bearish{ color: var(--rust); }
   .signal-label.neutral{ color: var(--gold); }
-  .signal-pct{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 1.1rem;
-    color: var(--text);
-  }
+  .signal-pct{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step-1); }
+  .band-note{ font-size: var(--step--1); color: var(--text-3); margin: 8px 0 14px 0; line-height: 1.5; }
 
-  .bars{ display:flex; flex-direction:column; gap:8px; margin-bottom: 12px; }
-  .bar-row{ display:flex; align-items:center; gap:8px; }
-  .bar-row .bar-label{ font-size:0.7rem; color:var(--text-faint); width:78px; flex-shrink:0; }
-  .bar-track{ flex:1; height:5px; background:var(--bg); position:relative; }
-  .bar-fill{ position:absolute; left:0; top:0; height:100%; background: var(--gold); }
-  .bar-row .bar-val{ font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--text-dim); width:32px; text-align:right; }
-
-  details{ margin-top: 4px; }
-  summary{
-    cursor:pointer; font-size:0.8rem; color: var(--slate);
-    list-style: none;
+  .bars{ display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+  .bar-row .bar-head{
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 5px;
   }
-  summary::-webkit-details-marker{ display:none; }
-  summary:before{ content:"+ "; color: var(--gold); }
-  details[open] summary:before{ content:"– "; }
-  .detail-body{ margin-top:10px; padding-top:10px; border-top:1px solid var(--hairline); font-size:0.82rem; color: var(--text-dim); }
-  .detail-body ul{ margin:6px 0 10px 0; padding-left:18px; }
-  .detail-body li{ margin-bottom:3px; }
-  .detail-body .sect-label{ color: var(--text-faint); font-size:0.7rem; text-transform:none; margin-top:8px; }
+  .bar-row .bar-label{ font-size: var(--step--1); color: var(--text-2); }
+  .bar-row .bar-val{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1); color: var(--text-3); }
+  .bar-track{ display: block; height: 6px; background: var(--bg); border-radius: 999px; position: relative; overflow: hidden; }
+  .bar-fill{ position: absolute; left: 0; top: 0; height: 100%; border-radius: 999px; }
+  .bar-sub{ font-size: 0.72rem; color: var(--text-3); margin-top: 4px; }
 
-  .card-footer-note{
-    margin-top:10px; font-size:0.68rem; color: var(--text-faint);
+  .card details{ margin-top: auto; }
+  .card summary{
+    cursor: pointer; list-style: none; font-size: var(--step--1); color: var(--gold);
+    min-height: 40px; display: flex; align-items: center; gap: 8px;
   }
+  .card summary::-webkit-details-marker{ display: none; }
+  .card summary::before{ content: "+"; font-family: 'IBM Plex Mono', monospace; width: 0.9rem; }
+  .card details[open] summary::before{ content: "–"; }
+  .detail-body{
+    margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--line-soft);
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.7;
+  }
+  .detail-body ul{ margin: 6px 0 12px 0; padding-left: 18px; }
+  .detail-body li{ margin-bottom: 5px; }
+  .detail-body p{ margin: 6px 0 12px 0; }
+  .detail-body .sect-label{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 12px;
+  }
+  .card-footer-note{ margin-top: 12px; font-size: 0.72rem; color: var(--text-3); line-height: 1.5; }
 
   /* ---------- Rotation watch ---------- */
-  section.rotation{ padding-top: 34px; }
-  .rotation h2{
-    font-family:'Fraunces', serif; font-weight:500; font-size:1.15rem;
-    margin: 0 0 6px 0; color: var(--gold);
-  }
-  .rotation .rot-intro{
-    font-size:0.84rem; color: var(--text-dim); max-width: 780px; margin-bottom:16px;
-  }
   .rot-verdict{
-    background: var(--bg-raised); border:1px solid var(--hairline);
-    border-left:3px solid var(--gold-dim);
-    padding: 14px 16px; margin-bottom:18px;
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-left: 3px solid var(--gold-dim); border-radius: var(--radius);
+    padding: 16px 18px; margin-bottom: var(--gap);
   }
   .rot-verdict .vlabel{
-    font-family:'IBM Plex Mono', monospace; font-size:0.8rem; font-weight:600;
-    letter-spacing:0.03em; color: var(--gold); margin-bottom:5px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
+    font-weight: 600; letter-spacing: 0.03em; color: var(--gold); margin-bottom: 6px;
   }
-  .rot-verdict .vtext{ font-size:0.86rem; color: var(--text-dim); }
-  .rot-table-wrap{ overflow-x:auto; margin-bottom: 20px; border:1px solid var(--hairline); }
+  .rot-verdict .vtext{ font-size: var(--step--1); color: var(--text-2); line-height: 1.65; }
+  .scroll-hint{ font-size: 0.72rem; color: var(--text-3); margin: 0 0 6px 0; }
+  .rot-table-wrap{
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line-soft); border-radius: var(--radius);
+    margin-bottom: var(--gap);
+  }
   table.rot{
-    border-collapse: collapse; width:100%; min-width: 640px;
-    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    border-collapse: collapse; width: 100%; min-width: 560px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
   }
   table.rot th, table.rot td{
-    padding: 9px 12px; text-align:right; border-bottom:1px solid var(--hairline);
-    white-space:nowrap;
+    padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line-soft); white-space: nowrap;
   }
-  table.rot th{
-    color: var(--text-faint); font-weight:500; font-size:0.7rem;
-    background: var(--bg-raised-2); text-align:right;
-  }
-  table.rot th:first-child, table.rot td:first-child{ text-align:left; color: var(--text-dim); }
-  table.rot tr:last-child td{ border-bottom:none; }
+  table.rot th{ color: var(--text-3); font-weight: 500; font-size: 0.72rem; background: var(--surface-2); }
+  table.rot th:first-child, table.rot td:first-child{ text-align: left; color: var(--text-2); }
+  table.rot tr:last-child td{ border-bottom: none; }
   table.rot td.lead{ color: var(--text); }
-  table.rot .tok{ font-family:'Fraunces', serif; font-size:0.95rem; color: var(--text); }
-  table.rot .best{ color: var(--jade); }
-  table.rot .worst{ color: var(--rust); }
+  table.rot .tok{ font-family: 'Fraunces', Georgia, serif; font-size: var(--step-0); color: var(--text); }
 
   .trigger{
-    border:1px solid var(--hairline); background: var(--bg-raised);
-    padding: 12px 14px; margin-bottom:10px;
-    display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap;
+    border: 1px solid var(--line-soft); background: var(--surface); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 10px;
+    display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap;
   }
   .trigger .tstate{
-    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; font-weight:600;
-    letter-spacing:0.05em; padding:3px 8px; flex-shrink:0; border:1px solid;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; border: 1px solid; flex-shrink: 0;
   }
   .tstate.hold{ color: var(--jade); border-color: var(--jade-dim); }
   .tstate.fired{ color: var(--rust); border-color: var(--rust-dim); }
-  .trigger .tbody{ flex:1; min-width:240px; }
-  .trigger .tname{ font-size:0.85rem; color: var(--text); margin-bottom:3px; }
-  .trigger .tdesc{ font-size:0.78rem; color: var(--text-faint); }
+  .trigger .tbody{ flex: 1; min-width: min(100%, 240px); }
+  .trigger .tname{ font-size: var(--step-0); color: var(--text); margin-bottom: 3px; }
+  .trigger .tdesc{ font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
   .trigger .tnums{
-    font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
-    color: var(--text-dim); margin-top:5px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem;
+    color: var(--text-3); margin-top: 7px; line-height: 1.6; overflow-wrap: anywhere;
   }
-  .rot-method{
-    border:1px solid var(--hairline); background: var(--bg-raised);
-    padding: 13px 16px; margin-top: 4px;
-  }
-  .rot-method summary{ font-size:0.84rem; color: var(--gold); }
-  .rot-method .detail-body{ font-size:0.82rem; }
+  .rot-method{ margin-top: 4px; }
   .rot-method h4{
-    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; font-weight:600;
-    letter-spacing:0.03em; color: var(--text-faint); margin:14px 0 5px 0;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); margin: 18px 0 6px 0;
   }
-  .rot-method h4:first-child{ margin-top:0; }
-  .rot-method p{ margin:0 0 8px 0; }
-  .rot-method .rule{ display:flex; gap:10px; margin-bottom:4px; align-items:baseline; }
+  .rot-method h4:first-child{ margin-top: 0; }
+  .rot-method p{ margin: 0 0 10px 0; }
+  .rot-method .rule{ display: flex; gap: 12px; margin-bottom: 6px; align-items: baseline; flex-wrap: wrap; }
   .rot-method .rule b{
-    font-family:'IBM Plex Mono', monospace; font-size:0.74rem; color: var(--gold);
-    flex-shrink:0; width:70px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem; color: var(--gold);
+    flex-shrink: 0; width: 66px;
   }
-  .rot-method .cliff{ margin-bottom:6px; }
-  .rot-method .cliff b{ font-family:'Fraunces', serif; color: var(--text); font-size:0.9rem; }
-  .rot-method .flag{
-    border-left:2px solid var(--rust-dim); padding-left:10px; color: var(--text-dim);
-  }
-  .rot-method .watch{
-    border-left:2px solid var(--jade-dim); padding-left:10px; color: var(--text-dim);
-  }
-  .rot-note{ font-size:0.72rem; color: var(--text-faint); margin-top:14px; max-width:820px; }
+  .rot-method .cliff{ margin-bottom: 8px; }
+  .rot-method .cliff b{ font-family: 'Fraunces', Georgia, serif; color: var(--text); font-size: var(--step-0); }
+  .rot-method .flag{ border-left: 2px solid var(--rust-dim); padding-left: 12px; }
+  .rot-method .watch{ border-left: 2px solid var(--jade-dim); padding-left: 12px; }
+  .rot-note{ font-size: 0.74rem; color: var(--text-3); margin-top: 16px; max-width: 78ch; line-height: 1.65; }
 
-  .loading-row{ color: var(--text-faint); font-family:'IBM Plex Mono', monospace; font-size:0.85rem; padding: 30px 0; text-align:center; }
-  .error-row{ color: var(--rust); font-family:'IBM Plex Mono', monospace; font-size:0.85rem; padding: 16px 0; }
+  /* ---------- Glossary ---------- */
+  .glossary-grid{
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+  .glossary-grid dt{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
+    color: var(--gold); margin-bottom: 3px;
+  }
+  .glossary-grid dd{ margin: 0 0 14px 0; font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
+
+  .loading-row{
+    color: var(--text-3); font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); padding: 28px 0; text-align: center;
+  }
+  .error-row{
+    color: var(--rust); font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); padding: 16px 0;
+  }
 
   footer{
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--hairline);
-    font-size: 0.76rem;
-    color: var(--text-faint);
+    margin-top: var(--section-gap); padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.76rem; color: var(--text-3); line-height: 1.7; max-width: 82ch;
+  }
+
+  @media (max-width: 640px){
+    .header-row{ align-items: flex-start; }
+    .meta-col{ width: 100%; }
+    #refreshBtn{ width: 100%; }
+    .card-top{ align-items: center; }
+    table.rot th, table.rot td{ padding: 9px 11px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
   }
 </style>
 </head>
@@ -336,145 +348,239 @@
     <div class="header-row">
       <div>
         <h1>Signal Deck</h1>
-        <div class="subhead">A composite read across six majors — live technical structure blended with a dated macro &amp; news layer.</div>
+        <p class="subhead">A plain-English read on six major crypto assets — live chart signals blended with a dated macro and news layer.</p>
       </div>
       <div class="meta-col">
         <div id="lastUpdated">loading prices…</div>
         <button id="refreshBtn">Refresh live data</button>
       </div>
     </div>
-    <div class="disclaimer-band">
-      <strong>Not financial advice.</strong> Every score below is a heuristic — a weighted mix of technical indicators and Claude's own qualitative reading of macro, geopolitical and news factors as of the date shown. It is not a statistically calibrated probability of price movement, not a recommendation to buy or sell, and it can be wrong. Crypto markets are highly volatile — size positions and manage risk accordingly, and treat this as one input among your own research.
-    </div>
+
+    <details class="panel primer" open>
+      <summary>New here? How to read this deck</summary>
+      <div class="primer-grid">
+        <div class="primer-item">
+          <h3>One score, two halves</h3>
+          <p>Each card ends in a single percentage. It is 55% live chart signals, computed in your browser from the last 100 days of prices, and 45% a hand-written read of news, policy and fund flows.</p>
+        </div>
+        <div class="primer-item">
+          <h3>What the words mean</h3>
+          <p>62% and above reads <b>Bullish</b>, 42% and below reads <b>Bearish</b>, and anything between the two reads <b>Neutral</b> — which usually means the chart and the news are pulling against each other.</p>
+        </div>
+        <div class="primer-item">
+          <h3>The news half is dated</h3>
+          <p>Prices refresh every time you open the page. The news read does not: it carries the date stamp shown below and only changes when the deck is rebuilt.</p>
+        </div>
+        <div class="primer-item">
+          <h3>Scores move on written rules</h3>
+          <p>The news score runs from −2 to +2 and only moves when a rule written down in advance is met — a flow number crossing a level, a vote happening, an upgrade shipping. Not on a feeling about the tape.</p>
+        </div>
+      </div>
+      <p class="primer-note">This is one research read, built by Claude, and it can be wrong. It describes what has happened and what the rules say — it does not know what you own, what you can afford to lose, or what you should do next. Treat it as one input beside your own work.</p>
+    </details>
   </header>
 
   <section class="macro">
-    <h2>Macro &amp; geopolitical backdrop — as of Sept 22, 2026 (02:00 UTC)</h2>
+    <div class="sect-head">
+      <h2>Market backdrop</h2>
+      <p class="lede">The six things in the wider world currently doing the most to move these prices — central bank pricing, US legislation, ETF money, energy and shipping.</p>
+      <span class="stamp">Research as of <span class="asOf">—</span></span>
+    </div>
     <div class="macro-grid" id="macroGrid"></div>
     <div class="catalysts-row" id="catalystsRow"></div>
   </section>
 
   <section class="assets">
-    <h2>Signals</h2>
+    <div class="sect-head">
+      <h2>The six signals</h2>
+      <p class="lede">Prices and chart indicators are live. Open <em>Why this read</em> on any card for the full reasoning and the dated catalysts behind its news score.</p>
+    </div>
     <div id="statusRow"></div>
     <div class="grid" id="assetGrid"></div>
   </section>
 
   <section class="rotation">
-    <h2>Rotation watch — perp DEX narrative</h2>
-    <div class="rot-intro">
-      When to rotate HYPE into a same-narrative challenger (ASTER, LIT). The logic: you rotate out of the leader when
-      the leader's <em>moat</em> is measurably eroding — not when a challenger's price is rising. Price momentum in a
-      challenger is usually just higher beta on the same trade. Market data below is live; volume and fee figures are a
-      dated research layer refreshed with the rest of the deck.
+    <div class="sect-head">
+      <h2>Rotation watch — perp DEX narrative</h2>
+      <p class="lede">
+        When to rotate HYPE into a same-narrative challenger (ASTER, LIT). The logic: you rotate out of the leader when
+        the leader&rsquo;s <em>moat</em> is measurably eroding — not when a challenger&rsquo;s price is rising. Price momentum in a
+        challenger is usually just higher beta on the same trade. Market data below is live; volume and fee figures are a
+        dated research layer refreshed with the rest of the deck.
+      </p>
     </div>
     <div id="rotVerdict"></div>
+    <p class="scroll-hint">Table scrolls sideways on a phone.</p>
     <div class="rot-table-wrap"><table class="rot" id="rotTable"></table></div>
     <div id="rotTriggers"></div>
     <div id="rotMethod"></div>
     <div class="rot-note" id="rotNote"></div>
   </section>
 
+  <section class="glossary">
+    <div class="sect-head">
+      <h2>Plain-English glossary</h2>
+      <p class="lede">Every term this page uses that a beginner has no reason to already know.</p>
+    </div>
+    <details class="panel">
+      <summary>Open the glossary</summary>
+      <dl class="glossary-grid">
+        <div>
+          <dt>Spot ETF flow</dt>
+          <dd>Money moving into or out of US funds that hold the coin itself. A positive session means the funds bought more than they sold that day. Reported per fund, one trading day at a time.</dd>
+        </div>
+        <div>
+          <dt>Settled session</dt>
+          <dd>A completed trading day whose flow figures have been published. Weekends and US holidays have none, and a freshly posted row can still be revised upward for a day or two.</dd>
+        </div>
+        <div>
+          <dt>Moving average (SMA)</dt>
+          <dd>The average closing price over the last 20 or 50 days. Price above it is usually read as an uptrend, below it as a downtrend.</dd>
+        </div>
+        <div>
+          <dt>RSI</dt>
+          <dd>A 0–100 gauge of how one-sided recent moves have been. Above 70 is often called overbought, below 30 oversold. It measures pace, not value.</dd>
+        </div>
+        <div>
+          <dt>MACD</dt>
+          <dd>The gap between two moving averages. Positive means short-term momentum is running ahead of the longer trend; negative means it is lagging.</dd>
+        </div>
+        <div>
+          <dt>Basis point (bp)</dt>
+          <dd>One hundredth of a percentage point. A 25bp rate move is 0.25%. Bond yields move in these, so a 4.1bp fall is a small one.</dd>
+        </div>
+        <div>
+          <dt>Cloture</dt>
+          <dd>The US Senate vote that ends debate so a bill can proceed. It needs 60 of 100 senators. Failing it stalls the bill without killing it outright.</dd>
+        </div>
+        <div>
+          <dt>Unlock / cliff</dt>
+          <dd>A date when tokens held by a team or early investor become sellable. A large one is known supply arriving on a known day.</dd>
+        </div>
+        <div>
+          <dt>Perp (perpetual future)</dt>
+          <dd>A leveraged contract tracking a price with no expiry date. Perp exchanges earn fees on the volume they route.</dd>
+        </div>
+        <div>
+          <dt>TVL and FDV</dt>
+          <dd>TVL is the value of assets deposited in a protocol. FDV is what the token would be worth if every coin that will ever exist already traded.</dd>
+        </div>
+        <div>
+          <dt>Take rate</dt>
+          <dd>Fees earned per dollar traded, in basis points. It is the clearest test of whether a venue can charge for volume or is renting it with incentives.</dd>
+        </div>
+        <div>
+          <dt>Pre-break level</dt>
+          <dd>A fixed reference price this deck measures against, set before the current move began, so each asset can be compared on the same yardstick.</dd>
+        </div>
+      </dl>
+    </details>
+  </section>
+
   <footer>
-    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko's public API on load and on refresh. The macro/fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts, and similar — reflects research current as of 02:00 UTC on September 22, 2026 and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores. Not investment advice.
+    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko&rsquo;s public API on load and on refresh. The macro and fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts and similar — reflects research current as of <span class="asOf">—</span> and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores, and are a heuristic rather than a calibrated probability. Crypto markets are volatile, and every figure here can be checked against the source named beside it.
   </footer>
 </div>
 
 <script>
+/* Single source of truth for the build stamp — every "as of" label on the page
+   reads from here, so a refresh cannot leave one of them stale. */
+const AS_OF = 'Sept 22, 2026, 07:00 UTC';
+
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
     macroScore: -0.3,
-    summary: "Held at -0.3, and this run both legs were tested against live data rather than left pending. The flow leg finally has its session: Farside settled Sept 21 at +$617.6M, the first US ETF session since Sept 18 and the second consecutive large inflow after that day at +$433.0M. The re-cut bar needs one settled session below -$300M, or two consecutive each below -$150M, and a pair of large inflows fires neither. One caveat travels with the number, and it is the one this deck learned on the ETH Sept 15 row: IBIT has not posted yet, so +$617.6M is an incremental read of a row that is still settling, and IBIT averages +$95.1M a session. Within what has posted, ARKB at +$289.1M and MSBT at +$61.7M are each the largest single-session figure Farside records for those funds. The Fed leg was tested on the two routes the branch requires and fired neither. Polymarket, read live from its own API at 02:07 UTC, prices a 25bp increase at 52.5% against 46.5% for no change; centralbank.watch, derived from fed funds futures, reads 55.7 / 44.3 / 0.0. Both sit inside the 40 to 75 band, though the spread between the two routes has widened from 1.4pt yesterday to 3.2pt, and centralbank.watch has advanced its stamp to Sept 21, which it failed to do yesterday. On the tape BTC printed 87,397.00 at 20:00 on Sept 21, clearing the 82,283.00 of Sept 3 that had stood as its twenty-one-day high; unlike yesterday the seven-day and twenty-one-day windows now agree on that print. It has since given back 2.06%, trades 10.77% above the pre-break level, and rose 5.71% on the day.",
+    summary: "Held at -0.3, with the flow leg re-read rather than re-tested. Farside now carries the Sept 21 session at +$999.0M, up from the +$617.6M this deck published five hours ago, because IBIT has posted at +$381.4M and it was the single largest line on the row. That is the caveat from the last build resolving in the direction the caveat warned about, and it is worth keeping the size of it: the published figure moved 61.7% in five hours, so an incomplete Farside row is a floor and never a settle. The re-cut bar needs one settled session below -$300M or two consecutive each below -$150M, and the revision moves a large inflow further from both. Context sharpens what that session was: the whole trading week to Sept 18 netted just +$6.1M across five sessions, so Monday alone brought in more than a hundred times the week that preceded it. Farside records a larger day than this one on the same table, a maximum of $1,373.8M, so Sept 21 is a big session rather than a record one. The Fed leg was read again on both required routes and fired neither. Polymarket, from its own API at 07:27 UTC, prices a 25bp increase at 53.5% against 45.5% for no change, up about a point overnight; centralbank.watch is unchanged at 55.7 / 44.3 / 0.0 with its stamp still on Sept 21. Both sit inside the 40 to 75 band, and the gap between the routes has narrowed from 3.2pt to 2.2pt. On the tape BTC holds 85,359.23, up 4.58% over 24 hours, 2.33% below the 87,397.00 it printed on Sept 21 and 10.46% above the pre-break level.",
     catalysts: [
-      {date:'Sept 21', text:'Farside settled the first session since Sept 18 at +$617.6M, after +$433.0M on that Friday'},
-      {date:'Incomplete', text:'IBIT has not posted on that row, and it averages +$95.1M a session, so the figure can still move'},
-      {date:'Fed', text:'Polymarket 52.5% and centralbank.watch 55.7% - the branch needs above 75 or below 40 on two routes'}
+      {date:'Revised up', text:'Sept 21 now reads +$999.0M against the +$617.6M published five hours ago, because IBIT posted at +$381.4M'},
+      {date:'Context', text:'The full week to Sept 18 netted +$6.1M across five sessions, so one session beat all five together'},
+      {date:'Fed', text:'Polymarket 53.5% at 07:27 UTC and centralbank.watch 55.7% - the branch needs above 75 or below 40 on both'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
     macroScore: 0.4,
-    summary: "Held at +0.4, with the flow leg tested for the first time since Sept 18 and unfired. Farside settled Sept 21 at +$147.1M, and the re-cut bar needs two consecutive sessions each below -$150M, so a positive print ends that question for now. The incremental-settlement caveat applies here more heavily than on Bitcoin: ETHA and ETHB are both unposted on that row, and ETHA alone averages +$23.9M a session against a whole-table average of +$24.8M, so the single largest contributor to the row is the one missing from it. So +$147.1M is better read as a floor on the session than as a settled total. Worth recording against the bar itself while it sits idle: the two weakest sessions Farside currently shows are Sept 15 at -$142.0M and Sept 16 at -$224.1M, which are consecutive, but only one of them is below -$150M, so even at its worst the fortnight did not fire the branch. The roadmap leg is unchanged and unfired because its date has not arrived. Glamsterdam on Sepolia stays set for Oct 6 at 13:53:36 UTC, at epoch 353024 and slot 11296768, with Hoodi provisionally Oct 27 contingent on how Sepolia performs, and the buffer between client releases and the fork is seven days against the fourteen Ethereum normally allows for audit. Activation and finality adds 0.1; a slip, or a failure to finalise, cuts 0.1. Mainnet still carries no epoch and no timestamp beyond a Q4 2026 designation. ETH set a twenty-one-day high of 2,807.10 at 20:00 on Sept 21, sits 2.10% below it, and trades 9.59% above the pre-break level.",
+    summary: "Held at +0.4, and the row this deck flagged as incomplete has now filled in. Farside carries Sept 21 at +$270.0M against the +$147.1M published five hours ago: ETHA has posted at +$110.1M and ETHB at +$12.8M, the two lines called out as missing, alongside FETH at +$73.0M and the Grayscale mini trust at +$59.3M. An 83.6% upward revision on a five-hour-old figure is the clearest illustration this deck has had of why an early read gets published as a floor. The re-cut bar needs two consecutive sessions each below -$150M, and a single large inflow moves nothing toward it. The week that preceded it is the better measure of how much the mood changed: Sept 14 to Sept 18 ran -$140.6M net, with Sept 16 alone at -$224.1M, so Monday put back nearly twice what the whole previous week removed. The roadmap leg is unfired because its date has not arrived. Glamsterdam activates on Sepolia on Oct 6 at 13:53:36 UTC, at epoch 353024 and slot 11296768, with client software due Sept 29, which leaves a seven-day buffer against the fourteen Ethereum normally allows. The date was locked on the Sept 17 developer call and remains contingent on continued stability in the Devnet-11 private environment, and earlier Glamsterdam devnet cycles surfaced both implementation bugs and finality issues. Activation and finality adds 0.1; a slip or a failure to finalise cuts 0.1. Mainnet still has no epoch and no timestamp beyond a Q4 2026 designation. ETH trades 2,730.01, up 2.52% over 24 hours and 2.75% below its Sept 21 print of 2,807.10.",
     catalysts: [
-      {date:'Sept 21', text:'Settled at +$147.1M, so the bar of two consecutive sessions below -$150M is tested and unfired'},
-      {date:'Incomplete', text:'ETHA and ETHB are both unposted, and ETHA alone averages +$23.9M against a table average of +$24.8M'},
-      {date:'Oct 6', text:'Sepolia at 13:53:36 UTC, epoch 353024, slot 11296768; Hoodi provisionally Oct 27'}
+      {date:'Revised up', text:'Sept 21 now reads +$270.0M against +$147.1M, with ETHA at +$110.1M and ETHB at +$12.8M both posted'},
+      {date:'Context', text:'The week to Sept 18 ran -$140.6M net, so one session put back nearly twice what the week removed'},
+      {date:'Oct 6', text:'Sepolia at 13:53:36 UTC, client software due Sept 29, still contingent on Devnet-11 staying stable'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.5,
-    summary: "Raised from +0.4 to +0.5 - the only score move on this deck since Sept 20, and it comes from correcting a reading error rather than from new news. The branch is a weekly ETF print above $50M to restore the remaining 0.1, or below $5M to re-cut it. Yesterday this deck held because two publishers appeared to disagree about the week ending Sept 18: $13.2M citing SoSoValue against $60.7M citing CryptoBriefing, and it resolved the conflict by calling it one disputed session and standing on the SoSoValue series. A third and independent route now settles it differently. Farside has begun publishing a Solana ETF table fund by fund, and its rows for that week read 11.0 on Monday, 1.3 on Tuesday, 0.8 on Wednesday, 0.0 on Thursday and 47.6 on Friday, summing to exactly $60.7M. Those daily figures agree with the SoSoValue dailies on every day the two overlap - 11.01, 1.35, 836,926 and no change. So there was never a vendor dispute. The $13.2M was a four-day partial week, Monday to Thursday, published on Sept 19 before the Friday row was in hand, and yesterday this deck compounded the error by placing the missing $47.6M on Thursday Sept 17 when both Farside and the reporting put it on Friday Sept 18 in BSOL. One limit on this run is worth stating: SoSoValue itself sits behind a challenge that did not clear, so its own Friday row was not read directly, and the restore rests on Farside plus reporting putting about $48M into BSOL that day. A completed week of $60.7M clears the $50M bar, so the restore fires. The new week has opened at +$26.0M on Sept 21 alone. SOL printed 119.99 at 21:00 and trades 2.03% below it, 16.06% above the pre-break level.",
+    summary: "Held at +0.5, one build after the restore that took it there, and the restore survives its first re-read. The move rested on a completed week to Sept 18 of $60.7M against a $50M bar, reconstructed from the Farside table after a widely repeated $13.2M figure turned out to be a four-day partial week that stopped at Thursday. Re-reading that table this run returns the same rows: 11.0 on the Monday, 1.3, 0.8, 0.0 on the Thursday and 47.6 on the Friday. Two details are worth carrying rather than filing as settled. VSOL and FSOL still show no figure at all for Friday Sept 18, so that row can be revised upward but not downward, which means the week can only get further above the bar. And Solana flows are much the smaller series of the three this deck reads: the whole table averages $6.4M a session against $83.3M for Bitcoin, so a single fund having a good Friday is most of a Solana week. The new week has opened at +$26.0M on Sept 21, unrevised since yesterday, with six of the seven funds positive, and the restore is now spent: the live bar going the other way is a weekly print below $5M, which would re-cut the 0.1. That bar is a fortnight of quiet away rather than one bad session, and the first session of this week has already cleared it five times over. On the tape SOL holds 116.51, up 3.87% over 24 hours, 2.90% below the 119.99 it printed on Sept 21 and 15.03% above the pre-break level, the second strongest of the six on that measure.",
     catalysts: [
-      {date:'Move', text:'Raised to +0.5 - the completed week to Sept 18 reads $60.7M, clearing the $50M restore bar'},
-      {date:'Corrected', text:'The $13.2M was Monday to Thursday only; Farside puts the missing $47.6M on Friday Sept 18'},
-      {date:'Sept 21', text:'The new week opened at +$26.0M in its first session, with six of the seven funds positive'}
+      {date:'Re-read', text:'The Farside week to Sept 18 returns the same $60.7M on a second reading, so the restore stands'},
+      {date:'Pending', text:'VSOL and FSOL still show no figure for Friday Sept 18, so that week can only be revised upward'},
+      {date:'Live bar', text:'The restore is spent; what moves this score now is a weekly print below $5M, which re-cuts the 0.1'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'BNB',
     macroScore: 0.0,
-    summary: "Held at 0.0 for a fourteenth consecutive run, and this run gave the standing reasoning its cleanest test yet. This card has been held on the judgement that the fundamentals keep improving while the price will not pay for them in either direction, and the fair objection to that is that such a hold is never really tested in a flat tape. Sept 21 was not a flat tape. It was the strongest session of this series, with every one of the six setting a twenty-one-day high inside it. BNB rose 1.92% in that session, the second weakest of the six, 3.79pt behind Bitcoin and 5.48pt behind XRP, and it now sits 3.10% below its own high of the day, the second furthest of the six behind XRP at 3.99%. So on the day the market repriced risk hardest, BNB participated least of anything except Hyperliquid. That is evidence for the hold rather than against it, which is the first time this deck can say so from a strong tape rather than a quiet one. Nothing new surfaced on fundamentals beyond further syndication of the same figures, and the searches were again dominated by presale promotion for an unrelated token, which was filtered out. Market capitalisation back above $100B was reported on Sept 21, and it is a level rather than a catalyst. The object check that has held this score still holds: the Binance Research 88.2% is a share of tokenized stock DEX volume for BNB Chain and Robinhood Chain combined in a largely non-US market, while BNB Chain alone holds roughly $1B of issuance inside a tokenized-stock market capitalisation of about $3.1B. BNB printed 814.41 at 12:00 and trades 9.42% above the pre-break level.",
+    summary: "Held at 0.0 for a fifteenth consecutive run, and this run replaces the deck's longest-running object check with a cleaner number. The figure this card has repeatedly had to qualify is 88.2%, which is a share of tokenized stock DEX volume for BNB Chain and Robinhood Chain combined in a largely non-US market, and which is routinely repeated as though it were a share of the tokenized stock market itself. Reporting dated Sept 21 gives the like-for-like figure directly: tokenized stocks reached $3.5B of market value, of which BNB Chain holds $1.0B, or 32.7%, ahead of Ethereum at $770.1M and Solana at $715.9M. So BNB Chain does lead that market, and it leads it by roughly a third rather than by seven eighths; the two numbers measure different things and only one of them answers the question people ask. That market has also grown from the $3.1B reported on Sept 6, which is a real trend rather than a single print. On the tape BNB rose 1.88% over the last 24 hours, the second weakest of the six ahead of Hyperliquid and 0.64pt behind Ethereum, and it sits 3.44% below the 814.41 it printed on Sept 21. Against the pre-break level BNB is 9.03% up and Ethereum 8.86%, a gap of 0.17pt, which is inside the noise floor this deck applies, so no ordering claim is made between them. The hold itself still rests on a judgement rather than a numeric trigger: fundamentals keep improving and the price will not pay for them in either direction. That non-branch needs a numeric, relative definition and does not yet have one.",
     catalysts: [
-      {date:'Fourteenth', text:'Fourteenth run of the same hold, and the first one tested against a genuinely strong tape'},
-      {date:'Evidence', text:'BNB rose 1.92% on the strongest session of the series, 3.79pt behind Bitcoin'},
-      {date:'Object', text:'The 88.2% is tokenized stock DEX volume, BNB Chain and Robinhood Chain combined, largely non-US'}
+      {date:'Sept 21', text:'Tokenized stocks reached $3.5B of market value, with BNB Chain holding $1.0B of it, a 32.7% share'},
+      {date:'Object', text:'That 32.7% is share of market value; the 88.2% figure is DEX volume across two chains, largely non-US'},
+      {date:'Fifteenth', text:'Fifteenth run of the same hold, and the non-branch behind it still needs a numeric definition'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: 0.0,
-    summary: "Held at 0.0 for a sixth run, with the branch unfired in both directions - but the window that would fire it downward is now nine days from closing. Cloture on H.R. 3633 failed 49-50 on Sept 15, short not merely of the 60 needed but of a simple majority. The Tillis motion to reconsider is still preserved, he having changed his vote to the prevailing side precisely so he could file it, and no second vote is scheduled, confirmed again this run. The branch adds 0.2 on a second cloture vote passing and cuts 0.1 if the motion fails or the window closes unused, and that second condition has been carried without a date attached to it. This run fixes one. The Senate is due to leave on Oct 1, so a pre-midterm window that reaches Oct 1 with no second vote taken is the window closing unused, and the branch cuts. The blocker is unchanged: the ethics language governing crypto holdings by public officials, with Democrats holding that the revised text does not effectively apply to the president and first family. A contested drafting title does not move the way a whip count can. Thune can move to reconsider if a deal on that text emerges, and the lame-duck session after the midterms remains the named realistic slot. On the tape XRP was the clearest mover of the six at +7.40%, a margin of 1.42pt over Solana that sits well outside the noise floor this deck applies to ordering claims. It printed 1.5746 at 22:00 on Sept 21, the latest of the six highs, and has since given back 3.99%, the most of the six. It trades 11.42% above the pre-break level.",
+    summary: "Held at 0.0 for a seventh run, with nothing scheduled and the clock now the only thing moving. Cloture on H.R. 3633 failed 49-50 on Sept 15, short not merely of the 60 needed but of a simple majority, with every Democrat present voting no over the ethics language governing crypto holdings by public officials. The Tillis motion to reconsider is still preserved, he having changed his vote to the prevailing side precisely so that he could file it, and no second vote is scheduled, confirmed again this run. The branch adds 0.2 if a second cloture vote passes and cuts 0.1 if the motion fails or the window closes unused, and the previous build fixed a date to that second condition: the Senate is due to leave on Oct 1, so reaching Oct 1 with no second vote taken is the window closing unused. That is nine days out at this stamp. The distinction that matters for reading the odds is unchanged: the blocker is a contested drafting question about whether revised ethics text effectively reaches the president and first family, not a whip count that can be flipped by persuasion, and a drafting dispute does not resolve on a schedule. Thune can move to reconsider if a deal on that text emerges, and the lame-duck session after the midterms is still the named realistic slot. Ripple has argued separately that the failed vote does not reopen or alter the token's existing legal footing. On the tape XRP was the strongest of the six over 24 hours at +5.79%, a margin of 1.21pt over Bitcoin, and it holds 1.5192 after printing 1.5746 on Sept 21.",
     catalysts: [
-      {date:'Oct 1', text:'The Senate is due to leave in nine days; a window reaching that date with no vote taken cuts 0.1'},
-      {date:'Sixth run', text:'No second cloture vote scheduled; the Tillis motion to reconsider is still preserved'},
-      {date:'Why', text:'The blocker is the ethics text on crypto holdings by public officials, not the whip count'}
+      {date:'Oct 1', text:'Nine days until the Senate is due to leave; reaching that date with no second vote taken cuts 0.1'},
+      {date:'Seventh run', text:'No second cloture vote scheduled, and the Tillis motion to reconsider is still preserved'},
+      {date:'Why', text:'The blocker is the ethics text on crypto holdings by public officials, not a whip count that persuasion can flip'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Held at -0.1. The written branch moves this score on a disclosed fee split or a protocol revenue term on the Payward and Bitnomial HIP-3 deployment, and there is still none. Payward has disclosed no fee schedule, no expected trading volumes, no economic arrangement with Hyperliquid and no launch date; no fee-sharing with the HYPE buyback has been disclosed; a Kraken spokesperson declined to speculate on the revenue it might bring. Bitnomial Exchange and Bitnomial Clearinghouse act as the HIP-3 deployer, creating, owning and clearing the market, while NinjaTrader Clearing, the registered futures commission merchant of Payward, carries client accounts, and all of it stays subject to regulatory approval. What is new this run cuts at the thesis without touching the branch, and the distinction is worth stating rather than blurring. Hyperliquid launched native lending on Sept 18, and $269M was borrowed in the first twenty-four hours, with a 65% loan-to-value limit on HYPE collateral against 50% on Bitcoin. This score handicaps one thing: protocol revenue erosion from HIP-3, with revenue down from $356.7M in Q3 2025 to $201.8M in Q2 2026 while volume set records. A protocol-level credit business is evidence on that thesis. It is not evidence on the branch as written, which names one deal and one disclosure, so the score does not move and the branch is flagged as possibly narrower than the thesis it serves. HYPE printed 96.07 at 11:00 on Sept 21, above the 94.46 that reporting on Sept 19 called an all-time high, but it peaked earliest of the six and rose least at +0.58%. It is 18.75% above the pre-break level, the strongest of the six by 2.69pt over Solana.",
+    summary: "Held at -0.1, and this run puts a length of time against the branch for the first time. The written branch moves this score on a disclosed fee split or a protocol revenue term on the Payward and Bitnomial HIP-3 deployment, announced Sept 16, and none has been disclosed: no fee schedule, no expected volumes, no economic arrangement with Hyperliquid, no launch date, and a Kraken spokesperson declining to speculate on the revenue it might bring. What is new is the horizon. Payward has filed with the CFTC and has not been approved, and a former SEC attorney puts the process at ten to twelve months across both the SEC and the CFTC. The structure is unchanged: Bitnomial Exchange deploys, owns and administers the markets under a HIP-3 rule requiring the deployer to stake 500,000 HYPE, Bitnomial Clearinghouse clears and settles, and NinjaTrader Clearing carries client futures accounts. So the branch that governs this score is plausibly a year from resolving, which is worth saying plainly rather than carrying it forward each run as though an answer were imminent. The thesis it serves is narrower than the evidence available to test it: the score handicaps protocol revenue erosion from HIP-3, with revenue down from $356.7M in Q3 2025 to $201.8M in Q2 2026, while native lending launched Sept 18 and drew $269M of borrowing on day one. That is evidence on the thesis and not on the branch, so the score does not move. HYPE holds 94.12, up 0.15% over 24 hours, the weakest of the six by 1.73pt, and 19.90% above the pre-break level, the strongest of the six by 4.87pt.",
     catalysts: [
-      {date:'Sept 18', text:'Hyperliquid launched native lending and $269M was borrowed in the first twenty-four hours'},
-      {date:'Not the branch', text:'That is evidence on the revenue thesis but not the disclosure the written branch names'},
-      {date:'Unanswered', text:'Still no fee split or protocol revenue term on the Payward and Bitnomial deployment'}
+      {date:'Horizon', text:'A former SEC attorney puts CFTC and SEC approval at ten to twelve months, so the branch may be a year out'},
+      {date:'Unanswered', text:'Still no fee split, no volumes, no launch date and no economic term on the Payward and Bitnomial deployment'},
+      {date:'Not the branch', text:'Native lending drew $269M on day one, which tests the revenue thesis but not the disclosure the branch names'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'Fed / October', value:'Polymarket live 52.5% hike vs 46.5% no change; centralbank.watch 55.7 / 44.3 / 0.0', cls:'warn'},
-  {label:'CLARITY cloture', value:'FAILED 49-50 Sept 15; no second vote scheduled and the Senate is due to leave Oct 1', cls:'warn'},
-  {label:'BTC ETF flows', value:'Sept 21 settled +$617.6M after +$433.0M on Sept 18 - but IBIT has not posted on that row', cls:'ok'},
-  {label:'SOL ETF flows', value:'The completed week to Sept 18 reads $60.7M on Farside, clearing the $50M restore bar', cls:'ok'},
-  {label:'Oil and diesel', value:'Brent settled Sept 21 at $100.34 against $103.87 on Sept 18; AAA diesel $6.5107, a fresh record', cls:'warn'},
+  {label:'Fed / October', value:'Polymarket 53.5% hike against 45.5% no change at 07:27 UTC; centralbank.watch 55.7 / 44.3 / 0.0', cls:'warn'},
+  {label:'CLARITY cloture', value:'FAILED 49-50 on Sept 15; no second vote scheduled and the Senate is due to leave on Oct 1', cls:'warn'},
+  {label:'BTC ETF flows', value:'Sept 21 revised up to +$999.0M once IBIT posted; the whole week before it netted +$6.1M', cls:'ok'},
+  {label:'ETH ETF flows', value:'Sept 21 revised up to +$270.0M with ETHA and ETHB now posted, against -$140.6M the week before', cls:'ok'},
+  {label:'Oil and diesel', value:'Brent settled Sept 21 at $100.34 against $103.87 on Sept 18; AAA diesel $6.5107, a record', cls:'warn'},
   {label:'Hormuz', value:'IMF PortWatch logged 8 transits on Sept 13 against an 85-a-day pre-crisis baseline', cls:'warn'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'Sept 21', text:'All six rose again - a third consecutive 24-hour window with every name up'},
-  {date:'Fresh highs', text:'All six set their twenty-one-day high inside the Sept 21 session, each of them a seven-day high too'},
-  {date:'BTC', text:'87,397.00 at 20:00 clears the 82,283.00 of Sept 3 that had stood as the twenty-one-day high'},
-  {date:'Pullback', text:'Every one of the six now trades between 2.03% and 3.99% below the high it set yesterday'},
-  {date:'Publishable', text:'XRP rose most at +7.40%, a margin of 1.42pt over Solana, which is outside the noise floor'},
-  {date:'Publishable', text:'HYPE rose least at +0.58%, 1.34pt behind BNB, and it peaked earliest of the six at 11:00'},
-  {date:'Noise floor', text:'Solana at +5.98% and Bitcoin at +5.71% are 0.27pt apart, so no ordering claim is made on them'},
-  {date:'Driver', text:'Bitcoin closed the week to Sept 20 at $81,159, above its 50-week average for the first time in 45 weeks'},
-  {date:'Squeeze', text:'CoinGlass counted about $313M liquidated in one hour as BTC broke $84,000, 96% of it shorts'},
-  {date:'Second read', text:'A 24-hour figure of $769.80M across 115,490 traders is published elsewhere - a different window'},
-  {date:'BTC flows', text:'Sept 21 settled at +$617.6M, a second consecutive large inflow after +$433.0M on Sept 18'},
-  {date:'Incomplete', text:'IBIT has not posted on that row; ARKB at +$289.1M is the largest session Farside records for it'},
-  {date:'Branch', text:'The BTC re-cut bar needs one session below -$300M or two below -$150M; +$617.6M fires neither'},
-  {date:'ETH flows', text:'Sept 21 settled at +$147.1M with ETHA and ETHB still unposted, so that row can still move'},
-  {date:'SOL, corrected', text:'Farside carries the week to Sept 18 at $60.7M: 11.0, 1.3, 0.8, 0.0 and 47.6 on the Friday'},
-  {date:'Not a dispute', text:'The $13.2M read was Monday to Thursday only - the $47.6M sits on Friday Sept 18, not Thursday'},
-  {date:'Branch fires', text:'A completed week of $60.7M clears the $50M bar, so Solana is raised from +0.4 to +0.5'},
-  {date:'Fed, live', text:'Polymarket read from its own API at 02:07 UTC: 52.5% for a 25bp increase, 46.5% no change'},
-  {date:'Fed, second route', text:'centralbank.watch, futures-derived, reads 55.7 / 44.3 / 0.0 and has advanced its stamp to Sept 21'},
-  {date:'Rates', text:'The US 10-year fell 4.1bp to 4.9560% on Sept 21 as Brent settled 3.40% lower at $100.34'},
-  {date:'Sept 21', text:'AAA national diesel average $6.5107, a fresh record, up 76.2% on the $3.6958 of a year ago'}
+  {date:'Revised up', text:'Farside now carries BTC Sept 21 at +$999.0M against the +$617.6M this deck published five hours ago'},
+  {date:'Why', text:'IBIT has posted at +$381.4M - it was the missing line and the largest single fund on the row'},
+  {date:'Revised up', text:'ETH Sept 21 now reads +$270.0M against +$147.1M, with ETHA at +$110.1M and ETHB at +$12.8M posted'},
+  {date:'Lesson', text:'Both figures moved more than 60% in five hours, so an incomplete Farside row is a floor and never a settle'},
+  {date:'Context', text:'The whole BTC week to Sept 18 netted +$6.1M across five sessions, so Monday alone beat all five together'},
+  {date:'Context', text:'That same week ran -$140.6M for ETH, and Monday put back nearly twice what the week had removed'},
+  {date:'Scale', text:'Farside records a larger day than Sept 21 on the same table, a maximum of $1,373.8M, so it is big and not a record'},
+  {date:'SOL flows', text:'Sept 21 stands unrevised at +$26.0M with six of the seven funds positive, opening the week to Sept 25'},
+  {date:'SOL, pending', text:'VSOL and FSOL still show no figure for Friday Sept 18, so that week can only be revised upward'},
+  {date:'Branches', text:'Every flow bar on this deck is a downside bar, so three positive sessions fire none of them'},
+  {date:'Fed, live', text:'Polymarket at 07:27 UTC reads 53.5% for a 25bp hike against 45.5% for no change, up about a point overnight'},
+  {date:'Fed, route 2', text:'centralbank.watch is unchanged at 55.7 / 44.3 / 0.0 and its stamp still reads Sept 21'},
+  {date:'Spread', text:'The gap between the two Fed routes has narrowed from 3.2pt to 2.2pt, and both sit mid-band'},
+  {date:'Tape', text:'All six are higher again over 24 hours, and every one of the six gains is smaller than at the 02:00 build'},
+  {date:'Pullback', text:'All six still sit between 1.37% and 3.52% below the highs they set during the Sept 21 session'},
+  {date:'Publishable', text:'XRP rose most over 24 hours at +5.79%, a margin of 1.21pt over Bitcoin at +4.58%'},
+  {date:'Publishable', text:'HYPE rose least at +0.15%, 1.73pt behind BNB, yet it leads the six against the pre-break level'},
+  {date:'Noise floor', text:'BNB at 9.03% and ETH at 8.86% above the pre-break level are 0.17pt apart, so no ordering claim is made'},
+  {date:'Highs', text:'Seven-day and twenty-one-day highs are still the same print for all six, every one set during Sept 21'},
+  {date:'BNB', text:'Tokenized stocks reached $3.5B on Sept 21, with BNB Chain at $1.0B of it, a 32.7% share'},
+  {date:'Oct 1', text:'Nine days until the Senate is due to leave, the date the XRP downside branch now carries'}
 ];
 
 function renderMacro(){
@@ -486,7 +592,8 @@ function renderMacro(){
     </div>
   `).join('');
   const row = document.getElementById('catalystsRow');
-  row.innerHTML = GLOBAL_CATALYSTS.map(c => `<div class="catalyst-chip"><b>${c.date}</b> — ${c.text}</div>`).join('');
+  row.innerHTML = GLOBAL_CATALYSTS.map(c => `<div class="catalyst-chip"><b>${c.date}</b><span>${c.text}</span></div>`).join('');
+  document.querySelectorAll('.asOf').forEach(el => { el.textContent = AS_OF; });
 }
 
 function average(arr){ return arr.reduce((a,b)=>a+b,0) / arr.length; }
@@ -628,6 +735,22 @@ async function fetchChart(id){
   return data.prices.map(p => p[1]);
 }
 
+/* Plain-English restatements of the two scores, for readers meeting them for the first time.
+   Both are descriptions of the number beside them, not extra judgement. */
+const BAND_NOTE = {
+  bullish: 'Upper band — the blended score is 62 or above.',
+  neutral: 'Middle band — the blended score sits between 42 and 62, so the chart and the news read are not agreeing.',
+  bearish: 'Lower band — the blended score is 42 or below.'
+};
+
+function macroWord(score){
+  if (score >= 1) return 'supportive';
+  if (score > 0.2) return 'mildly supportive';
+  if (score >= -0.2) return 'balanced';
+  if (score > -1) return 'mildly cautious';
+  return 'cautious';
+}
+
 function renderCard(coin, marketRow, closes){
   const price = marketRow ? marketRow.current_price : (closes ? closes[closes.length-1] : null);
   const chg24 = marketRow ? marketRow.price_change_percentage_24h_in_currency : null;
@@ -643,6 +766,8 @@ function renderCard(coin, marketRow, closes){
 
   const macroPctDisplay = combined.macroPct.toFixed(0);
   const techPctDisplay = tech.pct.toFixed(0);
+  // Use the same minus glyph as the "−2 to +2" scale beside it, not an ASCII hyphen.
+  const macroSigned = (coin.macroScore > 0 ? '+' : '') + coin.macroScore.toFixed(1).replace('-', '−');
 
   return `
   <div class="card ${combined.cls}">
@@ -663,32 +788,39 @@ function renderCard(coin, marketRow, closes){
       <span class="signal-label ${combined.cls}">${combined.label}</span>
       <span class="signal-pct">${combined.composite.toFixed(0)}%</span>
     </div>
+    <p class="band-note">${BAND_NOTE[combined.cls]}</p>
 
     <div class="bars">
       <div class="bar-row">
-        <span class="bar-label">Technical</span>
+        <div class="bar-head">
+          <span class="bar-label">Live chart signals</span>
+          <span class="bar-val">${techPctDisplay} / 100</span>
+        </div>
         <span class="bar-track"><span class="bar-fill" style="width:${techPctDisplay}%; background:var(--gold);"></span></span>
-        <span class="bar-val">${techPctDisplay}</span>
+        <div class="bar-sub">Moving averages, RSI, MACD and 7-day momentum, computed in your browser. 55% of the score.</div>
       </div>
       <div class="bar-row">
-        <span class="bar-label">Fundamental</span>
+        <div class="bar-head">
+          <span class="bar-label">News and macro read</span>
+          <span class="bar-val">${macroPctDisplay} / 100</span>
+        </div>
         <span class="bar-track"><span class="bar-fill" style="width:${macroPctDisplay}%; background:var(--slate);"></span></span>
-        <span class="bar-val">${macroPctDisplay}</span>
+        <div class="bar-sub">Written score ${macroSigned} on a −2 to +2 scale — ${macroWord(coin.macroScore)}. 45% of the score.</div>
       </div>
     </div>
 
     <details>
       <summary>Why this read</summary>
       <div class="detail-body">
-        <div class="sect-label">Technical (live)</div>
+        <div class="sect-label">What the live chart says</div>
         <ul>${tech.notes.map(n=>`<li>${n}</li>`).join('')}</ul>
-        <div class="sect-label">Fundamental / macro (as of Sept 22, 2026, 02:00 UTC)</div>
+        <div class="sect-label">The news read, as of ${AS_OF}</div>
         <p>${coin.summary}</p>
         <div class="sect-label">Catalysts to watch</div>
         <ul>${coin.catalysts.map(c=>`<li><b>${c.date}</b> — ${c.text}</li>`).join('')}</ul>
       </div>
     </details>
-    <div class="card-footer-note">Composite = 55% live technical + 45% dated fundamental read. Heuristic, not a statistical forecast.</div>
+    <div class="card-footer-note">Composite = 55% live technical + 45% dated fundamental read. A heuristic, and it can be wrong.</div>
   </div>
   `;
 }
@@ -878,7 +1010,7 @@ function renderRotation(rows){
     `<div class="rot-verdict"><div class="vlabel">${verdict.label}</div><div class="vtext">${verdict.text}</div></div>`;
 
   document.getElementById('rotMethod').innerHTML = `
-    <details class="rot-method">
+    <details class="panel rot-method">
       <summary>Methodology &amp; standing notes</summary>
       <div class="detail-body">
 
@@ -917,7 +1049,7 @@ function renderRotation(rows){
   document.getElementById('rotNote').innerHTML =
     `Market cap, FDV, supply and TVL are live on page load. Perp volume, fees and revenue are a dated research ` +
     `layer (DefiLlama, as of ${ROTATION_ASOF}) — DefiLlama moved those series behind a paid plan, so they refresh ` +
-    `when the deck is refreshed, not on page load. Heuristic framework, not investment advice.`;
+    `when the deck is refreshed, not on page load. A heuristic framework for watching a moat, not a forecast.`;
 }
 
 async function loadRotation(){
@@ -929,6 +1061,10 @@ async function loadRotation(){
       `<div class="error-row">Couldn't load rotation data (${err.message}).</div>`;
   }
 }
+
+/* On a phone the primer would push the data a full screen down, so it starts closed there
+   and open on anything with room for it. One tap either way. */
+if (window.innerWidth < 900) document.querySelector('.primer').removeAttribute('open');
 
 document.getElementById('refreshBtn').addEventListener('click', () => { loadAll(); loadRotation(); });
 renderMacro();
