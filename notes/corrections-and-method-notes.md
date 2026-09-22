@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-09-22 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -26,15 +26,15 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
-As published 2026-09-21 06:00 UTC (this run — six holds, no moves):
+As published 2026-09-22 02:00 UTC (SOL +0.1; five holds):
 
 | Asset | Score | Held since |
 |-------|-------|-----------|
 | BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print) |
 | ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print) |
-| SOL   | +0.4  | Sept 16 (raised from +0.3; half the earlier flow cut restored) |
-| BNB   |  0.0  | 13 consecutive runs |
-| XRP   |  0.0  | 5 consecutive runs |
+| SOL   | **+0.5**  | **Sept 22** (remaining 0.1 restored on the completed $60.7M week to Sept 18) |
+| BNB   |  0.0  | 14 consecutive runs |
+| XRP   |  0.0  | 6 consecutive runs |
 | HYPE  | -0.1  | unchanged since the HIP-3 revenue cut |
 
 Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
@@ -50,14 +50,31 @@ this table, **not** against the served page — the served page can be stale (se
 - **ETH flow leg** — re-cut on two consecutive sessions each below **-$150M**.
 - **ETH roadmap leg** — activation *and finality* on Sepolia Oct 6 adds 0.1; a slip, or a failure
   to finalise (including via the builder-griefing vector on enshrined PBS), cuts 0.1.
-- **SOL flow leg** — a weekly ETF print **above $50M** restores the remaining 0.1; **below $5M**
-  re-cuts it. **The instrument is a SoSoValue weekly print** — see 5.1.
+- **SOL flow leg** — the remaining 0.1 was **restored 2026-09-22** on the completed $60.7M week to
+  Sept 18. Bar going forward: a weekly print **below $5M** re-cuts it. The instrument is the
+  SoSoValue daily series (Farside's `/sol/` table agrees with it row for row — see 5.1).
+  **Always confirm the week includes its Friday before comparing it to a bar.**
 - **XRP** — a second cloture vote *passing* adds 0.2; the motion failing, or the window closing
-  unused, cuts 0.1.
+  unused, cuts 0.1. **"The window closing unused" now has a date (fixed 2026-09-22): the Senate is
+  due to leave Oct 1; reaching Oct 1 with no second cloture vote taken fires the 0.1 cut.** Before
+  this it was an undated condition that could never fire, which is how a downside branch quietly
+  becomes decorative.
 - **BNB** — no numeric branch. Held while fundamentals improve and the price will not pay for them
-  in either direction. A price response in either direction is what would move it.
+  in either direction. A price response in either direction is what would move it. **This needs a
+  numeric definition (flagged 2026-09-22).** On Sept 21 every one of the six set a twenty-one-day
+  high; read loosely, "a price response" fires on pure beta. BNB was the *second weakest* of the six
+  that session (+1.92% against BTC +5.71%), which is evidence *for* the hold. Proposal: define it
+  **relative** — BNB outperforming or underperforming the median of the other five by some margin
+  over a stated window — not as an absolute move.
 - **HYPE** — moves on a **disclosed fee split or protocol revenue term** on the Payward/Bitnomial
   HIP-3 deployment. As of Sept 21 the absence is confirmed by the counterparty, not merely unfound.
+  **The branch is narrower than the thesis it serves (flagged 2026-09-22).** The -0.1 handicaps
+  *protocol revenue erosion from HIP-3* ($356.7M in Q3 2025 -> $201.8M in Q2 2026), but the branch
+  names one deal and one disclosure. Native lending launched Sept 18 and borrowed **$269M on day
+  one** (65% LTV on HYPE, 50% on BTC) — squarely evidence on the thesis, and it fired nothing.
+  Consider adding a revenue-level branch (e.g. a reported quarterly protocol revenue figure crossing
+  a stated level). Until one is written, do **not** move the score on thesis evidence — write the
+  branch first, then let it fire.
 
 ## 4. The calendar trap (found 2026-09-21 — the big one)
 
@@ -78,22 +95,42 @@ Sept 21, which settles after the US close (~20:00-21:00 UTC) — well after an e
 
 ## 5. Source traps
 
-### 5.1 The SOL weekly ETF figure has two publishers that disagree (found 2026-09-21)
-For the **same week ending Sept 18 2026**, same instrument (US spot Solana ETFs):
-- **$13.2M** — 24/7 Wall St (Sept 19) citing **SoSoValue**. Internally reconciles: Sept 14 $11.01M
-  + Sept 15 $1.35M + Sept 16 $836,926 + Sept 17 *no change* = $13.20M.
-- **$60.7M** — Solana Compass (Sept 20) citing **CryptoBriefing**, "strongest of the run", with
-  ~$47.6M on the Thursday.
+### 5.1 The SOL "vendor conflict" was a truncated week, not a conflict (resolved 2026-09-22)
+**This entry replaces the 2026-09-21 version, which reached the wrong explanation.**
 
-They reconcile: **$13.2M + $47.6M = $60.8M**. The entire gap is one Thursday (Sept 17) session that
-SoSoValue records as flat. Not a week-definition difference, not rounding — **one disputed session
-between two vendors.**
+For the week ending Sept 18 2026, two figures circulated for US spot Solana ETFs:
+- **$13.2M** — 24/7 Wall St (Sept 19) citing **SoSoValue**.
+- **$60.7M** — Solana Compass (Sept 20) citing **CryptoBriefing**.
 
-This *matters to the score*: $13.2M fires nothing, $60.7M clears the $50M restore bar. **Resolution:
-the SOL branch is written against a SoSoValue weekly print**, and the $153.87M / $6.18M / $10.30M
-readings behind it are the same series. Swapping vendor mid-series breaks the comparison the bar
-depends on rather than resolving it. Publish both attributed, adopt neither, hold the score.
-**Name the vendor in the branch text from now on.**
+The Sept 21 run reconciled the $47.6M gap to "one disputed **Thursday** session that SoSoValue
+records as flat," declared a live vendor dispute, stood on the SoSoValue series and held the score.
+**That was wrong.** Farside now publishes a Solana table (`farside.co.uk/sol/`: BSOL, VSOL, FSOL,
+TSOL, SOEZ, MSOL, GSOL) and it reads, for that week:
+
+| Mon 14 | Tue 15 | Wed 16 | Thu 17 | Fri 18 | Total |
+|--------|--------|--------|--------|--------|-------|
+| 11.0 | 1.3 | 0.8 | **0.0** | **47.6** (BSOL) | **60.7** |
+
+- Farside agrees with SoSoValue on **every overlapping day** (11.01 / 1.35 / 836,926 / no change).
+  Same series, not rival measurements.
+- The $47.6M is on **Friday Sept 18**, not Thursday. Farside puts 0.0 on the Thursday, exactly as
+  SoSoValue does. Reporting independently describes "BSOL alone attracted $48M in a single **Friday**
+  session."
+
+So **$13.2M was a four-day partial week** (Mon-Thu), published Sept 19 before the Friday row was in
+hand. The whole "conflict" was 5.2 operating at the *weekly* level.
+
+**Rules this produces:**
+1. **Count the days in a weekly figure before comparing it to a bar.** A five-session week that lists
+   four sessions is incomplete, however authoritative the vendor. Sum the dailies and check the
+   Friday is present.
+2. **A clean arithmetic reconciliation is not a correct one.** $13.2M + $47.6M = $60.8M ≈ $60.7M held
+   perfectly while the *day* was wrong and the *conclusion* was wrong. Reconciling the magnitude of a
+   gap does not identify its cause. Ask which session, and check it.
+3. **Prefer a fund-level table to a headline total.** Farside's per-fund rows made this visible in
+   one read; two headline totals could not.
+4. **Three routes now exist for SOL**: SoSoValue (the named instrument), Farside `/sol/`, and
+   CryptoBriefing. Farside is the easiest to read directly — see the access note in 8.
 
 ### 5.2 Farside rows settle incrementally and get revised
 On Sept 16 this deck read ETH Sept 15 as **-$49.5M** from three posted lines and published it as the
@@ -105,7 +142,9 @@ bar, so no leg fired retroactively — but it could have.)
 ### 5.3 centralbank.watch updates its table without advancing its stamp
 Read **57.9 / 42.1 / 0.0** on Sept 21 01:00 and **55.9 / 44.1 / 0.0** on Sept 21 06:00 — both
 displaying the **same "Sept 18" stamp**. The stamp does not date the figure. Quote the read and the
-time *you* took it. The page states the policy rate (3.88%) correctly throughout; that anchor being
+time *you* took it. **Update 2026-09-22:** read **55.7 / 44.3 / 0.0** at 02:10 UTC with the stamp now
+advanced to **Sept 21**. So the stamp is not permanently frozen — it lags, sometimes by days. The
+rule is unchanged (quote your own read time), but do not describe the stamp as stuck. The page states the policy rate (3.88%) correctly throughout; that anchor being
 right does not certify the meeting table.
 
 ### 5.4 Prefer the Polymarket API over the rendered page
@@ -131,6 +170,22 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
   **monthly average**; neither is a spot print. tradingeconomics "Actual" during a live session is
   an **in-progress read, not a settle** (a fetch helper may wrongly call it a settle — it is not).
 - **$13.2M collisions** — the SOL weekly figure is not the **-$13.2M BTC daily** print of Sept 11.
+- **Liquidation totals have a window, not just a publisher** (2026-09-22). For the Sept 21 squeeze:
+  **~$313M in one hour, 96% shorts** (CoinGlass, via Yahoo) and **$769.80M over 24h across 115,490
+  traders, ~85% shorts** (a second publisher). Not a conflict — two windows. Always state the window.
+- **"All-time high" is not a claim this deck can make** (2026-09-22). The tape method reads a
+  21-day window, so a 21-day high is all it can verify. HYPE printed 96.07 on Sept 21, above the
+  94.46 that reporting on Sept 19 called an ATH — publish it as a twenty-one-day high and attribute
+  any ATH language to whoever made it.
+- **Hormuz: relative and absolute claims can both be true** (2026-09-22). CENTCOM's "highest in six
+  months" for crude/cargo/LNG and IMF PortWatch's **8 transits on Sept 13 against an 85/day
+  pre-crisis baseline** do not contradict each other — one is a change against a collapsed base, the
+  other a level. Do not let a relative improvement read as a normal strait. Also: the best transit
+  count available is typically **a week or more old**; attach its date.
+- **Article recency trap, live example** (2026-09-22). A search for the CLARITY Act returned a Yahoo
+  piece headlined "The Senate Has 5 Working Days Left" ranked near the top; it was published
+  **Aug 2** and its "five working days" ran to the **Aug 7 recess**. Publishing it would have
+  invented a September deadline. Check the date on every item — search rank is not recency.
 
 ## 6. Tape method
 
@@ -141,6 +196,9 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
 - State the **7-day and 21-day window** next to every drawdown. They often differ and the difference
   is load-bearing: on Sept 21 BTC set a fresh *seven-day* high (82,087.11) while its *twenty-one-day*
   high stayed 82,283.00 from Sept 3. Saying "fresh high" unqualified would have been wrong.
+  The converse also happens: on **Sept 22 all six had the same print as their 7d and 21d high**, all
+  set inside the Sept 21 session — then the qualification is unnecessary and saying so is the
+  stronger claim. Check which case you are in; do not assume either.
 - All six trade on Coinbase: BTC, ETH, SOL, BNB, XRP, HYPE — all `-USD`, all online.
 - **Noise floor:** do not publish an ordering claim on a margin inside ~0.5pt; state the figures and
   decline the ranking. Precedent: HYPE/BNB reordered overnight on a 0.71pt margin.
@@ -201,7 +259,18 @@ They live at three places and a run that updates only the visible heading will s
   cards are built from live data. A 0 there is an API-availability signal, not a broken build —
   re-run before concluding anything.
 - **Farside is behind a Cloudflare JS challenge.** `curl` and WebFetch both get HTTP 403
-  ("Just a moment..."). It loads fine in headless Chromium, which clears the challenge in ~6s.
+  ("Just a moment..."). It loads fine in headless Chromium, which clears the challenge in ~6s —
+  but allow up to ~60s and poll for `table tr` rather than waiting a fixed 9s, and set a realistic
+  desktop `userAgent`; with the default Playwright UA the challenge did not clear at all
+  (2026-09-22). Working pages: `/btc/`, `/eth/`, `/sol/`. There is a `Hyperliquid ETF Flow` link in
+  the footer menu, but `/hype/` is a 404 — find the real slug before relying on it.
+- **SoSoValue does not clear.** `sosovalue.com/assets/etf/us-sol-spot` sits behind a harder
+  Cloudflare challenge that did **not** clear in 60s of headless Chromium (2026-09-22). Read the
+  SoSoValue series via Farside `/sol/` (rows agree) or via a citing publisher, and say which.
+- **Playwright is not installed.** Not in the repo, not globally. `npm install playwright` into the
+  scratchpad. Its bundled `chromium.executablePath()` reports **`chromium-1193`, which does not
+  exist**; the installed browser is **`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`** and must
+  be passed as `executablePath` explicitly or every launch fails.
 - **Playwright's Chromium does not trust the agent proxy CA** and fails every HTTPS request with
   `ERR_CERT_AUTHORITY_INVALID` — including, silently, the page's own live-price fetches. Importing
   the CA into the NSS store is *not* enough for Chromium 141 (it uses the Chrome Root Store). The
@@ -213,25 +282,37 @@ They live at three places and a run that updates only the visible heading will s
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — RESOLVED.** Earlier notes referenced a push blocker for this routine.
-      This run pushed to `main` successfully with the ambient credentials; there is no blocker.
-      Remove this item if it stays clean for another run or two.
-- [ ] **Sept 21 (Mon) ETF session** settles after the US close — first real test of both flow legs
-      since Sept 18. BTC re-cut bar: one session < -$300M or two consecutive < -$150M.
-      ETH: two consecutive < -$150M.
-- [ ] **SOL weekly print** for the week ending Sept 25, due ~Sept 26. Bar: >$50M restores, <$5M
-      re-cuts. **Read the SoSoValue figure specifically** (see 5.1).
+- [x] **GitHub push blocker — RESOLVED, reconfirmed 2026-09-22.** Earlier notes referenced a push
+      blocker for this routine. It pushed to `main` cleanly on 2026-09-21 and again on 2026-09-22
+      with the ambient credentials. **Two clean runs — treat this as settled and stop carrying it.**
+      Note the session starts checked out on a `claude/…` branch that is even with `origin/main`;
+      that is normal, not a blocker.
+- [x] **Sept 21 (Mon) ETF session — SETTLED, both flow legs tested.** BTC +$617.6M, ETH +$147.1M.
+      Neither re-cut bar fired. Both rows are **incomplete**: BTC missing IBIT, ETH missing ETHA and
+      ETHB. **Re-read them next run** — they can be revised materially (see 5.2).
+- [x] **SOL weekly print, week to Sept 18 — RESOLVED at $60.7M**, the restore fired (see 5.1).
+- [ ] **SOL weekly print** for the week ending Sept 25, due ~Sept 26. Bar is now **below $5M
+      re-cuts** (the restore is spent). **Count the sessions in the week before comparing it.**
+      The week opened at +$26.0M on Sept 21, six of seven funds positive.
+- [ ] **Oct 1 — XRP downside trigger.** The Senate is due to leave; reaching that date with no second
+      cloture vote taken is "the window closing unused" and cuts 0.1. Nine days out as of Sept 22.
+      Blocker is still the ethics text on crypto holdings by public officials, not the whip count;
+      Tillis motion to reconsider still preserved; lame duck is the named realistic slot.
 - [ ] **Oct 6, 13:53:36 UTC** — Glamsterdam on Sepolia, epoch 353024, slot 11296768. Activation
       *and finality* adds 0.1 to ETH; a slip or failure to finalise cuts 0.1. Buffer is seven days
       against the usual fourteen.
-- [ ] **Oct 27** — Hoodi Glamsterdam, provisional, contingent on Sepolia. (This retires the
-      long-carried "Hoodi has no activation date" item.)
-- [ ] **XRP** — no second cloture vote scheduled; Tillis motion to reconsider still preserved. The
-      blocker is the **ethics text on crypto holdings by public officials**, not the whip count.
-      Lame duck after the midterms is the named realistic slot.
+- [ ] **Oct 27** — Hoodi Glamsterdam, provisional, contingent on Sepolia.
 - [ ] **HYPE** — still no disclosed fee split or protocol revenue term on the Payward/Bitnomial
       deployment; Payward explicitly declined to give one. Subject to regulatory approval.
+      **Separately: the branch is narrower than the thesis — see 3.** Native lending (Sept 18,
+      $269M day one) fired nothing.
+- [ ] **BNB non-branch needs a numeric, relative definition — see 3.** Nearly fired on pure beta
+      this run.
+- [ ] **Fed routes are diverging.** Spread between Polymarket and centralbank.watch went 1.4pt
+      (Sept 21) -> 3.2pt (Sept 22). Both still mid-band. Watch whether one route leads before either
+      approaches 75 or 40.
 - [ ] **Stray snapshot** — `signal-deck-2026-09-21-0100utc.html` remains in the repo root. Harmless
-      (Pages serves `index.html`), left in place deliberately. Decide whether to keep dated
-      snapshots as a series or drop them.
-- [ ] **Pre-break levels** live only in prose (see 6). Consider a commented constant.
+      (Pages serves `index.html`), left in place deliberately. **Recommendation: stop creating dated
+      snapshots** — one of them caused a five-day stale publish. Decide and act.
+- [ ] **Pre-break levels** live only in prose (see 6). Consider a commented constant. They were used
+      unchanged again this run and continue to reproduce the published percentages.
