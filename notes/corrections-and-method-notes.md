@@ -21,6 +21,14 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   moved in between (BTC -0.4 -> -0.3, ETH +0.3 -> +0.4) and the public page showed neither.
   **Always write the build into `index.html`.** Dated snapshots may be kept alongside it, but the
   run is not finished until `index.html` changes and the live bytes match.
+- **`git branch -f main HEAD` must be re-run after EVERY commit, not once per run (found 2026-09-30).** The session
+  starts checked out on a `claude/...` branch, so the usual publish move is to commit, fast-forward the local `main`
+  ref to `HEAD`, and push `main`. **A second commit then lands on the `claude/` branch and leaves `main` behind**, and
+  `git push origin main` answers **`Everything up-to-date`** — which reads exactly like success. It happened this run
+  on the publish-record commit and was caught only by comparing `git rev-parse HEAD main origin/main`.
+  > **`Everything up-to-date` is not confirmation that your commit is published.** After every push, diff `HEAD`
+  > against `origin/main` rather than reading the push output. Same family as "never report success on exit status
+  > alone", one level down: the exit status was zero *and* the message was reassuring *and* nothing had been pushed.
 - Always verify the publish by re-fetching the live URL and comparing the served bytes to the
   built file. Never report success on exit status alone. Pages takes ~1 minute; re-check.
 
