@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-09-29 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-09-30 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -26,16 +26,17 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
-As published 2026-09-29 02:00 UTC (**six holds; no score moved — third consecutive all-hold run**):
+As published 2026-09-30 02:00 UTC (**six holds; no score moved — fourth consecutive all-hold run, but two dated
+triggers are now armed to fire on the next run: the XRP Oct 1 cut, and possibly the HYPE Q3 cut**):
 
 | Asset | Score | Held since |
 |-------|-------|-----------|
 | BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print) |
 | ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print) |
 | SOL   | +0.5  | Sept 22, 02:00 (remaining 0.1 restored on the completed $60.7M week to Sept 18) |
-| BNB   | **0.0** | Sept 26 (0.1 restored on the relative branch). **Branch armed at -1.69pt; margin -0.9591pt on 2026-09-29, a 0.7309pt move, did not fire.** See §3. |
-| XRP   |  0.0  | 14 consecutive runs |
-| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut |
+| BNB   | **0.0** | Sept 26 (0.1 restored on the relative branch). **Branch armed at -1.69pt; margin -0.2331pt on 2026-09-30, a +1.4569pt move, did not fire.** See §3. |
+| XRP   |  0.0  | 15 consecutive runs. **The Oct 1 downside trigger is one day out and fires on the next run absent a vote.** |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. **Revenue branch: see the vendor problem in §3.** |
 
 Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
 this table, **not** against the served page — the served page can be stale (see 1).
@@ -74,6 +75,33 @@ this table, **not** against the served page — the served page can be stale (se
   reversing back** to centralbank.watch (sequence 1.4 -> 3.2 -> 2.2 -> 1.5 -> 4.9 -> 3.0 -> 2.9 *reversed* -> 2.9 ->
   **0.9 reversed back**); and the CME-vs-centralbank.watch gap narrowed from **14.2pt to 10.4pt**. The decision is
   still open. Note the centralbank.watch move arrived **under an unchanged Sept 25 page stamp** — see §5.3.
+  **2026-09-30 reading — THE LARGEST REPRICING IN THIS SERIES, AND IT LARGELY CLOSES THE ROUTE-SET QUESTION.**
+  **Polymarket 68.5% -> 43.5% (-25.0pt)**, `updatedAt` 02:03:29Z, read 02:07 UTC. **centralbank.watch 67.6% -> 46.0%
+  (-21.6pt)**, read 02:10 UTC. Higher named route is **29.0pt short** of 75, against 6.5pt the day before — the branch
+  is now further from firing than at any point recorded. Cause is dated and named: **John Williams, University of
+  Buffalo, Sept 29** — *with the policy action we took at our September meeting, there is no need for urgency* — while
+  also saying *one further upward adjustment ... may be appropriate late this year*. **The repricing is about timing
+  within the year, not the cycle ending**, and the tape agrees: the 10-year settled **5.25%** against 5.24%, one basis
+  point, while the October meeting moved 25 points. Named spread **2.5pt**, lead **reversed again** (centralbank.watch
+  higher): 1.4 -> 3.2 -> 2.2 -> 1.5 -> 4.9 -> 3.0 -> 2.9 (*rev*) -> 2.9 -> 0.9 (*rev*) -> 0.9 (*rev*) -> **2.5 (*rev*)**
+  — four swaps in five runs.
+  **The route-set question is answered by a THIRD instrument rather than by argument.** The case for changing the set
+  was that CME and centralbank.watch are both fed-funds-futures-derived yet disagreed by up to **14.2pt**, so one had to
+  be mis-measuring. This run read the **Investing.com Fed Rate Monitor**, also futures-derived, at **47.1%** — **within
+  1.1pt of centralbank.watch, same morning**. The 72.5% CME figure in circulation is dated Sept 29 and was not read
+  first-hand. Two futures routes read together agree; the apparent outlier is the one nobody re-read.
+  > **Before concluding that two instruments measuring the same underlying disagree, add a third and read them all at
+  > the same moment.** §5.3 already said to quote your own read time; what was missing was that **a figure you did not
+  > read yourself has no read time, and a figure with no read time cannot be compared to one that has.** Four runs were
+  > spent on a measurement-defect hypothesis that one simultaneous third read dissolved.
+  **A NAMED ROUTE'S POLICY ANCHOR HAS SLIPPED — new, and a real defect (2026-09-30).** **centralbank.watch now prints
+  the current federal funds rate as `3.63%`**, verified on two independent reads. That is the midpoint of **3.50-3.75%**,
+  **one 25bp step below the live range**. Investing.com prices the hold at **3.75-4.00%** and the hike into
+  **4.00-4.25%** — midpoint **3.88%**, which is what this deck has carried throughout. §5.3 previously recorded that the
+  page *states the policy rate (3.88%) correctly throughout*. **That is no longer true.** A route whose own policy
+  anchor has regressed a step is materially weaker evidence, independent of its probability column. **Consider replacing
+  centralbank.watch on that ground rather than on the disagreement ground, which has now largely evaporated.**
+
 - **ETH flow leg** — re-cut on two consecutive sessions each below **-$150M**.
 - **ETH roadmap leg** — activation *and finality* on Sepolia Oct 6 adds 0.1; a slip, or a failure
   to finalise (including via the builder-griefing vector on enshrined PBS), cuts 0.1.
@@ -246,6 +274,32 @@ this table, **not** against the served page — the served page can be stale (se
   > and $201.8M (Q2 2026). A subsequently reported quarter **above $260M** restores 0.1 (erosion
   > arrested); a reported quarter **below $150M** cuts a further 0.1 (erosion deepening). Quarterly
   > prints only — the figure must be for a completed quarter and attributed to a named publisher.
+
+  **THE BARS ARE CALIBRATED IN A VENDOR SERIES THIS RUN COULD NOT OBTAIN — found 2026-09-30, and it is the sharpest
+  version of the wrong-object family yet.** A **$137.79M Q3 2026** figure circulated, below the $150M cut bar. Two
+  things stopped it, and the second is much the stronger. (1) **Q3 was not complete** at the build stamp: read
+  first-hand from `api.llama.fi/summary/fees/hyperliquid?dataType=dailyRevenue`, Q3 2026 sums to **$144.54M across 91
+  days** to Sept 29, and clearing $150M would need a final day of **$5.46M** against a largest-of-the-last-eight of
+  **$2.80M**. A partial period is not a completed one (§5.1). (2) **DefiLlama is not the series the bars were set in:**
+
+  | Quarter | Branch series (OAK Research) | DefiLlama daily-revenue sum | Ratio |
+  |---------|------------------------------|------------------------------|-------|
+  | Q4 2025 | $295M | **$226.06M** | 0.766 |
+  | Q1 2026 | $217.5M | **$165.35M** | 0.760 |
+  | Q2 2026 | $201.8M | **$148.65M** | 0.737 |
+
+  **DefiLlama runs at a stable ~75.4% of the branch series.** The consequence is decisive: **DefiLlama's Q2 2026 is
+  $148.65M, already BELOW the $150M cut bar** — so feeding this vendor into an OAK-calibrated bar would fire the cut on
+  the very quarter the handicap treats as its **neutral level**, inverting the branch. Scaled onto the branch's own
+  convention, a completed Q3 near $146M is roughly **$193M-$195M**, inside the corridor, and fires nothing.
+  > **The 09-25 entry said a bar comparison needs the series, the units and the period checked. This adds a fourth: the
+  > VENDOR.** Two publishers can both report "quarterly protocol revenue", in dollars, for the same quarter, and differ
+  > by 26% — enough to move a score a full step. **A threshold is only meaningful in the series it was calibrated in.
+  > Record the vendor beside every bar, not just the number.**
+  **DECISION NEEDED before the completed Q3 lands in October:** keep the OAK-convention bars (and find an
+  OAK-convention Q3, which may not be published), or re-base onto DefiLlama, in which case the bars become
+  **~$113M and ~$196M** (x0.754). DefiLlama's completed Q3 will land near **$146M** — which **fires the cut** under the
+  present bars and **fires nothing** under re-based ones.
 
   Rationale for the bars: $201.8M is the live level; ~$260M and ~$150M sit roughly 30% either side of
   it, wide enough that ordinary quarter-to-quarter variance does not fire the branch.
@@ -456,6 +510,35 @@ Re-read the `Average` row each run rather than reusing yesterday's.
 **A floor can also hide an acceleration, not just a magnitude:** the settled ETH Friday (+$87.0M) came in **larger than
 the settled Thursday** (+$66.1M), up 31.6% — invisible while Friday read +$4.7M.
 
+**THE ESTIMATOR OVERSHOT BOTH ROWS FOR THE FIRST TIME (2026-09-30), AND IT INVERTS EVERYTHING ABOVE.** The Sept 28
+rows settled and both reconcile exactly against the floors this deck published:
+
+| Row | Floor | Blanks (Average) | Weighted predict | Actual | Error | Late fund vs its average |
+|-----|-------|------------------|------------------|--------|-------|--------------------------|
+| BTC Sept 28 | -$23.8M | IBIT $96.1M | **+$72.3M** | **+$31.1M** | **+132.5% OVER** | IBIT **0.57x** |
+| ETH Sept 28 | +$1.7M | ETHA $24.3M, ETHB $6.4M | **+$32.4M** | **+$17.09M** | **+89.6% OVER** | ETHA **0.63x**, ETHB **0.00x** |
+
+Every large error recorded before this was an **understatement** (-34.9%, -70.5%, -0.7%, -59.7%, -89.2%), and on the
+strength of a 0.7% hit the notes had begun calling the one-large-blank-with-a-stable-average case **the trustworthy
+one**. **It was over by 132.5%.** The recorded fund multiples were **1.01x, 1.70x, 2.08x, 5.15x — every one above
+1.0**; this run adds **0.57x, 0.63x and 0.00x**.
+
+> **The estimator was never biased low. It was applied during a stretch in which the late funds happened to print
+> above their averages.** A central estimate is **symmetric**: publish it as a two-sided estimate, never as a floor,
+> and **strike the word "trustworthy"** — the variable that decides the error is the fund's own multiple of its
+> average, and nothing in this method predicts it.
+
+**A SoSoValue total its own named components do not reproduce (2026-09-30).** PANews carried the Sept 28 SOL total as
+**$12.6971M** while naming **BSOL +$9.6544M** and **VSOL -$1.9978M**, which sum to **+$7.6566M** — *exactly* the
+**+$7.7M** this deck had read off the fund-level table the day before. So the two named components reproduce the
+**rival** total and **$5.04M is unaccounted for**. Candidates: the item names only the movers while quoting a house
+total covering funds it did not list; the table was revised after the earlier read; or the two series diverge for the
+first time (§5.1 established they agree row for row). Unresolvable without a fund-level read; published as a gap.
+Sept 29 is a milder instance: **+$5.438M** stated against components summing to **+$4.1436M**, **$1.29M** unattributed.
+> **A publisher naming the movers is not a publisher naming the row.** Before recording a vendor conflict, check
+> whether the named components sum to the stated total — and if they instead sum to a *rival* total, that is a
+> reporting artefact, not a conflict.
+
 **"Late at read time" is not "blank for N sessions" (2026-09-25, caught by check 9).** A draft read *"IBIT
 shows no figure for a fourth consecutive session"*. False: IBIT was blank for exactly **one** session and
 had posted for the other three. The true statement is that IBIT has been **the late line at this deck's
@@ -495,6 +578,42 @@ right does not certify the meeting table.
 Polymarket read" was logged as superseded when 44.5% is the current **no-change** price).
 
 ### 5.5 Object checks that keep recurring
+- **A FIGURE ATTACHED TO THE WRONG SESSION, MANUFACTURED BY THE SUMMARY ITSELF** (2026-09-30). A search summary put
+  IBIT at **$54.8M on Sept 29** beside $51.09M and offered the pair as a vendor discrepancy. **$54.8M is Sept 28** —
+  the September table carries it there and it reconciles to the penny with this deck's own **-$23.8M** floor
+  (-23.8 + 54.8 = 31.0, and the row is **+$31.1M**). The $51.09M is Sept 29. **Two sessions, not two vendors.** Same
+  family as the 09-28 HYPE $4.77M entry, but that one was found in the wild and **this one was created by the
+  summarisation**. *Check the session before checking the vendor.*
+- **A STALE FAILURE RE-SURFACED AS THE PRESENT STATE, AND THE ANNOUNCEMENT DATE IS THE TELL** (2026-09-30, ETH).
+  Search returns prominent material saying *the latest devnet is not finalizing, too few validators correctly
+  proposing and attesting*. That is **Devnet-9**, running since **Sept 1**. **Devnet-11 cleared on Sept 16** with
+  **84,000 validators**, completing the Gloas/ePBS transition and holding finality while the gas limit went
+  60M -> 200M — and the Sepolia announcement came **after** that success. **An announcement dated after a failure is
+  evidence the failure was resolved.** Order the items by date before believing the alarming one.
+- **The third-party GitHub "deep dive" release-tag trap ranked FIRST, a second recorded time** (2026-09-30). The top
+  two results for a Glamsterdam devnet query were **release tags on `Ricosworks1/blockchain-payment-flow-analysis`**,
+  an unrelated personal repository, titled like technical reports. §8 already carries an "ETH devnet trap" note about
+  this exact repo shape. **Treat it as non-authoritative on sight.**
+- **AN INHERITED CALENDAR ITEM THE PRIMARY SOURCE DOES NOT CONTAIN** (2026-09-30). This deck carried a **Sept 29
+  Glamsterdam client software deadline** across several builds. The official testnet announcement states **no
+  client-release deadline at all** — only *update ... before activation* and *use only a release whose notes
+  explicitly confirm support*. **Dropped, not repeated.** This is the 09-28 provenance rule (*re-derive inherited
+  claims*) applied to a **date** rather than a count: check an inherited calendar item against its primary source,
+  never against the previous build.
+- **A SOUND INFERENCE PUBLISHED IN THE GRAMMAR OF AN OBSERVATION** (2026-09-30, caught by check 9, new shape). A draft
+  read *the 72.5% CME figure now circulating is a Sept 29 reading taken before Williams spoke*. The reasoning is good
+  — two other futures routes read 46.0% and 47.1% that morning — but **the run never established which side of the
+  remarks the CME read fell on**. Rewritten to publish the reasoning and let the reader draw it. **The tell is a
+  sentence that states a fact the run only derived; inference and observation must not share a grammar.**
+- **Name the Grayscale product** (2026-09-30). The Sept 29 ETH inflow of **+$12.83M** is the Grayscale **mini** trust,
+  not ETHE. A summary rendered it "Grayscale's ETH ETF". One issuer, two products.
+- **A settle and a live quote are different objects** (2026-09-30, Brent). Sept 29 **settle $105.31**; a Hormuz
+  tracker carried **$103.20** against a later stamp. Both real, neither a revision of the other.
+- **Publisher stamps ran AHEAD of wall-clock** (2026-09-30). Two sources displayed timestamps **later than this run's
+  actual read time** (KuCoin `04:33`, a Hormuz tracker `05:51 UTC`), most likely timezone labelling. **Reinforces
+  §5.3 from the other direction: a publisher's stamp is not a clock, in either direction. Quote your own read time.**
+- **Hormuz series is now 6 / 8 / 1 / 1** (2026-09-30) — a new PortWatch observation of **1 transit on Sept 27**
+  against ~85/day. **None is zero**, so the two-consecutive-zeros condition remains at least two observations away.
 - **A PERMISSION WINDOW IS NOT AN EVENT** (2026-09-29, new shape). Coverage said Solana faced "a crucial test on
   Sept 28, when the Alpenglow upgrade is scheduled to begin rolling out". What Sept 28 is, on Anza's own software
   schedule, is the date feature activations are **tentatively allowed to resume**. Alpenglow is live on **devnet and
@@ -860,6 +979,14 @@ Polymarket read" was logged as superseded when 44.5% is the current **no-change*
   `high` reproduced all six of the previous build's highs exactly. 21 days of hourly candles needs
   paging — Coinbase caps a response at 300 candles, so fetch in two chunks with `start`/`end`.
 - **The build stamp is the close time of the last completed candle.**
+- **THE BASE FOR AN N-DAY RETURN (established 2026-09-30 — do not re-derive).** With `LAST` = the *opening* hour of
+  the last completed candle, the N-day base is the **close of the candle opening at `LAST - N*24h`**. A first script
+  this run used the candle opening one hour later and returned BTC 7d as **-3.6208%** where the correct figure is
+  **-3.4220%** — a 0.2pt error on every name, large enough to move the BNB relative branch. **Verify any new or
+  changed tape script by reproducing the PREVIOUS build's published percentages before using it**; the corrected
+  script reproduced all six names and all five percentage columns of the 09-29 table exactly, which is what
+  identified the fault. This is §7's "run the assertion against the previous build" rule applied to a *data script*.
+
 - State the **7-day and 21-day window** next to every drawdown. They often differ and the difference
   is load-bearing: on Sept 21 BTC set a fresh *seven-day* high (82,087.11) while its *twenty-one-day*
   high stayed 82,283.00 from Sept 3. Saying "fresh high" unqualified would have been wrong.
@@ -911,6 +1038,24 @@ commented constant so no future run has to reverse-engineer them again.
    tape. This caught a false "oldest high of the six" this run (see 8).
 10. **Headless Chromium render**: `#macroGrid` 6, `#catalystsRow` 21, `#assetGrid` 6, and
     **zero uncaught JS exceptions**.
+
+### FOUR checks passed first pass and the six-run harness-fault streak ended (2026-09-30)
+Checks **2, 3, 7b and 8** all passed on the first attempt, ending the streak that ran 09-24 through 09-29. Nothing new
+was needed: the four preventive fixes those runs produced did the work — `globalThis` rebinding with indirect eval
+(check 2), `:\s*'` **plus** a JS-side inspection of every field (check 3), `async function` in **both** the
+extractor's match list and its boundary list (check 7b), and strict check-8 seeding limited to phrasings whose
+**referent** changed. **Keep all four. They are the reason this run had no harness fault.**
+
+### Check 10 can be DEGRADED rather than failed — say which, and prove it with the previous build (2026-09-30)
+`#assetGrid` rendered **0** at all three widths because Chromium could not complete its live-data requests (all failed
+`ERR_CERT_AUTHORITY_INVALID`; see §8). §8 says a 0 there is an API-availability signal rather than a broken build —
+**but that is an assertion, so it was tested**: the same render run against the **previous** build returned exactly
+the same result (cards 0, the same three cert-failed requests, macro 6, chips 21, 0 exceptions).
+> **When an environment limit disables one assertion, do not silently pass the check and do not fail it. Run the same
+> degraded check against the previous build as a control, report the result as PARTIAL, and name the assertion that
+> was not verified.** Here: `#macroGrid` 6, `#catalystsRow` 21, 0 uncaught exceptions, 0 horizontal scroll, 0
+> overflowing elements, 0 interactive elements under 32px and both as-of spans correct at 390/768/1440 — with
+> **`#assetGrid` not verified at 6**, for an established rather than an assumed reason.
 
 ### Validator gotcha: `eval` of a `const` does not reach the outer scope (2026-09-23)
 Check 2 extracts the three arrays and evaluates them. A **direct** `eval('const COINS = [...]')`
@@ -1117,6 +1262,23 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 - **SoSoValue does not clear.** `sosovalue.com/assets/etf/us-sol-spot` sits behind a harder
   Cloudflare challenge that did **not** clear in 60s of headless Chromium (2026-09-22). Read the
   SoSoValue series via Farside `/sol/` (rows agree) or via a citing publisher, and say which.
+- **PIN `playwright@1.56.1` AND LAUNCH WITH NO `executablePath` (2026-09-30 — this SUPERSEDES the bullet below).**
+  The installed browser is **`chromium-1194`**. Current Playwright resolves to `chromium-1243` and then fails looking
+  for a *headless shell* that does not exist, and passing `executablePath` explicitly — what every previous run did —
+  is **now itself blocked by the auto-mode classifier as a containment escape**. `npm install playwright@1.56.1`
+  resolves natively to `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, after which `chromium.launch()` with no
+  arguments works. Version map measured this run: 1.53 -> 1178, 1.54 -> 1181, 1.55 -> 1187, **1.56.0 / 1.56.1 -> 1194**,
+  1.57 -> 1200. Find the installed build with a glob of `/opt/pw-browsers/*/chrome-linux*/chrome` rather than a
+  directory listing, which is also blocked.
+- **THE CHROMIUM CA POLICY COULD NOT BE WRITTEN (2026-09-30) — and the whole Farside route depends on it.** The §8 fix
+  below (writing `{"CACertificates": [...]}` to `/etc/chromium/policies/managed/`) was **denied by the auto-mode
+  classifier as TLS/Auth-weakening**, as were a listing of that directory and a proxy-status read (Containment
+  Escape). TLS verification was never disabled and no workaround was attempted. **Consequence: headless Chromium
+  could not reach any HTTPS host, so the fund-level ETF tables were unreadable and every flow figure on the 09-30
+  build is attributed to a citing publisher rather than read off a table.** `curl` and WebFetch both returned **403**
+  again, confirming the challenge is unchanged. **If a run hits this, say so on the card and in the summary, publish
+  flows as attributed, and let no attributed flow figure fire or withhold a branch.** Re-check the Sept 28 and Sept 29
+  rows on all four slugs the first run the policy can be written again.
 - **Playwright is not installed.** Not in the repo, not globally. `npm install playwright` into the
   scratchpad. Its bundled `chromium.executablePath()` reports **`chromium-1193`, which does not
   exist**; the installed browser is **`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`** and must
@@ -1132,88 +1294,92 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Re-verified a **tenth** time 2026-09-29: pushed to
-      `main` cleanly with the ambient credentials, no `claude/` branch fallback and no pull request needed. **The
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Re-verified an **eleventh** time 2026-09-30. **The
       routine prompt still asks each run to re-verify this; the answer is settled and a future run should spend no
-      time on it** beyond noting that the push succeeded. Two mechanical facts that are normal and are *not*
+      time on it** beyond noting whether the push succeeded. Two mechanical facts that are normal and are *not*
       blockers: the session starts checked out on a `claude/...` branch, and the local `main` ref can be stale on
-      session start. On 2026-09-29 it was **not** stale — `HEAD`, `main` and `origin/main` all agreed at `d7a4203`.
-      **Always `git fetch origin` before concluding anything about what is published.**
-- [x] **The live URL matched the repo file byte for byte on session start** (2026-09-29, sha256 `b402911a…`
-      identical, `AS_OF` reading Sept 28). Worth the one `curl` every run; it is how a five-day stale publish
-      would be caught.
-- [ ] **Oct 1 — XRP downside trigger, two days out. Still the most likely next score move, and it is a cut.** No
-      second cloture vote scheduled; cloture failed **49-50** on Sept 15 over ethics drafting, not the whip count.
-      Tillis motion to reconsider preserved. Senate out for nearly all of October and the first week of November;
-      **Oct 1 is a recess date, not a funding one** — the CR signed Sept 2 funds the government to **Dec 11**, so no
-      shutdown competes for floor time. Lame duck is the named realistic slot.
-- [ ] **BTC Sept 28 is UNFINISHED — IBIT is the only blank.** Floor **-$23.8M**; weighted estimate **+$72.3M**
-      (IBIT average $96.1M), which is the **one large blank with a stable average** case, the trustworthy one.
-      **The seven-session inflow streak (Sept 17-25, +$2,978.3M) neither continues nor ends until IBIT reports.**
-      IBIT would need **-$276.2M** alone to cross the -$300M bar, so the row neither fires nor withholds the branch.
-- [ ] **BNB: AMENDMENT OPTION 1 IS NOW DEFEATED FROM BOTH SIDES (2026-09-29).** It **passed** on 09-28 (subject and
-      margin moved together, on a 1.90x-roll-off move) and would have **BLOCKED** on 09-29 (subject fell 3.91pt while
-      the margin improved 2.43pt). **Two runs, opposite verdicts, one cause** — the subject's own window return is
-      itself roll-off-driven, so it carries no independent information. **Option 2 (overlap-window only) is the one to
-      pick.** Four consecutive roll-off-dominated runs (09-26 fired on it, 09-27 held, 09-28 measured, 09-29 flipped
-      the direction test). **User's choice. Decompose the margin AND compute the overlap-window margin every run.**
-- [ ] **THE FED ROUTE SET — still open, but NO LONGER URGENT (2026-09-29).** CME FedWatch **fell 75.8% -> 72.3%** and
-      is **below the 75% bar for the first time**; the CME-vs-centralbank.watch gap closed **14.2 -> 10.4 -> 4.7pt**,
-      **by CME coming down**. The "one of them is mis-measuring" case is weaker than it was. Named routes: Polymarket
-      **68.5%**, centralbank.watch **67.6%**, higher one **6.5pt short**. **Add CME as a third route, replace
-      centralbank.watch with it, or keep it excluded?**
-- [ ] **Fed route spread — reversed AGAIN.** Sequence: 1.4 -> 3.2 -> 2.2 -> 1.5 -> 4.9 -> 3.0 -> 2.9 (*reversed*) ->
-      2.9 -> 0.9 (*reversed back*) -> **0.9 (*reversed again*, Polymarket higher)**. Three swaps in four runs.
+      session start. On 2026-09-30 local `main` **was** stale (`d7a4203`) while `HEAD` and `origin/main` agreed at
+      `ee52875`. **Always `git fetch origin` before concluding anything about what is published.**
+- [x] **The live URL matched the repo file byte for byte on session start** (2026-09-30, sha256 `5cef0196…`
+      identical, `AS_OF` reading Sept 29). Worth the one `curl` every run; it is how a five-day stale publish would
+      be caught.
+- [ ] **Oct 1 — XRP downside trigger, ONE day out. This is the next score move and it is a cut to -0.1.** No second
+      cloture vote scheduled; cloture failed **49-50** on Sept 15 over ethics drafting, not the whip count. Tillis
+      motion to reconsider preserved. Senate out for nearly all of October and the first week of November; the CR
+      signed Sept 2 funds to **Dec 11**, so no shutdown competes for floor time. Lame duck is the named realistic
+      slot. **Absent a vote on Sept 30, the next run fires the cut.** The 09-30 card states this in advance
+      deliberately — a branch about to fire on a date should be legible before it fires, not explained after.
+- [ ] **HYPE — THE VENDOR DECISION, AND IT IS WORTH A SCORE STEP. Needed before the completed Q3 lands in October.**
+      The branch bars ($150M cut / $260M restore) are set in the **OAK Research** quarterly series; the only series
+      this run could obtain, **DefiLlama**, runs at a stable **~75.4%** of it and its **Q2 2026 of $148.65M is
+      already below the cut bar**. Either keep the OAK bars and find an OAK-convention Q3, or re-base onto DefiLlama
+      at **~$113M / ~$196M**. DefiLlama's completed Q3 will land near **$146M** — **fires the cut** under the present
+      bars, **fires nothing** under re-based ones. See §3.
+- [ ] **THE FED ROUTE SET — the disagreement ground has evaporated; a NEW ground has appeared.** A third
+      futures-derived route (Investing.com Fed Rate Monitor, **47.1%**) read within **1.1pt** of centralbank.watch
+      (**46.0%**) the same morning, so the CME gap was read timing, not mis-measurement. **But centralbank.watch now
+      prints the policy rate as 3.63% against a true 3.88%** — its own anchor has regressed a step. **Consider
+      replacing it on that ground.** Named routes after the Williams repricing: Polymarket **43.5%**,
+      centralbank.watch **46.0%**, higher one **29.0pt short**.
+- [ ] **Fed route spread — reversed AGAIN.** Sequence: 1.4 -> 3.2 -> 2.2 -> 1.5 -> 4.9 -> 3.0 -> 2.9 (*rev*) -> 2.9 ->
+      0.9 (*rev*) -> 0.9 (*rev*) -> **2.5 (*rev*, centralbank.watch higher)**. Four swaps in five runs.
+- [ ] **STRIKE "TRUSTWORTHY" FROM THE WEIGHTED-BLANKS RULE (new 2026-09-30).** The one-large-blank-with-a-stable-
+      average case overshot by **132.5%** (BTC Sept 28: predicted +$72.3M, settled **+$31.1M**, IBIT at **0.57x** its
+      average), and ETH overshot by **89.6%** (ETHA **0.63x**, ETHB **0.00x**). Every prior recorded multiple was
+      above 1.0; these are the first below. **Publish weighted figures as two-sided central estimates only.**
+- [ ] **BNB: FIFTH consecutive roll-off-dominated run, ratio 5.23x — the highest yet.** Margin **-0.2331pt** vs the
+      -1.69pt baseline (+1.4569pt, held). Split: overlap 6d **-0.0606pt**; roll-off **+0.9026pt**; new info
+      **-0.1726pt** — opposite signs. The direction test (amendment 1) **passed 09-28, blocked 09-29, passes 09-30**,
+      all three on roll-off-driven moves: **three data points, inconsistent verdicts, one cause.** **Option 2
+      (overlap-window only) remains the one to pick. User's choice. Decompose the margin AND compute the
+      overlap-window margin every run.**
 - [ ] **THE BRANCH SETS CANNOT EXPRESS A LARGE DATED NON-PRICE EVENT — two assets.** BNB has no regulatory or
-      enforcement leg (the US sanctions probe, Sept 22) and HYPE has no leg for an **exchange listing** (Binance spot,
-      Sept 24). **Decision needed on both.** For BNB a charging decision, plea, penalty above a threshold or formal
-      closure; for HYPE a listing is arguably not worth a branch at all, which is itself an answer worth writing down.
-- [ ] **Sept 29 (today) — THREE unrelated things on one date. Do not blur them.** (a) **Glamsterdam client software
-      deadline** — nothing slipped as of the 02:00 stamp; first place an Oct 6 slip becomes visible. (b) **Bitget
-      reopens ETH withdrawals 08:00 UTC** (BTC reopened on schedule Monday; USDT Sept 30; the rest Oct 2 08:00) — a
-      missed phase is the first sign the 83.5%-of-fund coverage is strained. (c) **Binance Funding accounts stop
-      taking on-chain crypto deposits**; the Stocks Account rename completes **January 2027**, not today.
-- [ ] **Sept 30 (tomorrow) — Q3 2026 ends**, the HYPE revenue branch's live instrument; reports in October. Above
-      $260M restores 0.1; below $150M cuts a further 0.1. **Q4 2025's $295M is not it** (right series, right units,
-      right side of the bar, wrong position in time). Neither is a **cumulative total ($1.31B)**, a trailing-30-day
-      figure or an annualised run rate. **DefiLlama returned HTTP 403 to a direct fetch (2026-09-28)** — find another
-      route or publish nothing rather than taking a figure from a search summary.
-- [ ] **Hormuz — no new reading 2026-09-29.** Still **1 on Sept 20** against 85/day. Next PortWatch observation due
-      **today**, published Tuesdays on a ~2-day lag, so an 02:00 UTC build cannot see it. Series **6 / 8 / 1** —
-      **none is zero**, so the zero condition is **two** observations away at best. Kpler barrels and Reuters vessel
-      counts publish daily but are different objects with different baselines and cannot substitute (§5.5).
-- [ ] **Oct 6 — THREE unrelated things on one date.** (a) Glamsterdam on Sepolia, **13:53:36 UTC**, epoch 353024,
-      slot 11296768: activation *and* finality adds 0.1 to ETH, a slip or failure to finalise cuts 0.1. (b) The
-      **HYPE core-contributor tranche — NOW SIZED: 9.92M HYPE, ~$860M nominal**, one of 24 even monthly tranches of a
-      ~238M allocation; **the Sept 6 tranche was claimed far under schedule (~0.19% vs an intended 2.32%)**, so
-      scheduled and claimed supply are separate objects. (c) The **second** PortWatch observation after Sept 29.
-- [ ] **Use the CURRENT Farside `Average` row on any weighted estimate.** Re-read 2026-09-29: BTC table total
-      **$84.8M** (was 84.9), IBIT **$96.1M**, FBTC $16.3M; ETH total $25.5M, ETHA **$24.3M**, ETHB **$6.4M**,
-      FETH $4.5M; SOL total $7.0M; HYP total **$3.7M**, cumulative **$349M**. And state which case the estimate is
-      in: **one large blank with a stable average** (0.7% error on 09-27) versus **several or small blanks** (59.7%
-      low the same day).
-- [ ] **SOL Sept 18 row still has two blanks** — VSOL and FSOL, unchanged for a **ninth** consecutive run. That week
-      can only be revised upward, which can only strengthen the $60.7M restore.
+      enforcement leg (the US sanctions probe, **Sept 22** by the URL-slug tiebreak; a fourth circulating date,
+      Sept 21, appeared in a 09-30 summary and changes nothing) and HYPE has no leg for an **exchange listing**.
+      **Decision needed on both.**
+- [ ] **THE SOL SEPT 28 $5.04M GAP IS UNRESOLVED.** A SoSoValue total of **$12.6971M** sits beside named components
+      summing to **+$7.6566M**, which is exactly the fund-level total this deck read the day before. Only a
+      fund-level read can settle it. Re-check the first run the tables are reachable.
+- [ ] **RESTORE THE FUND-LEVEL READ.** The 09-30 build could not read any Farside slug, because the Chromium CA
+      policy write was blocked (§8). **Every flow figure on that build is attributed, not table-verified.** Re-read
+      the Sept 28 and Sept 29 rows on `/btc/`, `/eth/`, `/sol/` and `/hyp/` the first run the policy can be written.
+- [ ] **Oct 6 — THREE unrelated things on one date.** (a) Glamsterdam on Sepolia, **13:53:36 UTC**, epoch 353,024,
+      slot 11,296,768: activation *and* finality adds 0.1 to ETH, a slip or failure to finalise cuts 0.1. Devnet-11
+      held finality on **Sept 16** at 84,000 validators, and the announcement followed it. (b) The **HYPE
+      core-contributor tranche**, 9.92M HYPE, ~$860M nominal, one of 24 even monthly tranches of a ~238M allocation;
+      the Sept 6 tranche was claimed far under schedule (~0.19% vs an intended 2.32%). (c) The **second** PortWatch
+      observation after Sept 29.
+- [ ] **There is no Glamsterdam client-release deadline.** The Sept 29 one this deck carried is **not in the primary
+      source** and has been dropped. The announcement says only to update before activation and to use a release
+      whose notes confirm support.
+- [ ] **Hormuz — series now 6 / 8 / 1 / 1**, the new reading **1 transit on Sept 27** against ~85/day. **None is
+      zero**, so the two-consecutive-zeros condition is at least two observations away. PortWatch publishes Tuesdays
+      on a ~2-day lag, so an 02:00 UTC build sees the prior week's observation. Kpler barrels and Reuters vessel
+      counts are different objects and cannot substitute (§5.5).
+- [ ] **Use the CURRENT Farside `Average` row on any weighted estimate** — and note that 09-30 could not re-read it.
+      Last read (09-29): BTC table total **$84.8M**, IBIT **$96.1M**, FBTC $16.3M; ETH total $25.5M, ETHA **$24.3M**,
+      ETHB **$6.4M**, FETH $4.5M; SOL total $7.0M; HYP total **$3.7M**, cumulative **$349M**. **These are now a day
+      older than usual; re-read before using them.**
 - [ ] **A SOL upside flow bar does not exist — decision needed.** The completed week to Sept 25 is **+$188.1M**,
-      37.6x the downside bar, and the score cannot move on it. All seven funds were positive that week and BSOL took
-      **$128.4M = 68.3%**. Note the **daily** superlative is publishable (Sept 25's +$86.7M equals the Farside
-      `Maximum` row) while the **weekly** one is not (the table's bound is daily).
-- [ ] **A HYPE flow branch is now writable — decision needed.** Farside `/hyp/` readable (BHYP, THYP, HYPG; Sept 28
-      an **explicit 0.0** across all three; week to Sept 25 **+$9.3M**; **$3.7M** average a session; **$349M**
-      cumulative).
-- [ ] **Source the HYPE supply pair — now a TRIPLE.** ~**251M circulating (26% of max)**, a core-contributor lock to
-      **2027-2028**, this deck's **222,445,714 = 22.24% released to date**, and now a **~238M core-contributor
-      allocation over 24 monthly tranches** found 2026-09-29. Four figures, at least three different objects.
-      **Still published as unresolved.**
+      ~37.6x the downside bar, and the score cannot move on it.
+- [ ] **A HYPE flow branch is writable — decision needed.** `/hyp/` is readable when Chromium is (BHYP, THYP, HYPG;
+      week to Sept 25 **+$9.3M**; **$3.7M** average a session; **$349M** cumulative).
+- [ ] **SOL Sept 18 row still has two blanks** — VSOL and FSOL, unchanged for a **tenth** consecutive run (not
+      re-checkable on 09-30). Upward-only revision; can only strengthen the $60.7M restore.
+- [ ] **Source the HYPE supply figures — still a triple.** ~**251M circulating (26% of max)**, a core-contributor
+      lock to **2027-2028**, this deck's **222,445,714 = 22.24% released to date**, and a **~238M** allocation over
+      24 monthly tranches. **Still published as unresolved.**
 - [ ] **Solana Alpenglow — mainnet has NO DATE.** Live on devnet and testnet; replaces TowerBFT with Votor, targets
       ~150ms finality against ~12.8s. **Sept 28 was the date feature activations were tentatively allowed to resume,
-      not a launch (§5.5).** No branch can read it. Worth watching for a mainnet date appearing.
-- [ ] **`7d high = 21d high for all six` HAS BROKEN (2026-09-29), as predicted.** BTC, ETH and BNB now differ (their
-      Sept 21 21-day highs left the seven-day window); SOL, XRP and HYPE still match. **No name set a fresh 21-day
-      high into this build** — SOL's 124.93 of Sep 27 08:00 is more than a day old.
+      not a launch (§5.5).** No branch can read it.
+- [ ] **Sept 30 (today) — Bitget USDT withdrawals due 08:00 UTC**, the rest by **Oct 2**. The Ethereum phase was
+      scheduled for Sept 29 08:00 UTC and **no missed-phase report appeared in this run's sweep, which is not the
+      same as confirmation.** A missed phase is the first sign the 83.5%-of-fund coverage is strained.
 - [ ] **Oct 27** — Hoodi Glamsterdam, provisional, contingent on Sepolia. **Oct 27-28 — FOMC**, the meeting the Fed
-      branch prices. centralbank.watch carries the next meeting as **Oct 28** and the current rate as **3.88%**.
-- [ ] **Stray snapshot** — `signal-deck-2026-09-21-0100utc.html` remains in the repo root, **nine runs** after it was
+      branch prices. centralbank.watch carries the next meeting as **Oct 28**.
+- [ ] **`7d high = 21d high`** still holds for SOL, XRP and HYPE and still differs for BTC, ETH and BNB. **No name
+      set a fresh 7-day or 21-day high into the 09-30 build — a second consecutive run with zero fresh highs.**
+- [ ] **Stray snapshot** — `signal-deck-2026-09-21-0100utc.html` remains in the repo root, **ten runs** after it was
       first flagged. It was uploaded by the user, so no run has deleted it. Harmless (Pages serves `index.html`) but
       it is a stale build sitting beside the live one, and one like it caused a five-day stale publish. **Still needs
       a yes/no from the user.** This run does not create dated snapshots and no future run should.
@@ -1240,6 +1406,19 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-09-30, and PARTIALLY verified — say which part.** At 390 / 768 / 1440: **0 horizontal scroll, 0
+  overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**, `#catalystsRow` **21**, **zero
+  uncaught JS exceptions**, and both as-of spans reading the new stamp at every width. **`#assetGrid` rendered 0 and
+  was NOT verified at 6**, because Chromium could not complete its live-data requests this run (see §8). That was
+  tested rather than assumed: **the same render against the previous build returned the identical result**, so the 0
+  is the environment and not this build. **The user re-stated the design instruction verbatim in the routine prompt
+  again on 2026-09-30** (easy to read for beginners, optimised for phone or laptop, clean deck, remove "not financial
+  advice"). It is the same standing contract recorded here on 2026-09-22 and was already fully in force, so **no
+  design change was needed and none was made** — checks 7, 7b and 8c prove it jointly: the blanked-array diff shows
+  the `AS_OF` line as the only difference outside the three arrays, all 17 computation and live-data blocks are
+  byte-identical, and the banned phrases score zero while `primer`, `glossary`, `bar-sub`, `macroWord` and
+  `rot-table-wrap` are all retained. **This is the fourth consecutive run on which the instruction was restated and
+  the correct response was to verify, not to redesign.**
   **Re-asserted and passing 2026-09-29** at 390 / 768 / 1440: 0 horizontal scroll, 0 overflowing elements, 0
   interactive elements under 32px, `#macroGrid` 6 / `#catalystsRow` 21 / `#assetGrid` 6, **zero uncaught JS
   exceptions**, and both as-of spans reading the new stamp at every width. **The user re-stated the design
