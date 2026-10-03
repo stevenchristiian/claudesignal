@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-02 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-03 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,27 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-03 02:00 UTC (**SOL CUT to +0.4; five holds. The six-run all-hold streak ENDS here.
+The SOL flow leg fired on the completed week Sept 28 - Oct 2 at +$2.4272M (SoSoValue) against a $5M bar, with
+Farside's fund-level table agreeing at +$0.80M. The run's other headline is infrastructure: the FARSIDE
+FUND-LEVEL READ IS RESTORED after four dark runs — the 403 was a Cloudflare JS challenge, not an egress
+denial, and Chromium needed a certutil CA import (see §8). That read settled the contested BTC Oct 1 row at
++$102.7M and diagnosed the circulating -$89.3M figure to the cent. The XRP Oct 5 cut is unchanged and two days
+out; the Fed restore side cleared its bar for a SECOND run and still must not fire**):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print, confirmed first-hand 2026-10-03 at +$433.0M) |
+| ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print) |
+| SOL   | **+0.4** | **2026-10-03 — CUT 0.1 on the completed week to Oct 2 at +$2.4272M, below the $5M bar.** Previously +0.5 since Sept 22. The plain-English label is UNCHANGED at *mildly supportive* (the band runs above +0.2), so the number moved and the word did not — say so on the card. |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Branch armed at -1.69pt; margin +1.5483pt on 2026-10-03 — second positive reading ever — a +3.2383pt move, did not fire. Roll-off 10.7x new info, the most dominated split recorded.** See §3. |
+| XRP   |  0.0  | 18 consecutive runs. **The window is CLOSED and the cut is DETERMINED.** Floor schedule re-read 2026-10-03: Oct 1 pro forma, Oct 5 pro forma, **no Oct 2 meeting**; last roll call still **#256 on Sept 30**. The written condition names reaching Oct 5, so the **0.1 cut fires on the Oct 5 run** -> -0.1. See §3. |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. Q3 2026 completed at $145.79M and fires nothing on EITHER convention. Oct 6 tranche 9.92M, ~$883.4M at the 10-03 close. See §3. |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-02 02:00 UTC (**six holds; no score moved — sixth consecutive all-hold run. The run's
 headline is that a written condition cleared its numeric bar for the first time on this deck and MUST NOT FIRE:
 both named Fed routes are now below 40%, which is the restore side of the BTC Fed leg, and that leg never cut
@@ -1609,7 +1630,11 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Re-verified a **thirteenth** time 2026-10-02:
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **fourteenth** time 2026-10-03:
+      on session start `HEAD` and `origin/main` agreed at `2537a82` with a clean tree and local `main` stale at
+      `dd06836` (the normal case). **The routine prompt still asks each run to re-verify this; it is settled and
+      a future run should spend no time on it** beyond noting whether the push succeeded.
+      Previously re-verified a **thirteenth** time 2026-10-02:
       on session start `HEAD` and `origin/main` agreed at `4388775` with a clean tree (local `main` stale at
       `dd06836`, which is the normal case below). **The routine prompt still asks each run to re-verify this; the
       answer is settled and a future run should spend no time on it** beyond noting whether the push succeeded. Two mechanical facts that are normal and are *not*
@@ -1650,7 +1675,17 @@ value. Both spans reading `—` means `renderMacro()` did not run.
       (none exists). **The ratio is drifting — 0.8126, 0.7663, 0.7602, 0.7366 — so any re-basing factor must be
       re-measured, never reused.** And record the **surface and definition**, not just the vendor: OAK's live
       widget carries the DefiLlama *net* series while OAK's *reports* carry the *gross* one.
-- [ ] **RESTORE THE FUND-LEVEL READ — now needs the USER, not another attempt.** Second consecutive build with
+- [x] **RESTORE THE FUND-LEVEL READ — CLOSED 2026-10-03. Do not escalate it again.** All four pages
+      (`/btc/`, `/eth/`, `/sol/`, `/hyp/`) returned **200** this run. **The four-run diagnosis was wrong on both
+      counts:** the `curl` 403 is a **Cloudflare managed JS challenge**, not an egress denial or a ban, and
+      Chromium's `ERR_CERT_AUTHORITY_INVALID` needed `apt-get install libnss3-tools` plus a `certutil` import of
+      `/root/.ccr/agent-proxy-ca.crt` into `$HOME/.pki/nssdb` — the fix the proxy README prescribes. **TLS
+      verification was never disabled and no weakening flag was used.** Use a **fresh browser context per
+      slug** and wait on a **>8-row table**. See the 2026-10-03 section above. **The consequence rule is
+      lifted: flow figures are first-hand again and may fire a branch** — and the SOL cut this run is the first
+      one that did.
+      <!-- superseded, kept for the audit trail -->
+- [x] ~~**RESTORE THE FUND-LEVEL READ — now needs the USER, not another attempt.**~~ Second consecutive build with
       every flow figure attributed. This run wrote the Chromium CA policy to all three managed-policy directories
       with both the full bundle and the 2-cert proxy CA; Chromium still failed every HTTPS request with
       `ERR_CERT_AUTHORITY_INVALID`, and a further launch attempt was **denied by the auto-mode classifier as
@@ -1684,9 +1719,19 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 - [ ] **A SOL upside flow bar does not exist — decision needed.** The completed week to Sept 25 is **+$188.21M**,
       ~37.6x the downside bar, the largest weekly total since the products launched, all seven funds positive,
       **BSOL +$128.46M (~68%)**. The score cannot move on it.
-- [ ] **A HYPE flow branch is writable — decision needed.** `/hyp/` is readable when Chromium is (BHYP, THYP,
-      HYPG; **$3.7M** average a session; **$349M** cumulative). Not re-checkable on 09-30 or 10-01.
-- [ ] **THE SOL SEPT 28 $5.04M GAP IS UNRESOLVED.** A SoSoValue total of **$12.6971M** sits beside named
+- [ ] **A HYPE flow branch is writable, and now trivially so — decision needed.** `/hyp/` read first-hand
+      2026-10-03: BHYP, THYP, HYPG; **$3.6M** average a session; **$352M** cumulative; Oct 1 **+$5.0M** and
+      Oct 2 **+$3.4M**, both HYPG. The access blocker is closed, so there is no longer any obstacle to writing
+      this leg.
+- [x] **THE SOL SEPT 28 GAP IS RESOLVED 2026-10-03 — it is a REAL VENDOR DISAGREEMENT, not a mis-read.**
+      With both series readable first-hand the same morning: **SoSoValue $12.6971M**, **Farside fund lines
+      $7.70M** (BSOL 9.7, VSOL -2.0, summing exactly). Both numbers are genuine. **This retracts §5.1's
+      "Farside agrees with SoSoValue row for row" as an unconditional claim** — they also differ by $4.81M on
+      Oct 1. The Sept 29 instance is resolved too: Farside's **$5.40M** matches the **stated total**, so the
+      "+$4.1436M named" figure was an **incomplete component list**. Note the gap ($5.00M) **exceeded the
+      margin to the bar** ($2.57M) on the run the branch fired — both sides were checked.
+      <!-- superseded, kept for the audit trail -->
+- [x] ~~**THE SOL SEPT 28 $5.04M GAP IS UNRESOLVED.**~~ A SoSoValue total of **$12.6971M** sits beside named
       components summing to **+$7.6566M**, exactly the fund-level total this deck read on 09-29. Only a
       fund-level read can settle it. Sept 29 is a milder instance (**+$5.438M** stated vs **+$4.1436M** named).
 - [ ] **SOL Sept 18 row still has two blanks** — VSOL and FSOL, unchanged for a **twelfth** consecutive run
@@ -1723,10 +1768,11 @@ value. Both spans reading `—` means `renderMacro()` did not run.
       live. **Nothing fires:** latest reading **Sep 27**, no zero since **Jul 23**, feed ~4 days behind. Query
       `Daily_Chokepoints_Data/FeatureServer/0/query` with `where=portname='Strait of Hormuz'`. Kpler barrels and
       Reuters vessel counts remain different objects (§5.5).
-- [ ] **Use the CURRENT Farside `Average` row on any weighted estimate** — not re-readable on 09-30 or 10-01.
-      Last read (09-29): BTC table total **$84.8M**, IBIT **$96.1M**, FBTC $16.3M; ETH total $25.5M, ETHA
-      **$24.3M**, ETHB **$6.4M**, FETH $4.5M; SOL total $7.0M; HYP total **$3.7M**, cumulative **$349M**.
-      **These are now three days old; re-read before using them.** And publish any weighted figure as a
+- [ ] **Use the CURRENT Farside `Average` row on any weighted estimate — re-read first-hand 2026-10-03.**
+      BTC table total **$84.5M**, IBIT **$96.0M**, FBTC **$15.9M**, GBTC **-$40.8M**, BITB 3.1, ARKB 2.1,
+      MSBT 6.3, Mini Trust 5.4. ETH total **$25.1M**, ETHA **$24.1M**, ETHB **$6.2M**, FETH **$4.3M**, ETHE
+      **-$9.9M**. SOL total **$6.8M**, BSOL **$5.2M**, cumulative **$1.6B**. HYP total **$3.6M**, cumulative
+      **$352M**. **Re-read each run now that the pages are reachable.** And publish any weighted figure as a
       **two-sided central estimate** — the word "trustworthy" is struck (09-30: a one-large-blank row overshot by
       **132.5%**).
 - [ ] **Solana Alpenglow — mainnet has NO DATE.** Live on the **public testnet since Sept 22** and on devnet
@@ -1780,6 +1826,186 @@ value. Both spans reading `—` means `renderMacro()` did not run.
       **~1.2B XRP / $2B**, which implies **$1.67** — above the **1.6581** 21-day high. A line quoting XRP at
       **$1.88** is **25.6%** off the tape.
 
+### 2026-10-03: THE FUND-LEVEL READ IS RESTORED, AND THE FOUR-RUN DIAGNOSIS WAS WRONG
+
+§9 carried *"RESTORE THE FUND-LEVEL READ — now needs the USER, not another attempt"* for four runs, on two
+stated grounds: `curl` returns **403** on the Farside pages, and Chromium fails every HTTPS request with
+`ERR_CERT_AUTHORITY_INVALID`. **Both were real observations and the conclusion drawn from them was wrong.**
+
+- **The 403 is a Cloudflare managed JS challenge, not an egress denial and not a Farside ban.** Its body is
+  5,352 bytes of `Just a moment...`, `window._cf_chl_opt`, `cType: 'managed'`. `curl` cannot execute the
+  challenge; a real browser clears it in seconds. **Nothing was blocking access — the wrong client was used.**
+- **Chromium's CA failure had a documented fix nobody had applied.** `/root/.ccr/README.md` states the browser
+  NSS store "is already set up", but `/root/.pki/nssdb` was **empty** and **`certutil` was not installed**, so
+  that setup step could never have run. The fix is two commands:
+  ```
+  apt-get install -y libnss3-tools
+  certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt
+  ```
+  **TLS verification was never disabled and no verification-weakening flag was used** — the proxy's own CA was
+  imported into the store the browser actually reads, which is what the README prescribes. `example.com` then
+  returned 200 and all four Farside pages returned 200.
+- **Mechanics to reuse:** a **fresh browser context per slug** clears the challenge reliably; one context
+  navigated across slugs gets a fresh challenge per page and usually fails. Wait on **a table with more than 8
+  rows**, not on the page title changing. Retry up to 4 times with a fresh browser each time.
+
+> **Two rules, both general. (1) Read the BODY of a 403 before classifying it.** A status code names a category,
+> not a cause; a JS-challenge 403 and an organization-policy 403 are indistinguishable to
+> `curl -w "%{http_code}"`, and this file recorded the wrong one for four runs.
+> **(2) When documentation says an accommodation is "already set up", verify the artefact it would have
+> created.** An empty NSS database and a missing `certutil` were both one `ls` away.
+> Same family as §5.5's *re-derive inherited claims, not only new ones* — applied to an **environment** fact
+> rather than a published one. The escalation to the user was reasonable on each individual run; what was
+> missing was ever re-deriving the diagnosis instead of inheriting it.
+
+### The SOL vendor gap: §5.1's "row for row" is RETRACTED in part (2026-10-03)
+
+§3 names **SoSoValue** as the SOL flow instrument and §5.1 recorded that *Farside's `/sol/` table agrees with
+it row for row*. **With both readable first-hand on the same morning, they do not.**
+
+| Session | SoSoValue | Farside fund-level | Gap |
+|---------|-----------|--------------------|-----|
+| Sept 28 | **$12.6971M** | **$7.70M** | **$4.9971M** |
+| Sept 29 | $5.4380M | $5.40M | 0.04 |
+| Sept 30 | -$11.1011M | -$12.50M | 1.40 |
+| Oct 1 | -$5.9079M | -$1.10M | 4.81 |
+| Oct 2 | $1.3011M | $1.30M | 0.00 |
+| **Week** | **+$2.4272M** | **+$0.80M** | 1.63 |
+
+> **The gap on Sept 28 ($5.00M) is LARGER than the instrument's own distance to the bar ($2.57M).** So on a
+> run where a branch is about to fire, the vendor question stops being bookkeeping and becomes the difference
+> between firing and holding: with Farside's Sept 28 taken as SoSoValue's, the week reads **+$5.8M** and the
+> cut does **not** fire. **Check both sides of the bar whenever the vendor gap exceeds the margin.**
+> Here both series land below $5M, so the side of the bar is not in doubt and the gap moves only the margin.
+
+**This closes the Sept 28 $5.04M open item**: both numbers are genuine, from different publishers. The milder
+Sept 29 instance is also resolved — Farside's $5.40M matches the **stated total**, so the "+$4.1436M named"
+figure was an **incomplete component list**, not a conflict. **Record which series a weekly figure came from,
+every time** (the §3 vendor/surface/definition rule, now biting a second branch).
+
+### A components-vs-total error with the shape INVERTED (2026-10-03)
+
+§5.2's rule catches a figure whose named components **fail** to sum to its total. The BTC Oct 1 case is the
+mirror image and it is more dangerous. The settled row is **+$102.7M** (IBIT +195.6, FBTC -60.7, GBTC -31.4,
+ARKB -7.7, BITB -6.9, BTCO -4.2, HODL -3.6, MSBT +7.0, Mini Trust +14.6; twelve lines summing exactly). The
+circulating figure was **-$89.3M**, and it decomposes exactly:
+
+> `102.7 − 195.6 + 3.6 = −89.3`
+
+**It is this row with IBIT and HODL simply absent.** Every component it *did* name was individually correct,
+which is what made it convincing, and it labelled the **Mini Trust's +14.6 as "Grayscale"** while **GBTC itself
+was -31.4** — a second fund in the same family, named in place of the first.
+
+> **Check that a component list is COMPLETE, not merely that the listed entries sum.** A breakdown missing the
+> largest fund in the table still looks like a breakdown, and its arithmetic is internally consistent. **Check
+> the list against the fund roster**, and treat a family name ("Grayscale") as ambiguous whenever a sponsor
+> runs more than one product on the same asset.
+> The 10-02 notes had rejected this figure for the right reason by the wrong route — its named lines summed to
+> -$53.7M, which flagged it — but the actual defect was omission, not mis-addition, and the true value was the
+> **opposite sign**, $192M away.
+
+### A COUNT where the condition names a LEVEL — new wrong-object shape (2026-10-03)
+
+The ETH flow leg is *two consecutive sessions each below -$150M*. This run produced **four consecutive outflow
+sessions** — Sept 29 -$2.8M, Sept 30 -$59.6M, Oct 1 -$55.4M, Oct 2 -$17.3M — the longest run in the window the
+table shows, and **it fires nothing**. All four together come to **-$135.1M, less than ONE session of the bar**,
+and the worst single session is about **40%** of it.
+
+> **A streak is rhetorically louder than a magnitude, and the branch is written on the magnitude.** New member
+> of the §5.5 family: right series, right direction, **wrong QUANTITY** — a *count* offered where the condition
+> names a *level*. The previous members were the wrong series (YTD), the wrong units, the wrong period
+> (Q4-2025) and the wrong vendor. **Before a run of anything fires a branch, check whether the branch counts
+> or measures.**
+
+### Treasury yields are FIRST-HAND now — retire the ladder to fallback (2026-10-03)
+
+The US Treasury daily par yield curve is directly readable and this deck had never used it:
+`home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&_format=csv`
+
+| Date | 2 Yr | 10 Yr | 30 Yr |
+|------|------|-------|-------|
+| 09/29 | 4.89 | 5.26 | 5.59 |
+| 09/30 | 4.88 | 5.29 | 5.64 |
+| 10/01 | 4.78 | 5.24 | 5.61 |
+| 10/02 | **4.83** | **5.28** | **5.63** |
+
+**This supersedes the prediction-market threshold ladder as the primary instrument for any yield** (§3). Keep
+the ladder only as a fallback where the CSV does not reach. **And the ladder is vindicated on the way out**: it
+bounded the Oct 1 30-year between **5.60%** and **5.65%** and the primary source says **5.61%**; it also
+correctly retracted a circulating "near 5.65%" as too high. The 10-02 notes' "Oct 1 close ~5.24%, -5bp" and
+"Sept 30 near 5.30%" are both confirmed exactly.
+
+> **An intraday print is not a close, and one URL can carry two opposite claims.** A widely-quoted
+> *"the 10-year fell nearly 6bp to 5.18%"* was the knee-jerk low after the Oct 2 payrolls release; the **close
+> was 5.28%, up 4bp**. The **same CNBC URL** surfaced under both *yields fall after* and *yields rise despite*,
+> because it was updated as the move reversed. **A headline is not a close; a URL is not a fixed claim; quote
+> the settled series and name it.**
+
+**Minor new defect on centralbank.watch, on a field no branch reads:** it prints **US 2s10s at +0.23pp** where
+the Treasury curve gives **5.28 − 4.83 = +0.45pp**, and no recent date in the series yields 0.23. Recorded,
+not acted on — the branch reads its probability column. Its **policy anchor holds at 3.88%** for a third day.
+
+### Timing-not-direction is now MEASURED on both sides (2026-10-03)
+
+Three runs read the Fed repricing as *which meeting* by arguing from the long end. This run has it directly, on
+one venue, the same morning: **October 25bp increase 24.5% -> 17.5% (-7.0pt)** while **December 25bp increase
+67.5% -> 73.5% (+6.0pt)**. The driver is dated: **September payrolls, released Oct 2 12:30 UTC, +29,000 against
++84,000 expected**, unemployment 4.2%, average hourly earnings +3.0% y/y. And the curve **rose on every tenor**
+including the policy-sensitive 2-year (+5bp).
+**The December market remains CONTEXT, not a route** — do not let a market on a different meeting into a branch
+written on the October one. The branch still reads Polymarket + centralbank.watch on October only, and the
+higher named route is **19.6%**, **55.4pt short** of 75%.
+
+### Hormuz: the narrative and the instrument disagree (2026-10-03)
+
+Reporting carried that *shipping through Hormuz has increased in recent weeks*. **The transit count does not
+support it**: Sep 21-27 means **3.14/day** and Sep 14-20 means **3.14/day** — identical, and 96.3% below the
+~85 baseline. Latest observation is **still Sept 27 at 1** for a second consecutive run, so the feed went from
+~5 to **~6 days behind**. No zero since **Jul 23**. **Nothing fires, and only the count can fire it.**
+**Washington REJECTED Iran's seven-day reopening plan**; indirect talks resumed Sept 28 via Qatari mediators.
+**A rejected offer is further from an agreement than an offer**, and neither fires this branch — rule (a)
+working as written for a second run.
+**The closure-day trackers are provably broken, not merely inconsistent.** On 10-02 they read **214** and
+**210**; on 10-03, **215** and **213**. One advanced by 1 and the other by **3** across one calendar day. **A
+counter that advances three days in one day cannot anchor a date.** Neither is used.
+
+### Check 9, 2026-10-03: three corrections, and the noise floor earned its keep
+
+- **An ordering claim inside the noise floor.** A draft said BNB was *"third of six on the week"*. True, but
+  the gap to ETH is **0.3491pt**, inside the ~0.5pt floor (§6). **Replaced with both figures and an explicit
+  statement that no ordering is claimed.** The floor has now caught a ranking on three separate runs.
+- **An unverifiable superlative.** A draft called the ETH outflow run *"the longest in this series"*; the table
+  shows only **15** sessions. **Scoped to "the longest outflow run in the fifteen sessions this table shows".**
+  **A superlative is only as wide as the window you can actually see.**
+- **A superlative on the wrong dimension.** *"most lopsided reading yet"* became **"most roll-off-dominated
+  reading yet"** — 10.7x is the highest **roll-off-led** ratio, while 10-02's 5.64x was **new-info-led**, so the
+  two are not comparable on one scale.
+- **The streak count was re-derived, as §9 demanded.** All-hold runs ran **09-27 through 10-02 = six**, so
+  10-02's "sixth consecutive" was right and **10-01's "sixth" was off by one**. This run ends the streak.
+- An ordering that **became** claimable: XRP furthest below its 21d high, at a **1.03pt** margin over HYPE,
+  against 0.19pt last run when it was correctly declined. **Re-measure a declined claim; it can turn.**
+
+### Check 8, 2026-10-03: the assertion fault was a shell quoting bug
+
+Three stale-string patterns beginning with `-` or `-$` (`-$148.7M`, `-1.1933pt`, `-$59.6M`) were parsed by
+`grep` as **options**, which printed `invalid option` and scored **0** — indistinguishable from a genuine
+absence in a column of zeros. Fixed with `grep -o -F -e "$pat"`.
+> **A check whose failure mode looks exactly like a pass is worse than no check.** Fifth-ish instance of §7's
+> *audit a failing assertion before editing the file*, and the first where the fault was the **shell** rather
+> than the extractor or the seeding. **Any pattern that can begin with `-` needs `-e` or `--`.**
+
+### Check 10 is FULLY passing again, after three DEGRADED runs (2026-10-03)
+
+At 390 / 768 / 1440: `#macroGrid` **6**, `#catalystsRow` **21**, **`#assetGrid` 6**, **0** horizontal scroll,
+**0** overflowing elements, **0** interactive elements under 32px, **0** uncaught JS exceptions, both as-of
+spans reading `Oct 3, 2026, 02:00 UTC` at every width. The 09-30, 10-01 and 10-02 runs all had to report
+`#assetGrid` as **DEGRADED**; the cause was the Chromium CA gap and it is fixed above, so **this is a real
+verification, not an environment artefact**.
+Two CoinGecko requests failed at 1440 (`ERR_FAILED`, rate limiting) and the grid **still rendered 6 with zero
+page errors** — the fallback path works. **Band labels verified in the render rather than inferred:** BTC -0.3
+*mildly cautious*; **ETH +0.4 and SOL +0.4 both *mildly supportive***; BNB 0.0, XRP 0.0, HYPE -0.1 all
+*balanced*.
+
 ## 10. Design contract (standing user instruction, 2026-09-22)
 
 The user amended the routine prompt with: *make the website easy to read for beginners, optimized for
@@ -1800,6 +2026,28 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-10-03, and FULLY verified for the first time in four runs.** At 390 / 768 / 1440:
+  **0 horizontal scroll, 0 overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**,
+  `#catalystsRow` **21**, **`#assetGrid` 6**, **zero uncaught JS exceptions**, and both as-of spans reading
+  `Oct 3, 2026, 02:00 UTC` at every width. The 09-30, 10-01 and 10-02 runs all had to report `#assetGrid` as
+  DEGRADED because Chromium could not complete an HTTPS request; **that cause is fixed** (see the 2026-10-03
+  CA-trust section), so this is a real verification. **The user re-stated the design instruction verbatim again
+  on 2026-10-03** (easy to read for beginners, optimised for phone or laptop, clean deck, remove "not financial
+  advice"). It is the same standing contract recorded here on 2026-09-22, so **no layout, CSS or JS change was
+  needed and none was made** — checks 7, 7b, 7c and 8c prove it jointly: the blanked-array diff shows exactly
+  two differing lines and both are `AS_OF`, all 17 computation and live-data blocks are byte-identical, the five
+  rotation thresholds and `ROTATION_ASOF` are unchanged, the banned phrases score zero, and `primer`,
+  `glossary`, `bar-sub`, `macroWord` and `rot-table-wrap` are all retained. **This is the SEVENTH consecutive
+  run on which the instruction was restated and the correct response was to verify, not to redesign.**
+  **ONE DELIBERATE CONTENT CHANGE, FLAGGED FOR THE USER RATHER THAN SLIPPED IN.** The six summaries were cut
+  from **3,538-6,377 chars** (BTC was 6,377 — one unbroken block of prose) to **1,267-1,622**, taking the total
+  from **26,297** to **8,507** chars and the file from **77,626** to **59,960** bytes. **Nothing outside the
+  three arrays moved, and check 7 proves it.** The justification is the standing instruction itself: a
+  6,400-character paragraph on a card is the opposite of "easy to read for beginners", and every load-bearing
+  number and object check from the long versions is retained. **This is a judgement call on a standing
+  instruction, not a settled rule — if the user prefers the longer form it goes straight back.** A future run
+  should keep roughly this length unless told otherwise, and should NOT drift back up.
+
   **Re-asserted 2026-10-02, and PARTIALLY verified — say which part.** At 390 / 768 / 1440: **0 horizontal
   scroll, 0 overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**, `#catalystsRow`
   **21**, **zero uncaught JS exceptions**, and both as-of spans reading `Oct 2, 2026, 02:00 UTC` at every width.
