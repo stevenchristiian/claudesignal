@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-03 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-04 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,29 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-04 02:00 UTC (**SIX HOLDS; no score moved. The headline is that the BNB relative branch
+came within **0.8747pt** of firing: margin **+2.4353pt** against the armed -1.69pt, the **largest reading in the
+series** and the closest to firing since the Sept 26 re-arm. Unlike the previous run it is not peer-weakness —
+BNB led the six on 24h (+1.97%) and 7d (+1.37%). **A real error in the 10-03 published build was found and
+corrected: the BNB overlap window ended one day too late** (see the new section below). Oct 3-4 is a WEEKEND, so
+no fund session, Treasury close or futures session is new, and **both Oct 2 flow rows are still provisional** —
+the 10-03 carry-forward asked for them to be settled and they were not settlable. The XRP Oct 5 cut is **one day
+out** and re-confirmed first-hand; the Fed restore side cleared its bar for a THIRD run and still must not
+fire**):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print). Oct 1 settled +$102.7M; **Oct 2 +$31.7M still provisional, IBIT blank**. |
+| ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print). Four outflow sessions -$135.1M total, worst -$59.6M; **Oct 2 provisional, ETHA and ETHB blank**. |
+| SOL   | +0.4  | **2026-10-03** (cut 0.1 on the week to Oct 2 at +$2.4272M). Next completed week is **Oct 5-9** — nothing measurable before Friday. The week that fired the cut is now **corroborated by an outside publisher at $2.4M**. |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Branch armed at -1.69pt; margin +2.4353pt on 2026-10-04 — LARGEST IN THE SERIES, a +4.1253pt move, 0.8747pt SHORT of firing. Second consecutive positive reading.** See §3. |
+| XRP   |  0.0  | **19 consecutive runs.** Window CLOSED, cut DETERMINED. Floor schedule re-read 2026-10-04: **Oct 5 pro forma at 4:00 p.m.**, Oct 1 pro forma, no Oct 2 meeting; last roll call still **#256, Sept 30**. **The 0.1 cut fires on the Oct 5 run** -> -0.1. See §3. |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. Q3 2026 completed $145.79M, fires nothing on either convention. Oct 6 tranche **9,916,666** tokens, **~$889.1M** at the 10-04 close. See §3. |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-03 02:00 UTC (**SOL CUT to +0.4; five holds. The six-run all-hold streak ENDS here.
 The SOL flow leg fired on the completed week Sept 28 - Oct 2 at +$2.4272M (SoSoValue) against a $5M bar, with
 Farside's fund-level table agreeing at +$0.80M. The run's other headline is infrastructure: the FARSIDE
@@ -1628,9 +1651,85 @@ value. Both spans reading `—` means `renderMacro()` did not run.
   Never disable TLS verification. This must be done **before** the validation render, or the render
   is not faithful to what a real visitor sees.
 
+### 2026-10-04: THE BNB OVERLAP WINDOW ENDS AT THE **OLD** BUILD'S STAMP — a real error in the 10-03 build
+
+The margin decomposition splits `new(7d to T1) - old(7d to T0)` where `T1 = T0 + 1 day`. The two windows are
+`[T0-7d, T0]` and `[T0-6d, T0+1d]`, so **the overlap they actually share is `[T0-6d, T0]` — a six-day window
+ending at the OLD build's timestamp.** The 10-03 run used the six-day window ending at **its own** stamp.
+
+| | published 10-03 | corrected |
+|---|---|---|
+| old (7d to Oct 2) | -1.1933 | -1.1933 |
+| overlap | +1.3143 (6d to **Oct 3** — wrong) | **+1.5546** (6d to **Oct 2**) |
+| roll-off | +2.5076 | **+2.7479** |
+| new information | +0.2340 | **-0.0062** |
+| ratio | 10.7x | **~440x, and opposite-signed** |
+
+**How it was diagnosed rather than merely suspected:** the published "+0.2340" is numerically the *next* run's
+roll-off with the sign flipped, because it is the same subtraction (`1.5483 - 1.3143`). When a published
+component of run N reappears as a different component of run N+1, suspect an off-by-one in the window, not a
+coincidence.
+
+> **The qualitative conclusion survived and was UNDERSTATED** — the reading was *more* roll-off-dominated than
+> published, not less, and no score depended on it either way. **A wrong number that happens to support the
+> right conclusion is still a wrong number.** Recompute the split from the windows every run; never carry a
+> component forward.
+
+### 2026-10-04: a MEDIAN helper for five peers must take the middle element
+
+A fresh tape script reproduced the 10-03 table exactly on all six names and every percentage column, then
+returned the BNB margin as **+0.5996pt** against the recorded **+1.5483pt**. Cause: `(sorted[2]+sorted[3])/2`,
+the median of an **even**-sized list, applied to the **five** peers. The middle element is `sorted[2]`.
+**This branch always compares BNB against exactly five peers, so the even-sized form is always wrong here.**
+Caught by §6's reproduce-the-previous-build rule, which has now caught a real defect on two consecutive runs.
+
+### 2026-10-04: a correctly-dated event of the RIGHT TYPE on the WRONG OBJECT
+
+The Senate **did invoke cloture on Sept 30**, agreed **53-47**, roll call **#255** — on the **Sonderling
+nomination for Secretary of Labor**. The XRP branch reads *a second cloture vote on the market-structure bill*,
+whose motion failed **49-50 on Sept 15**. A search for a Sept 30 cloture vote returns something real, dated,
+and correctly described that **has nothing to do with the branch**. This is sharper than the usual stale-date
+trap: the date is right, the event type is right, and only the object is wrong. **Ask what the vote was ON.**
+
+### 2026-10-04: an unchanged fact does not oblige the deck to mention it
+
+A check-8 companion list asserting that unchanged facts "must still be present" scored **0** for `87,397.00`
+simply because this build's BTC card did not quote it. **That is not a defect and there is no file-side
+remedy.** The §7 check-8 rule ("establish that the FACT changed before seeding on it") has a mirror image:
+**do not assert the presence of a fact merely because it is still true.** The assertion was dropped.
+
+### 2026-10-04: the NSS store can be ABSENT, not merely empty
+
+`certutil -A` failed with `SEC_ERROR_BAD_DATABASE` because `$HOME/.pki/nssdb` **did not exist at all** (the
+2026-10-03 note records it as existing but empty). The working sequence is:
+
+```
+apt-get install -y libnss3-tools
+mkdir -p $HOME/.pki/nssdb
+certutil -d sql:$HOME/.pki/nssdb -N --empty-password      # <-- create it FIRST
+certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt
+```
+
+Also: the Playwright Chromium binary is at **`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`**. The
+unversioned `/opt/pw-browsers/chromium/...` path does not exist. TLS verification was never disabled.
+
+### 2026-10-04: a WEEKEND is a cause, and it should be tested rather than assumed
+
+Oct 3-4 fell on a Saturday and Sunday, which explains most of what did not move. Each leg was still read
+first-hand to distinguish *no session* from *broken feed*: Treasury's latest CSV row stayed **10/02/2026**;
+all four Farside slugs returned **200** with no new date row; centralbank.watch held **19.6%** under an
+unchanged **Oct 2** stamp; Polymarket held **17.5% / 73.5%** with `updatedAt` minutes old. **An unchanged
+weekend figure that is freshly stamped is confirmed; an unchanged figure under an old stamp is merely stale.**
+Applied: the 2.1pt route spread was **not** published as a disagreement, per §9's both-legs-fresh rule.
+
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **fourteenth** time 2026-10-03:
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **fifteenth** time 2026-10-04:
+      on session start `HEAD` and `origin/main` agreed at `93e4960` with a clean tree and local `main` stale at
+      `dd06836` (the normal case). **The routine prompt still asks each run to re-verify this; it is settled,
+      and this run spent no time on it beyond confirming the push.** Live URL also matched the repo file byte
+      for byte on session start (sha256 `0ed56854…`, 59,960 bytes, `AS_OF` reading Oct 3).
+      Previously held a **fourteenth** time 2026-10-03:
       on session start `HEAD` and `origin/main` agreed at `2537a82` with a clean tree and local `main` stale at
       `dd06836` (the normal case). **The routine prompt still asks each run to re-verify this; it is settled and
       a future run should spend no time on it** beyond noting whether the push succeeded.
@@ -2026,6 +2125,21 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-10-04, and FULLY verified for the SECOND consecutive run.** At 390 / 768 / 1440:
+  **0 horizontal scroll, 0 overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**,
+  `#catalystsRow` **21**, **`#assetGrid` 6**, **zero uncaught JS exceptions, zero failed requests**, and both
+  as-of spans reading `Oct 4, 2026, 02:00 UTC` at every width. **The user re-stated the design instruction
+  verbatim again on 2026-10-04** (easy to read for beginners, optimised for phone or laptop, clean deck, remove
+  "not financial advice"). It is the same standing contract recorded here on 2026-09-22, so **no layout, CSS or
+  JS change was needed and none was made.** The proof this run is unusually tight: **check 7's blanked-array
+  diff shows exactly ONE differing line in the whole file, and it is `AS_OF`** — strictly stronger than the
+  17-block byte-identity assertion, because it covers everything outside the three arrays rather than only the
+  named blocks. The five rotation thresholds and `ROTATION_ASOF` are unchanged, the banned phrases score zero,
+  and `primer`, `glossary`, `bar-sub`, `macroWord` and `rot-table-wrap` are all retained. **This is the EIGHTH
+  consecutive run on which the instruction was restated and the correct response was to verify, not to
+  redesign.** Summary lengths **1,227-1,446 chars** (total 7,980), inside the band set on 10-03 and not
+  drifting up.
+
   **Re-asserted 2026-10-03, and FULLY verified for the first time in four runs.** At 390 / 768 / 1440:
   **0 horizontal scroll, 0 overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**,
   `#catalystsRow` **21**, **`#assetGrid` 6**, **zero uncaught JS exceptions**, and both as-of spans reading
