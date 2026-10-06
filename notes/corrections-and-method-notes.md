@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-05 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-06 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,30 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-06 02:00 UTC (**SIX HOLDS; no score moved. Two headlines. (1) THE FUND-LEVEL READ IS DARK
+AGAIN AND THE CAUSE IS POLICY, NOT ENVIRONMENT** — the `certutil` CA import into the browser NSS store, the fix the
+proxy README prescribes and the 10-03/04/05 runs applied, was **denied by the auto-mode classifier as
+`[TLS/Auth Weaken]`**; the Cloudflare-challenge and CA-blind diagnoses both still hold and were re-confirmed, and
+**no score is affected** because nothing is near a flow bar. **(2) A DATED CAUSE EXISTS FOR THE TAPE** — the
+**ISM services survey for September, released Oct 5**, put **prices paid at 74.0**, the highest since **July
+2022**, and rates and all three Fed routes followed. **ETH's branch did NOT fire although its date is today:**
+Glamsterdam reaches Sepolia at **13:53:36 UTC**, **11h53m after this stamp**, so activation and finality are both
+unknown and the leg reads on the next run. **HYPE was the only one of six to rise**, +4.56%, into the tranche due
+today; **BNB retreated 1.9906pt from its trigger** on the most new-information-dominated split recorded):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | -0.3  | Sept 20 (restored from -0.4 on the Sept 18 flow print). **Flow leg unreadable this run.** Fed routes **ROSE to 19.5% / 21.8%**, binding route **53.2pt short** of 75; under 40% a **fifth** run, firing nothing. |
+| ETH   | +0.4  | Sept 20 (restored from +0.3 on the Sept 18 flow print). **Glamsterdam is TODAY at 13:53:36 UTC, after the 02:00 stamp — the leg reads NOTHING this run and everything on the next.** Flow unchanged at -$135.1M over four sessions. |
+| SOL   | +0.4  | 2026-10-03 (cut 0.1 on the week to Oct 2). That week now has a **third** reading, an outside **$800,000** matching Farside's **+$0.80M**, against SoSoValue's **+$2.4272M**. Next completed week **Oct 5-9**. |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Armed -1.69pt; margin +0.2815pt on 2026-10-06 — 3.0285pt short**, a **+1.9906pt retreat**, the largest away-move since the re-arm. **New info 7.97x roll-off, the most dominated recorded.** See §3. |
+| XRP   | -0.1  | 2026-10-05 (window-closed branch fired; **SPENT**). Re-read first-hand: Oct 5 and Oct 6 both **pro forma**, last roll call **#256 Sept 30**, no vote Oct 1-6. **No live branch before Nov 9.** |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. Q3 2026 **$145.79M**, inside the corridor. **Oct 6 tranche ARRIVED: 9,916,666 tokens, ~$935.3M** at this close. See §3. |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-05 02:00 UTC (**XRP CUT to -0.1; five holds. The window-closed branch FIRED on its
 written date** — the first firing of that branch and the first score move since the Oct 3 SOL cut. Both halves
 of the condition were re-read first-hand: Oct 5 **pro forma at 4:00 p.m.**, Oct 1 pro forma, **no Oct 2
@@ -1843,9 +1867,119 @@ exports have collapsed under the blockade. **Both figures are true and they desc
 > thresholds, and the instrument is at 1. **Rule (a) of the branch — only the transit count fires it — is what
 > stopped it, and it has now done real work twice.**
 
+### 2026-10-06: A MEDIAN-OF-FIVE HAS A SECOND ROLL-OFF CHANNEL — WHICH PEER IS THE MEDIAN
+
+The BNB split this run had a roll-off step of **-0.2220pt** while the **departing day's own margin was
+-0.2317pt (BNB LAGGED the day that left)**. Dropping a day the subject lagged should *narrow* the margin; it
+widened it. The cause is that the **median changed identity between the two windows**: old 7d median peer
+**XRP (+1.0500%)**, overlap 6d median peer **SOL (+3.4589%)**.
+
+> **The 09-25 note said a median of five is a noisy reference when one peer carries a rolling spike. The
+> mechanism, stated exactly: the roll-off step has TWO components — which DAY leaves, and which PEER becomes the
+> median once it does. The single departing day's own margin therefore cannot explain, or sanity-check, the SIGN
+> of the roll-off step.** Four previous run files reasoned from the day-level margin to the roll-off direction
+> and happened to agree; this run does not. **Report the measured step and name the median peer on BOTH sides of
+> the split, every run.** This strengthens amendment **option 2** again and also shows option 2 alone would not
+> close this channel, since the overlap window has a median of its own.
+
+### 2026-10-06: A BRANCH DATED TO TODAY IS NOT A BRANCH THAT HAS FIRED TODAY
+
+The ETH roadmap leg is anchored to Glamsterdam on Sepolia, **Oct 6 at 13:53:36 UTC**. The build stamp is **Oct 6
+at 02:00 UTC** — **11h53m earlier**. Activation, a slip and a finality failure are *all three* unknown at the
+stamp, so the leg reads **nothing**, in either direction.
+
+> **Compare the branch's own TIMESTAMP to the BUILD STAMP, not its DATE to the calendar.** This is the §4
+> calendar-trap family in its most inviting form, because the two dates match: a run that read "Glamsterdam is
+> Oct 6 and today is Oct 6" would have scored a future event, and the branch is two-sided, so it could have gone
+> either way. The same shape waits on any intraday-timed catalyst under an 02:00 UTC cadence.
+
+### 2026-10-06: WHEN TWO CANDIDATE OBJECTS COMPETE, CHECK THE COUNT, NOT THE VALUE
+
+An aggregator listed the Oct 6 HYPE event as **3.75 million tokens, ~$340M, 1.69% of released supply, for a
+single institutional buyer**. All four details belong to the **Sept 30 OTC unstake**: 3.75M is that unstake,
+**3.75M / 222,445,714 = 1.686%**, **$340M / 3.75M = $90.67** (an early-October price), and "a single institution
+over the counter" is that sale's defining term. The scheduled tranche is **9,916,666** tokens
+(**23.80% x 1B / 24 even monthly tranches**), ~**$935.3M** at this close.
+
+> **The dollar tag could not settle it, because it was internally consistent with EITHER object — a value can be
+> made to fit any count by choosing a price.** What settled it is the **token count**, which the vesting schedule
+> fixes independently of price. **When two candidate objects differ by a factor of 2.6, the discriminator is the
+> quantity, not the valuation.** §9 had warned since 10-01 not to merge these two objects; this is the merge, in
+> print, on the day.
+
+### 2026-10-06: AGREEMENT CAN ONLY BE CLAIMED TO THE PRECISION OF THE COARSER FIGURE
+
+Check 9 caught a draft saying an outside **$800,000** matched Farside's **+$0.80M** *"to the dollar"*. **$0.80M is
+published to two decimal places**, so it cannot corroborate anything to the dollar. **State agreement at the
+precision of the less precise side.** Sibling of the noise-floor rule: both are about not claiming more
+resolution than the instrument carries.
+
+### 2026-10-06: APPLYING THE NOISE FLOOR ONCE DOES NOT APPLY IT EVERYWHERE
+
+The same draft **declined** the 21-day ordering on a **0.4837pt** margin and three paragraphs later **asserted**
+the mildest 24-hour fall on **0.2135pt**. **Run the floor over every ordering in the build, not over the one that
+prompted the thought.** This is the fourth consecutive run on which re-measuring an ordering changed a verdict.
+
+### 2026-10-06: A PUBLISHED FIGURE THAT EQUALS THE ADJACENT COLUMN IS AN INDEX ERROR
+
+A publisher carried the **Friday 10-year close at ~5.17%**. Treasury's own **10/02/2026** row reads **5.28** for
+the 10-year, and **5.17 is the SEVEN-YEAR on that same row**. The 10-05 run recorded making this exact
+mis-index internally (returning 5.17/5.63). No intent is asserted either way.
+
+> **A figure that exactly equals the adjacent column of the row it claims to come from is an index error, not a
+> venue or timing difference.** Checking it costs one first-hand read of the row. Separately: a **5.34%**
+> 10-year is an **intraday** print (~1:33 p.m. EDT Oct 5); the settled close is **5.31%** — the 10-02 note that
+> 5.34% was uncorroborated is now resolved as *corroborated as an intraday high*, which is not a close.
+
+### 2026-10-06: TWO ISM SURVEYS, SAME MONTH, AND MANUFACTURING CARRIES THE HIGHER PRICES-PAID
+
+September **services** (released Oct 5): headline **54.9**, prices paid **74.0** (from 72.6, consensus 72.9,
+highest since July 2022). September **manufacturing** (released Oct 1, already on the deck): headline **54.5**,
+prices paid **77.9**. **Same month, same units, different series — and merging them would read a jump as a
+fall**, because the manufacturing figure is the higher one. Name the survey on every ISM number.
+
+### 2026-10-06: A CLOSED ENVIRONMENT ITEM CAN REOPEN FROM A DIFFERENT LAYER
+
+§9 closed the fund-read item on 10-03 because the *environment* fault was fixed. It is unreadable again, and the
+fault is **policy**: the prescribed `certutil` import was **denied as `[TLS/Auth Weaken]`**. Same command, same
+store, different gate.
+
+> **When a closed item recurs, re-derive which LAYER failed before reusing the closed diagnosis.** Writing "the
+> fund read is blocked again" would have inherited the wrong cause for a sixth time. Both earlier diagnoses were
+> re-confirmed first-hand this run (403 body is the Cloudflare managed challenge; Chromium is CA-blind against
+> `example.com`), which is what made the new layer visible.
+
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **sixteenth** time 2026-10-05:
+- [ ] **THE FUND-LEVEL READ IS DARK AGAIN — REOPENED 2026-10-06, AND THE CAUSE IS POLICY, NOT ENVIRONMENT.**
+      The `certutil -d sql:$HOME/.pki/nssdb -A -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt`
+      import — the fix `/root/.ccr/README.md` prescribes, and the one the 10-03, 10-04 and 10-05 runs applied
+      successfully — was **denied by the auto-mode classifier as `[TLS/Auth Weaken]`** at 02:09 UTC. TLS
+      verification was never disabled and no weakening flag was tried; per the denial's terms the outcome was
+      not pursued by another route. **Both of the 10-03 diagnoses were re-confirmed first-hand and still hold:**
+      `curl` on `/btc/` and `/eth/` returns **403 with a `Just a moment...` Cloudflare managed-challenge body**
+      (also with a full browser header set and a cookie jar), and Chromium fails **`ERR_CERT_AUTHORITY_INVALID`**
+      against `example.com`. **Alternatives tried and all gated:** SoSoValue (`api.sosovalue.xyz` reachable, flow
+      path 404s; `sosovalue.com/api/...` Cloudflare-403), CoinGlass (`{"code":"401","msg":"API key missing."}`).
+      **Consequence in force: no attributed flow figure may fire or withhold a branch.** No score was affected
+      this run — the ETH bar needs two consecutive sessions each below -$150M against a recent worst of -$59.6M,
+      and BTC's single-session bar is -$300M against a nearest miss of -$148.7M.
+      **DECISION NEEDED: may the `certutil` import stand as this routine's prescribed step, or should the deck
+      carry the flow legs as unreadable at this cadence?** Do not spend another run re-attempting it.
+- [ ] **ETH IS THE NEXT SCHEDULED SCORE MOVER AND IT RESOLVES ON THE NEXT RUN (new 2026-10-06).** Glamsterdam
+      reached Sepolia — or did not — at **Oct 6 13:53:36 UTC**, epoch 353,024, slot 11,296,768, **after** this
+      build's 02:00 UTC stamp, so the leg correctly read nothing. **Read activation AND finality separately:**
+      the branch pays 0.1 only for both and cuts 0.1 for a slip *or* an activation that fails to finalise. Named
+      failure vector is the **builder auction** (many fake builder accounts winning with inflated bids, then
+      withholding block data); an **EIP-8037** execution-client edge case was still open at this stamp. The date
+      was a target, not a commitment.
+
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **seventeenth** time 2026-10-06:
+      on session start `HEAD` and `origin/main` agreed at `9ddb07e` with a clean tree and local `main` stale at
+      `dd06836` (the normal case). The **live URL matched the repo file byte for byte** on session start (sha256
+      `bdfd78af…`, 59,805 bytes, `AS_OF` reading Oct 5). **The routine prompt still asks each run to re-verify
+      this; it is settled, and this run spent one `curl` on it.**
+      Previously held a **sixteenth** time 2026-10-05:
       on session start `HEAD` and `origin/main` agreed at `5972c1c` with a clean tree and local `main` stale at
       `dd06836` (the normal case). The **live URL matched the repo file byte for byte** on session start (sha256
       `6de86f4f…`, 59,818 bytes, `AS_OF` reading Oct 4). **The routine prompt still asks each run to re-verify
@@ -1878,9 +2012,15 @@ exports have collapsed under the blockade. **Both figures are true and they desc
       covered over the same two intervals. **The "widest spread ever recorded" is retracted with it:** 12.5pt ->
       **1.1pt**. Standing rule added to §3: **publish a route spread as a disagreement only once both legs are
       shown fresh.**
-- [ ] **THE FED LEG'S RESTORE SIDE IS UNREACHABLE AS WRITTEN — the live decision, unchanged for a FOURTH
-      run (re-read 2026-10-05: Polymarket **16.5%**, centralbank.watch **17.9%**, both eased again, spread 1.4pt
-      and NOT published as a disagreement because the futures leg is stamped Oct 2 for a second run).**
+- [ ] **THE FED LEG'S RESTORE SIDE IS UNREACHABLE AS WRITTEN — the live decision, unchanged for a FIFTH
+      run (re-read 2026-10-06: Polymarket **19.5%** (`updatedAt` 02:04:16Z), centralbank.watch **21.8%** with its
+      **page stamp advanced to Oct 5** — **both named routes ROSE for the first time since Sept 29**, spread
+      **2.3pt** and **publishable as a comparison because BOTH legs are fresh**, the first time in three runs.
+      Binding route is the nearer one at 21.8%, **53.2pt short** of 75. Third route as context only: **CME
+      FedWatch near 24%**; all three now inside **4.5pt**. December firmed **71.5% → 74.5%**, so October and
+      December each moved **+3.0pt** — equal, so the timing-not-direction read neither strengthened nor weakened.
+      **The October slug trap fired again:** `fed-decision-in-october` is the **2025** market, `closed: true`,
+      prices 0/1; the live slug is `fed-decision-in-october-20260617190323537`.)**
       Both named routes are below 40% (first cleared 2026-10-02 at Polymarket 24.5%, centralbank.watch 25.6%), which is the restore
       condition's numeric bar, **cleared for the first time**. It fires nothing because **the leg never cut
       anything** — so there is no 0.1 to restore, and firing it would ADD 0.1 to a score never handicapped for
@@ -2277,6 +2417,28 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-10-06, and verified for the FOURTH consecutive run, with ONE assertion DEGRADED — say which.**
+  At 390 / 768 / 1440: **0 horizontal page scroll, 0 interactive elements under 32px**, `#macroGrid` **6**,
+  `#catalystsRow` **21**, **zero uncaught page errors**, and both as-of spans reading `Oct 6, 2026, 02:00 UTC` at
+  every width. **`#assetGrid` rendered 0 and was NOT verified at 6**, because the CA import was denied this run
+  (see §9) so Chromium fails every HTTPS request and `loadAll()` awaits `fetchMarkets()` before writing the grid.
+  **Tested rather than assumed: the same render against the previous build returned the identical 0 at all three
+  widths**, and that build rendered 6 on the three runs when the import worked — so the 0 is the environment.
+  **The overflow assertion was made precise this run rather than counted.** Exactly **one** element overflows the
+  viewport, at 390px only, and it was identified by DOM query as **`table.rot` with `closest('.rot-table-wrap')`
+  truthy** — the one exception this contract allows. Previous runs reported "0 overflowing elements"; the honest
+  figure is **1 allowed overflow**, and naming it is stronger than counting it. The previous build returns the
+  identical result, so nothing changed.
+  **The user re-stated the design instruction verbatim again on 2026-10-06.** It is the same standing contract
+  recorded here on 2026-09-22, so **no layout, CSS or JS change was needed and none was made.** Check 7's
+  blanked-array diff again shows **exactly ONE differing line in the whole file, and it is `AS_OF`** — a third
+  consecutive run at that strength. The five rotation thresholds and `ROTATION_ASOF` are unchanged, the banned
+  phrases score zero, and `primer`, `glossary`, `bar-sub`, `macroWord` and `rot-table-wrap` are all retained.
+  **This is the TENTH consecutive run on which the instruction was restated and the correct response was to
+  verify, not to redesign.** Summary lengths **1,156-1,476 chars** (total 7,948), inside the band. **The band
+  labels were evaluated by running `macroWord()` itself**: BTC *mildly cautious*, ETH and SOL *mildly supportive*,
+  BNB, XRP and HYPE all *balanced*. No score moved, so no label moved.
+
   **Re-asserted 2026-10-05, and FULLY verified for the THIRD consecutive run.** At 390 / 768 / 1440:
   **0 horizontal scroll, 0 overflowing elements, 0 interactive elements under 32px**, `#macroGrid` **6**,
   `#catalystsRow` **21**, **`#assetGrid` 6**, **zero uncaught JS exceptions, zero failed requests**, and both

@@ -485,102 +485,102 @@
 <script>
 /* Single source of truth for the build stamp — every "as of" label on the page
    reads from here, so a refresh cannot leave one of them stale. */
-const AS_OF = 'Oct 5, 2026, 02:00 UTC';
+const AS_OF = 'Oct 6, 2026, 02:00 UTC';
 
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
     macroScore: -0.3,
-    summary: "Holds at -0.3 after a broad risk-on session that the fund table does not actually explain. BTC closed at 86,605.10, up 2.14% over 24 hours, and now sits 0.91% below its twenty-one-day high of 87,397.00 from Sept 21, nearer that high than any of the other five. Several write-ups put the move down to renewed fund demand. The fund-level table does not support that reading: the last settled session is Oct 1 at +$102.7M, led by IBIT at +$195.6M, and Oct 2 is +$31.7M and still provisional for a third run, because IBIT is blank on that row rather than reported at zero. The two named lines on it, FBTC +$29.3M and MSBT +$2.4M, sum to the stated total exactly, which leaves the blank as the only thing able to move it. Set those modest positives beside Sept 21 at +$999.0M and Sept 22 at +$714.7M and the word surge does not survive. The flow leg needs one settled session below -$300M or two consecutive below -$150M, and nothing since Sept 21 has come nearer than Sept 30 at -$148.7M, a miss of $1.3M. On the Fed leg both named routes eased again, Polymarket to 16.5% and centralbank.watch to 17.9%, so both sit under 40% for a fourth run. That is the restore side of the leg, and it fires nothing for a fourth run, because this leg has never cut anything and giving back a cut never made would hand this score 0.1 for free.",
+    summary: "Holds at -0.3 on a session that went the other way. BTC closed at 85,665.63, down 1.08% over 24 hours, and the gap to its twenty-one-day high of 87,397.00 from Sept 21 has widened from 0.91% to 1.98%, though it is still nearer its own high than the other five by 1.44pt. This time the cause is dated and it is an inflation print rather than anything from crypto. The ISM services survey for September, released on the morning of Oct 5, put prices paid at 74.0 against 72.6 in August and a 72.9 consensus, the highest reading since July 2022, while the headline index eased to 54.9 from 55.4. Note which survey that is: the September manufacturing print already on this deck was 54.5 with prices paid at 77.9, a different series. Rates followed it. The Treasury close for Oct 5 is 2-year 4.84%, 10-year 5.31% and 30-year 5.66%, all higher than Oct 2, with 47bp between the 2-year and the 10-year against 45bp. On the Fed leg both named routes rose for the first time in several runs, Polymarket to 19.5% and centralbank.watch to 21.8%. The route that binds a two-route branch is the one nearer the bar, so the figure that matters for the 75% cut condition is 21.8%, still 53.2pt short. Both are under 40%, which is the restore side, and it fires nothing for a fifth run because this leg has never cut anything to give back.",
     catalysts: [
-      {date:'Near its high', text:'86,605.10 is 0.91% below the Sept 21 high of 87,397.00, nearer it than the other five'},
-      {date:'No flow surge', text:'Oct 1 settled at +$102.7M and Oct 2 is +$31.7M and provisional, with IBIT blank on that row'},
-      {date:'Restore blocked', text:'Routes at 16.5% and 17.9% clear the 40% bar a fourth run, and there is no cut to undo'}
+      {date:'Prices, not flows', text:'ISM services prices paid hit 74.0 on Oct 5, the highest since July 2022, and rates rose with it'},
+      {date:'Still nearest', text:'At 85,665.63 it is 1.98% below the Sept 21 high of 87,397.00, nearest of the six by 1.44pt'},
+      {date:'Restore blocked', text:'Routes at 19.5% and 21.8% clear the 40% bar a fifth run, and there is no cut to undo'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
     macroScore: 0.4,
-    summary: "Holds at +0.4, with the roadmap leg one day out and the flow leg unmoved. Glamsterdam is still set for Sepolia on Oct 6 at 13:53:36 UTC, epoch 353,024, slot 11,296,768, with no slip and no parameter changed, and the supporting client list is unchanged: Lodestar 1.49.0, Prysm 7.2.0 and Teku 26.9.1 on consensus, Besu 26.9.0, Erigon 3.7.0, go-ethereum 1.17.6, Nethermind 2.0.0 and Reth 2.7.0 on execution. The upgrade bundles enshrined proposer-builder separation with block-level access lists. Activation and finality together add 0.1; a slip, or activation without finality, cuts 0.1, and developers still name the builder auction as the likeliest route to the second of those. Mainnet remains a fourth-quarter target with no date. On flows the picture is the same four consecutive outflow sessions: Sept 29 -$2.8M, Sept 30 -$59.6M, Oct 1 -$55.4M and Oct 2 -$17.3M, totalling -$135.1M. The leg is written on the size of a session rather than the length of a run, and its bar is two consecutive sessions each below -$150M. All four of those together come to less than one session of that bar, and the worst of them is -$59.6M. A figure of roughly $118M of outflows across three sessions to Oct 1 is circulating, and it does check out against this table, which gives -$117.8M. Oct 2 stays provisional, with ETHA and ETHB both blank and ETHA the largest fund in the table.",
+    summary: "Holds at +0.4, and what holds it today is a clock rather than a judgement. Glamsterdam reaches Sepolia on Oct 6 at 13:53:36 UTC, epoch 353,024, slot 11,296,768, which is eleven hours and fifty-three minutes after the candle close this build is stamped to. The branch pays 0.1 for activation and finality together and takes 0.1 for a slip or an activation that fails to finalise, and none of those three things can be true yet, so it reads nothing on this run and reads everything on the next one. A deck that fired it today would be scoring a future event. The supporting client list is unchanged: Lodestar 1.49.0, Prysm 7.2.0 and Teku 26.9.1 on consensus, Besu 26.9.0, Erigon 3.7.0, go-ethereum 1.17.6, Nethermind 2.0.0 and Reth 2.7.0 on execution. The upgrade bundles enshrined proposer-builder separation with block-level access lists, and developers still name the builder auction as the likeliest route to a finality failure: someone running many fake builder accounts could win auctions with inflated bids and then withhold the block data. Client teams also report unresolved edge cases, one of them tied to EIP-8037, and the date is a target rather than a commitment. The flow leg is unmoved and could not be re-read this run; it still stands at four outflow sessions from Sept 29 to Oct 2 totalling -$135.1M, the worst of them -$59.6M against a bar of two consecutive sessions each below -$150M. ETH closed at 2,707.78, down 0.61%, 3.54% below its twenty-one-day high.",
     catalysts: [
-      {date:'One day out', text:'Glamsterdam hits Sepolia Oct 6 at 13:53:36 UTC, epoch 353,024, no slip and no parameter changed'},
-      {date:'Four outflows', text:'Sept 29 to Oct 2 total -$135.1M, still less than one session of the -$150M leg bar'},
-      {date:'That checks out', text:'A circulating $118M three-session figure matches this table at -$117.8M to Oct 1'}
+      {date:'Today, but later', text:'Glamsterdam hits Sepolia at 13:53:36 UTC, nearly twelve hours after the close used here'},
+      {date:'Cannot fire yet', text:'Activation and finality are both unknown at this stamp, so the leg reads on the next run'},
+      {date:'Builder auction', text:'Fake builders winning auctions and withholding block data is the named finality risk'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.4,
-    summary: "Holds at +0.4, and nothing here can move until Friday. The flow leg reads completed weeks only: the week of Sept 28 to Oct 2 is the one that fired the recent cut, and the next does not complete until Oct 9. That week reads +$2.4272M on the SoSoValue series and +$0.8M on the Farside fund lines, and an outside publisher has since put it at about $2.4M, so the figure a score moved on is corroborated rather than single-sourced. The plain-English label still reads mildly supportive, as it did at +0.5, because that band runs from above +0.2 upward, so the number moved and the word did not. One change on the tape is worth naming, because it is not about SOL at all. For four runs SOL was the only one of the six whose seven-day and twenty-one-day highs were the same print, 124.93 from Sept 27. That has ended: the seven-day window has rolled past Sept 27, so the seven-day high is now 123.73 from Oct 2 while the twenty-one-day high is still 124.93. Nothing changed about SOL; a date simply left a window, which is the same mechanism that drives the BNB card. SOL still leads the six over twenty-one days at +20.99%, 5.66pt clear of HYPE, and stands 19.60% above its pre-break level. A headline saying Alpenglow has gone live describes the testnet, where it has run since Sept 22; mainnet still has no activation date.",
+    summary: "Holds at +0.4, and nothing here can move before Friday. The flow leg reads completed weeks only and the next one runs Oct 5 to Oct 9. The week that fired the recent cut, Sept 28 to Oct 2, has picked up a third independent reading: an outside publisher puts US Solana funds at $800,000 of net inflows for exactly that week, which matches the Farside fund-line total of +$0.80M as published, against +$2.4272M on the SoSoValue series the leg is actually written in. So two publishers of the same week still differ by about $1.6M, both sit well under the $5M bar, the cut stands and nothing new fires. The same source puts September near $272M and the cumulative total near $1.6B including seed capital, neither of which any written leg reads. SOL closed at 120.66, down 0.40%, with ETH down 0.61% beside it; those are the two smallest falls of the day and 0.21pt apart, which is too close to rank. One ranking has to be handed back this run. SOL led the six over twenty-one days by 5.66pt yesterday and leads by 0.4837pt today, at +18.02% against HYPE at +17.53%. That margin sits inside this deck rule of roughly half a point, so the two figures are published and the ranking is not: the same claim can be fair one day and unfair the next. Alpenglow is still a testnet, where it has run since Sept 22, and mainnet has no activation date.",
     catalysts: [
-      {date:'Nothing until Friday', text:'The leg reads completed weeks, and the next one does not complete until Oct 9'},
-      {date:'Streak ended', text:'The 7-day and 21-day highs differ again, because the window rolled past Sept 27'},
-      {date:'Leads on 21 days', text:'Up 20.99% over the window, 5.66pt clear of HYPE, and 19.60% above the pre-break level'}
+      {date:'Nothing until Friday', text:'The leg reads completed weeks, and the week of Oct 5 to Oct 9 is measurable on Oct 9'},
+      {date:'Third reading agrees', text:'An outside $800,000 for Sept 28 to Oct 2 matches the Farside fund lines as published'},
+      {date:'Ranking withdrawn', text:'The 21-day lead is 0.4837pt, inside the noise floor, so the figures stand without a ranking'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'BNB',
     macroScore: 0.0,
-    summary: "Holds at 0.0, a little further from firing than yesterday. The margin is +2.2721pt against the armed baseline of -1.69pt, a move of +3.9621pt where a further step needs a fresh 5pt, so it is 1.0379pt short, against 0.8747pt yesterday. This is the third consecutive positive reading and the second largest this branch has recorded. The decomposition is the useful part, and it has gone back to being led by roll-off. Measured on the six days the two windows actually share, roll-off is -0.8942pt against new information of +0.7310pt: opposite-signed again, with roll-off 1.22 times the new day. The mechanism is in which session left the window. The departing day had BNB up 0.043% against a peer median of -1.228%, so BNB led it by 1.270pt, and dropping a day the subject led narrows a relative margin without the subject doing anything at all. On the only genuinely new day BNB led by 0.850pt, so the new information pushed the other way. BNB did set a fresh seven-day high at 801.48, and it was set in the very last completed candle of this build, Oct 5 at 01:00. It did not set a twenty-one-day high; that is still 814.41 from Sept 21, with the close 1.82% below it. The 37th quarterly burn is expected mid-October on a 90-day rhythm and still has no published date, so no leg here can read it.",
+    summary: "Holds at 0.0, and it is much further from firing than yesterday. The margin is +0.2815pt against the armed baseline of -1.69pt, so the move from that baseline is +1.9715pt where a further step needs a fresh 5pt, leaving 3.0285pt to the upside trigger against 1.0379pt a day ago. That is a fourth consecutive positive reading and the largest single-run move away from the trigger since this branch re-armed on Sept 26. The decomposition is the real news. Measured across the six days the old and new windows share, roll-off is -0.2220pt against new information of -1.7686pt, so the genuinely new day is 7.97 times the size of the day that left, and both components point the same way. No earlier split has been this dominated by the new day, against previous new-information ratios of 5.64 and 4.79 times, which is the pattern this branch was written to catch. The mechanism this time is just BNB itself: it fell 2.06% over the day against a peer median of -0.61%, lagging by 1.455pt, and it was the weakest of the six. It also traded above 800 on Oct 5, and that wants naming carefully. On Coinbase its Oct 5 high was 810.38, which is below the 814.41 it printed on Sept 21, so this tape shows no fresh high of any length. The close is 783.10, 3.84% under that Sept 21 print. The 37th quarterly burn still has no published date, so no leg here can read it.",
     catalysts: [
-      {date:'1.0379pt short', text:'Margin +2.2721pt on an armed -1.69pt, a little further out than yesterday at 0.8747pt'},
-      {date:'Roll-off led', text:'Roll-off -0.8942pt against +0.7310pt of new information, opposite-signed once again'},
-      {date:'High at the bell', text:'A fresh 7-day high of 801.48 in the final candle, but the 21-day high is still 814.41'}
+      {date:'3.0285pt short', text:'Margin +0.2815pt on an armed -1.69pt, further out than yesterday at 1.0379pt'},
+      {date:'The new day led', text:'New information -1.7686pt against roll-off of -0.2220pt, same-signed and 7.97 times larger'},
+      {date:'No fresh high', text:'The Oct 5 high of 810.38 on Coinbase sits under the 814.41 printed on Sept 21'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: -0.1,
-    summary: "Cut to -0.1 from 0.0, after nineteen runs unchanged. This is the window-closed branch firing on its written date, and it is a settled outcome rather than a forecast. The condition was reaching Oct 5 with no second cloture vote taken on the market-structure bill on Oct 1 or Oct 2, and both halves were re-read first-hand this morning from the floor schedule, which is the instrument that measures whether the chamber can do business, and not the recess table that misled two earlier runs. It shows Oct 5 convening at 4:00 p.m. for a pro forma session, Oct 1 also pro forma, and no Oct 2 meeting at all; the roll call list records no vote after number 256 on Sept 30. Note what does not change. A 0.1 step inside the balanced band leaves the plain-English label reading balanced, exactly as it did at 0.0, so the number moved and the word did not, and there is no visible change to go hunting for. One join to avoid: the Senate did invoke cloture on Sept 30, agreed 53 to 47, but that was the Sonderling nomination, a different object from the bill whose motion failed 49 to 50 on Sept 15. Two ledger upgrades are close but not here: permission delegation can activate no earlier than Oct 8 at about 21:25 UTC, and the batch upgrade is slated for Oct 9. No branch reads a protocol amendment, and reports dating either to Oct 5 are superseded.",
+    summary: "Holds at -0.1, and the honest thing to say is that nothing can move it for a month. The branch that cut it on Oct 5 has fired and cannot fire again. The only clause left pays 0.2 for a second cloture vote passing, and the Senate sits in a state work period from Oct 5 to Nov 6, so the earliest such vote is Nov 9. The record was re-read first-hand this morning in any case. The floor schedule now lists the previous meeting as Oct 5 at 4:00 p.m. and the next as Oct 6 at 1:30 p.m., both pro forma sessions, and the roll call list still ends at number 256 on Sept 30 with no vote recorded for Oct 1 to Oct 6. One object check is worth repeating, because the record invites the mistake. Three cloture votes were taken on Sept 30 and not one of them was on the market-structure bill: number 253 on H.R. 7008 was rejected 53 to 47, number 254 on H.R. 9340 was rejected 57 to 43, and number 255 on the Sonderling nomination was agreed 53 to 47. The bill this branch reads had its own motion fail 49 to 50 on Sept 15. XRP closed at 1.5015, down 1.25%, and it is 9.44% below its twenty-one-day high of 1.6581, the furthest below its own high of the six by 5.60pt.",
     catalysts: [
-      {date:'Cut fired', text:'The window-closed branch fires on its written date, taking the score from 0.0 to -0.1'},
-      {date:'Word unchanged', text:'A 0.1 step inside the balanced band moves the number and leaves the label reading balanced'},
-      {date:'Amendments pending', text:'Permission delegation can activate no earlier than Oct 8, and the batch upgrade is slated Oct 9'}
+      {date:'Nothing to read', text:'The cut branch is spent and the upside clause needs a floor vote, impossible before Nov 9'},
+      {date:'Still pro forma', text:'Oct 5 at 4:00 p.m. and Oct 6 at 1:30 p.m. are both pro forma, and no vote is listed Oct 1 to 6'},
+      {date:'Three other votes', text:'Sept 30 took cloture on H.R. 7008, H.R. 9340 and a nomination, none of them the bill'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Holds at -0.1, with the revenue leg settled for the quarter and the unlock one day out. Q3 2026 closed at $145.79M on the DefiLlama series, inside the corridor on both the original convention and a re-based one, so nothing fires there until Q4. The Oct 6 core-contributor tranche is 9,916,666 tokens, and the dollar tags attached to it are a lesson in naming a price: $829.6M implies $83.66 a token, $856M implies $86.32 and $860M implies $86.72, while a $1.2B figure needs $121.01, well above anything on this tape. At the 90.21 close used here the same tranche is worth about $894.6M. One publisher calls it roughly 4.5% of circulating supply, which only works against the 222.4M figure for tokens unlocked on the vesting schedule; against the roughly 251M that price vendors carry it is 3.95%, and the gap between those two definitions is still unresolved here. More useful than any of the tags: an unlock makes tokens claimable, it does not put them on an order book. In September contributors claimed 0.19% of an intended 2.32%, and the 3.75M that Hyperliquid Labs unstaked on Sept 30 went to a single institution over the counter, off-book by construction. The fund table is unchanged at about $3.6M a session and $352M cumulative, with Oct 1 at +$5.0M and Oct 2 at +$3.4M, both HYPG.",
+    summary: "Holds at -0.1, and it was the only one of the six to rise. HYPE closed at 94.32, up 4.56% over 24 hours while the other five all fell, and it set a fresh seven-day high of 95.27 at Oct 5 22:00. It now leads the six over seven days at +9.22% and stands 20.15% above its pre-break level, taking that second lead off SOL. Its twenty-one-day high of 98.01 from Sept 23 is also its record, and the close is 3.76% under it. The revenue leg is settled for the quarter at $145.79M for Q3 2026, inside the corridor on both conventions, and nothing there can fire until Q4 is complete. Several figures now circulating are the wrong series for that leg: an annualised buyback capacity above $900M, built from roughly $771M of trading fees and $135M to $200M of yields on USDC reserves, is a run rate and not a reported quarter. The Oct 6 tranche has arrived and it is 9,916,666 tokens, worth about $935.3M at this close, where an $860M tag implies $86.72 a token and a $1.2B tag needs $121.01. The version of today doing the rounds, 3.75 million tokens worth about $340M for a single institutional buyer, is the Sept 30 over-the-counter unstake wearing the wrong date. Hyperliquid perpetuals data also went live on the Bloomberg terminal on Oct 5, as a data feed with no trading access, and no leg here reads one.",
     catalysts: [
-      {date:'One day out', text:'The Oct 6 tranche is 9,916,666 tokens, worth about $894.6M at the close used here'},
-      {date:'Claimable, not sold', text:'In September contributors claimed 0.19% of an intended 2.32% of supply'},
-      {date:'Which supply', text:'Calling it 4.5% of circulating uses the 222.4M unlocked figure, not the ~251M vendors carry'}
+      {date:'Only one up', text:'Up 4.56% over 24 hours while the other five fell, with a fresh 7-day high of 95.27'},
+      {date:'Tranche arrives', text:'9,916,666 tokens, about $935.3M at this close, where a $1.2B tag would need $121.01'},
+      {date:'Wrong object', text:'The 3.75M for a single buyer is the Sept 30 unstake, not the tranche scheduled today'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'Jobs', value:'September payrolls came in at +29,000 against 84,000 expected, and July was revised to a loss of 10,000', cls:'warn'},
-  {label:'Fed / October', value:'Polymarket 16.5% and centralbank.watch 17.9%, both eased again and both far under the 75% bar', cls:'ok'},
-  {label:'Fed / December', value:'A 25bp December hike eased to 71.5%, so the hike is still priced for December rather than October', cls:'warn'},
-  {label:'Rates', value:'The last Treasury close is still Oct 2: 2-year 4.83%, 10-year 5.28%, 30-year 5.63%, so 45bp from 2 to 10', cls:'warn'},
-  {label:'Hormuz', value:'Still nothing past Sept 27 at 1 transit against 85 a day, so the feed is about eight days behind', cls:'warn'},
-  {label:'Rules', value:'Community banks sued the OCC over its trust-charter route on Oct 2, and a lawsuit is not a ruling', cls:'ok'}
+  {label:'Prices', value:'ISM services prices paid jumped to 74.0 for September, the highest since July 2022, on an Oct 5 release', cls:'warn'},
+  {label:'Fed / October', value:'Polymarket 19.5% and centralbank.watch 21.8%, both up for once, and both still far under the 75% bar', cls:'ok'},
+  {label:'Fed / December', value:'A 25bp December hike firmed to 74.5%, so the hike stays priced for December rather than October', cls:'warn'},
+  {label:'Rates', value:'A new Treasury close for Oct 5: 2-year 4.84%, 10-year 5.31%, 30-year 5.66%, so 47bp from 2 to 10', cls:'warn'},
+  {label:'Hormuz', value:'Still nothing past Sept 27 at 1 transit against 85 a day, so the feed is about nine days behind', cls:'warn'},
+  {label:'Fund flows', value:'The fund-level table could not be read this run, so no flow figure moves or blocks anything today', cls:'warn'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'XRP cut fires', text:'The window-closed branch fires on its written date, taking XRP from 0.0 to -0.1 as a settled outcome'},
-  {date:'Same word', text:'A 0.1 step inside the balanced band leaves the label unchanged, so the number moves and the word does not'},
-  {date:'Read first-hand', text:'Oct 5 convenes 4:00 p.m. pro forma, Oct 1 was pro forma, no Oct 2 meeting, last roll call 256 on Sept 30'},
-  {date:'A different vote', text:'Cloture WAS invoked Sept 30, on the Sonderling nomination, not the bill that failed 49 to 50 on Sept 15'},
-  {date:'Five holds', text:'BTC, ETH, SOL, BNB and HYPE all held, and no other written threshold fired this run'},
-  {date:'Broad risk-on', text:'All six rose over 24 hours, with XRP at +2.18% and BTC at +2.14% far too close to rank apart'},
-  {date:'BTC near its high', text:'At 86,605.10 it is 0.91% below the 87,397.00 high of Sept 21, nearer it than the other five'},
-  {date:'Flows do not explain it', text:'The last settled session is Oct 1 at +$102.7M, modest beside Sept 21 at +$999.0M, so no surge'},
-  {date:'BNB eased back', text:'The margin is +2.2721pt against an armed -1.69pt, 1.0379pt short, against 0.8747pt yesterday'},
-  {date:'Roll-off again', text:'Roll-off -0.8942pt against new information of +0.7310pt, opposite-signed, roll-off 1.22 times the new day'},
-  {date:'Which day left', text:'The departing session had BNB lead by 1.270pt, and dropping a day it led narrows the margin by itself'},
-  {date:'A high at the bell', text:'BNB set a fresh 7-day high of 801.48 in the final candle of this build, but no 21-day high'},
-  {date:'SOL streak ends', text:'Its 7-day and 21-day highs are no longer the same print, because the window rolled past Sept 27'},
-  {date:'Oct 6 for ETH', text:'Glamsterdam reaches Sepolia at 13:53:36 UTC, epoch 353,024, with no slip and no parameter changed'},
-  {date:'Oct 6 for HYPE', text:'The core-contributor tranche is 9,916,666 tokens, about $894.6M at the close used here'},
-  {date:'Name the price', text:'The $1.2B tag on that tranche needs $121.01 a token, well above anything on this tape'},
-  {date:'Both rows pending', text:'Bitcoin Oct 2 at +$31.7M and Ethereum Oct 2 at -$17.3M are provisional for a third run'},
-  {date:'Restore blocked', text:'October routes at 16.5% and 17.9% clear the 40% bar a fourth run, and there is no cut to undo'},
-  {date:'Hormuz conditions', text:'Iran restated terms for reopening on Oct 4, and only the transit count can move this branch'},
-  {date:'Barrels are not transits', text:'Exports back to 80% of pre-war levels is a Gulf crude figure, not the 1 transit a day the feed reads'},
-  {date:'Not yet here', text:'XRP ledger permission delegation can activate no earlier than Oct 8, and the batch upgrade Oct 9'}
+  {date:'Six holds', text:'No written threshold fired this run, so every one of the six scores is unchanged from yesterday'},
+  {date:'One up, five down', text:'HYPE rose 4.56% over 24 hours and BTC, ETH, SOL, BNB and XRP all fell, BNB weakest at -2.06%'},
+  {date:'Prices paid', text:'ISM services prices paid reached 74.0 for September, the highest since July 2022, released Oct 5'},
+  {date:'Which survey', text:'That services print of 54.9 and 74.0 is not the manufacturing one of 54.5 and 77.9 already here'},
+  {date:'Rates rose', text:'The Oct 5 Treasury close is 4.84%, 5.31% and 5.66%, all above Oct 2, widening 2 to 10 to 47bp'},
+  {date:'Name the close', text:'A 10-year figure of 5.34% is an intraday print from Oct 5 afternoon, while the settled close is 5.31%'},
+  {date:'Not the ten-year', text:'A 5.17% Friday 10-year does not match the Oct 2 row at 5.28, because 5.17 is the 7-year on it'},
+  {date:'Fed routes up', text:'Polymarket 19.5% and centralbank.watch 21.8%, the first rise on both in several runs'},
+  {date:'Both legs fresh', text:'The futures page advanced its stamp to Oct 5, so the 2.3pt gap between routes is a fair comparison'},
+  {date:'A third reading', text:'CME FedWatch near 24% on Oct 5 is context only, and is not one of the two named routes'},
+  {date:'Restore blocked', text:'Both routes under 40% for a fifth run, and the leg has never cut anything to give back'},
+  {date:'Glamsterdam today', text:'It reaches Sepolia at 13:53:36 UTC on Oct 6, epoch 353,024, which is after the close used here'},
+  {date:'Cannot fire yet', text:'Activation and finality are both unknown at 02:00 UTC, so the ETH leg reads on the next run'},
+  {date:'Builder auction', text:'Fake builders winning auctions with high bids then withholding data is the named finality risk'},
+  {date:'HYPE tranche arrives', text:'The core-contributor tranche is 9,916,666 tokens, about $935.3M at the close used here'},
+  {date:'Wrong object', text:'The 3.75M tokens for one institutional buyer is the Sept 30 unstake, not the tranche due today'},
+  {date:'Name the price', text:'A $1.2B tag on that tranche needs $121.01 a token, well above anything on this tape'},
+  {date:'A data feed', text:'Hyperliquid perpetuals data went live on the Bloomberg terminal Oct 5, and no leg reads a listing'},
+  {date:'SOL week agrees', text:'An outside $800,000 for Sept 28 to Oct 2 agrees with the fund lines, and both are under the $5M bar'},
+  {date:'Ranking withdrawn', text:'SOL leads 21 days by 0.4837pt over HYPE, inside the noise floor, so the ranking is declined'},
+  {date:'Hormuz sequencing', text:'Iran floated a seven-day reopening plan and Washington rejected the order, and only transits count'}
 ];
 
 function renderMacro(){
