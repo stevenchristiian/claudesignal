@@ -2573,6 +2573,33 @@ The XRPL carries **two distinct amendments whose names both read as "permission 
 > UTC**) that reporting merely asserted. **Where a protocol encodes its own schedule, read the schedule off
 > the protocol.**
 
+### 2026-10-09: `$(...)` STRIPS TRAILING NEWLINES — never verify a publish by hashing a shell variable
+
+The publish-verification loop compared `printf '%s' "$OUT" | sha256sum` against the built file and **never
+matched**, while reporting `bytes=59746` against a built **59,747** and the **correct** new `AS_OF`. The
+publish was correct. **Command substitution strips trailing newlines**, so the variable held the served page
+minus its final newline and the hash could not match by construction.
+
+> **Download to a file and compare files — `curl -o`, then `sha256sum` and `diff`.** **The signature of this
+> bug is a one-byte shortfall with a CORRECT as-of label; the signature of a bad publish is a STALE as-of
+> label.** They are easy to tell apart, so tell them apart before reporting a failed publish.
+> Same family as 10-08's "an empty background log is not evidence that nothing happened": **the measuring
+> apparatus produced the alarming reading, not the thing measured.** §7's audit-the-assertion rule applies to
+> the publish check too, not only to the pre-publish ones.
+
+### 2026-10-09: DO NOT `pkill -f` A PATTERN THAT MATCHES YOUR OWN SHELL
+
+Stopping a background polling loop with `pkill -f "stevenchristiian.github.io"` **killed the shell issuing
+the command**, which exited **144** with none of its work done: the notes edits and the publish-record commit
+batched into the same invocation were lost and had to be redone. Nothing was corrupted — the working tree was
+clean and the build commit was already pushed — but a run that had batched the *build* commit there would
+have lost it.
+
+> **`pkill -f` matches the full command line of every process, including the one issuing it.** Kill a
+> background job by its id, or let it finish. **And never batch cleanup with real work in one invocation** —
+> the same lesson as §1's "re-run `git branch -f main HEAD` after EVERY commit", which also exists because
+> batching hides a failure.
+
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
 - [ ] **BOTH FLOW LEGS HAVE FIRED AND NEITHER HAS A RE-ARM RULE — new 2026-10-09, and it is now the most
