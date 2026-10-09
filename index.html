@@ -485,102 +485,102 @@
 <script>
 /* Single source of truth for the build stamp — every "as of" label on the page
    reads from here, so a refresh cannot leave one of them stale. */
-const AS_OF = 'Oct 8, 2026, 02:00 UTC';
+const AS_OF = 'Oct 9, 2026, 02:00 UTC';
 
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
-    macroScore: -0.3,
-    summary: "Holds at -0.3, and this is the closest the flow leg has come to its single-session bar since it was restored in September. The Oct 7 session is published at -$277.2M, which is $22.8M short of the -$300M that would re-cut the score, and it is provisional: the Blackrock line is blank, and the five lines that do report, Fidelity -$105.1M, Ark -$101.7M, Grayscale -$39.3M, Bitwise -$27.6M and VanEck -$3.5M, sum to the stated total exactly, so that one blank is the only thing that can move it. Five of the last six settled Blackrock prints were positive, so the likelier revision takes the row away from the bar rather than through it, but a provisional row cannot fire a branch either way and this one does not. The pair condition, two consecutive sessions each below -$150M, has no pair to work with, because Oct 6 settled positive. That settlement is the second run in a row where a blank line turned out to be the whole row: Oct 6 was carried yesterday at -$3.2M and closed at +$118.8M once Blackrock reported +$122.0M. On the Fed leg the binding route eased again, to 17.9% on centralbank.watch, now 57.1pt short of the 75% cut condition and the furthest from it this deck has recorded. Both named routes stay under 40%, which is the restore side, and it fires nothing for a seventh run because this leg has never cut anything to give back. BTC closed at 83,056.97, down 1.55%, and 4.97% under its Sept 21 high of 87,397.00.",
+    macroScore: -0.4,
+    summary: "Cut to -0.4 from -0.3, because the flow leg fired. The condition re-cuts the score on one settled session below -$300M, and the Oct 7 session, carried yesterday as provisional at -$277.2M, has settled at -$484.9M. It cleared the bar by $184.9M, or 61.6%. The blank line was the mover, exactly as the arithmetic said it would be: Blackrock reported -$207.7M, and with Fidelity -$105.1M, Ark -$101.7M, Grayscale -$39.3M, Bitwise -$27.6M and VanEck -$3.5M the six lines sum to the stated total exactly. Worth being honest about the call this deck made yesterday. It noted that five of the last six settled Blackrock prints were positive and that the likelier revision took the row away from the bar, and it went the other way instead. The reason that did no damage is the rule beside it: settle the row, do not predict it. A provisional row fired nothing, and a settled one fired on its own number. Scope the size properly. This is the largest single session in the window this deck tracks, and it is not a record for the product, whose own minimum is -$1,113.7M. Oct 8 is provisional at -$238.6M with Blackrock blank again. The plain-English label does not change: -0.4 and -0.3 both read mildly cautious, so the number moved and the word did not. BTC closed at 81,920.09, down 1.37%, the smallest fall of the six, and it is nearest its own high at 6.27% below.",
     catalysts: [
-      {date:'Closest yet', text:'Oct 7 is published at -$277.2M, which is $22.8M short of the -$300M single-session bar'},
-      {date:'Still provisional', text:'The Blackrock line is blank and the five reporting lines sum to the stated total exactly'},
-      {date:'Furthest from 75', text:'The binding Fed route eased to 17.9%, now 57.1pt under the cut bar and the furthest recorded'}
+      {date:'The leg fired', text:'Oct 7 settled at -$484.9M against a -$300M single-session bar, clearing it by 61.6%'},
+      {date:'The blank was the mover', text:'Blackrock reported -$207.7M, and the six reporting lines sum to the stated total exactly'},
+      {date:'Scoped, not inflated', text:'Largest session in the window tracked here, but the product minimum is -$1,113.7M'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
-    macroScore: 0.5,
-    summary: "Holds at +0.5, and the leg that has never been close is suddenly half-fired. The flow condition cuts 0.1 on two consecutive sessions each below -$150M, and until this run the worst session this deck had on record was -$59.6M. The Oct 6 session has now settled at -$201.9M, 34.6% past the bar, and it is one line: Blackrock reported -$201.9M and every other fund reported zero. That was checked against an outside publisher, which puts the same session at -$201.89M and also attributes all of it to that one fund, so two publishers agree on the figure and on the fund. Half the condition is therefore in place and the other half is not. Oct 5 came in at -$50.8M, and Oct 7 is provisional at -$44.8M with two lines blank, Blackrock among them, so there is no adjacent pair and the branch does not fire. What it does have is a live route to firing on the next run: the reporting lines on Oct 7 already sum to the stated total, which leaves those two blanks needing about -$105M more between them to carry the row past -$150M, and one of them printed -$201.9M the day before. The roadmap leg, meanwhile, is spent. The Sepolia clause paid its 0.1 last run and cannot pay again, Hoodi on Oct 27 is provisional, and mainnet has no date. ETH closed at 2,576.45, down 3.02%, and is 8.22% below its Sept 21 high.",
+    macroScore: 0.4,
+    summary: "Cut to +0.4 from +0.5, because the pair arrived. The flow leg cuts 0.1 on two consecutive sessions each below -$150M, and yesterday this deck had one half of it and said to read the other half first today. It read -$160.9M. The Oct 7 session, carried as provisional at -$44.8M, settled once Blackrock reported -$116.1M, and together with Oct 6 at -$201.9M that is two adjacent sessions both past the bar. The branch fires. The lines check out: Blackrock -$116.1M and Grayscale -$25.8M, with five smaller lines adding -$19.0M, sum to the total exactly, and an outside publisher reports the same session at $160.9M with the same two largest lines. Note what this says about a judgement in these notes. Six runs described this bar as unreachable, on the ground that the worst session on record here was -$59.6M. It was cleared twice in two days. A distance to a bar is a reading, not a property. Seven settled sessions have now run negative since Sept 29, for -$568.8M. The plain-English label does not change: +0.4 and +0.5 both read mildly supportive, so the number moved and the word did not. ETH closed at 2,480.53, down 3.72%, and it is the only one of the six now under its pre-break level, by 1.09%.",
     catalysts: [
-      {date:'Half the condition', text:'Oct 6 settled at -$201.9M, past the -$150M bar, where the worst on record here had been -$59.6M'},
-      {date:'One fund, two sources', text:'All of it is the Blackrock line, and an outside publisher puts the same session at -$201.89M'},
-      {date:'No pair yet', text:'Oct 5 was -$50.8M and Oct 7 is provisional at -$44.8M, so no two adjacent sessions clear the bar'}
+      {date:'The pair arrived', text:'Oct 7 settled at -$160.9M, and with Oct 6 at -$201.9M two adjacent sessions clear -$150M'},
+      {date:'Checked line by line', text:'Blackrock -$116.1M leads a row that sums exactly, and an outside publisher agrees'},
+      {date:'Never close is not cannot', text:'Six runs called this bar unreachable at -$59.6M, and it was cleared twice in two days'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.4,
-    summary: "Holds at +0.4, and the week that will decide it is three days old. The leg reads completed weeks only, and the week running Oct 5 to Oct 9 now holds three sessions, -$9.2M, -$3.7M and -$4.8M, for -$17.7M so far. That running total already sits under the $5M weekly bar that would re-cut the score, but a partial week is not a reading: this deck compares a week to a bar only once its Friday has settled, a rule it wrote down after a four-day figure was available and correctly left unused. So nothing fires today and the comparable week stays the one to Oct 2. The arithmetic is worth stating plainly rather than hinting at: with two sessions left, getting from -$17.7M to above +$5M needs about +$22.7M, and this table has produced single sessions that large as recently as Sept 25 at +$86.7M. The week is not decided, it is only unmeasured, and the reading arrives Friday Oct 9. SOL closed at 116.02, down 2.48%, and it keeps its own two rankings, both clear of this deck's half-point noise floor: it leads the six over twenty-one days at +16.99% against HYPE at +11.62%, and it leads above its pre-break level at +14.54% against HYPE at +12.19%. Alpenglow is still testnet-only. An October mainnet target is circulating, but it is not in a primary source and no written leg reads it, so it is named here rather than adopted.",
+    summary: "Holds at +0.4, and the week that decides it is four sessions old with its Friday still to come. The leg reads completed weeks only, and the week running Oct 5 to Oct 9 now holds -$9.2M, -$3.7M, -$4.8M and -$3.5M, for -$21.2M. That running total is under the $5M weekly bar that would re-cut the score, and it is still not a reading, because this deck compares a week to a bar only once its Friday has settled. An 02:00 UTC Friday build comes before the Friday session, so the week cannot be measured here however close the arithmetic looks. It is measurable on the next run. Stating that arithmetic plainly: getting from -$21.2M to above +$5M needs about +$26.2M in one session, and this table has produced a single session that large, Sept 25 at +$86.7M. So the week is undecided rather than lost. SOL closed at 109.37, down 5.73%, the weakest of the six on the day against the next weakest at -4.58%, a gap wide enough to call. Its twenty-one-day lead is gone: at +6.81% it now sits within 0.05pt of Bitcoin, which is inside this deck's half-point noise floor, so no leader is named on that column. Alpenglow is still testnet-only, and a report dated Oct 8 calling it live on devnet with mainnet soon reuses a feature-activation date as a launch. Mainnet has no date.",
     catalysts: [
-      {date:'Three days in', text:'Oct 5 to Oct 9 holds -$9.2M, -$3.7M and -$4.8M so far, and a partial week is not comparable'},
-      {date:'Friday decides it', text:'Clearing the $5M bar from -$17.7M needs about +$22.7M, which this table has done in one session'},
-      {date:'Two clear leads', text:'SOL leads on twenty-one days at +16.99% and above its pre-break level at +14.54%'}
+      {date:'Four sessions in', text:'Oct 5 to Oct 9 holds -$21.2M so far, and a partial week is not comparable to the bar'},
+      {date:'Friday decides it', text:'Clearing the $5M bar needs about +$26.2M, which this table has done in one session'},
+      {date:'The 21-day lead is gone', text:'SOL at +6.81% is within 0.05pt of Bitcoin, inside the noise floor, so no leader is named'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'BNB',
     macroScore: 0.0,
-    summary: "Holds at 0.0, and it was the only one of the six to rise. The margin is +2.0830pt against the armed baseline of -1.69pt, which leaves 1.2270pt to the upside trigger at +3.31pt, the third closest reading this branch has produced, after 0.8747pt on Oct 4 and 1.0379pt on Oct 5. BNB returned +0.3967% over the trailing seven days against a peer median of -1.6863%, and that median is Solana, which held the role in all three windows measured this run instead of changing hands as it did last run. The decomposition is the most even this branch has recorded. Across the six days the old and new windows share, roll-off is -2.3675pt and new information is +2.6806pt, a ratio of 1.13 to 1, where the two previous runs sat at the opposite extremes of the same axis, 14.90 to 1 and 7.97 to 1. The two components point opposite ways, which is why they nearly cancel. And for the first time in three runs the departing day explains its own sign: over Sept 30 to Oct 1 BNB returned +1.1830% against a peer median of +0.0658%, so it led the day that dropped out by 1.1172pt, and dropping a day the subject led should narrow the margin, which the -2.3675pt roll-off duly did. The arriving day is cleaner still, BNB leading it by 2.7470pt against a measured step of +2.6806pt. BNB closed at 771.96, up 0.18%. The 37th quarterly burn still has no published date.",
+    summary: "Holds at 0.0, and this is the closest the branch has come to firing. The margin is +2.6540pt against the armed baseline of -1.69pt, leaving 0.6560pt to the upside trigger at +3.31pt, inside the previous closest of 0.8747pt on Oct 4. Seventh consecutive positive reading. BNB returned -4.51% over the trailing seven days against a peer median of -7.16%, so it is outperforming while falling. Two things are worth a beginner seeing. First, the thing that stopped it firing was not the market. The median of five peers changed identity, from Solana to XRP, between the old window and the new one. Had Solana stayed the median, the margin would read +3.9518pt and this branch would have fired, raising the score. The identity change cost 1.2978pt, which is more than the distance to the trigger. Second, a measurement rule changed here. For two runs this deck could not explain the sign of the roll-off step using the departing session, and the reason was that it compared BNB to the wrong thing. Compared instead to the asset that is the window median, BNB lagged Solana by 0.9193pt on the day that dropped out, which predicts a roll-off of +0.9193pt against a measured +0.8829pt. The same test on yesterday agrees to 0.0121pt. BNB closed at 736.63, down 4.58%.",
     catalysts: [
-      {date:'1.2270pt short', text:'Margin +2.0830pt on an armed -1.69pt, the third closest reading this branch has produced'},
-      {date:'The evenest split', text:'Roll-off -2.3675pt against new information +2.6806pt, a 1.13 to 1 ratio, after 14.90 and 7.97'},
-      {date:'The sign fits', text:'BNB led the departing day by 1.1172pt, and the roll-off step narrowed the margin as it should'}
+      {date:'0.6560pt short', text:'Margin +2.6540pt on an armed -1.69pt, the closest this branch has come to firing'},
+      {date:'The median moved, not BNB', text:'Had Solana stayed the window median the margin would be +3.9518pt, and it would have fired'},
+      {date:'A better reference', text:'Against the window-median asset the departing day predicts roll-off to 0.0364pt'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: -0.1,
-    summary: "Holds at -0.1, and nothing written can move it before Nov 9. The branch that cut it on Oct 5 is spent, and the one clause left pays 0.2 for a second cloture vote passing, which cannot happen while the Senate sits in a state work period running to Nov 6. So the asset waits, and this card says so rather than dressing the wait up as a signal. Two protocol dates do land in the next two days and neither is a branch input. Permission delegation can activate from Oct 8 at about 21:25 UTC, two weeks after the validator majority was recorded, and a batch amendment carrying a security fix follows on Oct 9, with operators told to upgrade before it. Those dates match the ones this deck already held, which is worth noting because reports dating either amendment to Oct 5 were circulating a week ago and were superseded. No XRP leg reads a protocol amendment, so an upgrade landing in the same week as a price move must not be read as its cause. XRP closed at 1.4227, down 3.62%, the weakest of the six on the day, though ETH at -3.02% is only 0.5995pt away. It is 14.20% below its Sept 23 high of 1.6581, the furthest below its own high of the six by 4.06pt, and that gap widened from 10.97% in a single session.",
+    summary: "Holds at -0.1, and nothing written can move it before Nov 9. The branch that cut it on Oct 5 is spent, and the single clause left pays 0.2 for a second cloture vote passing, which cannot happen while the Senate sits in a state work period running to Nov 6. So the asset waits, and this card says so plainly rather than dressing a wait up as a signal. The ledger upgrade this deck has been tracking did happen, and it was read from the ledger itself rather than from a forecast. Permission delegation is now enabled, confirmed against a validated ledger at 02:14 UTC. The two batch amendments are not: they sit as pending majorities whose own recorded close times put their earliest activation at about 14:12 and 14:46 UTC today, both after this build. So one landed and two are hours away, and none of them is a branch input, because no XRP leg reads a protocol amendment. One naming trap is worth recording. The ledger carries two different amendments whose names both read as permission delegation, and only the V1_1 one is enabled, so a report naming the feature without the version does not settle which object activated. XRP closed at 1.3892, down 2.35%. It is the furthest below its own high of the six, 16.22% under its Sept 23 peak of 1.6581, and that gap has widened for a second session.",
     catalysts: [
       {date:'Nothing before Nov 9', text:'The cut branch is spent and the upside clause needs a floor vote during a state work period'},
-      {date:'Two upgrade dates', text:'Permission delegation from Oct 8 about 21:25 UTC, and a batch amendment with a security fix Oct 9'},
-      {date:'Furthest from its high', text:'XRP is 14.20% under its Sept 23 high, a gap that widened from 10.97% in one session'}
+      {date:'Read from the ledger', text:'Permission delegation is enabled; the two batch amendments are not, and are due after this build'},
+      {date:'Furthest from its high', text:'XRP is 16.22% under its Sept 23 high, the widest gap of the six by 2.63pt'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Holds at -0.1, and the quarter that was moving has stopped. Read first-hand from the same endpoint over the same 92 days, Q3 2026 protocol revenue is $173.91M, the identical figure this deck read a day ago, after it had jumped 19.3% from $145.79M in the six days before that. One stable reading is not a settled series, so the read date is kept beside the number and the next run checks it again. It fires nothing on either convention, exactly as it did at the lower figure: $173.91M sits inside the raw $150M to $260M corridor, and scaled onto the larger gross series the bars were calibrated in it is roughly $214M to $236M, inside as well. Q4 now holds seven days and $15.04M, a partial period that reads nothing. One object check is worth a beginner seeing. Reports are describing the Oct 6 event as 3.75 million tokens worth about $337M going to core contributors, and that merges two separate things. The scheduled tranche was 9,916,666 tokens. The 3.75M block is the separate parcel Hyperliquid Labs unstaked on Sept 30 and sold over the counter to a single institution, settling Oct 7, and it is 37.8% of the tranche by token count. One is a schedule, the other a private sale. The next tranche is listed for Nov 6. HYPE closed at 88.07, down 2.57%, and 10.14% under its Sept 23 high.",
+    summary: "Holds at -0.1, and the quarter now looks settled rather than merely still. Read first-hand from the same endpoint over the same 92 days, Q3 2026 protocol revenue is $173.9115M, the identical figure on three consecutive reads after it jumped 19.3% from $145.79M in the days just after the quarter closed. Two non-moving observations is the point at which this deck stops treating a quarter as in motion, so the figure is adopted, with its read date kept beside it. It fires nothing on either convention: $173.91M sits inside the raw $150M to $260M corridor, and scaled onto the larger gross series the bars were calibrated in it is roughly $214M to $236M, inside as well. The settling has moved down a level rather than stopped. Q4 now reads $17.5490M across eight days, and reconciling it against yesterday shows the Oct 7 daily print revised up by $0.0602M while the quarter above it held. A partial period still reads nothing. The two-objects trap fired in the press for a third run and is again not adopted: reports describing a 3.75 million token unlock are describing the parcel Hyperliquid Labs unstaked on Sept 30 and sold over the counter, not the 9,916,666-token scheduled tranche of Oct 6. A separate figure of 12 million tokens for about $330M implies roughly $27.50 a token, about 68% below the tape. The next tranche is listed for Nov 6. HYPE closed at 84.69, down 3.84%.",
     catalysts: [
-      {date:'The quarter held', text:'Q3 2026 reads $173.91M again on the same endpoint and 92 days, after jumping 19.3% last run'},
-      {date:'Fires nothing', text:'Inside the raw corridor, and about $214M to $236M on the series the bars were set in'},
-      {date:'Two different objects', text:'The Oct 6 tranche is 9,916,666 tokens; the 3.75M block is a separate over-the-counter sale'}
+      {date:'Three identical reads', text:'Q3 2026 is $173.9115M on the same endpoint and 92 days, so the quarter is treated as settled'},
+      {date:'Settling moved down a level', text:'Q4 is $17.5490M over eight days, with the Oct 7 daily print revised up $0.0602M'},
+      {date:'Two different objects', text:'The 3.75M block is a September over-the-counter sale, not the 9,916,666-token Oct 6 tranche'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'Ether flows', value:'Oct 6 settled at -$201.9M, clearing the -$150M bar for the first time since this leg was written', cls:'warn'},
-  {label:'Bitcoin flows', value:'Oct 7 is provisional at -$277.2M, which is $22.8M short of the -$300M single-session bar', cls:'warn'},
-  {label:'Fed minutes', value:'The Sept 15-16 minutes landed Oct 7: a unanimous 12-0 hike, and most expect one more by year end', cls:'warn'},
-  {label:'Fed / October', value:'Polymarket 15.5% and centralbank.watch 17.9%, the binding route now 57.1pt under the 75% bar', cls:'ok'},
-  {label:'Fed / December', value:'A 25bp December hike holds at 74.5% for a second run, so the hike moves meeting, not year', cls:'warn'},
-  {label:'Rates', value:'The Oct 7 Treasury close steepened: 2-year 4.77% down 2bp, 10-year 5.28% up 1bp, 30-year 5.67% up 3bp', cls:'warn'}
+  {label:'Bitcoin flows', value:'Oct 7 settled at -$484.9M, clearing the -$300M single-session bar by 61.6% and cutting the score', cls:'warn'},
+  {label:'Ether flows', value:'Oct 7 settled at -$160.9M, and with Oct 6 at -$201.9M the two-session condition is met', cls:'warn'},
+  {label:'Oil', value:'Brent settled at $104.28, up about 4%, after trading near $106 on renewed Iran risk', cls:'warn'},
+  {label:'Rates', value:'The Oct 8 Treasury close FELL across the curve: 2-year 4.75%, 10-year 5.22%, 30-year 5.60%', cls:'ok'},
+  {label:'Fed / October', value:'Polymarket 15.5% unchanged and centralbank.watch 18.0%, the binding route 57.0pt under the 75% bar', cls:'ok'},
+  {label:'Fed / December', value:'A 25bp December hike firmed to 75.5% while October held, so the hike moves meeting, not year', cls:'warn'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'Six holds', text:'No score moved, and the news is a flow bar cleared by one session where the branch needs two'},
-  {date:'Ether half-fired', text:'Oct 6 settled at -$201.9M against a bar of two consecutive sessions each below -$150M'},
-  {date:'One fund did it', text:'The Blackrock line is the whole of that -$201.9M, with every other Ether fund reporting zero'},
-  {date:'Checked twice', text:'An outside publisher puts the same session at -$201.89M and attributes all of it to that fund'},
-  {date:'No pair yet', text:'Oct 5 was -$50.8M and Oct 7 is provisional at -$44.8M, so no two adjacent sessions qualify'},
-  {date:'Bitcoin near its bar', text:'Oct 7 is published at -$277.2M, which is $22.8M short of the -$300M single-session condition'},
-  {date:'Provisional again', text:'That row has the Blackrock line blank, and the five reporting lines sum to the total exactly'},
-  {date:'A row settled up', text:'Bitcoin Oct 6 closed at +$118.8M, not the provisional -$3.2M, once Blackrock reported +$122.0M'},
-  {date:'Fed minutes read', text:'The Sept 15-16 minutes were released Oct 7, hours after the previous build could have reached them'},
-  {date:'Unanimous', text:'The vote was 12-0 with no dissents, raising the target range to 3.75 to 4.00 percent'},
-  {date:'One more by year end', text:'Most participants judged a further increase likely to be appropriate by the end of 2026'},
-  {date:'But dated Sept 16', text:'Those minutes predate the Oct 2 jobs report, so they are not a reading of this week'},
-  {date:'The jobs print', text:'September payrolls rose 29,000 and unemployment was 4.2%, released Oct 2 and behind the repricing'},
-  {date:'Furthest from 75', text:'The binding Fed route is 17.9%, now 57.1pt under the cut condition and the furthest recorded'},
-  {date:'Both legs fresh', text:'Polymarket restamped this morning and centralbank.watch advanced to Oct 7, so the 2.4pt gap is real'},
-  {date:'Restore blocked', text:'Both routes under 40% for a seventh run, and this leg has never cut anything to give back'},
-  {date:'Timing, not direction', text:'December holds 74.5% for a second run while October reads 15.5% and 17.9%, so the hike moves meeting'},
-  {date:'Rates steepened', text:'The Oct 7 close is 4.77%, 5.28% and 5.67%, with the front end down and the long end up'},
-  {date:'Five of six fell', text:'BNB was the only one to rise, up 0.18%, and XRP was weakest at -3.62%'},
-  {date:'Three rankings declined', text:'Seven-day weakest, twenty-one-day weakest and nearest-to-high are all inside the noise floor'},
-  {date:'Hormuz unchanged', text:'No new transit observation this run, so the Oct 1 zero is still one reading and fires nothing'}
+  {date:'Two scores moved', text:'Bitcoin is cut to -0.4 and Ether to +0.4, both on flow legs that fired on settled sessions'},
+  {date:'Bitcoin fired', text:'Oct 7 settled at -$484.9M against a -$300M single-session bar, clearing it by 61.6%'},
+  {date:'The blank was the mover', text:'Blackrock reported -$207.7M, and the six reporting lines sum to the stated total exactly'},
+  {date:'A prediction went wrong', text:'This deck judged the likelier revision was away from the bar, and the row settled through it'},
+  {date:'Which is why it waited', text:'Settle the row, do not predict it: the provisional row fired nothing and the settled one fired'},
+  {date:'Ether fired too', text:'Oct 7 settled at -$160.9M, so Oct 6 and Oct 7 are two adjacent sessions each past -$150M'},
+  {date:'Blackrock again', text:'The Ether row turned on one line reporting -$116.1M, and an outside publisher agrees on it'},
+  {date:'Never close is not cannot', text:'Six runs called the Ether bar unreachable at -$59.6M, and it was cleared twice in two days'},
+  {date:'Neither is a record', text:'The product minimums are -$1,113.7M and -$465.1M, so both claims are scoped to this window'},
+  {date:'No label moved', text:'Bitcoin stays mildly cautious and Ether stays mildly supportive, so the numbers moved and the words did not'},
+  {date:'All six fell', text:'SOL was weakest at -5.73% and BTC strongest at -1.37%, with four orderings declined as noise'},
+  {date:'One single hour', text:'All six set their 24-hour low in the same hour, Oct 8 17:00 UTC, which points to one macro event'},
+  {date:'Oil is the dated cause', text:'Brent settled at $104.28, up about 4%, after trading near $106 as Iran risk was repriced'},
+  {date:'But not the Hormuz branch', text:'Only the transit count moves that leg, and an oil price is neither a transit nor a barrel'},
+  {date:'An attribution declined', text:'Reports blamed rising Treasury yields, and the official Oct 8 close fell across the whole curve'},
+  {date:'Equities were narrow', text:'The Nasdaq fell 1.3% on an AI story while the Dow rose 0.1%, so this was not a broad risk-off day'},
+  {date:'Liquidations declined', text:'Circulating figures run from $547M to $1.8B on different windows, so none is published here'},
+  {date:'Timing, not direction', text:'December firmed to 75.5% while October held at 15.5%, so the hike moves meeting rather than year'},
+  {date:'Restore still blocked', text:'Both Fed routes under 40% for an eighth run, and this leg has never cut anything to give back'},
+  {date:'Hormuz unchanged', text:'No new transit observation for a second run, so the Oct 1 zero is still one reading and fires nothing'},
+  {date:'BNB nearly fired', text:'Margin 0.6560pt short, and a median changing identity cost it 1.2978pt, more than that gap'}
 ];
 
 function renderMacro(){

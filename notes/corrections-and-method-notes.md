@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-08 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-09 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,38 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-09 02:00 UTC (**TWO SCORES MOVED AND BOTH FLOW LEGS FIRED ON THE SAME DAY — the first
+two-move run on this deck.** `BTC -0.3 -> -0.4` on **one settled session of -$484.9M** against a -$300M bar,
+clearing it by **61.6%**; `ETH +0.5 -> +0.4` on **Oct 6 -$201.9M and Oct 7 -$160.9M**, two adjacent sessions
+each past -$150M. **Both rows were provisional on 10-08 and both settled THROUGH the bar when the Blackrock
+line reported** (-$207.7M and -$116.1M). Three further headlines. **(1) THE 10-08 BUILD PREDICTED THE BTC ROW
+WOULD SETTLE AWAY FROM THE BAR AND IT SETTLED THROUGH IT** — the base rate (five of six settled IBIT prints
+positive) pointed the wrong way, and it cost nothing because the branch was withheld on *provisionality*, not
+on the prediction. **(2) BNB CAME 0.6560pt FROM FIRING, THE CLOSEST RECORDED, AND ONLY THE MEDIAN CHANGING
+IDENTITY STOPPED IT** — had SOL stayed the window median the margin reads **+3.9518pt** against a **+3.31pt**
+trigger, so **the median-identity defect now has a SCORE CONSEQUENCE**; a mean of five would read +1.8479pt.
+**(3) THE ROLL-OFF SIGN PUZZLE IS SOLVED AND THE OLD REFERENCE WAS THE WRONG OBJECT** — against the
+*window-median asset* rather than the day-level peer median, the departing session predicts the roll-off step
+to **0.0364pt** this run and **0.0121pt** on the 10-08 control. Also: **all six fell and all six set their
+24-hour low in the SAME HOUR, Oct 8 17:00 UTC**; **Brent settled $104.28 (+4%)** and is the dated cause, and
+**fires nothing because only the transit count moves the Hormuz leg**; **a published attribution to rising
+Treasury yields was DECLINED because the official Oct 8 close fell 2/6/7bp**; **XRP permission delegation is
+ENABLED, read from the ledger**; **HYPE Q3 is SETTLED** on a third identical read; and **ETH is the only one
+of six below its pre-break level**):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | **-0.4** | **2026-10-09 — CUT 0.1, the flow leg firing on one settled session.** Oct 7 settled **-$484.9M** (IBIT **-$207.7M**, six lines summing exactly), clearing the **-$300M** bar by **$184.9M / 61.6%**. Previously -0.3 since Sept 20. **The band label is unchanged at *mildly cautious*** — number moved, word did not. Largest in the window tracked here; **NOT a product record (`Minimum` -$1,113.7M)**. **Oct 8 provisional -$238.6M, IBIT blank, named lines summing exactly.** Fed binding route **18.0%** (cbw), **57.0pt short** — second furthest, 10-08's 57.1pt stands. Restore side cleared an **EIGHTH** run, fires nothing. Hormuz: no new observation, Oct 4 = 4. |
+| ETH   | **+0.4** | **2026-10-09 — CUT 0.1, the flow leg firing on the pair.** Oct 7 settled **-$160.9M** (ETHA **-$116.1M**, seven lines summing exactly) and pairs with Oct 6 **-$201.9M**. Previously +0.5 since 10-07. **The band label is unchanged at *mildly supportive*** — number moved, word did not. **Corroborated line for line** by an outside publisher. Seven settled negative sessions since Sept 29 = **-$568.8M**; five-session **-$506.4M** vs a published $506.3M. Roadmap leg still **SPENT**. **-$201.9M is NOT a product record (`Minimum` -$465.1M).** |
+| SOL   | +0.4  | 2026-10-03 (cut 0.1 on the week to Oct 2). **Week Oct 5-9 is FOUR sessions in at -$21.2M** (-9.2, -3.7, -4.8, -3.5), under the $5M bar but **a partial week is not a reading** — an 02:00 UTC Friday build precedes the Friday session. Measurable **next run**; needs **about +$26.2M**, which this table has done in one session (Sept 25, +$86.7M). **Most likely next score move.** |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Armed -1.69pt; margin +2.6540pt on 2026-10-09 — 0.6560pt short, the CLOSEST RECORDED**, in from 1.2270pt. Seventh consecutive positive. **Roll-off +0.8829pt vs new info -0.3119pt, 2.83x roll-off, opposite-signed. Median SOL -> SOL -> XRP: the identity change cost 1.2978pt and is the ONLY reason it did not fire.** See §3. |
+| XRP   | -0.1  | 2026-10-05 (window-closed branch fired; **SPENT**). **No live branch before Nov 9.** **PermissionDelegationV1_1 ENABLED**, read first-hand from a validated ledger; `fixBatchV1_2` and `BatchV1_1` activate **Oct 9 14:12:51 / 14:46:02 UTC**, after this stamp, derived from the ledger's own pending-majority close times. **Fires nothing.** Furthest below its own high of the six at **-16.22%**. |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. **Q3 2026 $173.9115M — a THIRD identical read, so two consecutive non-moves: the quarter is ADOPTED as settled.** Fires nothing on either convention (~$214M-$236M scaled). **Q4 $17.5490M / 8 days, and Oct 7's DAILY print revised up $0.0602M while every quarter held.** Press merging the 3.75M OTC block with the 9,916,666 tranche **caught a third run**; a 12M/$330M figure implying ~$27.50 **declined**. |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-08 02:00 UTC (**SIX HOLDS; no score moved. Three headlines. (1) ETH'S FLOW LEG IS
 HALF-FIRED, AND IT WAS THE LEG NOBODY WAS WATCHING** — the Oct 6 session settled at **-$201.9M**, clearing the
 **-$150M** bar by **34.6%**, where the worst session this deck had on record was **-$59.6M** and §9 had written
@@ -208,6 +240,28 @@ this table, **not** against the served page — the served page can be stale (se
 
 - **BTC flow leg** — re-cut on one settled session below **-$300M**, or two consecutive sessions
   each below **-$150M**. Restored 2026-09-20 on the Sept 18 print of +$433.0M.
+  **FIRED 2026-10-09, on the single-session clause. BTC -0.3 -> -0.4.** The Oct 7 session, carried on
+  10-08 as **-$277.2M provisional with IBIT blank**, settled at **-$484.9M** — IBIT reported
+  **-$207.7M** and the six lines (IBIT -207.7, FBTC -105.1, ARKB -101.7, GBTC -39.3, BITB -27.6,
+  HODL -3.5) **sum to the stated total exactly**. It clears the bar by **$184.9M, or 61.6%**.
+  **The band label is unchanged at *mildly cautious*** (verified by evaluating `macroWord()`), so the
+  number moved and the word did not — said on the card.
+  **A SUPERLATIVE SCOPED RATHER THAN CLAIMED:** -$484.9M is the largest single session in the window
+  this deck tracks, and **not a record for the product** — the table's own `Minimum` for Total is
+  **-$1,113.7M**. An outside publisher calls it the largest since **June 25 (-$691.7M)**, consistent
+  with both statements.
+  **THE 10-08 PREDICTION POINTED THE WRONG WAY AND IT COST NOTHING — keep this distinction.** That run
+  published *five of the last six settled IBIT prints were positive, so the likelier revision is AWAY
+  from the bar — but settle the row, do not predict it.* The row settled **through** the bar.
+  > **A base rate is not a forecast of the next draw, and a branch must never be withheld or fired on
+  > one.** The 10-08 run withheld the branch on **provisionality**, which is a rule, and published the
+  > base rate as **colour**. Had it withheld on the base rate instead, the same words would have been
+  > a wrong reason for a right answer. **Keep the two separate: settlement status is the rule, a base
+  > rate is context.**
+  **DECISION NEEDED: does this leg RE-ARM?** The branch text says nothing about re-arming, and
+  **Oct 8 is provisional at -$238.6M with IBIT blank and the named lines summing exactly** — if it
+  settles below -$150M it pairs with Oct 7. BNB and Hormuz both have written re-arm clauses; **the two
+  flow legs that fired this run have none. Write them.**
 - **BTC Fed leg** — October priced **above 75%** on *two independently routed* instruments cuts
   0.1; **below 40%** on two restores it. Two routes currently used: Polymarket (prediction market)
   and centralbank.watch (fed funds futures-derived). Both must agree for the branch to fire.
@@ -365,6 +419,30 @@ this table, **not** against the served page — the served page can be stale (se
   combination — and the deck published the tension rather than manufacturing a cause.
 
 - **ETH flow leg** — re-cut on two consecutive sessions each below **-$150M**.
+  **FIRED 2026-10-09. ETH +0.5 -> +0.4.** The Oct 7 session, carried on 10-08 as **-$44.8M provisional
+  with ETHA and ETHB blank**, settled at **-$160.9M** once **ETHA reported -$116.1M** (ETHB reported
+  **0.0**, so one line carried the row for the third consecutive run). The seven non-zero lines
+  (ETHA -116.1, ETHE -25.8, TETH -6.3, ETHW -5.9, ETHV -2.8, QETH -2.0, ETH -2.0) **sum to the stated
+  total exactly**, and **Oct 6 -$201.9M and Oct 7 -$160.9M are adjacent sessions both past the bar.**
+  **The band label is unchanged at *mildly supportive***, so the number moved and the word did not.
+  **Corroborated line for line** by an outside publisher: same session **$160.9M**, same largest line
+  **$116.1M**, same second line **$25.8M**; and the five-session total **-$506.4M** against a published
+  **$506.3M**. **Seven settled consecutive negative sessions since Sept 29 total -$568.8M.**
+  **-$201.9M is not a product record** (`Minimum` -$465.1M), and the published claims stay scoped.
+  > **THE "NEVER BEEN CLOSE" JUDGEMENT WAS WRONG, AND IT WAS THIS FILE'S.** §9 called this bar
+  > *never within $90M of firing* on the ground that the worst session on record here was -$59.6M, and
+  > six runs of carry-forward notes repeated it. **It was cleared twice in two days, by 34.6% and
+  > 7.3%.** The distance to a bar is a **reading, not a property** — and the only reason this was
+  > caught on the day it fired is that the leg was read every run anyway.
+  **ISSUER NAMES WERE CUT FROM THE PUBLISHED ROW (check 9).** A draft named TETH as *Bitwise* and ETHW
+  as *Hashdex*; **neither mapping was read first-hand**, and ETHW is plausibly Bitwise, which would
+  make the draft wrong twice. The card names only **ETHA = Blackrock** and **ETHE = Grayscale** and
+  describes the rest as *five smaller lines adding -$19.0M*, verified to sum.
+  > **A ticker is not an issuer until you have read the mapping.** When the load-bearing claim is
+  > arithmetic (the lines sum to the total), **the names are decoration — drop them rather than guess.**
+  **DECISION NEEDED: does this leg RE-ARM?** If so, a further cut needs a **fresh pair not overlapping
+  Oct 6-7**. Oct 8 is **-$1.4M provisional** with ETHA and ETHB blank.
+  <!-- superseded by the firing above, kept for the audit trail -->
   **HALF-FIRED 2026-10-08, and this leg had been written off.** The **Oct 6** session settled at
   **-$201.9M**, clearing the bar by **34.6%**, where the worst session on record here was **-$59.6M** and
   §9 described the leg as *never within $90M of firing*. **It is one fund:** ETHA reported -$201.9M and every
@@ -682,6 +760,59 @@ this table, **not** against the served page — the served page can be stale (se
   The new day was nearly inert and corroborates the attribution: BNB **-1.6001%** against a peer median of
   **-1.6850%**, leading by **0.0849pt**, against a measured new-info step of **+0.0936pt**.
 
+  **DID NOT FIRE 2026-10-09 — THE CLOSEST READING RECORDED, AND THE MEDIAN IS WHAT STOPPED IT.**
+  Margin **+2.6540pt** against the -1.69pt baseline, so **0.6560pt short of the +3.31pt trigger** —
+  inside the previous closest of 0.8747pt (10-04). Seventh consecutive positive. BNB **-4.51%** on
+  seven days against a peer median of **-7.16%**: outperforming while falling.
+
+  | | Span | Margin | Median peer | Step |
+  |---|---|---|---|---|
+  | Old 7d | Oct 1 01:00 -> Oct 8 01:00 | **+2.0830** | **SOL** -1.6863% | — (recomputed; **matches the record exactly**) |
+  | Overlap 6d | Oct 2 01:00 -> Oct 8 01:00 | **+2.9659** | **SOL** -2.8959% | roll-off **+0.8829pt** |
+  | New 7d | Oct 2 01:00 -> Oct 9 01:00 | **+2.6540** | **XRP** -7.1639% | new information **-0.3119pt** |
+
+  **Roll-off is 2.83x the new information**, opposite-signed.
+  **THE MEDIAN-IDENTITY DEFECT NOW HAS A SCORE CONSEQUENCE — this is the entry that should settle the
+  open decision.** SOL held the median in the old and overlap windows and **XRP took it in the new
+  one**, because SOL fell to -8.4617% and XRP at -7.1639% became the middle element.
+
+  | Counterfactual | Margin | Against the +3.31pt trigger |
+  |---|---|---|
+  | **Median holds SOL** | **+3.9518pt** | **WOULD HAVE FIRED**, by 0.64pt |
+  | Median is XRP (actual) | +2.6540pt | 0.6560pt short |
+  | **Mean of five** (option 4) | +1.8479pt | 1.4621pt short |
+
+  > **The identity change cost 1.2978pt — nearly twice the distance to the trigger.** For six runs this
+  > was an argument about measurement; it is now an argument about **a 0.1 the written bar would
+  > otherwise have paid**. And the three references give **materially different answers**
+  > (+1.8479 / +2.6540 / +3.9518), so **the choice of reference is itself worth a score step. It can no
+  > longer be deferred as academic. Option 4 (a mean of five, or a fixed basket) remains the
+  > recommendation — it cannot change identity.** User's choice; branch unamended.
+
+  **THE ROLL-OFF SIGN PUZZLE IS SOLVED, AND THE OLD REFERENCE WAS THE WRONG OBJECT (2026-10-09).**
+  The 10-06 and 10-07 runs could not reconcile the roll-off sign with the departing session, and 10-08
+  found the day-level figure "bounds the sign but not the size" (1.1172pt predicted vs 2.3675pt
+  measured, **2.12x off**). **The reference was wrong.** The roll-off step measures BNB against **the
+  asset that is the window median**, not against the departing day's own peer median.
+
+  | Run | BNB, departing day | Window-median asset, same day | Predicted roll-off | Measured | Agreement |
+  |---|---|---|---|---|---|
+  | **2026-10-09** | +0.3264% | **SOL** +1.2457% | **+0.9193pt** | **+0.8829pt** | **0.0364pt** |
+  | 2026-10-08 (control) | +1.1830% | **SOL** -1.1724% | **-2.3554pt** | **-2.3675pt** | **0.0121pt** |
+
+  On the **day-level** peer median this run looks "wrong-signed" again: that median was **ETH
+  +0.9892%**, so BNB *lagged* by 0.6628pt, and a lagged departing day should narrow the margin while
+  the roll-off step **widened** it by +0.8829pt.
+  > **Sanity-check a trailing-window relative margin against the departing-day return of the asset
+  > that IS the window median — never against the departing day's own peer median.** The first predicts
+  > sign *and* magnitude to ~0.04pt on both runs tested; the second got the size wrong by 2.12x on one
+  > run and the sign wrong on the other. **Two runs of "this branch is unexplainable" were two runs of
+  > comparing the right number to the wrong object** — the §5.5 family, arising inside this deck's own
+  > arithmetic rather than in a publisher's. **Retire the day-level comparison.**
+  > **It narrows the identity decision without retiring it:** the prediction works *because* the median
+  > held identity across old -> overlap. When it changes there (10-07), no single asset's departing-day
+  > return can explain the step — which is the defect itself.
+
   **Do not patch this retroactively and do not un-fire the Sept 26 restore.** Amendment options, ranked, for
   the user to choose: (1) require the subject's own return to move in the same direction as the margin by
   some fraction of the divergence — targets the observed failure directly; (2) measure the margin change only
@@ -800,6 +931,21 @@ this table, **not** against the served page — the served page can be stale (se
   Oct 6 1.917). A partial period reads nothing (§5.1). **The vendor/surface/definition decision becomes live at
   Q4 — and it must now be made against a figure that is still settling.**
 
+  **Q3 2026 IS ADOPTED AS SETTLED (2026-10-09) — a THIRD identical read.** Read first-hand on the same
+  endpoint over the same 92 days: **$173.9115M**, identical on **10-07, 10-08 and 10-09**, so **two
+  consecutive non-moving observations**. The 10-07 note asked for "two or three"; the figure is adopted
+  with its read date beside it. All four older quarters unchanged (Q3 2025 $289.8464M, Q4 2025
+  $226.0608M, Q1 2026 $165.3484M, Q2 2026 $148.6458M). **Fires nothing on either convention** —
+  ~$214M-$236M scaled onto the gross series, and inside the re-based bars too.
+  **THE SETTLING MOVED FROM THE QUARTER TO THE DAY.** Q4 2026 reads **$17.5490M across 8 days**.
+  Reconciling against the 10-08 read of **$15.0361M / 7 days**: the difference is **$2.5129M** against
+  an Oct 8 print of **$2.4527M**, so **Oct 7's DAILY print was revised UP by $0.0602M**
+  ($2.7121M -> $2.7723M) **while every quarter above it held.**
+  > **A quarter can stop moving while the days inside the CURRENT quarter are still moving.** §5.2's
+  > revision rule now has three levels: daily fund rows, quarterly aggregates, and **the individual
+  > daily prints of the live quarter.** Record the read date on the Q4 running total too, not only on
+  > the completed quarter. **Stop re-reading Q3 every run; re-check at Q4 close.**
+
   Rationale for the bars: $201.8M is the live level; ~$260M and ~$150M sit roughly 30% either side of
   it, wide enough that ordinary quarter-to-quarter variance does not fire the branch.
 
@@ -899,6 +1045,25 @@ this table, **not** against the served page — the served page can be stale (se
   conditions from the Islamabad memorandum are met, passage restorable in **seven days** if they are; Washington
   **ruled the proposal out**; Qatar mediating. **Only the transit count moves this branch, and it has now been
   read.**
+
+  **2026-10-09: NO NEW OBSERVATION FOR A SECOND RUN, AND A LARGE DATED OIL MOVE THAT FIRES NOTHING.**
+  Queried first-hand; **latest is still Oct 4 = 4**, identical to the 10-07 and 10-08 runs, so the lag
+  widened to **~5 days**. Sept 19 - Oct 4 re-queried and **matched these notes exactly** (6, 1, 2, 3,
+  4, 5, 3, 4, 1, 4, 1, 4, 0, 4, 2, 4). **The Oct 1 zero is still a SINGLE observation and the condition
+  names TWO CONSECUTIVE**, with Sept 30 and Oct 2 both reading 4. Nothing above 20.
+  **Dated and large, and it fires nothing: Brent settled $104.28, up about 4%, after trading near $106
+  intraday** (US crude $91.49, +3.6%), on a repricing of Iran risk. **Rule (a) holds — only the transit
+  count moves this branch.**
+  > **AN OIL PRICE IS A THIRD OBJECT: not a transit, and not a barrel.** §5.5 already separated barrels
+  > from transits twice. This is the cleanest form of the gap yet — **a large, correctly-dated,
+  > correctly-sourced move in exactly the right geography that no written branch can read.** It belongs
+  > with the BNB enforcement and HYPE listing/classification holes: **audit what a branch set can
+  > express, not only whether its branches fired.** Decision needed: should a macro leg read an oil
+  > instrument?
+  > **A COUNT ERROR CAUGHT BY CHECK 9:** a draft said *no new observation for a third run*. **10-07 is
+  > the run that ADVANCED the feed to Oct 4**; 10-08 was the first no-new run and this is the second.
+  > **Re-derive a streak from the run files, never increment it from memory** — the same shape as
+  > 10-02's "sixth consecutive" that would not reconcile.
 
   **The downside remains live rather than decorative**, but it needs two readings: Breadth is intended — a genuine reopening is a broad risk-on macro input,
   not an asset-specific one.
@@ -2296,8 +2461,151 @@ the defect.** It does not retire the decision — a median-of-five can change ha
 fixed basket now has a measured case rather than a plausible one. Magnitude is still unexplained by the
 day-level figure (2.12x), so **the day-level margin bounds the SIGN and not the SIZE.**
 
+### 2026-10-09: A BASE RATE IS NOT A FORECAST, AND IT MUST NEVER CARRY A BRANCH
+
+The 10-08 build published, on the BTC flow row: *five of the last six settled IBIT prints were positive, so
+the likelier revision is AWAY from the bar — but settle the row, do not predict it.* **The row settled
+through the bar at -$484.9M, with IBIT at -$207.7M.** The directional read was wrong.
+
+**It cost nothing, and the reason is worth isolating.** The branch was withheld because the row was
+**provisional** — a rule — and the base rate was published as **colour**. Had the run withheld *on the base
+rate*, the identical words would have been a wrong reason that happened to produce the right answer, and the
+next run would have inherited a prediction as a method.
+
+> **Settlement status is the rule; a base rate is context. Never let the second do the first's work.** A
+> base rate over six observations says nothing about the seventh draw, and this deck now has a measured
+> counterexample. The useful habit is the 10-08 run's: **state the base rate, then state the rule that
+> actually governs, and let the rule decide.**
+
+### 2026-10-09: SANITY-CHECK A WINDOW MARGIN AGAINST THE WINDOW-MEDIAN ASSET, NOT THE DAY'S PEER MEDIAN
+
+The headline finding of this run, and it closes a puzzle open since 10-06. See §3's BNB section for the
+tables. In short: the roll-off step of a trailing-window relative margin is **BNB versus the asset that is
+the window median**, so the departing session's informative figure is **that asset's return on that day** —
+not the median of the five peers *on that day*, which is a different object.
+
+| Reference | 10-09 prediction vs measured | 10-08 prediction vs measured |
+|---|---|---|
+| **Window-median asset** (correct) | **+0.9193 vs +0.8829pt** (0.0364) | **-2.3554 vs -2.3675pt** (0.0121) |
+| Day-level peer median (retired) | sign **wrong** | size wrong by **2.12x** |
+
+> **Two runs of "this branch is unexplainable" were two runs of comparing the right number to the wrong
+> object.** The §5.5 which-object family, arising **inside this deck's own arithmetic** rather than in a
+> publisher's figure — which is why no amount of source discipline would have caught it. **Retire the
+> day-level comparison.** Note the limit: the prediction works because the median **held identity** across
+> old -> overlap; when identity changes there, no single asset's departing-day return can explain the step,
+> and that is the defect rather than a failure of this check.
+
+### 2026-10-09: A TICKER IS NOT AN ISSUER UNTIL YOU HAVE READ THE MAPPING
+
+A draft named all seven Ether fund lines by issuer, including **TETH as Bitwise** and **ETHW as Hashdex**.
+**Neither mapping was established first-hand**, and ETHW is plausibly Bitwise, which would have made the
+published row wrong on two lines at once. Check 9 cut them. The published card names only **ETHA =
+Blackrock** and **ETHE = Grayscale** — the two that are certain — and describes the rest as *five smaller
+lines adding -$19.0M*, verified to sum to the row exactly.
+
+> **When the load-bearing claim is arithmetic, the names are decoration: drop them rather than guess.** The
+> claim that does work here is *the lines sum to the stated total*, and it needs no issuer at all. Same
+> family as the superlative-scoping rule: **publish the part you established, not the part that reads well.**
+
+### 2026-10-09: A STALE-STRING CHECK MUST NOT PUNISH A DECK FOR SHOWING ITS OWN CORRECTION
+
+Check 8 flagged `-$277.2M` and `-$44.8M` as present in the new build. **Both were deliberate**: the cards
+read *carried yesterday as provisional at -$277.2M, has settled at -$484.9M* and *carried as provisional at
+-$44.8M, settled once Blackrock reported*. **A superseded figure named as superseded is not a stale string** —
+it is the clearest way to show a beginner what changed between two builds.
+
+**The assertion was refined, not the file edited:** an old figure is legal **only in a superseding context**,
+tested as *a past-tense framing marker AND the new figure within 170 characters of it*.
+
+> **A check written to catch a stale claim will, if written naively, push the deck toward hiding its own
+> corrections.** That is the opposite of what this file exists for. **Scope a stale-string seed to the claim
+> presented as CURRENT, not to the characters.** (And the mechanism fix held: **every seed this run passed
+> through Python string containment, with no shell and no `grep` in the path** — the quoting bug that voided
+> a seed four times cannot recur by construction.)
+
+### 2026-10-09: A SYNCHRONOUS LOW ACROSS SIX INSTRUMENTS BEATS ANY ATTRIBUTED CAUSE
+
+**All six assets set their 24-hour low in the same hour, Oct 8 17:00 UTC** (BTC 80,314.70, ETH 2,404.60,
+SOL 105.62, BNB 716.59, XRP 1.3175, HYPE 82.60). That is **measured** on this deck's own candles, where every
+cause in circulation was inherited. It is also the honest shape of the claim: it establishes *one event*
+without naming it.
+
+**And it caught a venue difference:** a circulating BTC low of **$80,393** is **0.1%** off this deck's read of
+**80,314.70**. The published figure names the venue (§6's quarter-returns rule, applied to a low).
+
+### 2026-10-09: A PUBLISHED CAUSE CONTRADICTED BY THE PRIMARY SOURCE THIS DECK ALREADY HOLDS
+
+Several outlets attributed Thursday's weakness to **rising Treasury yields**, with intraday figures of
+**5.30%** and *"approaching 5.35%, highest since 2002"* in circulation. **The official Oct 8 close fell
+across the whole curve: 2-year 4.75% (-2bp), 10-year 5.22% (-6bp), 30-year 5.60% (-7bp)**, and the 2s10s
+**flattened 51 -> 47bp**.
+
+An intraday high and a close are different objects, so these are not strictly inconsistent. But **the
+attribution as written is not supported by the settled instrument**, and the deck published the close and
+named the conflict.
+
+> **10-05's rule was to publish a failed attribution rather than manufacture a cause. This adds the stronger
+> case: when you hold a first-hand reading that CONTRADICTS the circulating cause, say so.** The settled
+> close is the instrument; an intraday figure nobody read first-hand has no read time (§3's third-route rule)
+> and cannot override one that does.
+
+### 2026-10-09: FIVE INCOMPATIBLE FIGURES FOR ONE EPISODE IS A SPREAD OF WINDOWS, NOT A MEASUREMENT
+
+Liquidation totals in circulation for the same episode: **$547M**, **$608M**, **$1.1B** (longs ~$1.05B),
+**$1.16B** (>90% longs) and **$1.8B** ("biggest 2026 wipeout"). **Span 3.3x.** CoinGlass is gated to this
+routine (`401 API key missing`), so none can be read first-hand. **Published as a declined range rather than
+by picking the most quotable number.** Sibling of the noise-floor rule: **state the figures, decline the
+claim.**
+
+### 2026-10-09: CHECK THE VERSION SUFFIX ON AN AMENDMENT NAME
+
+The XRPL carries **two distinct amendments whose names both read as "permission delegation"**:
+`PermissionDelegation` (bare) and `PermissionDelegationV1_1`. Read against a validated ledger, **only
+`PermissionDelegationV1_1` is enabled**; the bare one is a different amendment ID and is not.
+
+> **A report naming a feature without its version does not establish which object activated.** Exactly the
+> Polymarket bare-slug trap (`fed-decision-in-october` being the **2025** market) in a different system — so
+> the rule generalises beyond prediction markets: **where a namespace carries versioned objects, the version
+> is part of the identity.**
+> **Worth keeping for its method too:** the ledger's own pending-majority close times (**Sept 25 14:12:51**
+> and **14:46:02**) plus the two-week rule derive the batch activation times (**Oct 9 14:12:51 / 14:46:02
+> UTC**) that reporting merely asserted. **Where a protocol encodes its own schedule, read the schedule off
+> the protocol.**
+
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
+- [ ] **BOTH FLOW LEGS HAVE FIRED AND NEITHER HAS A RE-ARM RULE — new 2026-10-09, and it is now the most
+      actionable item in this file.** BTC was cut to **-0.4** on one settled session (**-$484.9M**) and ETH to
+      **+0.4** on the pair (**-$201.9M / -$160.9M**). **Neither branch text says whether it re-arms.** BNB and
+      Hormuz both have written re-arm clauses; these two do not. **It bites immediately:** Oct 8 is provisional
+      at **-$238.6M** (BTC, IBIT blank, named lines summing exactly) and **-$1.4M** (ETH, ETHA and ETHB blank).
+      If BTC's Oct 8 settles below -$150M it pairs with Oct 7. **DECISION NEEDED: do these legs re-arm from the
+      new baseline, requiring a FRESH session or pair that does not overlap the one that fired, or can they cut
+      again on an overlapping reading?** Until the user answers, **do not cut either score a second time on a
+      session already used** — the XRP spent-branch precedent says a fired clause does not fire twice.
+- [ ] **SOL IS THE MOST LIKELY NEXT SCORE MOVE — new 2026-10-09.** The week Oct 5-9 is **four sessions in at
+      -$21.2M** (-9.2, -3.7, -4.8, -3.5) against a **$5M** bar, and it is **not measurable at an 02:00 UTC
+      Friday stamp** because the Friday session has not happened. **It completes on the next run.** Clearing
+      the bar needs **about +$26.2M** in one session; this table did **+$86.7M** on Sept 25. **Confirm the
+      Friday has settled before comparing** (§3).
+- [ ] **THE BNB MEDIAN REFERENCE NOW HAS A SCORE CONSEQUENCE — escalated 2026-10-09, and it should be settled
+      before the next close reading.** Margin **+2.6540pt**, **0.6560pt from firing, the closest recorded**.
+      **Had SOL stayed the window median the margin would read +3.9518pt and the branch WOULD HAVE FIRED**; the
+      identity change to XRP cost **1.2978pt**, nearly twice the distance to the trigger. A **mean of five**
+      gives **+1.8479pt**. **Three references, three materially different answers, one of them a 0.1 score
+      step.** Option 4 (mean of five, or a fixed basket) remains the recommendation. **This is no longer
+      academic and should not be deferred again.**
+- [x] **THE ROLL-OFF SIGN PUZZLE IS CLOSED — 2026-10-09.** Sanity-check a trailing-window relative margin
+      against the departing-day return of **the asset that IS the window median**, never the day's own peer
+      median. Predicts sign and magnitude to **0.0364pt** (10-09) and **0.0121pt** (10-08 control), against a
+      day-level reference that got the sign wrong once and the size wrong by 2.12x. **Retire the day-level
+      comparison.** See §3 and §8.
+- [x] **ETH WAS THE LIVE SCORE RISK AND IT RESOLVED — CLOSED 2026-10-09 on the downside (+0.5 -> +0.4).** Oct 7
+      settled at **-$160.9M** once ETHA reported **-$116.1M**, pairing with Oct 6's -$201.9M. The 10-08 note
+      predicted the shape exactly (two blanks needing ~-$105M; ETHA alone delivered -$116.1M). **Replaced by
+      the re-arm item above.**
+      <!-- superseded, kept for the audit trail -->
 - [ ] **ETH IS THE LIVE SCORE RISK AND IT IS ONE SESSION AWAY — new 2026-10-08, and it is the most actionable
       item in this file.** The flow leg is **half-fired**: Oct 6 settled **-$201.9M** against a **-$150M** bar
       (see §3). **Oct 7 is -$44.8M provisional with ETHA and ETHB blank, and the reporting lines already sum to
@@ -2305,6 +2613,13 @@ day-level figure (2.12x), so **the day-level margin bounds the SIGN and not the 
       -$201.9M the day before**. **Read the Oct 7 Ether row FIRST on the next run. If it settles below -$150M
       the branch fires and ETH is cut 0.1 to +0.4.** This also partly answers the Sepolia-clause-spent item
       below: **ETH is not branchless after all — its flow leg is demonstrably live.**
+- [x] **BTC WAS $22.8M FROM ITS BAR AND IT SETTLED THROUGH IT — CLOSED 2026-10-09 (-0.3 -> -0.4).** Oct 7
+      settled at **-$484.9M** once IBIT reported **-$207.7M**, clearing -$300M by **61.6%**. **The 10-08
+      directional read was wrong** — it judged the likelier revision to be away from the bar on a base rate of
+      five positive IBIT prints in six — **and it cost nothing because the branch was withheld on
+      provisionality, which is a rule, not on the base rate, which is colour.** See §8's new entry. **Replaced
+      by the re-arm item above.**
+      <!-- superseded, kept for the audit trail -->
 - [ ] **BTC IS $22.8M FROM ITS SINGLE-SESSION BAR, ON A PROVISIONAL ROW — new 2026-10-08.** Oct 7 published at
       **-$277.2M** against **-$300M**, IBIT blank, and the five reporting lines (FBTC -105.1, ARKB -101.7,
       GBTC -39.3, BITB -27.6, HODL -3.5) **sum to the total exactly**, so the one blank is the only mover. The
@@ -2336,6 +2651,20 @@ day-level figure (2.12x), so **the day-level margin bounds the SIGN and not the 
       settles it, so **Oct 6 is provisional on both series** for exactly the same reason (BTC -$3.2M with IBIT
       blank; ETH $0.0M with ETHA and ETHB blank). **Still worth asking the user whether the deck should state a
       settled-through date rather than carrying rows as provisional.**
+- [x] **HYPE Q3 2026 IS SETTLED — CLOSED 2026-10-09 at $173.9115M.** A **third identical read** on the same
+      endpoint over the same 92 days (10-07, 10-08, 10-09), so **two consecutive non-moves**: the figure is
+      adopted with its read date. Fires nothing on either convention. **Stop re-reading it every run; re-check
+      at Q4 close.** **But the settling moved down a level:** Q4 reads **$17.5490M / 8 days** and **Oct 7's
+      DAILY print was revised UP $0.0602M** while every quarter held. **Record the read date on the Q4 running
+      total too.**
+- [ ] **A LARGE DATED MACRO INPUT THAT NO BRANCH CAN READ: OIL — new 2026-10-09.** **Brent settled $104.28, up
+      about 4%**, after trading **near $106** intraday (US crude $91.49, +3.6%), on a repricing of Iran risk,
+      on the day all six assets set their 24-hour low in the same hour. **The Hormuz branch reads ONLY the
+      transit count** (rule (a)), and **an oil price is a third object — neither a transit nor a barrel.**
+      **This is the fourth category of unexpressible dated event**, alongside the BNB enforcement, HYPE listing
+      and HYPE classification holes. **Decision needed: should a macro leg read an oil instrument, and on what
+      dated series?**
+      <!-- superseded, kept for the audit trail -->
 - [ ] **HYPE Q3 2026 — FIRST NON-MOVING OBSERVATION 2026-10-08. Keep re-reading until there are two or three.**
       Read **2026-10-08** on the same endpoint over the same 92 days: **$173.9115M, identical to the 10-07
       read.** One stable reading after a 19.3% revision is not a settled series, so the read date stays beside
@@ -2374,7 +2703,13 @@ day-level figure (2.12x), so **the day-level margin bounds the SIGN and not the 
       withholding block data); an **EIP-8037** execution-client edge case was still open at this stamp. The date
       was a target, not a commitment.
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **NINETEENTH** time 2026-10-08:
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTIETH** time 2026-10-09:
+      on session start `HEAD` == `origin/main` == **`12ae5dc`** with a clean tree and local `main` **stale** at
+      `2ff369c` — the normal case. The **live URL matched the repo file byte for byte**: sha256
+      **`984ccf9e…`**, **59,826 bytes**, `AS_OF` reading **Oct 8** — the exact hash and byte count the 10-08 run
+      recorded on publish, a clean end-to-end confirmation of that run's verified publish. **Cost: one `curl`
+      and one `git rev-parse`.**
+      Previously held a **NINETEENTH** time 2026-10-08:
       on session start `HEAD` == `origin/main` == **`5f98148`** with a clean tree and local `main` **stale** at
       `2ff369c` — the normal case, and the opposite variation from 10-07's (where local `main` equalled `HEAD`).
       **Neither a stale nor a current local `main` tells you anything; §1's rule to re-run `git branch -f main
@@ -2549,6 +2884,13 @@ day-level figure (2.12x), so **the day-level margin bounds the SIGN and not the 
       internal consistency question is closed. **Residual:** market-data vendors carry **~251M** circulating,
       **~28.6M** more, a definitional gap between *unlocked on a vesting schedule* and *circulating per a price
       vendor*. Still not fully sourced; published as unresolved.
+- [ ] **Hormuz — NO NEW OBSERVATION FOR A SECOND RUN 2026-10-09, and the lag is now ~5 days.** Latest is
+      still **Oct 4 = 4**. Sept 19 - Oct 4 re-queried and **matched these notes exactly**. **The Oct 1 zero is
+      still a SINGLE observation and the condition names TWO CONSECUTIVE** (Sept 30 and Oct 2 both read 4).
+      **Fires nothing.** **A count error was caught by check 9 here:** a draft said *third run*; 10-07 is the
+      run that ADVANCED the feed, 10-08 was the first no-new run, this is the second. **Re-derive a streak from
+      the run files.** Narrative firing nothing (rule (a)): the Brent move above.
+      <!-- superseded, kept for the audit trail -->
 - [ ] **Hormuz — NO NEW OBSERVATION 2026-10-08, and the lag widened to ~4 days.** Latest is still **Oct 4 = 4**,
       identical to the 10-07 run. Sept 28 - Oct 4 re-queried and **matched these notes exactly** (4, 1, 4, 0, 4,
       2, 4); week mean **2.71/day**, **96.8% below** the ~85/day baseline. **The Oct 1 zero is still a SINGLE
@@ -2851,7 +3193,37 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
-  **Re-asserted 2026-10-08, and FULLY verified — the TWELFTH consecutive restatement, and the twelfth time the
+  **Re-asserted 2026-10-09, and FULLY verified — the THIRTEENTH consecutive restatement, and the thirteenth
+  time the correct response was to verify rather than redesign.** At 390 / 768 / 1440: `#macroGrid` **6**,
+  `#catalystsRow` **21**, **`#assetGrid` 6**, **0 horizontal page scroll**, **0 interactive elements under
+  32px**, **zero uncaught page errors**, both as-of spans reading `Oct 9, 2026, 02:00 UTC` at every width, and
+  `primer` / `glossary` / `bar-sub` at **1 / 1 / 12**.
+  **Check 7's blanked-array diff shows exactly ONE differing line in the whole file, and it is `AS_OF`** — a
+  **sixth** consecutive run at that strength. Also asserted: **15/15** named computation and live-data blocks
+  byte-identical, `RIVALS` identical, all **five rotation thresholds** unchanged, **`ROTATION_ASOF` unchanged
+  at `Sept 5, 2026`**, banned phrases scoring **zero**, and `primer` **14** / `glossary` **7** / `bar-sub`
+  **3** / `macroWord` **2** / `rot-table-wrap` **2** all retained at their previous counts.
+  **Overflow as an allowed SET, and the 10-08 rule earned its keep again:** **100% of overflowing elements
+  are inside `.rot-table-wrap` and ZERO are outside it**. **The count is again NOT reproducible** — repeat
+  passes at 390px on this same build returned **1** and then **48** — so it was not published as a number.
+  768 and 1440 returned zero. **A second independent confirmation that the allowed-set assertion is the
+  right form and the tally is noise.**
+  **A single failing render is a sample — it happened a THIRD time and the control settled it.** The
+  three-width pass returned **`#assetGrid` 0 and `bar-sub` 0 at 1440px** with 2 failed requests, while 390 and
+  768 gave 6 and 12. **Re-running 1440 alone gave 6 and 12 with zero failed requests, and the previous build at
+  1440 alone gave the identical 6 and 12** — a transient upstream rate limit under three back-to-back page
+  loads, the same shape as 10-07 (1440) and 10-08 (390).
+  Summary lengths **1,203-1,384 chars (total 7,770)**, **down** from 1,209-1,428 / 7,905 — the direction this
+  note asks for. **Two score moves were absorbed without the band drifting up**, which is what the 10-07 entry
+  warned about when ETH's single move pushed a card to 1,530.
+  **Band labels evaluated by running `macroWord()` itself**, which mattered because two scores moved: **BTC at
+  -0.4 reads *mildly cautious*, exactly as -0.3 did; ETH at +0.4 reads *mildly supportive*, exactly as +0.5
+  did**; SOL *mildly supportive*; BNB, XRP and HYPE *balanced*. **Two numbers moved and NO word moved — said
+  on both cards**, or a beginner hunts for a change that is not there.
+  **One real build defect was caught by check 8 and fixed before publish:** the **SOL card had no close
+  price**, alone among the six. Added (109.37).
+
+    **Re-asserted 2026-10-08, and FULLY verified — the TWELFTH consecutive restatement, and the twelfth time the
   correct response was to verify rather than redesign.** At 390 / 768 / 1440: `#macroGrid` **6**,
   `#catalystsRow` **21**, **`#assetGrid` 6**, **0 horizontal page scroll**, **0 interactive elements under
   32px**, **zero uncaught page errors**, **zero failed requests**, both as-of spans reading
