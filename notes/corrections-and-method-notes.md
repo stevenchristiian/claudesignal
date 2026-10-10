@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-09 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-10 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,39 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-10 02:00 UTC (**SOL CUT to +0.3; five holds. The flow leg fired on the completed week
+Oct 5-9 at -$25.0M against a $5M bar, clearing it by $30.0M** — the move the 10-09 run named as most likely,
+resolving on schedule once the Friday settled. **The second headline is a condition that WAS MET AND
+DELIBERATELY NOT ACTED ON: BTC's two-session clause is satisfied** — Oct 8 settled **-$244.1M** and with
+Oct 7 **-$484.9M** those are two consecutive sessions each past -$150M — **and it fired nothing, because
+Oct 7 already paid the single-session clause and the leg has no written re-arm rule.** The 10-09 file logged
+that gap as a decision needed; **this run it decided a score.** Three further headlines. **(1) A FORECAST
+DERIVED FROM A MECHANISM CAME TRUE, AND THE CONTRAST WITH THE BASE-RATE ONE THAT FAILED IS THE LESSON** —
+both XRP batch amendments activated at **Oct 9 14:12:51 / 14:46:02 UTC**, the times the 10-09 run computed
+from the ledger's own pending-majority close times; **97 enabled amendments where there were 95**, confirmed
+by ID and by name. **(2) A QUARTER THIS FILE ADOPTED AS SETTLED MOVED ON THE NEXT READ** — HYPE Q3 2026 reads
+**$173.9702M** against **$173.9115M** on three prior reads; **+0.034%, fires nothing, and the adoption rule
+needs a tolerance rather than an equality test.** **(3) A THIRD HORMUZ INSTRUMENT APPEARED AND IT POINTS THE
+OPPOSITE WAY** — Kpler counted **seven carriers on Tuesday** and called it a **two-month low**, where on
+PortWatch's own 0-5/day range seven would be the **highest since Sept 24**. Also: **check 9 caught TWO REAL
+ERRORS OF FACT**, both a wrong *strongest of the six*; **check 7b was found asserting a function that does not
+exist while omitting two that do**; **the 21-day column flipped negative on five of six purely by roll-off**;
+**the Oct 9 Treasury close firmed at the front (2Y +5bp, 2s10s 47 → 44bp)**; and **oil, equities and crypto
+all reversed Thursday's move together**):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | -0.4 | **2026-10-09** (flow leg, one settled session of -$484.9M). **THE PAIR CLAUSE IS NOW SATISFIED AND WAS WITHHELD: Oct 8 settled -$244.1M**, and with Oct 7 both sessions clear -$150M — **but Oct 7 is SPENT and this leg has no re-arm rule, so no second cut.** Oct 8 lines (IBIT -5.5, FBTC -197.1, ARKB -20.3, BITB -17.7, GBTC -8.2, EZBC +4.7) **sum exactly**, and **the blank line was NOT the mover this time** (-$5.5M, against -$207.7M the day before). **Oct 9 provisional -$1.3M, IBIT blank.** A circulating **$986.3M** October outflow **will not reconcile** with this table's **-$408.7M**. Fed binding route **17.9%** (cbw), **57.1pt short — level with the furthest recorded.** Restore side cleared a **NINTH** run, fires nothing. Hormuz: no new observation for a **third** run, Oct 4 = 4. |
+| ETH   | +0.4 | **2026-10-09** (flow leg, Oct 6 + Oct 7). **Oct 8 settled -$72.5M, under half the -$150M bar**, so no fresh pair and the hold does not depend on the re-arm question. Lines (ETHA -71.1, FETH +5.5, TETH -1.2, ETHV -0.9, MSSE +1.3, ETHE -6.1) **sum exactly**. **Eight consecutive settled negative sessions since Sept 29 = -$641.3M.** Oct 9 provisional $0.0M, ETHA and ETHB blank. **FETH was NOT named as Fidelity** — mapping unread (§3). **21-day turned negative at -4.56%, and it is ROLL-OFF**: the departing Sept 18 session was +6.42% on ETH. Still the **only one of six below its pre-break level**, by **0.58%**, in from 1.09%. |
+| SOL   | **+0.3** | **2026-10-10 — CUT 0.1, the flow leg firing on the completed week Oct 5-9.** Five settled sessions (-9.2, -3.7, -4.8, -3.5, **-3.8**) = **-$25.0M** against a **$5M** bar, clearing it by **$30.0M**. Previously +0.4 since 10-03. **The Friday is SETTLED** — every fund line on the Oct 9 row carries a number, unlike BTC/ETH that date. **Checked on both vendors: SoSoValue reads the Friday -$3.76M against Farside -$3.8M**, and the largest gap ever recorded here ($5.00M on one session) could not carry a $30.0M margin back across the bar; **the week total is published from the Farside fund-level table and that is stated.** **The band label is unchanged at *mildly supportive*** — number moved, word did not. **A FURTHER CUT WOULD TAKE IT TO +0.2, WHICH READS *balanced* — the next cut moves the word too.** **This leg also has no re-arm rule; the next completed week is Oct 12-16.** |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Armed -1.69pt; margin +2.3919pt on 2026-10-10 — 0.9181pt short**, easing back from the closest-recorded 0.6560pt. **Eighth consecutive positive.** **Roll-off -0.1383pt vs new info -0.1238pt, 1.12x roll-off and SAME-signed** — level with 10-08's 1.13x, so no record claimed. **MEDIAN DID NOT CHANGE IDENTITY (XRP both windows), so the defect is dormant: median +2.3919 vs mean-of-five +2.4416, just 0.0497pt apart.** **The window-median-asset roll-off reference worked a THIRD time (0.0184pt) and the retired day-level one got the sign wrong again.** See §3. |
+| XRP   | -0.1  | 2026-10-05 (window-closed branch fired; **SPENT**). **No live branch before Nov 9.** **BOTH BATCH AMENDMENTS ARE NOW ENABLED** at the times derived from the ledger on 10-09 — `fixBatchV1_2` **14:12:51** and `BatchV1_1` **14:46:02 UTC**, Oct 9 — read first-hand from validated ledger **107,551,692**, **97 enabled** (was 95), **confirmed by amendment ID and by `feature` name.** `PermissionDelegationV1_1` stays enabled; the **bare name is absent from this node's 107-entry registry entirely** (a refinement of 10-09's framing). **NEW pending majority `fixCleanup3_4_0`, recorded Oct 9 09:34:30 UTC → earliest activation ~Oct 23.** **All of it fires nothing.** Furthest below its own high of the six at **-15.10%**. |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. **Q3 2026 MOVED AGAIN: $173.9702M against $173.9115M on three prior reads, +$0.0587M / +0.034%** — **so the 10-09 adoption as settled was falsified by the next observation.** Fires nothing on either convention (raw inside $150M-$260M; scaled **$227M-$236M** across the three recorded ratios). **Q4 is a REVISION not an extension: still 8 days (Oct 1-8), $17.5562M against $17.5490M.** The two-objects trap caught a **fourth** run, and **it resolved 10-09's declined figure: $336.75M against the 3.75M parcel implies ~$89.80, near the tape — the right dollars on the wrong token count.** |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-09 02:00 UTC (**TWO SCORES MOVED AND BOTH FLOW LEGS FIRED ON THE SAME DAY — the first
 two-move run on this deck.** `BTC -0.3 -> -0.4` on **one settled session of -$484.9M** against a -$300M bar,
 clearing it by **61.6%**; `ETH +0.5 -> +0.4` on **Oct 6 -$201.9M and Oct 7 -$160.9M**, two adjacent sessions
@@ -240,6 +273,31 @@ this table, **not** against the served page — the served page can be stale (se
 
 - **BTC flow leg** — re-cut on one settled session below **-$300M**, or two consecutive sessions
   each below **-$150M**. Restored 2026-09-20 on the Sept 18 print of +$433.0M.
+  **2026-10-10: THE SECOND CLAUSE IS NOW SATISFIED AND WAS DELIBERATELY NOT FIRED. THIS IS THE
+  RE-ARM QUESTION ARRIVING AS A SCORE DECISION RATHER THAN A NOTE.** Oct 8 settled at **-$244.1M**
+  (IBIT -5.5, FBTC -197.1, ARKB -20.3, BITB -17.7, GBTC -8.2, EZBC +4.7 — **summing to the stated
+  total exactly**), so **Oct 7 (-$484.9M) and Oct 8 are two consecutive sessions each below -$150M**
+  and the written two-session clause reads as met. **It fired nothing**, because Oct 7 is the session
+  that paid this leg's 0.1 on 2026-10-09 under the single-session clause, and **the XRP spent-branch
+  precedent says a fired clause does not fire twice on the same reading.** Until the user answers the
+  re-arm question, that conservative reading governs. **Note that both candidate answers agree here:**
+  if the leg re-arms, Oct 7 is inside the window that fired and the pair is not fresh; if it does not
+  re-arm, there is nothing to fire. **A fresh, non-overlapping pair would be a different matter, and
+  is not in prospect — Oct 9 is provisional at -$1.3M with IBIT blank.**
+  **AND THE BLANK LINE WAS NOT THE MOVER, WHICH REFINES A PHRASE THIS FILE HAS USED TWICE.** The
+  10-09 entry described the Oct 8 row as *provisional with IBIT blank and the named lines summing
+  exactly*, from which the 10-08 and 10-09 runs both reasoned that the blank line was "the only
+  mover". It was — by **-$5.5M**, against the **-$207.7M** the same line delivered on Oct 7, which
+  had moved that row by 75%.
+  > **"The blank is the only mover" bounds WHICH line can move a row, not HOW MUCH it will.** The
+  > provisional total plus the blank line equals the settled total by construction, so the phrase is
+  > arithmetically empty as a forecast. Two consecutive rows settled by the same blank line, one
+  > decisive and one negligible. **Never let it stand in for an expected magnitude.**
+  **A CIRCULATING MONTH-TO-DATE FIGURE DECLINED ON PRIMARY-SOURCE GROUNDS (2026-10-10).** A widely
+  repeated **$986.3M** of October net outflows does not reconcile with this table: Oct 1 +102.7,
+  Oct 2 +189.9, Oct 5 -89.8, Oct 6 +118.8, Oct 7 -484.9, Oct 8 -244.1, Oct 9 -1.3 = **-$408.7M**, a
+  **2.4x** gap, and dropping the two positive sessions still gives only -$701.3M. **No window or
+  vendor this deck can construct produces it.** The deck published its own sum and named the table.
   **FIRED 2026-10-09, on the single-session clause. BTC -0.3 -> -0.4.** The Oct 7 session, carried on
   10-08 as **-$277.2M provisional with IBIT blank**, settled at **-$484.9M** — IBIT reported
   **-$207.7M** and the six lines (IBIT -207.7, FBTC -105.1, ARKB -101.7, GBTC -39.3, BITB -27.6,
@@ -490,6 +548,34 @@ this table, **not** against the served page — the served page can be stale (se
   Sept 18. Bar going forward: a weekly print **below $5M** re-cuts it. The instrument is the
   SoSoValue daily series (Farside's `/sol/` table agrees with it row for row — see 5.1).
   **Always confirm the week includes its Friday before comparing it to a bar.**
+  **FIRED 2026-10-10. SOL +0.4 -> +0.3.** The week **Oct 5-9** completed on all five sessions —
+  **-$9.2M, -$3.7M, -$4.8M, -$3.5M and -$3.8M = -$25.0M** — against a **$5M** bar, clearing it by
+  **$30.0M**. The 10-09 file named this as the most likely next score move and it resolved on
+  schedule.
+  **THE FRIDAY WAS ESTABLISHED AS SETTLED, NOT ASSUMED — and the test is one this deck can now
+  state mechanically.** Every fund line on the `/sol/` Oct 9 row carries a number (BSOL -3.8, the
+  rest 0.0, summing exactly), where the **`/btc/` and `/eth/` tables show `-` for their Blackrock
+  lines on the same date.** **A dash is the table's own marker for "not yet reported", so the
+  absence of dashes across a row is the settled-row test**, and it is what made this week measurable
+  today and correctly unmeasurable yesterday.
+  **THE VENDOR QUESTION WAS CHECKED ON BOTH SIDES AND DOES NOT BITE.** §9's retraction of the "row
+  for row" agreement means the vendor must be named. **SoSoValue reads the Friday at -$3.76M against
+  Farside's -$3.8M (a $0.04M gap)**, and the **largest vendor gap ever recorded here is $5.00M on a
+  single session** (Sept 28) — so **five such gaps, all in the favourable direction, bring the week
+  to $0.0M, still below the bar.** The side of the bar is not in doubt on any vendor; the margin is
+  **6x** the largest recorded gap. **The published week total comes from the Farside fund-level
+  table and the card says so.** SoSoValue's daily history was **not** obtainable this run — the page
+  renders only aggregate headline figures (`Daily Total Net Inflow -$3.76M`, `As of Oct 9 · Update
+  completed`) with **zero tables in the DOM** after full load and scroll, and `Total_SOL_Spot`
+  returns a Cloudflare **403**.
+  **The band label is unchanged at *mildly supportive*** (verified by evaluating `macroWord()`), so
+  the number moved and the word did not — said on the card.
+  **TWO THINGS FOR THE NEXT RUN.** (a) **This leg has NO RE-ARM RULE either**, so it joins the two
+  flow legs that fired on 10-09; the next completed week is **Oct 12-16, measurable Fri Oct 16**, and
+  a second sub-$5M week would force the same withhold-or-cut decision on a third asset. **Write the
+  rule for all three at once.** (b) **+0.3 is one step from a band edge** — `macroWord()` maps **+0.2
+  to *balanced*** — so **a further cut would move the number AND the word**, the first such run in
+  some time, and the design contract requires that to be said prominently.
 - **XRP** — a second cloture vote *passing* adds 0.2; the motion failing, or the window closing
   unused, cuts 0.1. "The window closing unused" was given a date on 2026-09-22 so that it could fire at all;
   before that it was undated and could never fire, which is how a downside branch quietly becomes decorative.
@@ -1746,6 +1832,12 @@ commented constant so no future run has to reverse-engineer them again.
 
 ## 7. Pre-publish checklist (run in order; audit a failing assertion before editing the file)
 
+> **Standing addition (2026-10-10): every list-driven assertion must report its own COVERAGE —
+> names found versus names expected — and a name it cannot find is a failure OF THE ASSERTION until
+> proven otherwise.** Check 7b passed at "20/20 byte-identical" while silently not covering two real
+> blocks, and the only reason the gap surfaced is that the extractor printed its NOT-FOUND list.
+> **A verdict without a coverage figure is not a result.** See §8's 2026-10-10 entry.
+
 1. `node --check` the extracted inline script.
 2. Evaluate the three arrays; assert **COINS 6 / MACRO_SNAPSHOT 6 / GLOBAL_CATALYSTS 21 /
    asset catalyst entries 18**.
@@ -1762,9 +1854,13 @@ commented constant so no future run has to reverse-engineer them again.
    2026-09-22). On a run that deliberately changes layout the diff fails by construction and tells
    you nothing. Replace it with the stronger assertion it was standing in for: extract every
    computation and live-data block from both builds and require them **byte-identical** —
-   `average`, `computeRSI`, `emaFull`, `computeMACD`, `computeTechnical`, `combine`, `sparkSVG`,
-   `fmtPrice`, `fetchMarkets`, `fetchChart`, `loadAll`, `fmtUsd`, `pct`, `fetchRotationLive`,
-   `loadRotation`, `ROTATION_ASOF`, `RIVALS` — plus a grep asserting the five rotation thresholds
+   **the full list of 22 top-level declarations outside the three arrays and `AS_OF` (corrected
+   2026-10-10 — the old 17-name list both invented a block that does not exist and omitted two that
+   do; see the new §8 entry):** `renderMacro`, `average`, `computeRSI`, `emaFull`, `computeMACD`,
+   `computeTechnical`, `combine`, `sparkSVG`, `fmtPrice`, `fetchMarkets`, `fetchChart`,
+   `BAND_NOTE`, `macroWord`, `renderCard`, `loadAll`, `ROTATION_ASOF`, `RIVALS`, `fmtUsd`,
+   `pct`, `fetchRotationLive`, `renderRotation`, `loadRotation` — **there is NO `renderCatalysts`;
+   the catalyst row is rendered inside `renderMacro()`** — plus a grep asserting the five rotation thresholds
    (`volShare < 55`, `bestMonet >= 1.0`, `bestTake > 2.5`, `lead.mcapRev * 0.5`, `bestTvl > 25`) are
    unchanged. A block extractor must stop at the *next* top-level declaration **or comment**; the
    first version of it ran past the end of a function and reported a new neighbouring comment as
@@ -2043,6 +2139,107 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 `ROTATION_ASOF` (`'Sept 5, 2026'`) is **not** an as-of label. Do not touch it.
 
 ## 8. Build-script and tooling hazards (found 2026-09-21)
+
+### 2026-10-10: AN ASSERTION THAT **PASSED** WRONGLY — the first of its kind on this deck
+
+Check 7b reported **20 of 21 named blocks found** and **20/20 byte-identical — a PASS** — while
+printing one name as NOT FOUND: **`renderCatalysts`**. §7's rule says audit a failing assertion
+before editing the file, and the audit found the file's top-level declarations are
+`renderMacro, average, computeRSI, emaFull, computeMACD, computeTechnical, combine, sparkSVG,
+fmtPrice, fetchMarkets, fetchChart, BAND_NOTE, macroWord, renderCard, loadAll, ROTATION_ASOF,
+RIVALS, fmtUsd, pct, fetchRotationLive, renderRotation, loadRotation` — **22 of them, and no
+`renderCatalysts` at all** (the catalyst row is rendered inside `renderMacro()`). So the name list
+was wrong in **both directions at once**: it **invented one block** and **omitted two real ones**
+(`BAND_NOTE`, `renderRotation`). Corrected, the assertion covers **22/22** and still passes.
+
+> **Five previous runs recorded harness faults where an assertion FAILED wrongly. This is the first
+> where one PASSED wrongly, and that is the more dangerous direction**, because a pass ends the
+> investigation. **An assertion that passes while silently omitting part of its subject is weaker
+> than it looks, and its pass is the thing that hides the gap.** The fix is structural, not textual:
+> **report coverage alongside the verdict** (§7), and treat an unmatched name as an assertion
+> failure. **Note also that §7's canonical list named 17 blocks against a file of 22 — it was never
+> complete, and check 7's blanked-array diff is what has actually been covering the difference**,
+> which is precisely why §7 calls that diff strictly stronger. §7's list is now the full 22.
+
+### 2026-10-10: "THE BLANK IS THE ONLY MOVER" BOUNDS *WHICH* LINE, NOT *HOW MUCH*
+
+The 10-08 and 10-09 runs both described a provisional row as *the named lines sum exactly, so the one
+blank line is the only mover*, and both times the blank line then dominated the settle (Oct 7 BTC
+-$207.7M on a -$277.2M provisional; Oct 7 ETH -$116.1M on a -$44.8M provisional). **On Oct 8 the same
+blank line reported -$5.5M** and FBTC carried the row at -$197.1M.
+
+> **The statement is arithmetically empty as a forecast:** provisional total plus blank line equals
+> settled total **by construction**, so "the blank is the only mover" is true of every provisional row
+> and says nothing about magnitude. It is a useful *object* claim (no other line will change) and a
+> worthless *size* claim. **Two consecutive rows settled by the same blank line, one moving it 75% and
+> one moving it 2%.** Same family as the base-rate rule: **do not let a true statement about structure
+> harden into an expectation about size.**
+
+### 2026-10-10: A FORECAST DERIVED FROM A MECHANISM LANDED, WHERE THE BASE-RATE ONE FAILED
+
+Two forward statements this deck made two days apart, both about facts unsettled at the time:
+
+| Run | Statement | Basis | Outcome |
+|---|---|---|---|
+| 10-08 | the BTC provisional row will likely settle **away** from its bar | **base rate** — five of six prior IBIT prints positive | **WRONG**, settled through by 61.6% |
+| 10-09 | the two XRP batch amendments activate at **Oct 9 14:12:51 / 14:46:02 UTC** | **arithmetic on a published mechanism** — the ledger's own recorded pending-majority close times plus the protocol's two-week rule | **RIGHT**, both enabled, read first-hand |
+
+> §3 already holds that **a base rate is not a forecast of the next draw and must never carry a
+> branch.** This is the complement, and it now has evidence: **a quantity derived from a stated
+> mechanism can be computed rather than awaited, and should be.** The practical rule: **before
+> deferring a dated question to the next run, ask whether the date is PUBLISHED, DERIVABLE, or merely
+> ESTIMATED.** Derivable is not the same as unknown — the 10-09 run computed two timestamps to the
+> second from data it already held. **And note why both were cheap to test: neither is a branch
+> input.** Keep testing forecasts on non-branch facts; it is how the distinction got evidence.
+
+### 2026-10-10: A TRAILING-WINDOW *COLUMN* CAN FLIP SIGN WITH NO NEW SELLING
+
+The 21-day return went negative on **five of six** assets in one session (BTC +6.86 → +1.67, ETH
++1.05 → -4.56, SOL +6.81 → -3.11, BNB -0.85 → -2.22, XRP +6.53 → -0.30, HYPE -2.39 → -9.32), against
+two negatives the day before. **The cause is roll-off and it was measured, not inferred:** the 21-day
+base moved **Sept 18 01:00 → Sept 19 01:00**, and that departing session ran **BTC +6.00%, ETH
++6.42%, SOL +10.73%, BNB +2.59%, XRP +8.27%, HYPE +7.39%** — reproducing §3's own record of the same
+session to two decimals, which independently validates both the script and these notes.
+
+> §3 established roll-off for the BNB *margin*. **This is the first run where it governed a whole
+> published column**, and the trap is sharper because the column is descriptive rather than a branch
+> input: **SOL fell 9.92pt on the 21-day view on a day it ROSE 0.45%.** A card calling that fresh
+> weakness would have been wrong about the cause while right about the number. **Whenever an N-day
+> column moves across several assets at once, measure the departing session before writing a word
+> about why.**
+
+### 2026-10-10: A THIRD HORMUZ INSTRUMENT, AND IT POINTS THE OPPOSITE WAY
+
+An article dated **Oct 9 05:03 UTC** reports **Kpler** counting **seven commodity carriers** through
+the strait **on Tuesday**, described as **the lowest since late July**. It fires nothing, on three
+independent grounds: **different publisher** (the branch names IMF PortWatch), **different object**
+("commodity carriers" is not PortWatch's `n_total`), and **different date coverage** (Tuesday = Oct 6,
+two days past PortWatch's latest observation, and the article never gives a calendar date).
+
+> **THE DECISIVE POINT IS THAT THE TWO SERIES POINT IN OPPOSITE DIRECTIONS, WHICH IS THE STRONGEST
+> EVIDENCE YET THAT THEY MEASURE DIFFERENT OBJECTS.** Kpler calls **seven** a two-month low. On
+> PortWatch's own recent range — **0 to 5 per day since Sept 19** — **seven would be the HIGHEST
+> reading since Sept 24.** A run that substituted the figure into the branch's series would read a
+> *two-month low* as an *improvement*: the wrong-object family **with the sign inverted**, which is
+> worse than a wrong magnitude. §5's "three instruments, three baselines" entry now has a case where
+> the instruments disagree on **direction**, not just level.
+
+### 2026-10-10: AN OPTIONS REQUEST, A PLAN, AND A STRIKE ARE THREE OBJECTS
+
+A search summary reported that *the US had prepared plans for three days of strikes against Iran*.
+The underlying report is that **the White House asked the Pentagon for options**. **An options request
+is not a plan, and a plan is not a strike** — three states of the world collapsed into one headline
+clause. Not published as any of them. Sibling of §5's which-object rule, applied to a *modality*
+rather than a subject.
+
+### 2026-10-10: CHECK A FIGURE AGAINST THE SAME PUBLISHER'S OWN TABLE FIRST
+
+One outlet's Oct 9 market report gave the Nasdaq at **+0.19%** in its introduction and **+0.64%** in
+its own closing table; two independent outlets agree on **+0.64%**. **The conflict was internal to one
+publisher, not cross-publisher.** Before treating two figures as a disagreement between sources,
+check whether one source disagrees with itself — a lede written early against a table filled at the
+close is a common shape, and it is a *staleness* fault, not a measurement one.
+
 
 - **Python `re.subn` with a lambda does not expand backreferences.** Passing
   `lambda m: repl` inserts `\g<1>` *literally*. This corrupted all three as-of labels on the first
@@ -2602,6 +2799,58 @@ have lost it.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
+- [ ] **THE FLOW-LEG RE-ARM RULE IS NO LONGER HYPOTHETICAL — IT WITHHELD A SCORE ON 2026-10-10, AND IT NOW
+      COVERS THREE LEGS. THIS IS THE MOST ACTIONABLE ITEM IN THIS FILE.** BTC's two-session clause is
+      **satisfied** — Oct 7 **-$484.9M** and Oct 8 **-$244.1M**, both past -$150M — and was **not fired**,
+      because Oct 7 already paid the single-session clause on 10-09. **Both candidate answers happen to agree
+      on this reading**, which is why it was safe to act: re-arming makes the pair non-fresh, and not
+      re-arming leaves nothing to fire. **SOL's leg fired 2026-10-10 and has no re-arm text either**, and its
+      next completed week is **Oct 12-16, measurable Fri Oct 16** — a second sub-$5M week would force the same
+      decision on a third asset. **DECISION NEEDED: do fired flow legs re-arm from the new baseline, requiring
+      a fresh session or week that does not overlap the one that fired? Write it for BTC, ETH and SOL at once.**
+      BNB and Hormuz have written re-arm clauses; the three flow legs do not.
+- [ ] **SOL IS ONE STEP FROM A BAND CHANGE — new 2026-10-10.** At **+0.3** it still reads *mildly supportive*;
+      `macroWord()` maps **+0.2 to *balanced***. **A further cut would move the number AND the plain-English
+      word**, the first run in some time where both change, and §10 requires that to be stated prominently
+      rather than left for a beginner to notice. **Verify by evaluating `macroWord()`, not by assuming.**
+- [ ] **THE HYPE ADOPTION RULE NEEDS A TOLERANCE — new 2026-10-10, and it falsified a decision taken one run
+      earlier.** §9 closed the Q3 item on 10-09 on a **third identical read** of **$173.9115M**, with the
+      instruction *stop re-reading it every run*. **The next read moved it to $173.9702M** (+$0.0587M,
+      +0.034%), while the four older quarters held. The move fires nothing, but **the rule as written is an
+      equality test on a printed figure, and the series is still being revised at the 0.1% level.**
+      **PROPOSAL FOR THE USER: adopt a quarter when two consecutive reads agree to within 0.1%, and re-read
+      monthly rather than never.** Note that **three identical reads meant three reads identical to the
+      precision printed** — the endpoint carries four decimals of millions and the fourth read differed in the
+      fourth decimal. **A string match on a printed figure is not a test of a series.** Q4 is a **revision not
+      an extension**: still **8 days (Oct 1-8)**, now **$17.5562M** against $17.5490M. **Read date recorded
+      beside both.** Same family as 10-09's ETH lesson: *it has stopped moving* is a reading, not a property.
+- [ ] **SHOULD THE HORMUZ BRANCH NAME A SECOND INSTRUMENT? — escalated 2026-10-10 by a contradiction, not a
+      gap.** PortWatch is **stuck on Oct 4 = 4 for a THIRD consecutive run, lag ~6 days**, while **Kpler
+      counted seven carriers on Tuesday and called it a two-month low** — a figure that on PortWatch's own
+      0-5/day range would be the **highest since Sept 24**. **The two series disagree on DIRECTION.** Do not
+      substitute it. **Decision: name a second instrument with its own baseline, or state explicitly that the
+      branch is blind between PortWatch publications?** The Oct 1 zero is still **one** observation against a
+      condition needing **two consecutive**.
+- [x] **SOL WAS THE MOST LIKELY NEXT SCORE MOVE AND IT RESOLVED — CLOSED 2026-10-10 (+0.4 -> +0.3).** The week
+      Oct 5-9 completed at **-$25.0M** against a **$5M** bar, clearing it by **$30.0M**, and the Friday was
+      established as settled by the absence of `-` markers across its row. **Checked on both vendors and the
+      side of the bar was never in doubt** (margin 6x the largest recorded vendor gap). **Replaced by the
+      re-arm and band-edge items above.**
+- [x] **BOTH XRP BATCH AMENDMENTS ACTIVATED AS DERIVED — CLOSED 2026-10-10.** `fixBatchV1_2` and `BatchV1_1`
+      are **enabled**, at the **Oct 9 14:12:51 / 14:46:02 UTC** times the 10-09 run computed from the ledger's
+      own pending-majority close times. Validated ledger **107,551,692**, **97 enabled (was 95)**, confirmed by
+      **amendment ID** and by **`feature` name**. **A refinement, not a retraction:** the bare
+      `PermissionDelegation` name hashes to a different, **not-enabled** ID, and that ID is **absent from this
+      node's 107-entry feature registry entirely** — so it is better described as *a name resolving to a
+      different and unsupported ID* than as a second live amendment. **Check the version suffix** stands.
+      **NEW and live: `fixCleanup3_4_0`, pending majority recorded Oct 9 09:34:30 UTC → earliest activation
+      ~Oct 23 09:34:30 UTC. Expect it enabled then; it is not a branch input.**
+- [ ] **A $986.3M OCTOBER BTC-OUTFLOW FIGURE IS IN CIRCULATION AND WILL NOT RECONCILE — new 2026-10-10.**
+      This deck's own sum of the table it reads first-hand is **-$408.7M** across the seven October sessions,
+      a **2.4x** gap; dropping the two positive sessions still gives only -$701.3M. **No window or vendor this
+      deck can construct produces $986.3M.** **If it recurs, the table read first-hand is still the
+      instrument** — same posture as 10-09's declined Treasury-yield attribution.
+
 - [ ] **BOTH FLOW LEGS HAVE FIRED AND NEITHER HAS A RE-ARM RULE — new 2026-10-09, and it is now the most
       actionable item in this file.** BTC was cut to **-0.4** on one settled session (**-$484.9M**) and ETH to
       **+0.4** on the pair (**-$201.9M / -$160.9M**). **Neither branch text says whether it re-arms.** BNB and
@@ -2616,6 +2865,14 @@ have lost it.
       Friday stamp** because the Friday session has not happened. **It completes on the next run.** Clearing
       the bar needs **about +$26.2M** in one session; this table did **+$86.7M** on Sept 25. **Confirm the
       Friday has settled before comparing** (§3).
+- [ ] **THE BNB MEDIAN REFERENCE IS DORMANT, NOT FIXED — re-read 2026-10-10.** The median **did not change
+      identity** this run (**XRP in both windows**), and the three candidate references promptly nearly agreed:
+      median **+2.3919pt** against mean-of-five **+2.4416pt**, just **0.0497pt** apart, where on 10-09 they
+      spanned 1.3-2.1pt. **That is not evidence the defect is harmless — it is evidence the defect only bites
+      when the median changes hands**, which is exactly why it is unsafe to leave. Margin **0.9181pt** short of
+      the +3.31pt trigger, eighth consecutive positive, **easing back from the closest-recorded 0.6560pt**.
+      Option 4 (mean of five, or a fixed basket) remains the recommendation.
+      <!-- superseded, kept for the audit trail -->
 - [ ] **THE BNB MEDIAN REFERENCE NOW HAS A SCORE CONSEQUENCE — escalated 2026-10-09, and it should be settled
       before the next close reading.** Margin **+2.6540pt**, **0.6560pt from firing, the closest recorded**.
       **Had SOL stayed the window median the margin would read +3.9518pt and the branch WOULD HAVE FIRED**; the
@@ -2678,7 +2935,8 @@ have lost it.
       settles it, so **Oct 6 is provisional on both series** for exactly the same reason (BTC -$3.2M with IBIT
       blank; ETH $0.0M with ETHA and ETHB blank). **Still worth asking the user whether the deck should state a
       settled-through date rather than carrying rows as provisional.**
-- [x] **HYPE Q3 2026 IS SETTLED — CLOSED 2026-10-09 at $173.9115M.** A **third identical read** on the same
+- [~] **HYPE Q3 2026 — THIS CLOSURE WAS FALSIFIED ON 2026-10-10 at $173.9702M. See the adoption-tolerance
+      item above; kept here for the audit trail.** Originally: **CLOSED 2026-10-09 at $173.9115M.** A **third identical read** on the same
       endpoint over the same 92 days (10-07, 10-08, 10-09), so **two consecutive non-moves**: the figure is
       adopted with its read date. Fires nothing on either convention. **Stop re-reading it every run; re-check
       at Q4 close.** **But the settling moved down a level:** Q4 reads **$17.5490M / 8 days** and **Oct 7's
@@ -2730,7 +2988,14 @@ have lost it.
       withholding block data); an **EIP-8037** execution-client edge case was still open at this stamp. The date
       was a target, not a commitment.
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTIETH** time 2026-10-09:
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-FIRST** time 2026-10-10:
+      on session start `HEAD` == `origin/main` == **`4f6e23b`** with a clean tree and local `main` **stale**
+      at `2ff369c` — the normal case. The **live URL matched the repo file byte for byte**: sha256
+      **`a74570ca…`**, **59,747 bytes**, `AS_OF` reading **Oct 9** — the exact hash and byte count the 10-09
+      run recorded on publish, a clean end-to-end confirmation of that run's verified publish. **Cost: one
+      `curl` and one `git rev-parse`. The routine prompt's step 0 still asks each run to re-verify this old
+      blocker. There is none, and there has not been one for twenty-one runs.**
+      Previously held a **TWENTIETH** time 2026-10-09:
       on session start `HEAD` == `origin/main` == **`12ae5dc`** with a clean tree and local `main` **stale** at
       `2ff369c` — the normal case. The **live URL matched the repo file byte for byte**: sha256
       **`984ccf9e…`**, **59,826 bytes**, `AS_OF` reading **Oct 8** — the exact hash and byte count the 10-08 run
@@ -3220,6 +3485,37 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-10-10, and FULLY verified — the FOURTEENTH consecutive restatement, and the fourteenth
+  time the correct response was to verify rather than redesign.** At 390 / 768 / 1440: `#macroGrid` **6**,
+  `#catalystsRow` **21**, **`#assetGrid` 6**, **0 horizontal page scroll**, **0 interactive elements under
+  32px**, **zero uncaught page errors**, both as-of spans reading `Oct 10, 2026, 02:00 UTC` at every width,
+  and `primer` / `glossary` / `bar-sub` at **1 / 1 / 12**.
+  **Check 7's blanked-array diff shows exactly ONE differing line in the whole file, and it is `AS_OF`** — a
+  **seventh** consecutive run at that strength. Check 7b now asserts **22/22** named blocks byte-identical
+  (the list was corrected this run — see §8), all **five rotation thresholds** unchanged, **`ROTATION_ASOF`
+  unchanged at `Sept 5, 2026`**, banned phrases scoring **zero**, and `primer` **14** / `glossary` **7** /
+  `bar-sub` **3** / `macroWord` **2** / `rot-table-wrap` **2** all retained.
+  **Overflow as an allowed SET, with a THIRD data point on the tally being noise:** **100% of overflowing
+  elements are inside `.rot-table-wrap` and ZERO are outside it** at all three widths. The count read **48**
+  at 390px on **two separate passes this run** and **0** at 768 and 1440 — so it was again **not published as
+  a number**, and the 10-08 decision to assert the allowed set stands confirmed.
+  **A single failing render is a sample — a FOURTH run, and the control settled it again.** The three-width
+  pass returned **`#assetGrid` 0 and `bar-sub` 0 at 1440px** with 2 failed requests, while 390 and 768 gave 6
+  and 12 with zero. **Re-running 1440 alone gave 6 and 12, and the previous build at 1440 alone returned the
+  identical 0 and 0 with the same 2 failed requests** — a transient upstream rate limit under three
+  back-to-back page loads, the same shape as 10-07, 10-08 and 10-09. **On the shared pass the new build
+  rendered strictly better than the already-verified control.**
+  Summary lengths **1,231-1,392 chars (total 7,716)**, total **down** from 1,203-1,384 / 7,770. **HYPE at
+  1,392 is 8 chars above yesterday's maximum** — flagged rather than absorbed, well under the 1,500 ceiling,
+  and the band must not drift further up.
+  **Band labels evaluated by running `macroWord()` itself**, which mattered because a score moved: **SOL at
+  +0.3 reads *mildly supportive*, exactly as +0.4 did**; BTC *mildly cautious*; ETH *mildly supportive*; BNB,
+  XRP and HYPE *balanced*. **The number moved and no word moved — said on the card. But +0.3 is one step from
+  the edge: +0.2 reads *balanced*, so the next SOL cut moves both.**
+  **Two real errors of fact were caught by check 9 and fixed before publish:** drafts of **both** the BNB and
+  XRP cards claimed to be *the strongest of the six* on 24 hours — **BNB was not (XRP rose more), and XRP's
+  lead over BNB is 0.1642pt, inside the ~0.5pt noise floor, so neither claim was available.** See §8.
+
   **Re-asserted 2026-10-09, and FULLY verified — the THIRTEENTH consecutive restatement, and the thirteenth
   time the correct response was to verify rather than redesign.** At 390 / 768 / 1440: `#macroGrid` **6**,
   `#catalystsRow` **21**, **`#assetGrid` 6**, **0 horizontal page scroll**, **0 interactive elements under
