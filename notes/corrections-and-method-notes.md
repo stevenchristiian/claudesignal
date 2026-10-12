@@ -3586,7 +3586,10 @@ have lost it.
       was a target, not a commitment.
 
 - [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-THIRD** time
-      2026-10-12: on session start `HEAD` == `origin/main` == **`3058b54`** with a clean tree and local
+      2026-10-12: **this run's own publish verified byte for byte — commit `98e7f5a`, served sha256
+      `33e8865f9d0062d2d30a85b56a1e92620e336018d6da4f63e80ce077a1e2a1f7`, 60,020 bytes, `AS_OF`
+      Oct 12, matched at 02:38:48 UTC about two minutes after the push. Check these at the next
+      session start.** On session start `HEAD` == `origin/main` == **`3058b54`** with a clean tree and local
       `main` **stale** at `2ff369c` — the normal case. The **live URL matched the repo file byte for
       byte**: sha256 **`e4c3fc9c8a6a2c5446ed86c49636a069071d3078c4d9f720e1f9b4158cbcd773`**,
       **60,185 bytes**, `AS_OF` reading **Oct 11** — a clean end-to-end confirmation of the 10-11 run's
