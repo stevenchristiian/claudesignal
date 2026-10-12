@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-11 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-12 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -34,6 +34,47 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 2. Score baseline
 
+As published 2026-10-12 02:00 UTC (**SIX HOLDS; no score moved — and there was NO NEW SETTLED ETF SESSION to read,
+because Oct 10-11 was a weekend and the Oct 12 session had not happened at the stamp.** Five headlines. **(1) THREE
+FUND-LEVEL WEEKLY FIGURES RECONCILE EXACTLY, A NEW KIND OF CHECK FOR THIS DECK** — across Oct 5-9 this table gives
+**IBIT +$1.1M**, **FBTC -$380.3M** and **ARKB -$207.2M**, each matching a published figure to the decimal; daily rows
+and weekly *totals* had been checked before but **never a weekly figure for a single fund**. Two further aggregates
+also land exactly, the **prior week Sept 28 - Oct 2 at +$241.1M** and **October to date at -$386.3M** over seven
+sessions — **five exact reconciliations in one run**, and the $986.3M resolution was **re-derived from scratch**
+(-$407.4M + -$578.9M). **(2) CHECK 9 CAUGHT A REAL ERROR OF FACT AND IT WAS THE RUN'S OWN HEADLINE** — a draft said
+the BNB roll-off reference *failed on the first run that could break it* and invented the condition *valid only while
+the median asset is the same at both ends*; **2026-10-09 also had an identity change and the reference landed within
+0.0364pt**, so the clause is false and the cause is published as **unexplained**. **(3) THE ROLL-OFF REFERENCE MISSED
+FOR THE FIRST TIME IN FIVE EVALUATIONS** — actual step **-0.5281pt** against **+0.2109pt** (old median asset,
+**sign wrong**) and **-0.8503pt** (new one, overshooting 0.3222pt), **13.6x and 5.9x** the worst prior residual.
+**(4) FOUR OF THE SIX 7-DAY HIGHS SIT IN THE WINDOW'S FIRST HOUR** (Oct 5 02:00 on BTC, ETH, BNB, XRP), so the
+measured high is **a window edge, not a peak** — the Oct 4 highs rolled out as forecast. **(5) THE HORMUZ
+CONTRADICTIONS DISSOLVED ON INSPECTION** — a **~21/day** figure is a banner **contradicted by its own 1.1/day
+table**, an **18 on Oct 7** belongs to the same page's **Red Sea** section, and **Windward (Oct 9 = 11, Oct 10 = 14)
+agrees on direction and is under the branch's 20/day step**; two of four "instruments" were reading errors.
+Also: **two orderings were declined on the noise floor that were safe yesterday** (SOL -7.97% vs XRP -7.73% is
+0.2383pt, against 1.57pt on 10-11); **ETH is now +1.25% above its pre-break mark**, ~125x the reference precision, so
+the retired claim is **reversed with room**; **SOL turned positive on 21 days**, so BTC is no longer alone;
+**PortWatch is stuck on Oct 4 = 4 for a FIFTH run (lag ~8 days) and `n_tanker` reads ZERO on four consecutive days
+Oct 1-4** where `n_total` has one — **the branch's unnamed column is now worth a score step**; the **HYPE partial-day
+call landed to the decimal** ($0.0275M → $1.3846M, Oct 1-9 unmoved to a rounding step); **Q3 is identical a third
+time at the value that falsified the same test**; **check 7 failed first and it was the ASSERTION, a TENTH such run**;
+**check 10 passed at all three widths on the first pass**; and **a circulating 10-year level claim was DECLINED for
+naming the wrong day** — the window high is Oct 5 at 5.31%, not Wednesday Oct 7 at 5.28%):
+
+| Asset | Score | Held since |
+|-------|-------|-----------|
+| BTC   | -0.4 | 2026-10-09 (flow leg). **NO NEW SESSION** — Oct 9 remains the last settled row on all four slugs, so the leg had nothing to read and the re-arm question does not arise. **FIVE EXACT RECONCILIATIONS** (IBIT +$1.1M, FBTC -$380.3M, ARKB -$207.2M for Oct 5-9; prior week +$241.1M; October MTD -$386.3M over 7 sessions). **IBIT +$1.1M says the week was FIDELITY AND ARK, not Blackrock** — the opposite of Oct 7. $986.3M **re-derived from scratch**. Fed binding route **17.7%** (cbw), **57.3pt short — a NEW furthest reading by 0.2pt**; Polymarket firmed to **16.5%**, spread **1.2pt**, lead unchanged. Restore side cleared an **ELEVENTH** run. Hormuz: **no new observation for a FIFTH run**, Oct 4 = 4, lag ~8 days. |
+| ETH   | +0.4 | 2026-10-09 (flow leg). **Oct 9 still -$56.1M**, ETHA the entire figure; **nine consecutive settled negative sessions since Sept 29 = -$697.4M**, re-derived this run. **Fires nothing:** last two -$72.5M and -$56.1M against a -$150M bar. October MTD **-$635.0M**. **NOW CLEARLY ABOVE ITS PRE-BREAK MARK AT +1.25%**, from +0.02% — ~125x the ~0.01pt reference precision, so the claim retired on 10-11 is **reversed with room**, and ETH is still **closest of the six to its own mark, by 2.16pt**. **It is also now the window median of the five peers the BNB branch reads**, a role XRP held. Roadmap leg **SPENT**; Hoodi dates conflict, mainnet undated. |
+| SOL   | +0.3 | 2026-10-10 (flow leg, week Oct 5-9 at -$25.0M). **NO READING THIS RUN** — the leg reads completed weeks and the next is **Oct 12-16, measurable Fri Oct 16**, which is also the **re-arm deadline**. Oct 9 re-verified -$3.8M, week -$25.0M, October MTD -$24.8M. **STILL ONE STEP FROM A BAND CHANGE: +0.2 reads *balanced***, both edges evaluated. **200ms target slot time ACTIVATED Oct 9** — dated, first new SOL catalyst in some time, **fires nothing** (no leg reads an upgrade) and its effect is **unmeasured**; it is **not Alpenglow**. **TURNED POSITIVE ON 21 DAYS (+0.50%)**, so BTC is no longer the only one. **The weakest-week claim was DECLINED at 0.2383pt** where 10-11 published it at 1.57pt. |
+| BNB   | 0.0 | Sept 26 (0.1 restored on the relative branch). **Armed -1.69pt; margin +0.7815pt on 2026-10-12 — 2.5285pt short**, retreating **0.5281pt**, a second consecutive away-move. **TENTH consecutive positive.** Departing session **+1.97%** on BNB against **+0.50%** entering. **THE ROLL-OFF REFERENCE MISSED, ITS FIRST FAILURE IN FIVE** — two candidate answers (**+0.2109pt** sign-wrong off the old median asset, **-0.8503pt** off the new) against **-0.5281pt**. **The identity-change explanation is FALSIFIED by 10-09** and the cause is **logged as unexplained**. **MEDIAN CHANGED IDENTITY, XRP → ETH; mean-of-five +0.0041pt, 0.7774pt apart — the WIDEST recorded** (prior 0.3303pt), defect live in the measurement and dormant in the score. 37th burn still undated. |
+| XRP   | -0.1  | 2026-10-05 (window-closed branch fired; **SPENT**). **No live branch before Nov 9.** **A PROCEDURAL DETAIL REFINES THE WAIT:** the motion to proceed failed **49-50 on Sept 15**, **eleven short of sixty**, and **one senator switched to no to file a motion to reconsider**, keeping the bill technically callable — while reporting puts comprehensive market-structure law **unlikely before 2027**. Ledger **107,596,395**, build 3.4.1: **107 registry entries, 97 enabled — the THIRD consecutive read at that count**; both batch amendments enabled. **`fixCleanup3_4_0` present, supported and NOT enabled — the 10-09 derivation on track for a THIRD run (~Oct 23 09:34:30 UTC).** All of it fires nothing. Furthest below its own high at **-15.39%**. |
+| HYPE  | -0.1  | unchanged since the HIP-3 revenue cut. **THE PARTIAL-DAY CALL LANDED TO THE DECIMAL: Oct 10 completed at $1.3846M from $0.0275M**, inside the ~$1.2M-$3.3M range the 10-11 card named, and **Oct 1-9 did NOT move** ($19.2644M vs $19.2643M). Q4 MTD **$20.6490M** over 10 days. **Oct 11 is ABSENT from the series, not partial** — a different state. **Q3 2026 $173.9702M, identical a THIRD time — which is the SAME TEST THAT FAILED on 10-10 at $173.9115M, so the test is weak rather than the figure final.** Not re-adopted. Fires nothing (raw inside $150M-$260M; scaled **$227.1M-$236.1M**). **FLAG: Q3 2025 scales at 0.8125, outside the 0.737-0.766 cluster**, so the *stable ~75.4%* claim is not supported across all four quarters. |
+
+Scale is **-2 to +2**. Move a score only when a written branch threshold below fires. Diff against
+this table, **not** against the served page — the served page can be stale (see 1).
+
+<!-- superseded baseline, kept for the audit trail -->
 As published 2026-10-11 02:00 UTC (**SIX HOLDS; no score moved — and the run's finding is an OPEN ITEM CLOSED BY
 ARITHMETIC.** The **$986.3M** "October Bitcoin ETF outflow" figure that 10-10 could not reconcile against its own
 table (**-$407.4M**) **reconciles exactly as the BITCOIN AND ETHER tables ADDED TOGETHER**: **-$407.4M + -$578.9M =
@@ -460,6 +501,38 @@ this table, **not** against the served page — the served page can be stale (se
   > **The binding measure of a two-route AND-branch is the route nearer the bar. A move by the other route
   > changes nothing and must not be described as the branch moving.** Yesterday's sentence was true; generalising
   > it to today made it false.
+
+  **2026-10-12 — A STANDING FRESHNESS RULE, NOW EVIDENCED BY A FIGURE THAT MOVED, AND IT HAS A THIRD
+  CASE.** centralbank.watch read **17.9% → 17.7%** under the **same unchanged Oct 9 news stamp**, which
+  settles the question the 10-11 run opened.
+  > **THE TEST IS WHETHER THE UNDERLYING INSTRUMENT TRADED SINCE THE STAMP WAS SET, NOT WHETHER THE
+  > STAMP ADVANCED.** Three reasons a route can fail to print, and they are not interchangeable:
+  > **(a) a weekend** — no session exists, so an unchanged figure is the expected state (10-11);
+  > **(b) a vendor lag** — the page updates its table without advancing its stamp, so the figure can
+  > move while the stamp sits (§5.3, and this run); **(c) a HOLIDAY, which is ASYMMETRIC.** Oct 12 is
+  > **Columbus Day**: the **cash bond market is shut and there is no Oct 12 Treasury close at all**,
+  > while **CME interest-rate futures trade on Globex from Sunday 18:00 ET**. **One instrument on one
+  > page can be frozen by a holiday while another is not — resolve freshness per instrument, never per
+  > page.** Cross-check against a continuously-traded route: Polymarket, fresh at 02:13:29Z, firmed to
+  > **16.5%**, so the futures route was flat-then-moving rather than frozen.
+  **THE POLICY-ANCHOR DEFECT IS NARROWED TO ONE MODULE, AND THE REPLACEMENT SUGGESTION IS WITHDRAWN.**
+  The page prints **`Current Federal Funds Rate 3.75%`**, improved from 09-30's regressed **3.63%** but
+  still the **bottom edge of the live 3.75-4.00% range rather than its 3.88% midpoint**. **The
+  probability table this branch reads anchors correctly at 3.88%** — it gives the October rate level as
+  **3.92%** after a **+4.4bp** fresh move, and 3.92 - 0.044 = 3.876. The 3.75% figure is in the
+  Taylor-Rule / economic-models card, which **no branch reads**. An outside rates page gives the
+  **effective rate as 3.88%** as of Oct 9.
+  > **LOCATE THE NUMBER THE BRANCH ACTUALLY READS BEFORE JUDGING A SOURCE BY A NUMBER IT DOES NOT.**
+  **Reading: Polymarket 16.5% (+1.0pt), centralbank.watch 17.7% (-0.2pt), binding route 57.3pt short —
+  a NEW furthest reading by 0.2pt.** Named spread **1.2pt**, cbw still higher, **no lead change**,
+  narrowed from 2.4pt. **Restore side cleared an ELEVENTH run and fires nothing.** A third route, CME
+  FedWatch at **~20%**, is **attributed and not first-hand**, so it cannot fire — but note **the three
+  routes now sit within 3.5pt**, against the **14.2pt** disagreement that consumed four runs in
+  September. **Timing-not-direction: October ROSE 1.0pt while December (74.5%) and *another hike in
+  2026* (77.5%) BOTH held exactly** — the mirror of the 10-07 case the file calls the cleanest form of
+  this evidence, and the 10-10 watch condition (*December falling again with October flat*) **did not
+  trigger on either clause.** Both month slugs year-checked again: the bare `fed-decision-in-october`
+  and `fed-decision-in-december` are the **2025** markets, both `closed: true` with 0/1 prices.
 
   **2026-10-02 — BOTH NAMED ROUTES ARE NOW BELOW 40%, AND THE RESTORE SIDE OF THIS LEG IS UNREACHABLE AS
   WRITTEN. THIS IS THE MOST IMPORTANT FINDING ON THE BRANCH SO FAR.** Polymarket **33.5% -> 24.5%** (-9.0pt),
@@ -1216,6 +1289,26 @@ this table, **not** against the served page — the served page can be stale (se
   >   **+0.2 to BTC and +0.1 each to ETH and SOL**, superseding the step above rather than stacking on it.
   > - **Zero transits on two consecutive published observations** cuts **0.1 from BTC**.
   > - Re-arm after any firing: a further move needs a fresh threshold crossing from the new baseline.
+
+  **2026-10-12 — THE COLUMN IS NOW NAMED, AND IT MATTERS. The instrument is the `n_total` field of the
+  PortWatch `Daily_Chokepoints_Data` FeatureServer** (ArcGIS service id `weJ1QsnbMYJlCHdG`,
+  `portname='Strait of Hormuz'`), **not `n_tanker` and not `n_cargo`.** Every observation this file has
+  ever carried matches `n_total`, so this records the practice rather than changing it — **but it was
+  unwritten and it is now worth a score step.** On Oct 1-4 `n_tanker` reads **0, 0, 0, 0 — four
+  consecutive zeros** — where `n_total` reads **0, 4, 2, 4**. The *zero transits on two consecutive
+  published observations* clause therefore **fires nothing on `n_total` and WOULD CUT 0.1 FROM BTC on
+  `n_tanker`.**
+  **A FIFTH RUN WITH NO NEW OBSERVATION: still Oct 4 = 4, lag ~8 days.** Sept 19 - Oct 4 re-queried and
+  matches these notes exactly (6, 1, 2, 3, 4, 5, 3, 4, 1, 4, 1, 4, 0, 4, 2, 4).
+  **AND TWO OF THE FOUR COMPETING INSTRUMENTS WERE READING ERRORS.** A **~21 tankers/day** figure is a
+  page banner **contradicted by that same page's 7-day average of 1.1/day**; an **18 transits on Oct 7**
+  figure belongs to the **Red Sea** section of a page that also covers Hormuz. **The one genuine second
+  instrument, Windward, agrees on direction: Oct 9 = 11 and Oct 10 = 14 transits, both BELOW the 20/day
+  upside step and both MORE RECENT than PortWatch's Oct 4.** So **the upside step would not fire on
+  either instrument** — the branch is stale, not blind to a move it is missing. UANI's **~138/day**
+  pre-war baseline is a third baseline, not a reading. Context firing nothing: **CENTCOM said Oct 8 it
+  has cleared mines from the primary transit lanes**; USNI reports near-daily strikes on ships through
+  October.
 
   **2026-10-11 — A FOURTH RUN WITH NO NEW OBSERVATION, AND NOW A FOURTH INSTRUMENT SPANNING 40% TO
   96% BELOW NORMAL.** PortWatch's latest reading is **still Oct 4 = 4**, identical to 10-07, 10-08,
@@ -2101,6 +2194,88 @@ commented constant so no future run has to reverse-engineer them again.
    tape. This caught a false "oldest high of the six" this run (see 8).
 10. **Headless Chromium render**: `#macroGrid` 6, `#catalystsRow` 21, `#assetGrid` 6, and
     **zero uncaught JS exceptions**.
+
+### THE FIVE-RUN "UPSTREAM TRANSIENT" IS AN ASSERTION TIMING FAULT — ELEVENTH such run, and it RETIRES A DIAGNOSIS (2026-10-12)
+The 10-07, 10-08, 10-09 and 10-10 runs each had one width return **`#assetGrid` 0** with **2 failed
+requests**, and each concluded *an upstream rate limit under three back-to-back page loads*, establishing
+it with a previous-build control. **The control half was right — it was never the build. The attribution
+was wrong.**
+
+Three observations broke it, in order:
+1. **A width returned `#assetGrid` 0 with ZERO failed requests**, which breaks the correlation the
+   diagnosis rested on. The already-verified **previous build returned the identical 0 at the same
+   width**, so it was still not the file.
+2. **In-page response logging named the real condition: HTTP 429.** Four of seven CoinGecko calls
+   returned **429**, and **a 429 is a RESPONSE, not a failed request** — so `requestfailed` cannot see
+   it and the failed-request counter was measuring the wrong thing all along. Meanwhile `curl` on the
+   same endpoint returned **200**, because it is a per-client rate limit, not an outage.
+3. **Lengthening the settle wait from 9s to 16s made all three widths PASS — including widths that
+   still had failed requests and 429s.** `#assetGrid` read **6** and `bar-sub` **12** everywhere.
+
+> **THE PAGE NEVER LOST A CARD; THE ASSERTION WAS READING THE DOM BEFORE `loadAll()` FINISHED.** When
+> CoinGecko throttles, the fetch chain simply takes longer than nine seconds, and a fixed `waitForTimeout`
+> turns a slow load into a failed assertion. **Four runs of notes recorded an upstream property that was
+> a property of the harness.**
+> **STANDING FIX — assert on a SETTLED CONDITION, never a fixed wait.** Poll for `#assetGrid` to have 6
+> children with a generous timeout, and **log response STATUSES rather than counting failed requests**,
+> because the status is the instrument that sees a 429. This is the same family as §7's standing
+> coverage rule: *a verdict without the figure that would falsify it is not a result.*
+> **And note the shape of the error: a correlation observed four times (0 cards alongside 2 failed
+> requests) was promoted to a cause, and the fifth observation falsified it.** Both numbers were
+> downstream of one slow load. **Four repetitions of a co-occurrence is not a mechanism.**
+
+### Check 7 failed first, and it was the ASSERTION — a TENTH such run (2026-10-12)
+The first splice replaced the edited region with `src.slice(j+1)`, where `j` indexes the newline
+before `function renderMacro(){`. That **dropped the blank line separating the arrays from the first
+function**: the file was byte-correct in content but **one line shorter**, and check 7 — which compares
+line *i* to line *i* rather than running a real diff — reported **493 differing lines**, every one of
+them a one-line shift. **§7's rule was followed and `index.html` was NOT edited to satisfy the
+assertion**; the anchor bytes were printed (`'}\n];\n\nfunction renderMacro(){`), the missing newline
+identified, and the splice corrected to `src.slice(j)`. Check 7 then returned **exactly one differing
+line**, a **ninth** consecutive run at that strength.
+> **A LINE-INDEX COMPARISON IS NOT A DIFF, AND IT FAILS CATASTROPHICALLY ON A ONE-LINE SHIFT — 493
+> reported differences and ZERO real ones.** The signature is diagnostic: **if line *n* of the new file
+> equals line *n-1* of the old for a long run, the fault is an OFFSET, not drift.** Either preserve the
+> line count exactly (what this run did) or make the assertion a real diff. **This is the tenth run
+> whose first failing check was the check**, and the sixth distinct mechanical family.
+
+### Check 7c's AS_OF count was a CONVENTION difference, not drift (2026-10-12)
+The counter returned **2** against this file's **3**. Audited rather than accepted: run against the
+**old** build it also returned 2, and `grep` shows **3** occurrences in both builds — the declaration
+(L488), the `textContent` write (L596) and the template reference (L817). **This file's count includes
+the declaration.** The counter also carried a spurious `ROTATION_` exclusion: **`ROTATION_ASOF`
+contains `ASOF`, not `AS_OF`**, so it never needed one. **Both builds give the identical 3.**
+> **RUN A DISAGREEING COUNTER AGAINST THE PREVIOUS BUILD BEFORE BELIEVING THE NEW ONE DRIFTED.** One
+> extra invocation separates "the file changed" from "my convention differs", and it is the same move
+> as §7's audit-the-assertion rule applied to a *count* rather than a *match*.
+
+### Check 9, 2026-10-12: three corrections, and the first was a real error of fact
+1. **A REAL ERROR OF FACT, AND IT WAS THE RUN'S OWN HEADLINE.** A draft said the BNB roll-off reference
+   *failed on the first run that could break it*, with a chip asserting *the rule holds only while the
+   median asset is the same at both ends of the step*. **2026-10-09 had an identity change (SOL → XRP,
+   costing 1.2978pt) and the reference landed within 0.0364pt.** Both the superlative and the invented
+   condition are false. Corrected to *missed badly*, cause **logged as unexplained**.
+   > **THE FAILURE MODE IS INVENTING A CONDITION THAT MAKES THE MISS CONSISTENT.** The clause was
+   > attractive *because* it explained the run, and this file's own history falsified it in one line.
+   > **When a rule that has worked misses, check the runs where its proposed excuse was also present.**
+2. **A NOVELTY CLAIM SCOPED.** A draft said *only daily rows and weekly totals had been cross-checked
+   before; this is the first fund-level one*. **Fund-level DAILY values were checked on 10-11** (the
+   Oct 9 row line for line: IBIT +22.4, HODL +2.3, FBTC -3.6). What is new is a fund-level **WEEKLY**
+   figure. Corrected.
+3. **A COUNT PHRASING TIGHTENED.** *Unchanged for a third consecutive run* on the XRP registry became
+   **the third consecutive read at that count** — three reads of 97 is **two** unchanged transitions.
+
+### A FUND-LEVEL WEEKLY AGGREGATE IS A STRONGER CROSS-CHECK THAN A TOTAL (2026-10-12)
+Three published per-fund weekly figures reconciled **exactly** against this deck's table for Oct 5-9:
+**IBIT +$1.1M**, **FBTC -$380.3M**, **ARKB -$207.2M**. Two further aggregates also landed exactly, the
+prior week at **+$241.1M** and October to date at **-$386.3M** over seven sessions.
+> **A WEEKLY TOTAL CAN MATCH WHILE INDIVIDUAL LINES DISAGREE AND OFFSET; THREE FUND COLUMNS MATCHING
+> ACROSS THE SAME FIVE SESSIONS MEANS THE PUBLISHER HOLDS THIS TABLE CELL FOR CELL** over that week,
+> including the settled Oct 9 row this deck read first-hand. **Run this check whenever a publisher
+> gives per-fund weekly figures.** Note what IBIT's **+$1.1M** also says: the week's damage was
+> **Fidelity and Ark, not Blackrock** — the opposite of Oct 7, where the Blackrock line was 75% of the
+> row. **A near-flat fund-level week is itself a finding when the recent sessions were blank-line
+> driven.**
 
 ### Check 2's extractor failed first, and it was the ASSERTION — a NINTH such run (2026-10-11)
 The first version of this run's array extractor built its pattern with `new RegExp` from a string
@@ -3079,6 +3254,88 @@ have lost it.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
 
+- [ ] **THE HORMUZ BRANCH DOES NOT NAME ITS COLUMN, AND THAT IS NOW WORTH A SCORE STEP — NEW
+      2026-10-12, and it is the sharpest new item this run.** Read first-hand from the PortWatch
+      FeatureServer, **`n_tanker` is ZERO on Oct 1, 2, 3 and 4 — four consecutive days** — while
+      **`n_total` has a single zero (Oct 1)**, with Sept 30 and Oct 2 both reading 4. The branch says
+      *the IMF PortWatch daily transit count* and names **no column**. On `n_total` the
+      two-consecutive-zeros clause **fires nothing**; on `n_tanker` it **would cut 0.1 from BTC**.
+      Every observation this file has ever recorded (6, 8, 1, 2, 3, 4, 5, …) matches `n_total`, so
+      **`n_total` is the column the branch has always read and the conservative reading stands** —
+      **but write the column name into §3 explicitly before a future run has to guess.** Sibling of
+      the 10-06 count-not-level finding; there the condition named a level and a count was read, here
+      it names neither.
+- [ ] **THE BNB ROLL-OFF REFERENCE MISSED, AND THE OBVIOUS EXPLANATION IS FALSE — NEW 2026-10-12.**
+      Five evaluations: **0.0364 / 0.0121 / 0.0184 / 0.0543pt**, then this run **two candidate
+      answers both wrong** — **+0.2109pt** off the old median asset (**sign wrong**) and
+      **-0.8503pt** off the new one (overshooting by 0.3222pt) against an actual **-0.5281pt**, i.e.
+      **13.6x and 5.9x** the worst prior residual. **A draft attributed it to the median changing
+      identity and invented the clause *valid only while the median asset is the same at both ends*.
+      2026-10-09 falsifies it: that run ALSO changed identity (SOL → XRP, costing 1.2978pt) and the
+      reference landed within 0.0364pt.** **Cause logged as UNEXPLAINED. Keep recording the residual
+      and the median identity on both sides of every split, and do NOT add a condition until a run
+      distinguishes one.**
+      > **WHEN A RULE THAT HAS WORKED MISSES, CHECK THE RUNS WHERE ITS PROPOSED EXCUSE WAS ALSO
+      > PRESENT.** The clause was attractive precisely because it made this run consistent, and one
+      > line of this file's own history killed it. **A condition invented to cover a miss is not a
+      > diagnosis.**
+- [ ] **BEFORE TREATING A FIGURE AS A SECOND INSTRUMENT, FIND ITS OWN TABLE — NEW 2026-10-12, and it
+      retired two escalations.** The 10-10 and 10-11 runs escalated the Hormuz item on figures that
+      appeared to point the opposite way. **Two of them were reading errors, not instruments:** a
+      **~21 tankers/day** headline is a **page banner contradicted by that same page's 7-day average
+      of 1.1/day** (a ~19x internal conflict), and an **18 transits on Oct 7** figure belongs to the
+      **Red Sea** section of a page that also covers Hormuz. **The one genuine second instrument,
+      Windward, AGREES on direction** — **Oct 9 = 11 and Oct 10 = 14 transits**, both **below the
+      branch's own 20/day upside step**, and both **more recent than PortWatch's Oct 4**.
+      **Consequence: the upside step would not fire on EITHER instrument, so the branch is not blind
+      in the way the item feared.** PortWatch is still **stuck on Oct 4 = 4 for a FIFTH run, lag ~8
+      days**, so the item stays open but is **much less urgent**. **Decision: name Windward as a
+      second instrument with its own baseline, or state that the branch is blind between PortWatch
+      publications?**
+      > **A HEADLINE NUMBER AND THE PAGE'S OWN TABLE ARE TWO OBJECTS, AND SO ARE TWO SECTIONS OF ONE
+      > PAGE.** Check the banner against the table, and ask which waterway the section describes.
+      > Two runs of escalation were spent on figures that one page-read dissolved.
+- [x] **THE WEEKEND FRESHNESS QUESTION IS ANSWERED BY A FIGURE THAT MOVED — CLOSED 2026-10-12, and it
+      needs ONE line written into §3.** The 10-11 run asked for a standing exemption on the ground
+      that an unchanged futures figure under an unchanged stamp is the *expected* state when the
+      market was shut. **This run the same route MOVED (17.9% → 17.7%) under the SAME unchanged Oct 9
+      news stamp**, which confirms both halves at once: §5.3's *the page lags, it does not stick*, and
+      **the test is whether the underlying instrument traded since the stamp was set, not whether the
+      stamp advanced.** **ADD THE HOLIDAY CASE, which is asymmetric and bit this run:** Oct 12 is
+      **Columbus Day**, so the **cash bond market is shut and there will be no Oct 12 Treasury close
+      at all**, while **CME interest-rate futures trade on Globex from Sunday 18:00 ET**. **One
+      instrument can be frozen by a holiday while another on the same page is not.**
+- [x] **THE centralbank.watch POLICY-ANCHOR CONCERN IS NARROWED AND THE 09-30 REPLACEMENT SUGGESTION
+      IS WITHDRAWN — 2026-10-12.** The page now prints **`Current Federal Funds Rate 3.75%`**, up from
+      the regressed **3.63%** of 09-30, which is the **bottom edge of the live 3.75-4.00% range rather
+      than its 3.88% midpoint** — so the defect is reduced from 25bp to 13bp, not cured. **But the two
+      anchors live in DIFFERENT MODULES of one page.** The **futures-derived probability table**, which
+      is the route this deck's branch reads, **implies 3.88%**: it prints the October rate level as
+      **3.92%** after a **+4.4bp** fresh move, and 3.92 - 0.044 = 3.876. The **3.75%** figure sits in
+      the Taylor-Rule / economic-models card, which **no branch reads**. Independently corroborated by
+      an outside rates page giving the **effective fed funds rate as 3.88%** as of Oct 9.
+      > **A DEFECT IN ONE MODULE OF A PAGE IS NOT A DEFECT IN THE ROUTE, IF THE ROUTE IS A DIFFERENT
+      > MODULE.** 09-30 proposed dropping centralbank.watch on anchor grounds. **Locate the number the
+      > branch actually reads before judging the source by a number it does not.**
+- [ ] **NEW: THE HYPE SCALING RATIO IS NOT AS STABLE AS §3 STATES — 2026-10-12.** §3 carries three
+      ratios (0.766 / 0.760 / 0.737) and calls DefiLlama *a stable ~75.4%* of the branch series.
+      **Q3 2025 reads 289.8464 / 356.7 = 0.8125**, well outside that cluster. Including it widens the
+      scaled Q3 2026 range from **$227.1M-$236.1M** to **$214.1M-$236.1M** — **still inside the
+      $150M-$260M corridor, so NO branch consequence** — but the *stable ~75.4%* claim should be
+      restated as **a three-quarter cluster with one outlier**. Recorded, not acted on.
+- [ ] **A WINDOW HIGH CAN BE THE WINDOW'S OWN EDGE — NEW 2026-10-12.** **Four of the six 7-day highs
+      sit in the FIRST CANDLE of the window** (Oct 5 02:00 on BTC, ETH, BNB and XRP, against a window
+      base of Oct 5 01:00). The real peak (Oct 4-5) has **rolled out**, so the measurement now rests
+      on its own boundary and it means **prices only fell after the window opened.** Reporting it as a
+      dated high invites a reader to think a rally happened that day. **Check an N-day high's
+      timestamp against the window base before describing it.**
+- [x] **A MARGIN THAT WAS SAFE YESTERDAY IS NOT SAFE TODAY — 2026-10-12, the first case of the same
+      claim about the same asset flipping publishability.** *SOL weakest of the six over seven days*
+      was **published on 10-11 at a 1.57pt margin** and is **withheld today at 0.2383pt** (SOL -7.97%
+      vs XRP -7.73%). The asset did not change; the margin did. **§8's re-measure-every-ordering rule
+      now has a worked example on both sides.** Two further 24-hour orderings were also declined
+      (0.17pt and 0.25pt).
+
 - [x] **THE $986.3M FIGURE IS RESOLVED — CLOSED 2026-10-11, BY ADDING THIS DECK'S OTHER TABLE.** It
       reconciles **exactly** as the Bitcoin and Ether October-to-date totals through Oct 8:
       **-$407.4M + -$578.9M = -$986.3M**, to the last decimal. The same publisher family separately
@@ -3328,7 +3585,15 @@ have lost it.
       withholding block data); an **EIP-8037** execution-client edge case was still open at this stamp. The date
       was a target, not a commitment.
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-SECOND** time
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-THIRD** time
+      2026-10-12: on session start `HEAD` == `origin/main` == **`3058b54`** with a clean tree and local
+      `main` **stale** at `2ff369c` — the normal case. The **live URL matched the repo file byte for
+      byte**: sha256 **`e4c3fc9c8a6a2c5446ed86c49636a069071d3078c4d9f720e1f9b4158cbcd773`**,
+      **60,185 bytes**, `AS_OF` reading **Oct 11** — a clean end-to-end confirmation of the 10-11 run's
+      verified publish. **Cost: one `curl` and one `git rev-parse`. The routine prompt's step 0 still
+      asks each run to re-verify this old blocker. There is none, and there has not been one for
+      twenty-three runs.**
+      Previously held a **TWENTY-SECOND** time
       2026-10-11: on session start `HEAD` == `origin/main` == **`bf60d92`** with a clean tree and local
       `main` **stale** at `2ff369c` — the normal case. The **live URL matched the repo file byte for
       byte**: sha256 **`81e765043f5aa9b5e0f0420b3d9ba440bd59cad5d528ca9f8ee40f71eb96ba1b`**,
@@ -3833,6 +4098,50 @@ What this means for future runs:
   no element overflowing the viewport (the rotation table is the one allowed exception, inside
   `.rot-table-wrap`), and no interactive element under 32px tall. The render check in §7 does all
   three at once.
+  **Re-asserted 2026-10-12, and FULLY VERIFIED ON THE FIRST PASS AT ALL THREE WIDTHS — the SIXTEENTH
+  consecutive restatement, and the sixteenth time the correct response was to verify rather than
+  redesign.** The user's amendment arrives appended to the routine prompt on every firing; **it is
+  already implemented and §10 is the record of that.** At 390 / 768 / 1440: `#macroGrid` **6**,
+  `#catalystsRow` **21**, **`#assetGrid` 6**, **0 horizontal page scroll**, **0 interactive elements
+  under 32px**, **zero uncaught page errors**, both as-of spans reading `Oct 12, 2026, 02:00 UTC` at
+  every width, and `primer` / `glossary` / `bar-sub` at **1 / 1 / 12**.
+  **Check 8c:** banned phrases score **zero** — `not financial advice`, `not investment advice`,
+  `financial advice`, `investment advice` and `Netlify` in all three casings — the five beginner-facing
+  markers are retained at **identical counts** (`primer` 14 / `glossary` 7 / `bar-sub` 3 / `macroWord`
+  2 / `rot-table-wrap` 2), and the honest-framing text (*it can be wrong* x2, *one research read* x1)
+  is **present and untouched**.
+  **Overflow as an allowed SET, confirmed a FIFTH time:** **100% of overflowing elements are inside
+  `.rot-table-wrap` and ZERO are outside it** at all three widths. The count read **48** at 390px and
+  **0** at 768 and 1440; across runs the tally has read 0, 1 and 48 on both builds, so it is **again
+  not published as a number.**
+  **AND THE FIVE-RUN "UPSTREAM TRANSIENT" WAS DIAGNOSED AND RETIRED THIS RUN — it is an ASSERTION
+  TIMING FAULT.** A later re-render returned `#assetGrid` **0** at 1440px with **zero failed requests**,
+  and so did the **already-verified previous build**, so it was not the file. In-page response logging
+  named the cause: **HTTP 429**, which is a *response* and therefore invisible to the failed-request
+  counter the previous four runs reasoned from. **Raising the settle wait from 9s to 16s made all three
+  widths PASS, including widths that still showed 429s.** The page never lost a card; the assertion was
+  reading the DOM before `loadAll()` finished. **Standing fix recorded in §7: poll for a settled
+  condition and log response statuses, never a fixed wait and a failed-request count.** Failed requests
+  on the passing pass: 2 at 390px, 0 at 768px, 2 at 1440px — **and all three widths passed regardless**,
+  which is the point.
+  **Check 7's blanked-array diff shows exactly ONE differing line and it is `AS_OF`** — a **ninth**
+  consecutive run at that strength, after an **assertion fault** (see §7).
+  **Check 7b stays PROVABLY EXHAUSTIVE for a second run:** **22/22 byte-identical, coverage 22/22, an
+  EMPTY not-found list**, and **26** top-level declarations = the 22 named blocks + `AS_OF` + the three
+  edited arrays, **with nothing outside that set.**
+  **Check 7c:** all **five rotation thresholds** unchanged, **`ROTATION_ASOF` unchanged at
+  `Sept 5, 2026`**, and **`AS_OF` references = 3** (a counter disagreement resolved as a convention
+  difference — see §7).
+  **Check 8 went 22 for 22 with ZERO survivors and ZERO assertion faults**, and the seeds were run
+  **through `indexOf` in node with no shell quoting at all** — the standing mechanical fix for the
+  quoting fault that voided a seed four times.
+  **Summary lengths 1,217-1,366 chars (total 7,728).** **The MAXIMUM is DOWN** from 1,373 and the
+  **total DOWN 86** from 7,814, well under the 1,500 ceiling. The band did not drift up.
+  **Band labels evaluated by running `macroWord()` itself**: BTC *mildly cautious*; ETH and SOL *mildly
+  supportive*; BNB, XRP and HYPE *balanced*. **No score moved, so no label moved** — and the edges were
+  evaluated too (**+0.2 → *balanced*, +0.3 → *mildly supportive***), which keeps the SOL band-edge
+  warning checkable rather than remembered.
+
   **Re-asserted 2026-10-11, and FULLY VERIFIED ON THE FIRST PASS AT ALL THREE WIDTHS — the FIFTEENTH
   consecutive restatement, and the fifteenth time the correct response was to verify rather than
   redesign.** At 390 / 768 / 1440: `#macroGrid` **6**, `#catalystsRow` **21**, **`#assetGrid` 6**,
