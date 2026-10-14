@@ -2318,6 +2318,14 @@ commented constant so no future run has to reverse-engineer them again.
 > blocks, and the only reason the gap surfaced is that the extractor printed its NOT-FOUND list.
 > **A verdict without a coverage figure is not a result.** See §8's 2026-10-10 entry.
 
+> **Standing addition (2026-10-14): a check-9 correction is not applied until EVERY string carrying the
+> claim is changed — grep the whole build for the corrected CLAIM, not only the string you found it in.**
+> The 10-13 run corrected *all three firmed by two to three points* in the BTC summary and **left the same
+> claim standing in a catalyst chip**, which went live for a day. Check 9 reads each published string
+> independently, which is what lets it catch things and exactly why its remedies must be global.
+> **Mechanical form: apply every correction through an anchor-count assertion that FAILS unless the anchor
+> appears exactly once.** That turns "did I fix it everywhere" into an assertion rather than a memory.
+
 1. `node --check` the extracted inline script.
 2. Evaluate the three arrays; assert **COINS 6 / MACRO_SNAPSHOT 6 / GLOBAL_CATALYSTS 21 /
    asset catalyst entries 18**.
@@ -2345,14 +2353,6 @@ commented constant so no future run has to reverse-engineer them again.
    unchanged. A block extractor must stop at the *next* top-level declaration **or comment**; the
    first version of it ran past the end of a function and reported a new neighbouring comment as
    drift in `fetchChart`.
-> **Standing addition (2026-10-14): a check-9 correction is not applied until EVERY string carrying the
-> claim is changed — grep the whole build for the corrected CLAIM, not only the string you found it in.**
-> The 10-13 run corrected *all three firmed by two to three points* in the BTC summary and **left the same
-> claim standing in a catalyst chip**, which went live for a day. Check 9 reads each published string
-> independently, which is what lets it catch things and exactly why its remedies must be global.
-> **Mechanical form: apply every correction through an anchor-count assertion that FAILS unless the anchor
-> appears exactly once.** That turns "did I fix it everywhere" into an assertion rather than a memory.
-
 8. Stale-string checks scoped to the *previous build's* phrasing, not to generic words.
 9. **Superlative / count / margin grep** over every published string; verify each claim against the
    tape. This caught a false "oldest high of the six" this run (see 8).
