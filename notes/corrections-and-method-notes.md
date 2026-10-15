@@ -4070,7 +4070,16 @@ have lost it.
       withholding block data); an **EIP-8037** execution-client edge case was still open at this stamp. The date
       was a target, not a commitment.
 
-- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-FOURTH** time
+- [x] **GitHub push blocker — CLOSED. Do not re-check it again.** Held a **TWENTY-FIFTH** time
+      2026-10-15: **this run's own publish verified byte for byte — commit `d6bed6e`, served sha256
+      `96b728165763ec65e50e3fd4ea64be50f9adbdbf91eeb8592b497830e40a83ea`, identical to the built file, with
+      `AS_OF` reading `Oct 15, 2026, 02:00 UTC`**, matched at **02:33:39 UTC** on the **fifth** poll about a
+      minute after the push. Session start read `origin/main` at `c9b7ef2` **matching `HEAD` with no fetch
+      needed**, and `HEAD` = `main` = `origin/main` after. **The first four polls served the previous build with
+      its own stable hash — that is what a correct pre-propagation read looks like, not a failure.**
+      **Cost: one `git rev-parse` and one `curl`.** The routine prompt's step 0 still asks each run to re-verify
+      this old blocker. **There is none, and there has not been one for twenty-five runs.**
+      Previously held a **TWENTY-FOURTH** time
       2026-10-14: on session start `HEAD` == **`4f08ebd`** with a clean tree, local `main` **stale** at
       `2ff369c` and **`origin/main` ALSO stale at `2ff369c` until fetched** — a variation worth naming, because
       an unfetched `origin/main` looks exactly like a failed push. **One `git fetch origin main` advanced it to
