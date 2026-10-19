@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-18 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-19 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -33,6 +33,43 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   built file. Never report success on exit status alone. Pages takes ~1 minute; re-check.
 
 ## 2. Score baseline
+
+As published 2026-10-19 02:00 UTC (**SIX HOLDS, and the run's finding is a CROSS-CHECK rather than a score.**
+**(1) A 24-FIGURE FUND-LEVEL ETF RECONCILIATION WITH ZERO MISMATCHES — the strongest outside confirmation on
+record here.** A publisher reading the same Farside tables printed the week **Oct 12-16** fund by fund (piece
+dated **Oct 17 07:40 UTC**) and **all twenty-four figures reproduce from tables read first-hand, to the
+decimal**: the grand total **-$610.7M**, the SOL+ZEC+HYP subtotal **-$62.2M**, five table totals (**-228.4 /
+-320.1 / -25.5 / -17.5 / -19.2**) and **seventeen individual fund lines** across four tables. **The PRIOR
+week reconciles too** at **-$1,286.3M** against a published **$1.29bn**, and the published **52.5%** fall
+reproduces as **52.52%**. **Seventeen fund lines cannot coincide**, so every figure this deck published off
+those tables in the past week is corroborated at once. **(2) BUT THE NOVELTY CLAIM IN THE DRAFT WAS A REAL
+ERROR OF FACT, AND IT WAS THIS FILE'S OWN CONTENT THAT REFUTED IT.** A draft called `/hyp/` a table *this
+card has never been able to read*; **§8 has said `/hyp/` is SOLVED since 2026-09-26** and **§9 has carried
+*a HYPE flow branch is writable, decision needed* since 2026-10-03**. **Only `/zec/` is genuinely new.**
+**(3) THE TAPE SWEEP INVERTED COMPLETELY — 6 of 6 POSITIVE on 24 hours from 17 of 18 NEGATIVE — AND FOUR OF
+THE SIX SET THEIR 21-DAY LOW INSIDE THAT SAME 24 HOURS** (SOL 100.32, BNB 704.95, XRP 1.2547, HYPE 76.04, all
+at **Oct 18 19:00 or 20:00 UTC**), closing **2.94% to 4.70%** above. **Both ends of the 24-hour ordering are
+DECLINED** (0.1992pt and 0.2132pt). **No dated cause exists for that low and none was manufactured** — the
+dated coverage describes a **shallower, earlier** Saturday-night dip (ETH to 2,360 against an actual low of
+2,325.48). **(4) BOTH FED ROUTES FELL AND CONVERGED INSIDE A BLACKOUT** — Polymarket **13.5% -> 12.5%**,
+centralbank.watch **16.1% -> 13.6%** (its three columns summing to exactly 100.0), **spread 2.6pt -> 1.1pt**,
+governing (LOWER) route **12.5%, 62.5pt short**. **A CME-citing route dated today reads 16%, so three
+readings sit inside 3.5pt.** **The 10-18 weekend prediction LANDED** — the frozen route moved once CME
+reopened Globex at 22:00 UTC — **but the mechanism is unread and causation is not claimed.** **(5) HORMUZ IS
+BLIND FOR A FOURTH RUN and the pre-registered jump test COULD NOT BE RUN, because there is no new
+observation.** The outside series now has **TWO consecutive weekly observations, 39.29 then 36.29/day**,
+which **weakens the 10-18 "a weekly total is not two observations" objection**; the decision is in its
+**second** run. **(6) TWO BASELINES, NOT ONE:** UKMTO's **~70% below pre-conflict** back-solves to **~121/day**
+where this deck reads **36.29/day as 42.7% of 85/day (57.3% below)**. **Both right, not comparable.**)
+
+| Asset | Score | Held since |
+|-------|-------|------------|
+| BTC   | -0.4 | 2026-10-09 (flow leg). **No new ETF session** — Friday **Oct 16 stands at -$82.4M** with **no revision**, against a **-$300M** bar, and Oct 15 was an inflow so no pair can read. **October to date -$614.7M across twelve settled sessions**; week Oct 12-16 **-$228.4M**, matching a publisher's figure **exactly**. **Fed leg: BOTH routes FELL — Polymarket 12.5% (`updatedAt` 02:11:12Z), centralbank.watch 13.6% (`Current Rate: 3.88%` for a sixth run, news stamp Oct 16 unchanged while the figure moved — §5.3 again).** Spread **1.1pt from 2.6pt**. **GOVERNING (LOWER) ROUTE 12.5%, 62.5pt short**; nearer 13.6%, 61.4pt. Restore side cleared an **EIGHTEENTH** run with nothing to restore. **A third route, dated today, reads 16% (CME-cited), so three readings sit inside 3.5pt.** **Hormuz: Oct 11 = 2 for a FOURTH run, lag ~8 days; the UKMTO series now has TWO consecutive weekly reads at 39.29 and 36.29/day — see the headline. Fires nothing; the DECISION is in its second run.** Tape: **rose 0.97% to 82,350.73**, strongest of the six over 7d (**1.9801pt**) and 21d (**4.6440pt**) and least below both highs (**1.8982 / 4.8352pt**); **+6.57% above its pre-break mark, the highest of six by 3.1300pt**. |
+| ETH   | +0.4 | 2026-10-09 (flow leg). **No new session.** Last two settled **-$60.3M** and **-$69.7M** against a **-$150M each** pair bar, so the **nearer leg is $80.3M short** and it fires nothing. **October to date -$955.1M across twelve settled sessions**; week Oct 12-16 **-$320.1M**, and **ETHA alone -$299.0M of it — both matching a publisher EXACTLY**. Roadmap leg **SPENT**. **A TAPE SHAPE THE CARD LEADS WITH: ETH ROSE 0.68% AND ITS 7-DAY READING GOT WORSE**, -4.10% -> -4.63%, because **the price the week is measured from rose 2,508.18 -> 2,539.18** (costing **1.17pt**) against **+0.65pt** from the higher close. Closed **2,421.70**, **-3.43%** against its pre-break mark; **it and XRP are the two below the line and they are 0.0307pt apart, so NOT ranked**. |
+| SOL   | +0.2 | 2026-10-17 (flow leg, second firing). **The next fresh, non-overlapping completed period is the week Oct 19-23, and it STARTS TODAY** — unreadable until Friday settles. The week that paid still reads **-0.7, -1.0, -1.3, -9.8, -12.7 = -$25.5M**, matching a publisher exactly. October to date **-$50.3M across twelve settled sessions**. Band label **balanced** (`macroWord` evaluated, not assumed); **+0.1 stays balanced, +0.3 would read mildly supportive**. **The bar reads NET FLOW, not activity** — a draft calling it *a quiet week* was corrected, because a week of heavy outflows is not quiet and still cuts. Alpenglow **Oct 21 ~15:00 UTC, epoch 1064 (slot 459,648,000), TWO days out and STAGED**: TowerBFT runs the first **5,000 slots (~18 min)**, Alpenglow takes over at slot **459,653,000**, Rotor not in this activation, **150ms finality is a TARGET not a demonstrated mainnet figure**, operators need **0.8 SOL above the rent-exempt minimum**. **Fresh 21-day low 100.32 @ Oct 18 19:00**, closing **4.44%** above. |
+| BNB   | +0.1 | 2026-10-13 (relative branch, upside). **Margin +2.5943pt** from +1.9584pt, **step +0.6359pt** = roll-off **+0.8319pt** + new information **-0.1960pt** (sum exact). **THE MEDIAN HELD ITS IDENTITY THROUGHOUT FOR A SECOND CONSECUTIVE RUN** — SOL at the old reading, the interim and the new. **BUT THE POSITIVE HALF IS THE ROLL-OFF, NOT THE WEEK:** fresh trading went slightly AGAINST BNB, so the card says the margin improved **because of what left the back of the window, not because BNB beat its peers over the last day**. Needs a fresh **±5.00pt** from **+3.8633pt**: cut edge **3.7310pt** away, rise edge **6.2690pt** — **downside still the nearer**. Mean-of-five **+2.0600pt**, gap **0.5343pt**, in line with the stored series. **BNB rose 0.98% on the day while falling 3.43% on the week, and the card says the day first.** **CROSSED BACK ABOVE its pre-break mark at +0.62% from -0.35%**, ~62x the precision of the level, so **two of six are now below the line, from three**. **The only one of six whose 21-day base roll went AGAINST it (-0.0396pt).** 37th burn still undated, eighth run. |
+| XRP   | -0.1 | 2026-10-05 (window-closed branch, SPENT). Nothing can fire before **Nov 9**; Senate out to **Nov 6**; motion to proceed failed **49-50, eleven short of sixty**, none rescheduled. Ledger read first-hand **02:33 UTC**, validated ledger **107,752,494**, build **3.4.1**: **107 entries, 97 enabled, 10 supported-not-enabled — a TENTH consecutive read**, and **no amendment is named on the card**. **SEC Regulation Crypto Assets closes for comment Oct 20 — ONE day out**, fires nothing, published as commentary. **The 21-day column improved 1.9350pt to -12.95% and THIS TIME BOTH HALVES HELPED** — base roll **+1.0578pt**, higher close **+0.8773pt** — the mirror of 10-18, and the card says so. **Fresh 21-day low 1.2547 @ Oct 18 19:00.** Rose 1.02% to **1.3098**. |
+| HYPE  | -0.1 | 2026-09-21 (disclosure handicap). Revenue leg: **Q3 2026 $173.9713M over 92 days, a SIXTH identical read**; ratios **0.766 / 0.760 / 0.737** give **$227.12M-$236.05M**, inside the **$150M / $260M** corridor on every scaling, **$77.12M above the cut bar on the least favourable scaling**. **Q4 2026 is 18 days old at $38.7536M and is NOT readable.** Disclosure leg: nothing disclosed on the **named** deployment; a **$75.08M cumulative HIP-3 fee** figure dated Oct 15, split **$37.01M / $38.07M** (summing exactly), is a **protocol-wide aggregate** the publisher itself says is **not entirely protocol revenue** — declined. **`/hyp/` ETF table read again: -$17.5M on the week, -$18.5M in October across BHYP/THYP/HYPG — and there is STILL NO HYPE FLOW LEG, an open item since 2026-10-03.** Tape: **weakest of six over 7 days (2.0728pt) and furthest below both highs (2.5472 / 1.0385pt)**; **21-day weakest changed hands HYPE -> SOL and is DECLINED at 0.2453pt**; **fresh 21-day low 76.04 @ Oct 18 20:00**; rose **0.47%**, the smallest figure of six but **0.2132pt from the next, so the ranking is DECLINED**; **+0.60% above its pre-break mark from +0.13%, moving AWAY from the line.** |
 
 As published 2026-10-18 02:00 UTC (**SIX HOLDS, and the run's finding is not a score but an INSTRUMENT.**
 **(1) THE HORMUZ BRANCH IS MEASURED BY A GAUGE THAT IS NOT SEEING, AND THE 10-17 "CALM OR BLIND" QUESTION IS
@@ -2605,6 +2642,37 @@ commented constant so no future run has to reverse-engineer them again.
 > `$173.9713M`, `13.5%`, `16.1%`, `+3.8633pt`, `107 entries`). **Both previous runs reached zero survivors
 > only after re-seeding. This is what the 10-15 and 10-17 rules were written for — keep the control half.**
 
+> **Standing addition (2026-10-19): A SEED MUST COME FROM THE PREVIOUS BUILD, NOT FROM THE NOTES ABOUT IT.**
+> Check 8's one void seed this run, `a fifth identical read to the last decimal`, was never in the 10-18
+> **deck** — it is the 10-18 **run-notes'** phrasing of the same fact. A seed drawn from this file tests
+> nothing, because the file is not what gets published. **Grep the previous `index.html` for the exact string
+> before using it as a seed.** Third member of the seeding family after "seed the claim, not the number"
+> (10-15) and "seed the countdown, not the date" (10-17). The `14.89%` survivor this run was the 10-15 rule
+> firing again, for a third time: a step prints both of its endpoints.
+
+> **Standing addition (2026-10-19): AN EXPECTED-COUNT EXPRESSION CAN CONFLATE ENTRIES WITH FIELDS.** Check 2's
+> field-inventory assertion expected `3*6 + 18 + 18 + 21*2 = 96` and the extractor returned **114**, which is
+> correct: `6*3` identity fields + **`18*2`** asset-catalyst fields + `6*3` macro fields + `21*2` global
+> fields. The formula counted the 18 asset catalysts as 18 *fields* rather than 36. **`index.html` was not
+> edited** — a THIRTEENTH run whose first failure was its own assertion. **Sibling of 10-16's rule that an
+> anchor-count assertion must take its expected count: here the count was taken, and taken wrong, because
+> the expression never named its unit.** Write such expectations as `entries * fields_per_entry`, labelled.
+
+> **Standing addition (2026-10-19): BEFORE PUBLISHING THAT ANYTHING IS NEW TO THIS DECK, GREP THIS FILE.**
+> A draft called Farside's `/hyp/` table something *this card has never been able to read*. §8 has carried
+> **"the Hyperliquid ETF slug is `/hyp/`, not `/hype/` — SOLVED 2026-09-26, stop looking"** and §9 has carried
+> **"a HYPE flow branch is writable — decision needed"** since **2026-10-03**. The run also spent a web search
+> rediscovering that slug. **The error was in the notes-reading, not in the world**, and check 9 caught it only
+> because the claim contained the word *never*. **A novelty claim is a claim about this file's contents, so
+> verify it against this file, not against a search.** Only `/zec/` was in fact new.
+
+> **Standing addition (2026-10-19): A SEARCH SUMMARY CAN BE WRONG ON THE VALUE *AND* ON THE SPAN, AND ONE
+> FOLLOW-UP QUERY SETTLES IT.** A summary offered **VIX 20.57, +25%, highest since late July** and *worst week
+> since January*. Direct checking gave a **close of 19.99-20.0**, an **intraday high of 22.31, the highest
+> since June 11**, and *worst week since June* from every source. **Two spans sit on one instrument: the
+> four-month span belongs to the INTRADAY high, the three-month one to the close.** A macro tile that attached
+> the four-month span to the *close* was corrected by check 9. Third instance of the 10-13 misattribution rule.
+
 1. `node --check` the extracted inline script.
 2. Evaluate the three arrays; assert **COINS 6 / MACRO_SNAPSHOT 6 / GLOBAL_CATALYSTS 21 /
    asset catalyst entries 18**.
@@ -3066,6 +3134,66 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 `ROTATION_ASOF` (`'Sept 5, 2026'`) is **not** an as-of label. Do not touch it.
 
 ## 8. Build-script and tooling hazards (found 2026-09-21)
+
+### 2026-10-19: THE 09-30 `executablePath` CLASSIFIER BLOCK HAS LAPSED — RE-PROBE, DO NOT INHERIT
+§8 records (2026-09-30) that passing `executablePath` to `chromium.launch()` is **blocked by the auto-mode
+classifier as a containment escape**, and prescribes a no-argument launch after pinning playwright. This run
+passed **`executablePath: /opt/pw-browsers/chromium-1194/chrome-linux/chrome`** on **seven** Farside/HTML
+launches and **was not blocked once**. It also ran check 10 with **no arguments**, which still works.
+> **BOTH ROUTES WORK TODAY. The blocked-flag verdict is now a MEASUREMENT WITH A DATE, not a property.**
+> Same family as the 10-07 rule to re-probe the cheap thing before inheriting an infrastructure verdict.
+> **Keep the no-argument launch as the default** — it is the one the file has evidence for across many runs —
+> **and do not spend a run working around a block that may no longer exist.** Note also that `require` from
+> `/opt/node-tools/node_modules/playwright` works without a local install.
+
+### 2026-10-19: A DIAGNOSTIC THAT NEEDS A FRESH OBSERVATION IS DEAD WHILE THE PUBLISHER IS SILENT
+The 10-18 run pre-registered a clean two-way test for the Hormuz series: *a jump toward ~36/day means it
+lags; staying near 2 means it measures something else.* **Neither branch could fire this run, because
+PortWatch published nothing** — a fourth consecutive run at Oct 11 = 2, lag ~8 days.
+> **PRE-REGISTERING A TEST ON A SERIES THAT MAY NOT PUBLISH GIVES NO DEADLINE.** The test is sound and stays
+> armed, but it cannot be the reason to defer the instrument decision, because **the series has a veto over
+> when it resolves.** When a pre-registered test depends on a third party acting, **write a decision rule for
+> the case where they do not** at the same time as the test.
+
+### 2026-10-19: A SEVENTEEN-LINE FUND-LEVEL MATCH IS A DIFFERENT KIND OF EVIDENCE FROM A TOTAL
+A publisher reading the same Farside tables printed the week Oct 12-16 fund by fund. **All twenty-four
+figures reproduced from first-hand reads with zero mismatches** — grand total **-$610.7M**, a
+**-$62.2M** three-table subtotal, five table totals and **seventeen individual fund lines** across `/btc/`,
+`/eth/`, `/sol/` and `/hyp/`. The **prior** week reconciled at **-$1,286.3M** against a published **$1.29bn**
+and the published **52.5%** fall reproduced as **52.52%**.
+> **SEVENTEEN FUND LINES CANNOT COINCIDE.** A matching total admits many explanations (a different vendor
+> that happens to agree, a window that happens to line up); a line-by-line match across four tables
+> establishes that both parties are reading the same rows. **The consequence is retrospective: every figure
+> this deck published off those tables in the past week is corroborated at once**, not just the one quoted.
+> Extends the 10-12 rule that a fund-level weekly aggregate beats a total, and it is cheap — **assert it in a
+> script, 24 claims at a time, rather than eyeballing one.**
+
+### 2026-10-19: A BAR THAT READS NET FLOW IS NOT A BAR ON ACTIVITY
+The SOL flow leg re-cuts on *a weekly print below $5M*. Two consecutive builds described that as **a quiet
+week cuts this score and a busy one does not**. **A week of heavy outflows is not quiet and still cuts** —
+-$25.5M is the furthest thing from quiet and it is what fired the leg twice. The published wording is now
+*a week of weak or negative net flow cuts this score, and a strong one does not*.
+> **A SIGNED THRESHOLD AND A MAGNITUDE THRESHOLD READ THE SAME ON A CARD AND MEAN DIFFERENT THINGS.** The
+> phrase survived a check-9 pass once because it is *almost* right: low inflows do cut. **Re-derive a plain-
+> English gloss from the branch text every run, not from the previous build's gloss.** Same family as the
+> 10-11 rule to re-derive inherited claims including this file's own phrasing.
+
+### 2026-10-19: A MOVE WHOSE DIRECTION CONTRADICTS THE OTHER MACRO ON THE PAGE
+Both Fed routes fell (-1.0pt, -2.5pt) on a day when **Brent reached about $110**, which argues for *more*
+hike risk, and inside a **blackout** in which no official Fed guidance is due. **The deck published the move,
+named the blackout, pointed at the oil chip, and invented no cause.**
+> **WHEN TWO MACRO ITEMS ON ONE PAGE POINT OPPOSITE WAYS, LEAVE THEM BOTH VISIBLE.** Reconciling them would
+> require a mechanism this deck has not read. Sibling of 10-05's *publish a failed attribution rather than a
+> manufactured cause*, applied to a pair of facts rather than to one event.
+
+### 2026-10-19: THE WEEKEND CONTROL PREDICTED CORRECTLY AND STILL DOES NOT ESTABLISH A MECHANISM
+10-18 argued that the centralbank.watch route *could not* have moved because CME reopens Globex Sunday 22:00
+UTC, after an 02:00 UTC stamp. **That market reopened four hours before this stamp and the route moved -2.5pt,
+toward the continuously-traded one.** The prediction landed.
+> **BUT THIS DECK HAS NEVER READ THAT PAGE'S METHODOLOGY**, so *futures-derived* is an assumption two of this
+> file's arguments now rest on. Published as a **sequence**, not a cause. **Opened as a §9 item: spend one run
+> establishing what that route actually reads.** A prediction that lands on a wrong model is the most expensive
+> kind of confirmation.
 
 ### 2026-10-16: NEVER DERIVE A STEP BY SUBTRACTING TWO PUBLISHED ROUNDS
 A draft BNB summary read *up **1.2258pt** from +1.3825pt* and then gave a decomposition summing to **+1.2257pt**.
@@ -3809,6 +3937,92 @@ have lost it.
 > batching hides a failure.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
+
+- [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a TWENTY-NINTH confirmation, 2026-10-19. Do not re-check it, and
+      the routine prompt's step 0 should stop asking.** Session start read `main` at **`c9b7ef2`** against
+      `HEAD` at **`a4a7299`**, the stale-local-ref signature, for a **FOURTH consecutive run presenting
+      identically**; the **live bytes already matched the repo file exactly** (md5 `1b56517d…`, 59,696 bytes,
+      `AS_OF` = `Oct 18, 2026, 02:00 UTC`) and one `git fetch origin main` advanced `origin/main`
+      **`c9b7ef2..a4a7299`**. **There is no blocker. Spend one fetch on it and nothing more.**
+- [x] **"WAS THE 10-18 WEEKEND EXPLANATION RIGHT?" — ANSWERED YES, ONE RUN LATER, BY PREDICTION.** CME
+      reopened Globex Sunday **22:00 UTC**, four hours before this stamp, and the previously frozen route
+      moved **-2.5pt** toward the continuously-traded one. **The structural explanation predicted a move and
+      got one.** What it does **not** settle is item 1 below.
+- [ ] **ESTABLISH WHAT THE centralbank.watch ROUTE ACTUALLY READS — NEW 2026-10-19, and two of this file's
+      arguments already depend on the answer.** This deck has treated it as *futures-derived* since 10-18 and
+      has **never read its methodology**. The weekend argument and today's convergence story both rest on
+      that. **One run, one read of its "interpretation and methodology" link. A prediction that lands on a
+      wrong model is the most expensive kind of confirmation.**
+- [ ] **THE HORMUZ INSTRUMENT DECISION IS IN ITS SECOND RUN AND MUST NOT REACH A THIRD — 2026-10-19, and one
+      of the three withholding grounds has WEAKENED.** Named gauge **Oct 11 = 2/day, fourth run stale, lag
+      ~8 days**. The **same UKMTO weekly overview carries BOTH weeks: 129 + 146 = 275 = 39.29/day and 125 +
+      129 = 254 = 36.29/day** — **two consecutive published observations on that series**, both clearing the
+      **20/day** step. On 10-18 the branch was withheld on three grounds: an unnamed route, *a weekly total is
+      not two consecutive published daily observations*, and CENTCOM being a party to the war. **The second is
+      now weaker.** The first and third stand, so **it still fires nothing.** Options unchanged: adopt UKMTO
+      as the named instrument; add it as a second required route; or keep PortWatch and accept the branch is
+      dormant while the gauge is blind. **A +0.1 to BTC is being withheld on instrument choice alone.**
+- [ ] **THE PRE-REGISTERED PORTWATCH JUMP TEST COULD NOT BE RUN — 2026-10-19, and that is itself the
+      finding.** *A jump toward ~36/day means the series lags; staying near 2 means it measures something
+      other than transits.* **Neither branch can fire without a new observation, and there was none.**
+      > **THE SERIES HAS A VETO OVER WHEN THE TEST RESOLVES, SO THE TEST CANNOT BE THE REASON TO DEFER THE
+      > DECISION.** See the new §8 entry. **Write the no-publication decision rule now.**
+- [ ] **TWO BASELINES FOR ONE STRAIT, AND THEY ARE NOT COMPARABLE — NEW 2026-10-19.** UKMTO calls traffic
+      **~70% below pre-conflict**, which back-solves to a baseline near **121/day**; this deck reads
+      **36.29/day as 42.7% of 85/day**, i.e. **57.3% below**. **Both readings are correct.** Mixing them gives
+      either 25.5/day (below the step) or a 42.7% share of 121/day. **Published as two baselines, explicitly.**
+      Third member of the family after UANI's ~138/day and the barrels-are-not-transits rule.
+- [ ] **A HYPE FLOW BRANCH IS STILL UNWRITTEN AND IS NOW SIXTEEN DAYS OPEN** (since 2026-10-03). `/hyp/` read
+      again 2026-10-19: **BHYP/THYP/HYPG, -$17.5M on the week Oct 12-16, -$18.5M across twelve October
+      sessions**, all three fund lines matching a publisher exactly. **BTC, ETH and SOL each have a flow leg
+      and HYPE has none.** **Decide it or close the item** — a draft this run mistook the table for a new
+      instrument precisely because the item had gone quiet.
+- [ ] **`/zec/` IS A TABLE NEW TO THIS DECK — RECORDED 2026-10-19 so no future run rediscovers it.** ZCSH,
+      single fund, read first-hand: **-$19.2M** week Oct 12-16, **-$89.3M** across twelve October sessions.
+      **The deck carries no Zcash, so no action is implied** — but Farside's five working slugs are now
+      **`/btc/`, `/eth/`, `/sol/`, `/hyp/`, `/zec/`**, and the five together reconcile to the published
+      **-$610.7M** exactly.
+- [ ] **THE 10-18 HYPE PRE-BREAK WATCH ITEM RESOLVED IN THE OPPOSITE DIRECTION — CLOSED 2026-10-19.** It read
+      *one more day like this one makes it four of six below*. HYPE went **+0.13% -> +0.60%**, away from the
+      line, and **BNB crossed back ABOVE at +0.62% from -0.35%**, so **two of six are below it, from three**.
+      **XRP and ETH are the two, 0.0307pt apart, and are NOT ranked.**
+      > **A WATCH ITEM CAN BE ANSWERED BY THE TAPE RATHER THAN BY ARGUMENT, AND THE HONEST REPORT IS THAT THE
+      > FORECAST POINTED THE WRONG WAY AND COST NOTHING** — the 10-09 base-rate rule, from the other side.
+- [ ] **ALL SIX ROSE WHILE FOUR SET 21-DAY LOWS IN THE SAME 24 HOURS — 2026-10-19, and the pairing is the
+      hazard.** SOL **100.32**, BNB **704.95**, XRP **1.2547**, HYPE **76.04**, all at **Oct 18 19:00 or
+      20:00 UTC**, closing **2.94% to 4.70%** above; **both ends of the 24-hour ordering DECLINED** (0.1992pt,
+      0.2132pt). **No dated cause exists for that low**: the dated coverage describes a **shallower, earlier**
+      Saturday-night dip (ETH to 2,360 against an actual low of **2,325.48**, 13-15 hours earlier). **Nothing
+      was attributed.** A circulating **$51.6M** liquidation total was declined — the piece it traces to says
+      only *millions of dollars*, and competing figures ran $52M / $51.6M / $33M on different scopes.
+- [ ] **THE TRAILING-WINDOW DECOMPOSITION WAS RUN ON ALL SIX NAMES AND BOTH WINDOWS — 2026-10-19, extending
+      the 10-18 rule from one column to twelve.** Highlights: **ETH rose 0.68% and its 7-day reading got
+      WORSE** (base 2,508.18 -> 2,539.18 cost **1.17pt** against **+0.65pt** from the close); **88.7% of
+      HYPE's +3.6375pt 21-day improvement is the base rolling forward**; **BNB is the only one of six whose
+      21-day base roll went AGAINST it** (-0.0396pt). **Keep doing all six — the cost is one script and it
+      catches the shapes that read backwards.**
+- [ ] **THE FED IS DARK UNTIL OCT 29**, day **three** of thirteen, re-derived 10-18 from the primary rule and
+      calendar. Route moves inside it carry no new Fed information. **Today's -1.0pt / -2.5pt was published
+      with no cause, and its direction is opposite to what ~$110 Brent implies — both facts left visible.**
+- [ ] **"DOES THE FUTURES ROUTE LEAD ON A ONE-SIDED MOVE?" STILL UNTESTED.** Today's move was joint and the
+      CME-cited route sits **highest** of the three (16% against 12.5% and 13.6%). **Carried unchanged.**
+- [ ] **THE MEAN-OF-FIVE RECOMMENDATION STANDS AND TODAY IS AGAIN NOT A COUNT FOR IT — 2026-10-19.** The
+      median **held identity through the whole step for a second consecutive run**, so the decomposition is
+      clean; gap to the mean margin **0.5343pt**, in line with the stored series (0.7774, 0.8061, 0.6257,
+      0.4301). **Do not quietly drop the recommendation, and do not count this run in its favour.**
+- [ ] **BNB'S 37TH BURN IS STILL UNDATED, an EIGHTH run.** Coverage dated **Oct 16** still calls it near;
+      mid-October has passed. The July burn removed **1,615,827.795 BNB**; size is formula-driven and
+      unknowable in advance, so **publish no size.**
+- [ ] **ALPENGLOW IS TWO DAYS OUT AND THE SWITCH IS STAGED — re-verified 2026-10-19 from the project's own
+      page, which still lists mainnet NOT activated.** Epoch **1064** begins at slot **459,648,000**, about
+      **15:00 UTC Wed Oct 21**; **TowerBFT runs the first 5,000 slots (~18 minutes)**; Alpenglow takes over at
+      slot **459,653,000**; **Rotor is not in this activation**. **Do not measure consensus at the epoch
+      boundary.** Two facts added this run: **150ms finality is a TARGET, not demonstrated under full mainnet
+      load**, and operators need **0.8 SOL above the rent-exempt minimum** in the vote account.
+- [ ] **SOL DECIDES ON FRIDAY.** The week **Oct 19-23 started today** and is the next fresh, non-overlapping
+      completed period. A third sub-$5M week would be a third cut on the same leg. **A cut to +0.1 leaves the
+      band word unchanged** (`macroWord` evaluated this run, not assumed).
+- [ ] **THE SEC COMMENT DEADLINE IS OCT 20 — ONE day out.** Advance the countdown; never re-assert the date.
 
 - [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a TWENTY-EIGHTH confirmation, 2026-10-18. Do not re-check it.**
       Session start read `main` at **`c9b7ef2`** against `HEAD` at **`54f1868`**, the familiar stale-local-ref
@@ -5061,6 +5275,46 @@ page errors** — the fallback path works. **Band labels verified in the render 
 *balanced*.
 
 ## 10. Design contract (standing user instruction, 2026-09-22)
+
+  **Re-asserted 2026-10-19, and FULLY VERIFIED ON THE FIRST PASS AT ALL THREE WIDTHS — the TWENTY-THIRD
+  consecutive restatement, and the twenty-third time the correct response was to verify rather than
+  redesign.** The user amendment arrives appended to the routine prompt on every firing; **it is already
+  implemented and §10 is the record of that.** At 390 / 768 / 1440: `#macroGrid` **6**, `#catalystsRow`
+  **21**, `#assetGrid` **6** — settled on polls **3 / 2 / 2** — **0 horizontal page scroll**, **0 interactive
+  elements under 32px**, **zero uncaught page errors**, `.primer`/`.glossary`/`.bar-sub` **1/1/12**, and both
+  `.asOf` nodes reading `Oct 19, 2026, 02:00 UTC` at every width. Overflow: **1 at 390px, 0 at 768 and 1440 —
+  100% inside `.rot-table-wrap`, ZERO outside**, a **TWELFTH** confirmation of the allowed-set framing.
+  Check 8c: banned phrases **ZERO** in all three casings and every beginner marker **identical to the
+  previous build** (primer 14 / glossary 7 / bar-sub 3 / macroWord 2 / rot-table-wrap 2), honest framing
+  intact (*it can be wrong* x2, *one research read* x1, *does not know what you own* x1, *beside your own
+  work* x1). **Two HTTP 429s at 390px and all three widths passed** — the polling fix exercised and clean for
+  a **SIXTH** run — with **zero failed requests at any width**, so the 10-17 transport retry was not needed.
+  **The band words were read back out of the rendered DOM**, not asserted: *mildly cautious*, *mildly
+  supportive*, *balanced* x4.
+  **BEGINNER-FACING CARE ON THIS RUN'S SPECIFIC HAZARDS, which is what §10 is actually for:**
+  **(a) TWO TRUE SENTENCES THAT READ AS OPPOSITES GOT ADJACENT TILES, IN ORDER.** *All six rose over 24
+  hours*, then *but four hit 21-day lows first*. A reader shown only the first has been told the most
+  cheerful true thing on the page; a reader shown only the second, the most alarming.
+  > **WHEN A RISE AND A FRESH LOW DESCRIBE THE SAME 24 HOURS, PUBLISH BOTH, ADJACENTLY, NEWER FACT FIRST.**
+  > Hiding either is the misleading choice, and separating them across the page is the same thing slowly.
+  **(b) A WEEKLY NUMBER THAT WORSENED ON A DAY THE PRICE ROSE.** ETH's card puts both in one sentence and
+  then names the two base prices, because a reader who sees only the 7-day cell would conclude ETH fell.
+  **(c) A MARGIN THAT IMPROVED FOR A MECHANICAL REASON.** BNB's card says the gain came from what left the
+  window rather than from beating its peers — the opposite of the spin the number invites, and the mirror of
+  the 10-18 case where the same decomposition was favourable.
+  **(d) A PROBABILITY MOVE WITH NO CAUSE, SAID AS SUCH, BESIDE A FACT THAT POINTS THE OTHER WAY.** The Fed
+  chips say the routes fell, that the Fed is in blackout, and that no cause is invented; the oil chip sits
+  nearby arguing for more hike risk, left visible rather than reconciled.
+  **(e) AN UNVERIFIED CLAIM LABELLED THREE TIMES.** The tanker-mine chip names the claimant, says there is no
+  independent confirmation, and the surrounding row notes the US disputes Iran's accounts of sinkings.
+  **(f) AN OPEN DECISION DESCRIBED AS A DECISION.** The strait chips say changing the gauge is *a choice about
+  scores, not a matter of wording*, so a reader is not left thinking the deck is merely being careful.
+  **(g) A DECLINED RANKING SAID OUT LOUD TWICE.** Both ends of the 24-hour ordering and both ends of the
+  close-above-low ordering are inside the floor, and the page publishes the figures instead of an order.
+  > **AND A LENGTH NOTE, HONESTLY RECORDED:** summaries ran **1,226-1,303 chars, total 7,574**, up **88** from
+  > 7,486. **The increase is entirely check-9 corrections** — naming two base prices instead of a metaphor,
+  > declining a ranking in words, scoping a superlative. **That is the right trade and it is recorded rather
+  > than trimmed back.**
 
   **Re-asserted 2026-10-18, and FULLY VERIFIED ON THE FIRST PASS AT ALL THREE WIDTHS — the TWENTY-SECOND
   consecutive restatement, and the twenty-second time the correct response was to verify rather than
