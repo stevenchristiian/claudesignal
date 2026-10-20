@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Signal Deck — a plain-English read on six major crypto assets: live chart signals blended with a dated macro and news layer.">
+<title>Signal Deck — Crypto Read</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0f1116;
+    --surface: #171a23;
+    --surface-2: #1e2230;
+    --line: #2a2f3d;
+    --line-soft: #222634;
+    --text: #edece7;
+    --text-2: #b4b9c7;
+    --text-3: #888e9f;
+    --gold: #d4af61;
+    --gold-dim: #8a7238;
+    --jade: #5ac795;
+    --jade-dim: #2f6b4d;
+    --rust: #e0674c;
+    --rust-dim: #7a382a;
+    --slate: #98a0b5;
+
+    --step--1: clamp(0.78rem, 0.76rem + 0.10vw, 0.84rem);
+    --step-0:  clamp(0.94rem, 0.91rem + 0.15vw, 1.02rem);
+    --step-1:  clamp(1.05rem, 1.00rem + 0.25vw, 1.20rem);
+    --step-2:  clamp(1.25rem, 1.15rem + 0.50vw, 1.55rem);
+    --step-3:  clamp(1.75rem, 1.45rem + 1.50vw, 2.60rem);
+
+    --gap: clamp(14px, 2.2vw, 20px);
+    --section-gap: clamp(38px, 6vw, 68px);
+    --radius: 10px;
+  }
+  *{ box-sizing: border-box; }
+  html{ -webkit-text-size-adjust: 100%; }
+  html, body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.6;
+    padding-bottom: clamp(48px, 8vw, 88px);
+    overflow-x: hidden;
+  }
+  a{ color: var(--gold); }
+  h1, h2, h3{ font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+  .mono{ font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4.5vw, 32px);
+  }
+
+  /* ---------- Header ---------- */
+  header{ padding: clamp(28px, 5vw, 46px) 0 0 0; }
+  .header-row{
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: clamp(14px, 3vw, 28px); flex-wrap: wrap;
+  }
+  h1{ font-size: var(--step-3); margin: 0 0 8px 0; }
+  .subhead{ color: var(--text-2); font-size: var(--step-0); max-width: 46ch; margin: 0; }
+  .meta-col{
+    display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); color: var(--text-3);
+  }
+  #refreshBtn{
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1);
+    padding: 11px 16px;
+    min-height: 44px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  #refreshBtn:hover{ border-color: var(--gold); background: rgba(212,175,97,0.10); }
+  #refreshBtn:disabled{ opacity: 0.5; cursor: default; }
+
+  /* ---------- Panels ---------- */
+  .panel{
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    padding: clamp(16px, 2.6vw, 22px);
+  }
+  details.panel > summary{
+    cursor: pointer; list-style: none;
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Fraunces', Georgia, serif; font-size: var(--step-1);
+    color: var(--text); min-height: 32px;
+  }
+  details.panel > summary::-webkit-details-marker{ display: none; }
+  details.panel > summary::before{
+    content: "+"; color: var(--gold); font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem; width: 1rem; text-align: center; flex-shrink: 0;
+  }
+  details.panel[open] > summary::before{ content: "–"; }
+  details.panel[open] > summary{ margin-bottom: 14px; }
+
+  .primer{ margin-top: clamp(18px, 3vw, 26px); }
+  .primer-grid{
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  }
+  .primer-item h3{ font-size: var(--step-0); margin: 0 0 4px 0; color: var(--gold); }
+  .primer-item p{ margin: 0; color: var(--text-2); font-size: var(--step--1); line-height: 1.65; }
+  .primer-note{
+    margin: 16px 0 0 0; padding-top: 14px; border-top: 1px solid var(--line-soft);
+    color: var(--text-3); font-size: var(--step--1);
+  }
+
+  /* ---------- Section headings ---------- */
+  section{ margin-top: var(--section-gap); }
+  .sect-head{ margin-bottom: clamp(16px, 2.5vw, 22px); }
+  .sect-head h2{ font-size: var(--step-2); margin: 0 0 6px 0; color: var(--text); }
+  .sect-head .lede{ margin: 0; color: var(--text-2); font-size: var(--step--1); max-width: 68ch; }
+  .stamp{
+    display: inline-block; margin-top: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); color: var(--gold);
+  }
+
+  /* ---------- Macro strip ---------- */
+  .macro-grid{
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    margin-bottom: clamp(18px, 3vw, 26px);
+  }
+  .macro-cell{
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-radius: var(--radius); padding: 14px 16px;
+  }
+  .macro-cell .label{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 6px;
+  }
+  .macro-cell .value{ font-size: var(--step--1); line-height: 1.55; color: var(--text); }
+  .macro-cell .value.warn{ color: var(--rust); }
+  .macro-cell .value.ok{ color: var(--jade); }
+
+  .catalysts-row{ display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); }
+  .catalyst-chip{
+    display: flex; gap: 10px; align-items: baseline;
+    border-left: 2px solid var(--line); padding: 7px 0 7px 12px;
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.55;
+  }
+  .catalyst-chip b{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    color: var(--gold); font-weight: 600; font-size: 0.74rem;
+    white-space: nowrap; flex-shrink: 0; padding-top: 1px;
+  }
+
+  /* ---------- Asset cards ---------- */
+  .grid{
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  }
+  .card{
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-top: 3px solid var(--slate); border-radius: var(--radius);
+    padding: clamp(16px, 2.4vw, 20px);
+    display: flex; flex-direction: column;
+  }
+  .card.bullish{ border-top-color: var(--jade); }
+  .card.bearish{ border-top-color: var(--rust); }
+  .card.neutral{ border-top-color: var(--gold-dim); }
+
+  .card-top{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .name-block .sym{ font-family: 'Fraunces', Georgia, serif; font-size: var(--step-1); font-weight: 600; }
+  .name-block .full{ font-size: var(--step--1); color: var(--text-3); }
+  .price-block{ text-align: right; }
+  .price-block .px{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step-1); }
+  .price-block .chg{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); margin-top: 2px; color: var(--text-3);
+  }
+  .chg.up{ color: var(--jade); }
+  .chg.down{ color: var(--rust); }
+
+  .spark{ margin: 14px 0 12px 0; height: 44px; }
+
+  .signal-row{
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 12px 14px; background: var(--surface-2); border-radius: 8px;
+  }
+  .signal-label{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step-0); font-weight: 600; letter-spacing: 0.02em;
+  }
+  .signal-label.bullish{ color: var(--jade); }
+  .signal-label.bearish{ color: var(--rust); }
+  .signal-label.neutral{ color: var(--gold); }
+  .signal-pct{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step-1); }
+  .band-note{ font-size: var(--step--1); color: var(--text-3); margin: 8px 0 14px 0; line-height: 1.5; }
+
+  .bars{ display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+  .bar-row .bar-head{
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 5px;
+  }
+  .bar-row .bar-label{ font-size: var(--step--1); color: var(--text-2); }
+  .bar-row .bar-val{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1); color: var(--text-3); }
+  .bar-track{ display: block; height: 6px; background: var(--bg); border-radius: 999px; position: relative; overflow: hidden; }
+  .bar-fill{ position: absolute; left: 0; top: 0; height: 100%; border-radius: 999px; }
+  .bar-sub{ font-size: 0.72rem; color: var(--text-3); margin-top: 4px; }
+
+  .card details{ margin-top: auto; }
+  .card summary{
+    cursor: pointer; list-style: none; font-size: var(--step--1); color: var(--gold);
+    min-height: 40px; display: flex; align-items: center; gap: 8px;
+  }
+  .card summary::-webkit-details-marker{ display: none; }
+  .card summary::before{ content: "+"; font-family: 'IBM Plex Mono', monospace; width: 0.9rem; }
+  .card details[open] summary::before{ content: "–"; }
+  .detail-body{
+    margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--line-soft);
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.7;
+  }
+  .detail-body ul{ margin: 6px 0 12px 0; padding-left: 18px; }
+  .detail-body li{ margin-bottom: 5px; }
+  .detail-body p{ margin: 6px 0 12px 0; }
+  .detail-body .sect-label{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 12px;
+  }
+  .card-footer-note{ margin-top: 12px; font-size: 0.72rem; color: var(--text-3); line-height: 1.5; }
+
+  /* ---------- Rotation watch ---------- */
+  .rot-verdict{
+    background: var(--surface); border: 1px solid var(--line-soft);
+    border-left: 3px solid var(--gold-dim); border-radius: var(--radius);
+    padding: 16px 18px; margin-bottom: var(--gap);
+  }
+  .rot-verdict .vlabel{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
+    font-weight: 600; letter-spacing: 0.03em; color: var(--gold); margin-bottom: 6px;
+  }
+  .rot-verdict .vtext{ font-size: var(--step--1); color: var(--text-2); line-height: 1.65; }
+  .scroll-hint{ font-size: 0.72rem; color: var(--text-3); margin: 0 0 6px 0; }
+  .rot-table-wrap{
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line-soft); border-radius: var(--radius);
+    margin-bottom: var(--gap);
+  }
+  table.rot{
+    border-collapse: collapse; width: 100%; min-width: 560px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
+  }
+  table.rot th, table.rot td{
+    padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line-soft); white-space: nowrap;
+  }
+  table.rot th{ color: var(--text-3); font-weight: 500; font-size: 0.72rem; background: var(--surface-2); }
+  table.rot th:first-child, table.rot td:first-child{ text-align: left; color: var(--text-2); }
+  table.rot tr:last-child td{ border-bottom: none; }
+  table.rot td.lead{ color: var(--text); }
+  table.rot .tok{ font-family: 'Fraunces', Georgia, serif; font-size: var(--step-0); color: var(--text); }
+
+  .trigger{
+    border: 1px solid var(--line-soft); background: var(--surface); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 10px;
+    display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap;
+  }
+  .trigger .tstate{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; border: 1px solid; flex-shrink: 0;
+  }
+  .tstate.hold{ color: var(--jade); border-color: var(--jade-dim); }
+  .tstate.fired{ color: var(--rust); border-color: var(--rust-dim); }
+  .trigger .tbody{ flex: 1; min-width: min(100%, 240px); }
+  .trigger .tname{ font-size: var(--step-0); color: var(--text); margin-bottom: 3px; }
+  .trigger .tdesc{ font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
+  .trigger .tnums{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem;
+    color: var(--text-3); margin-top: 7px; line-height: 1.6; overflow-wrap: anywhere;
+  }
+  .rot-method{ margin-top: 4px; }
+  .rot-method h4{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); margin: 18px 0 6px 0;
+  }
+  .rot-method h4:first-child{ margin-top: 0; }
+  .rot-method p{ margin: 0 0 10px 0; }
+  .rot-method .rule{ display: flex; gap: 12px; margin-bottom: 6px; align-items: baseline; flex-wrap: wrap; }
+  .rot-method .rule b{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem; color: var(--gold);
+    flex-shrink: 0; width: 66px;
+  }
+  .rot-method .cliff{ margin-bottom: 8px; }
+  .rot-method .cliff b{ font-family: 'Fraunces', Georgia, serif; color: var(--text); font-size: var(--step-0); }
+  .rot-method .flag{ border-left: 2px solid var(--rust-dim); padding-left: 12px; }
+  .rot-method .watch{ border-left: 2px solid var(--jade-dim); padding-left: 12px; }
+  .rot-note{ font-size: 0.74rem; color: var(--text-3); margin-top: 16px; max-width: 78ch; line-height: 1.65; }
+
+  /* ---------- Glossary ---------- */
+  .glossary-grid{
+    display: grid; gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+  .glossary-grid dt{
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
+    color: var(--gold); margin-bottom: 3px;
+  }
+  .glossary-grid dd{ margin: 0 0 14px 0; font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
+
+  .loading-row{
+    color: var(--text-3); font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); padding: 28px 0; text-align: center;
+  }
+  .error-row{
+    color: var(--rust); font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: var(--step--1); padding: 16px 0;
+  }
+
+  footer{
+    margin-top: var(--section-gap); padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.76rem; color: var(--text-3); line-height: 1.7; max-width: 82ch;
+  }
+
+  @media (max-width: 640px){
+    .header-row{ align-items: flex-start; }
+    .meta-col{ width: 100%; }
+    #refreshBtn{ width: 100%; }
+    .card-top{ align-items: center; }
+    table.rot th, table.rot td{ padding: 9px 11px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="header-row">
+      <div>
+        <h1>Signal Deck</h1>
+        <p class="subhead">A plain-English read on six major crypto assets — live chart signals blended with a dated macro and news layer.</p>
+      </div>
+      <div class="meta-col">
+        <div id="lastUpdated">loading prices…</div>
+        <button id="refreshBtn">Refresh live data</button>
+      </div>
+    </div>
+
+    <details class="panel primer" open>
+      <summary>New here? How to read this deck</summary>
+      <div class="primer-grid">
+        <div class="primer-item">
+          <h3>One score, two halves</h3>
+          <p>Each card ends in a single percentage. It is 55% live chart signals, computed in your browser from the last 100 days of prices, and 45% a hand-written read of news, policy and fund flows.</p>
+        </div>
+        <div class="primer-item">
+          <h3>What the words mean</h3>
+          <p>62% and above reads <b>Bullish</b>, 42% and below reads <b>Bearish</b>, and anything between the two reads <b>Neutral</b> — which usually means the chart and the news are pulling against each other.</p>
+        </div>
+        <div class="primer-item">
+          <h3>The news half is dated</h3>
+          <p>Prices refresh every time you open the page. The news read does not: it carries the date stamp shown below and only changes when the deck is rebuilt.</p>
+        </div>
+        <div class="primer-item">
+          <h3>Scores move on written rules</h3>
+          <p>The news score runs from −2 to +2 and only moves when a rule written down in advance is met — a flow number crossing a level, a vote happening, an upgrade shipping. Not on a feeling about the tape.</p>
+        </div>
+      </div>
+      <p class="primer-note">This is one research read, built by Claude, and it can be wrong. It describes what has happened and what the rules say — it does not know what you own, what you can afford to lose, or what you should do next. Treat it as one input beside your own work.</p>
+    </details>
+  </header>
+
+  <section class="macro">
+    <div class="sect-head">
+      <h2>Market backdrop</h2>
+      <p class="lede">The six things in the wider world currently doing the most to move these prices — central bank pricing, US legislation, ETF money, energy and shipping.</p>
+      <span class="stamp">Research as of <span class="asOf">—</span></span>
+    </div>
+    <div class="macro-grid" id="macroGrid"></div>
+    <div class="catalysts-row" id="catalystsRow"></div>
+  </section>
+
+  <section class="assets">
+    <div class="sect-head">
+      <h2>The six signals</h2>
+      <p class="lede">Prices and chart indicators are live. Open <em>Why this read</em> on any card for the full reasoning and the dated catalysts behind its news score.</p>
+    </div>
+    <div id="statusRow"></div>
+    <div class="grid" id="assetGrid"></div>
+  </section>
+
+  <section class="rotation">
+    <div class="sect-head">
+      <h2>Rotation watch — perp DEX narrative</h2>
+      <p class="lede">
+        When to rotate HYPE into a same-narrative challenger (ASTER, LIT). The logic: you rotate out of the leader when
+        the leader&rsquo;s <em>moat</em> is measurably eroding — not when a challenger&rsquo;s price is rising. Price momentum in a
+        challenger is usually just higher beta on the same trade. Market data below is live; volume and fee figures are a
+        dated research layer refreshed with the rest of the deck.
+      </p>
+    </div>
+    <div id="rotVerdict"></div>
+    <p class="scroll-hint">Table scrolls sideways on a phone.</p>
+    <div class="rot-table-wrap"><table class="rot" id="rotTable"></table></div>
+    <div id="rotTriggers"></div>
+    <div id="rotMethod"></div>
+    <div class="rot-note" id="rotNote"></div>
+  </section>
+
+  <section class="glossary">
+    <div class="sect-head">
+      <h2>Plain-English glossary</h2>
+      <p class="lede">Every term this page uses that a beginner has no reason to already know.</p>
+    </div>
+    <details class="panel">
+      <summary>Open the glossary</summary>
+      <dl class="glossary-grid">
+        <div>
+          <dt>Spot ETF flow</dt>
+          <dd>Money moving into or out of US funds that hold the coin itself. A positive session means the funds bought more than they sold that day. Reported per fund, one trading day at a time.</dd>
+        </div>
+        <div>
+          <dt>Settled session</dt>
+          <dd>A completed trading day whose flow figures have been published. Weekends and US holidays have none, and a freshly posted row can still be revised upward for a day or two.</dd>
+        </div>
+        <div>
+          <dt>Moving average (SMA)</dt>
+          <dd>The average closing price over the last 20 or 50 days. Price above it is usually read as an uptrend, below it as a downtrend.</dd>
+        </div>
+        <div>
+          <dt>RSI</dt>
+          <dd>A 0–100 gauge of how one-sided recent moves have been. Above 70 is often called overbought, below 30 oversold. It measures pace, not value.</dd>
+        </div>
+        <div>
+          <dt>MACD</dt>
+          <dd>The gap between two moving averages. Positive means short-term momentum is running ahead of the longer trend; negative means it is lagging.</dd>
+        </div>
+        <div>
+          <dt>Basis point (bp)</dt>
+          <dd>One hundredth of a percentage point. A 25bp rate move is 0.25%. Bond yields move in these, so a 4.1bp fall is a small one.</dd>
+        </div>
+        <div>
+          <dt>Cloture</dt>
+          <dd>The US Senate vote that ends debate so a bill can proceed. It needs 60 of 100 senators. Failing it stalls the bill without killing it outright.</dd>
+        </div>
+        <div>
+          <dt>Unlock / cliff</dt>
+          <dd>A date when tokens held by a team or early investor become sellable. A large one is known supply arriving on a known day.</dd>
+        </div>
+        <div>
+          <dt>Perp (perpetual future)</dt>
+          <dd>A leveraged contract tracking a price with no expiry date. Perp exchanges earn fees on the volume they route.</dd>
+        </div>
+        <div>
+          <dt>TVL and FDV</dt>
+          <dd>TVL is the value of assets deposited in a protocol. FDV is what the token would be worth if every coin that will ever exist already traded.</dd>
+        </div>
+        <div>
+          <dt>Take rate</dt>
+          <dd>Fees earned per dollar traded, in basis points. It is the clearest test of whether a venue can charge for volume or is renting it with incentives.</dd>
+        </div>
+        <div>
+          <dt>Pre-break level</dt>
+          <dd>A fixed reference price this deck measures against, set before the current move began, so each asset can be compared on the same yardstick.</dd>
+        </div>
+      </dl>
+    </details>
+  </section>
+
+  <footer>
+    Live prices and technical indicators (RSI-14, SMA-20/50, MACD, 7-day momentum) are fetched from CoinGecko&rsquo;s public API on load and on refresh. The macro and fundamental layer for each asset — Fed policy odds, ETF flows, unlock schedules, regulatory catalysts and similar — reflects research current as of <span class="asOf">—</span> and does not auto-update; ask again in chat for a refreshed read as news develops. Composite scores combine technical (55%) and fundamental (45%) sub-scores, and are a heuristic rather than a calibrated probability. Crypto markets are volatile, and every figure here can be checked against the source named beside it.
+  </footer>
+</div>
+
+<script>
+/* Single source of truth for the build stamp — every "as of" label on the page
+   reads from here, so a refresh cannot leave one of them stale. */
+const AS_OF = 'Oct 19, 2026, 02:00 UTC';
+
+const COINS = [
+  {
+    id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
+    macroScore: -0.4,
+    summary: "Holds at -0.4, and the thing that matters most on this card is not a score but a choice of instrument that is now in its second run unanswered. The strait branch pays 0.1 to Bitcoin if transits run above 20 a day on two readings, and the count this deck named has published nothing new for a fourth run: it still reads 2 transits for Oct 11, about eight days stale. The test pre-registered for this run, whether a new reading would jump or stay near 2, could not be run at all, because no new reading exists. The outside count meanwhile firmed. The same maritime body read 129 outbound and 146 inbound the week before last, which is 39.3 a day, then 125 and 129 last week, which is 36.3 a day. That is two consecutive published readings, both far above the step. It still fires nothing, because the branch names a different gauge and a weekly total is not a daily count, but one of the three reasons for withholding has weakened, and the choice should be taken deliberately rather than left to sit. The Fed leg fell on both routes to 12.5% and 13.6%, the lower one governing and 62.5pt short of 75%. No ETF session has settled since Friday, which printed -$82.4M against a -$300M bar. BTC rose 0.97% to 82,350.73 and is the strongest of the six over both 7 and 21 days.",
+    catalysts: [
+      {date:'A fourth run with no reading', text:'The gauge this branch names still shows 2 transits for Oct 11, so the test written for today could not be run'},
+      {date:'The outside count now has two', text:'The same body read 39.3 a day the week before last and 36.3 a day last week, both far above the step that pays 0.1'},
+      {date:'Fed pricing fell on both routes', text:'October hike odds read 12.5% and 13.6%, and the lower route governs, leaving 62.5pt to the 75% bar'}
+    ]
+  },
+  {
+    id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
+    macroScore: 0.4,
+    summary: "Holds at +0.4, and the flow leg is the only live clause left here. It cuts 0.1 on two consecutive sessions each worse than -$150M. Friday settled at -$69.7M and Thursday at -$60.3M, so the nearer of the pair is $80.3M short of the bar and nothing fires. No new session has settled since: today is a Monday and the last traded day is still Friday. What is new is the strongest outside confirmation on record here. A publisher reading the same tables printed twenty-four figures for the week of Oct 12 to Oct 16, and every single one reproduces here to the decimal, including the biggest Ether fund at exactly -$299.0M for the week and the Ether table at exactly -$320.1M. The prior week reconciles too, at -$1,286.3M against a published $1.29bn, and the 52.5% fall between the two weeks reproduces as 52.52%. One tape reading needs care in the other direction from yesterday. ETH rose 0.68% on the day, yet its seven-day number got worse, from -4.10% to -4.63%. That is the window moving, not fresh selling: the price the week is measured from rose from 2,508.18 to 2,539.18 as the window rolled forward, which cost 1.17pt, while the higher close added 0.65pt back. ETH closed at 2,421.70 and is 3.43% under its pre-break mark.",
+    catalysts: [
+      {date:'The pair is well short', text:'Friday at -$69.7M and Thursday at -$60.3M, where both must beat -$150M, so the nearer is $80.3M away'},
+      {date:'Twenty-four figures reconcile', text:'An outside publisher printed the same week fund by fund and every figure matches these tables to the decimal'},
+      {date:'A weekly number that worsened', text:'ETH rose 0.68% on the day while its 7-day reading fell, because a stronger day dropped out of the window'}
+    ]
+  },
+  {
+    id: 'solana', symbol: 'SOL', name: 'Solana',
+    macroScore: 0.2,
+    summary: "Holds at +0.2, and the reason is mechanical rather than a judgement: the period that could move it only starts today. The flow leg fired two runs ago on the completed week of Oct 12 to Oct 16 at -$25.5M against a $5M floor, and the rule written then is that a leg which has fired re-arms and fires again on the first fresh, non-overlapping completed period that clears the bar. That period is the week Oct 19 to Oct 23, which cannot be read until Friday settles. Keep the direction of that bar in view, because it is the opposite of how a bar usually reads: a week of weak or negative net flow cuts this score, and a strong one does not. The plain-English word here is balanced, and a further cut to +0.1 would leave the word unchanged while a rise to +0.3 would move it. The dated item is the Alpenglow upgrade, two days out at about 15:00 UTC on Oct 21, and it is staged rather than instant: the old consensus keeps running for the first 5,000 slots, roughly eighteen minutes, before the new one takes over. The 150 millisecond finality figure is a target and has not been shown under full mainnet load. Holders need do nothing. SOL rose 1.22% to 104.77, but it printed a fresh 21-day low of 100.32 last night before recovering.",
+    catalysts: [
+      {date:'The clock starts today', text:'The next reading is the week Oct 19 to Oct 23, so this score cannot move again before Friday settles'},
+      {date:'Alpenglow is two days out', text:'About 15:00 UTC on Oct 21, staged so the old consensus runs the first 5,000 slots, roughly eighteen minutes'},
+      {date:'A fresh 21-day low last night', text:'It printed 100.32 at 19:00 UTC on Sunday, then closed 4.44% above it, so both facts are true at once'}
+    ]
+  },
+  {
+    id: 'binancecoin', symbol: 'BNB', name: 'Binance Coin',
+    macroScore: 0.1,
+    summary: "Holds at +0.1. BNB rose 0.98% on the day but is still down 3.43% over the week. The branch here is relative, comparing BNB over seven days against the middle performer of the other five, and that margin improved to +2.5943pt from +1.9584pt, a step of +0.6359pt. Taking the step apart is what keeps it honest, and today it says something less flattering than the headline. The roll-off half, which is simply old hours leaving the back of the window, contributed +0.8319pt. Fresh trading over the last day contributed -0.1960pt, so it went slightly the wrong way. The two sum to the step exactly. In plain words: the margin improved because of what left the back of the seven-day window, not because BNB beat its peers over the last day. The reference asset was Solana at the start, in the middle and at the end of the step, so the identity held throughout and none of this is a yardstick changing shape. That is a second clean read in a row. The branch stays armed at +3.8633pt and needs a fresh 5.00pt move either way, leaving the cut edge 3.7310pt below and the rise edge 6.2690pt above, so the downside is still the nearer of the two. BNB also crossed back above its pre-break mark at +0.62%, from -0.35% yesterday. The 37th quarterly burn is still undated, an eighth run of asking.",
+    catalysts: [
+      {date:'The margin rose for a weak reason', text:'Old hours leaving the window gave +0.8319pt while the last day of trading gave -0.1960pt, summing to the step'},
+      {date:'And the yardstick held steady', text:'Solana was the middle performer at every point in the step, so none of the gain comes from a changing reference'},
+      {date:'Back above the old line', text:'BNB sits 0.62% above its pre-break mark, from 0.35% below it yesterday, leaving two of the six still under it'}
+    ]
+  },
+  {
+    id: 'ripple', symbol: 'XRP', name: 'XRP',
+    macroScore: -0.1,
+    summary: "Holds at -0.1, and nothing written here can move it before Nov 9. The branch that cut it on Oct 5 is spent, the one clause left pays 0.2 for a second cloture vote passing, and the Senate sits out until Nov 6. The procedural position is unchanged: the motion to proceed failed 49 to 50 in mid-September, eleven short of the sixty needed, and no new vote has been scheduled. The one dated item is now a day away and sits outside every branch on this card: the securities regulator proposal on crypto assets closes for comment on Oct 20. The ledger was read first-hand at 02:33 UTC against validated ledger 107,752,494 on build 3.4.1, giving 107 entries in the feature registry and 97 of them enabled, a tenth consecutive read at those counts, with ten entries supported but not yet enabled. The tape needs the mirror of yesterday said out loud. Yesterday the 21-day number improved while XRP fell; today it improved again, to -12.95% from -14.89%, and this time both halves helped, the window base rolling forward adding 1.06pt and the higher close adding 0.88pt. XRP rose 1.02% to 1.3098, after printing a fresh 21-day low of 1.2547 at 19:00 UTC last night. It and Ether are the two still below their pre-break marks, 0.03pt apart, which is far too close to rank.",
+    catalysts: [
+      {date:'One day to comment', text:'The securities regulator proposal on crypto assets closes for comment on Oct 20, and it fires nothing here'},
+      {date:'A 21-day gain, honestly split', text:'It improved 1.94pt to -12.95%, with the window base worth 1.06pt and the higher close worth 0.88pt'},
+      {date:'A fresh 21-day low last night', text:'It printed 1.2547 at 19:00 UTC on Sunday, then closed 4.39% above that level'}
+    ]
+  },
+  {
+    id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
+    macroScore: -0.1,
+    summary: "Holds at -0.1, and the oldest unanswered question on this card got a figure today. Hyperliquid has exchange-traded funds of its own, readable here since late September, and the decision whether to give this card a flow leg like the other three has been open since Oct 3. The table was read again first-hand: three products lost $17.5M over the week of Oct 12 to Oct 16 and $18.5M across twelve October sessions. With no leg written, those numbers move nothing, which is the whole point of the open item. The existing clauses were both read. The revenue leg restores 0.1 on a completed quarter above $260M and cuts a further 0.1 below $150M, in a series this deck cannot read directly. The vendor it can read puts the completed third quarter at $173.9713M across 92 days, a sixth identical read, and that vendor has run at a stable 73.7% to 76.6% of the branch series, so the quarter scales to between $227.12M and $236.05M and sits inside the corridor on every scaling. The fourth quarter is 18 days old at $38.7536M and cannot be read until the turn of the year. The disclosure leg still has nothing disclosed about the named deployment. HYPE rose 0.47% to 78.97, the smallest figure of the six, though the 0.21pt gap to the next is too narrow to rank. It remains the weakest over seven days at -8.72%.",
+    catalysts: [
+      {date:'Its ETF flows have a figure', text:'Three Hyperliquid funds lost $17.5M over the week and $18.5M across October, read first-hand from the table'},
+      {date:'But still no branch to read them', text:'Bitcoin, Ether and Solana each have a flow leg here and Hyperliquid has none, an open question since Oct 3'},
+      {date:'The quarter is inside the corridor', text:'A completed $173.9713M scales to between $227.12M and $236.05M, between a $150M cut and a $260M restore'}
+    ]
+  }
+];
+
+const MACRO_SNAPSHOT = [
+  {label:'Six holds', value:'No score moved today, and each of the six branches was read rather than assumed', cls:'ok'},
+  {label:'All six rose over 24 hours', value:'Every one of the six is up on the day, between 0.47% and 1.22%, after seventeen of eighteen readings fell yesterday', cls:'ok'},
+  {label:'But four hit 21-day lows first', value:'Solana, BNB, XRP and Hyperliquid each printed their lowest price in 21 days last night, then closed above it', cls:'warn'},
+  {label:'The strait gauge is still blind', value:'The count this deck named has published nothing new for a fourth run and still reads 2 transits for Oct 11', cls:'warn'},
+  {label:'Fed pricing fell on both routes', value:'October hike odds read 12.5% and 13.6%, down from 13.5% and 16.1%, and the two routes are now 1.1pt apart', cls:'ok'},
+  {label:'Shares had their worst week since June', value:'Today is 39 years since Black Monday, and the fear gauge touched 22.31 on Friday, its highest reading since June', cls:'warn'}
+];
+
+const GLOBAL_CATALYSTS = [
+  {date:'Six holds', text:'No score moved today, and each of the six branches was read rather than assumed'},
+  {date:'All six rose over 24 hours', text:'Bitcoin, Ether, Solana, BNB, XRP and Hyperliquid are all up on the day, between 0.47% and 1.22%'},
+  {date:'And the ranking is declined', text:'The top and bottom of that ordering sit 0.20pt and 0.21pt apart, inside the margin of error used here'},
+  {date:'But four hit fresh 21-day lows', text:'Solana 100.32, BNB 704.95, XRP 1.2547 and Hyperliquid 76.04, all between 19:00 and 20:00 UTC last night'},
+  {date:'All six closed back above', text:'The six now sit 2.94% to 4.70% above the lowest price of their own 21-day windows'},
+  {date:'No cause is claimed for that dip', text:'Dated coverage describes an earlier and shallower weekend fall, so nothing is attributed to the Sunday evening low'},
+  {date:'Today is Black Monday plus 39', text:'Oct 19 1987 took 22.6% off the Dow in one session, and the anniversary falls on a Monday again'},
+  {date:'Shares had their worst week since June', text:'The S&P 500 fell about 2% on the week and the Nasdaq about 4%, on worries about debt at AI firms'},
+  {date:'The fear gauge hit a four-month high', text:'The VIX touched 22.31 on Friday, its highest since June 11, and closed near 20'},
+  {date:'Oil is the other pressure', text:'Brent reached about 110 dollars on Friday, its highest since May, with West Texas crude above 100'},
+  {date:'Fed pricing fell on both routes', text:'October hike odds read 12.5% and 13.6%, from 13.5% and 16.1%, and the gap between them narrowed to 1.1pt'},
+  {date:'A third route reads 16%', text:'A futures-based figure published today sits just above both, so three readings now sit inside 3.5pt'},
+  {date:'No Fed cause is available', text:'Day three of a blackout running Oct 17 to Oct 29, so nothing official explains the move and none is invented here'},
+  {date:'December is where they disagree', text:'One route prices a December hike at 75.5% and a futures reading at 92%, and no branch here reads December'},
+  {date:'Two tankers reported mined', text:'Iran says two crude tankers caught fire in the strait on Saturday, with no independent confirmation of the claim'},
+  {date:'The strait gauge is still blind', text:'The count this deck named has published nothing new for a fourth run and still reads 2 transits for Oct 11'},
+  {date:'And an outside count now has two', text:'The same body read 39.3 a day the week before last and 36.3 a day last week, both far above the step'},
+  {date:'Which makes this a decision', text:'Changing the named gauge or adding a second is a choice about scores, and this is the second run it has waited'},
+  {date:'Two baselines, not one', text:'That body calls traffic 70% below normal while this deck reads 42.7% of an 85 a day baseline, and the two do not mix'},
+  {date:'An ETF week that reconciles exactly', text:'Twenty-four figures an outside publisher printed for Oct 12 to Oct 16 match the tables read here, to the decimal'},
+  {date:'And one table was new here', text:'Zcash funds lost 19.2 million dollars that week, from a table this deck had never read before today'}
+];
+
+function renderMacro(){
+  const grid = document.getElementById('macroGrid');
+  grid.innerHTML = MACRO_SNAPSHOT.map(m => `
+    <div class="macro-cell">
+      <div class="label">${m.label}</div>
+      <div class="value ${m.cls}">${m.value}</div>
+    </div>
+  `).join('');
+  const row = document.getElementById('catalystsRow');
+  row.innerHTML = GLOBAL_CATALYSTS.map(c => `<div class="catalyst-chip"><b>${c.date}</b><span>${c.text}</span></div>`).join('');
+  document.querySelectorAll('.asOf').forEach(el => { el.textContent = AS_OF; });
+}
+
+function average(arr){ return arr.reduce((a,b)=>a+b,0) / arr.length; }
+
+function computeRSI(closes, period){
+  if (closes.length < period + 1) return null;
+  let gains = 0, losses = 0;
+  for (let i = closes.length - period; i < closes.length; i++){
+    const diff = closes[i] - closes[i-1];
+    if (diff >= 0) gains += diff; else losses -= diff;
+  }
+  const avgGain = gains / period, avgLoss = losses / period;
+  if (avgLoss === 0) return 100;
+  const rs = avgGain / avgLoss;
+  return 100 - (100 / (1 + rs));
+}
+
+function emaFull(values, period){
+  const result = new Array(values.length).fill(null);
+  if (values.length < period) return result;
+  const k = 2/(period+1);
+  let sum = 0;
+  for (let i=0;i<period;i++) sum += values[i];
+  let prev = sum/period;
+  result[period-1] = prev;
+  for (let i=period;i<values.length;i++){
+    prev = values[i]*k + prev*(1-k);
+    result[i] = prev;
+  }
+  return result;
+}
+
+function computeMACD(closes){
+  if (closes.length < 35) return null;
+  const ema12 = emaFull(closes, 12);
+  const ema26 = emaFull(closes, 26);
+  const macdLine = closes.map((_, i) => (ema12[i]!=null && ema26[i]!=null) ? ema12[i]-ema26[i] : null);
+  const macdValues = macdLine.filter(v => v!=null);
+  if (macdValues.length < 9) return null;
+  const signalArr = emaFull(macdValues, 9);
+  const macdLatest = macdValues[macdValues.length-1];
+  const signalLatest = signalArr[signalArr.length-1];
+  if (signalLatest == null) return null;
+  return { macd: macdLatest, signal: signalLatest, histogram: macdLatest - signalLatest };
+}
+
+function computeTechnical(closes){
+  const last = closes[closes.length-1];
+  const sma20 = closes.length>=20 ? average(closes.slice(-20)) : null;
+  const sma50 = closes.length>=50 ? average(closes.slice(-50)) : null;
+  const rsi14 = computeRSI(closes, 14);
+  const macd = computeMACD(closes);
+  const change7d = closes.length>=8 ? ((closes[closes.length-1]-closes[closes.length-8])/closes[closes.length-8])*100 : null;
+
+  let score = 0, max = 0;
+  const notes = [];
+
+  if (sma20 != null){
+    max += 1;
+    if (last > sma20){ score += 1; notes.push('Price above its 20-day average'); }
+    else notes.push('Price below its 20-day average');
+  }
+  if (sma50 != null){
+    max += 1;
+    if (last > sma50){ score += 1; notes.push('Price above its 50-day average'); }
+    else notes.push('Price below its 50-day average');
+    max += 1;
+    if (sma20 > sma50){ score += 1; notes.push('Short-term trend running above the long-term trend'); }
+    else notes.push('Short-term trend running below the long-term trend — caution');
+  }
+  if (rsi14 != null){
+    max += 1;
+    if (rsi14 >= 50 && rsi14 <= 70){ score += 1; notes.push(`RSI ${rsi14.toFixed(0)} — healthy bullish momentum`); }
+    else if (rsi14 > 70){ score += 0.3; notes.push(`RSI ${rsi14.toFixed(0)} — overbought, pullback risk`); }
+    else if (rsi14 >= 30){ score += 0.5; notes.push(`RSI ${rsi14.toFixed(0)} — neutral`); }
+    else { score += 0.6; notes.push(`RSI ${rsi14.toFixed(0)} — oversold, possible bounce`); }
+  }
+  if (macd != null){
+    max += 1;
+    if (macd.histogram > 0){ score += 1; notes.push('MACD momentum positive'); }
+    else notes.push('MACD momentum negative');
+  }
+  if (change7d != null){
+    max += 1;
+    if (change7d > 0){ score += 1; notes.push(`Up ${change7d.toFixed(1)}% over the last 7 days`); }
+    else notes.push(`Down ${Math.abs(change7d).toFixed(1)}% over the last 7 days`);
+  }
+
+  const pct = max > 0 ? (score/max)*100 : 50;
+  return { pct, notes, rsi14, change7d };
+}
+
+function combine(techPct, macroScore){
+  const macroPct = ((macroScore + 2) / 4) * 100;
+  const composite = techPct * 0.55 + macroPct * 0.45;
+  let label, cls;
+  if (composite >= 62){ label = 'Bullish'; cls = 'bullish'; }
+  else if (composite <= 42){ label = 'Bearish'; cls = 'bearish'; }
+  else { label = 'Neutral'; cls = 'neutral'; }
+  return { composite, label, cls, macroPct };
+}
+
+function sparkSVG(closes){
+  const w = 300, h = 40, pad = 2;
+  const slice = closes.slice(-30);
+  const min = Math.min(...slice), max = Math.max(...slice);
+  const range = (max - min) || 1;
+  const pts = slice.map((v,i) => {
+    const x = pad + (i/(slice.length-1)) * (w - pad*2);
+    const y = h - pad - ((v - min)/range) * (h - pad*2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const up = slice[slice.length-1] >= slice[0];
+  const color = up ? 'var(--jade)' : 'var(--rust)';
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%" preserveAspectRatio="none">
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.6"/>
+  </svg>`;
+}
+
+function fmtPrice(p){
+  if (p >= 1000) return '$' + p.toLocaleString('en-US', {maximumFractionDigits:0});
+  if (p >= 1) return '$' + p.toLocaleString('en-US', {maximumFractionDigits:2});
+  return '$' + p.toFixed(4);
+}
+
+async function fetchMarkets(){
+  const ids = COINS.map(c=>c.id).join(',');
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}&price_change_percentage=24h,7d`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('markets fetch failed: ' + res.status);
+  return res.json();
+}
+
+async function fetchChart(id){
+  const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=100&interval=daily`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('chart fetch failed for ' + id + ': ' + res.status);
+  const data = await res.json();
+  return data.prices.map(p => p[1]);
+}
+
+/* Plain-English restatements of the two scores, for readers meeting them for the first time.
+   Both are descriptions of the number beside them, not extra judgement. */
+const BAND_NOTE = {
+  bullish: 'Upper band — the blended score is 62 or above.',
+  neutral: 'Middle band — the blended score sits between 42 and 62, so the chart and the news read are not agreeing.',
+  bearish: 'Lower band — the blended score is 42 or below.'
+};
+
+function macroWord(score){
+  if (score >= 1) return 'supportive';
+  if (score > 0.2) return 'mildly supportive';
+  if (score >= -0.2) return 'balanced';
+  if (score > -1) return 'mildly cautious';
+  return 'cautious';
+}
+
+function renderCard(coin, marketRow, closes){
+  const price = marketRow ? marketRow.current_price : (closes ? closes[closes.length-1] : null);
+  const chg24 = marketRow ? marketRow.price_change_percentage_24h_in_currency : null;
+  const chg7 = marketRow ? marketRow.price_change_percentage_7d_in_currency : null;
+
+  let tech = { pct: 50, notes: ['Not enough history to compute indicators'], rsi14: null, change7d: null };
+  if (closes && closes.length >= 20) tech = computeTechnical(closes);
+
+  const combined = combine(tech.pct, coin.macroScore);
+
+  const chg24Str = chg24 != null ? `${chg24>=0?'+':''}${chg24.toFixed(2)}% (24h)` : '';
+  const chg7Str = chg7 != null ? `${chg7>=0?'+':''}${chg7.toFixed(2)}% (7d)` : '';
+
+  const macroPctDisplay = combined.macroPct.toFixed(0);
+  const techPctDisplay = tech.pct.toFixed(0);
+  // Use the same minus glyph as the "−2 to +2" scale beside it, not an ASCII hyphen.
+  const macroSigned = (coin.macroScore > 0 ? '+' : '') + coin.macroScore.toFixed(1).replace('-', '−');
+
+  return `
+  <div class="card ${combined.cls}">
+    <div class="card-top">
+      <div class="name-block">
+        <div class="sym">${coin.symbol}</div>
+        <div class="full">${coin.name}</div>
+      </div>
+      <div class="price-block">
+        <div class="px">${price!=null ? fmtPrice(price) : '—'}</div>
+        <div class="chg ${chg24>=0?'up':'down'}">${chg24Str}${chg7Str ? ' · '+chg7Str : ''}</div>
+      </div>
+    </div>
+
+    <div class="spark">${closes && closes.length>1 ? sparkSVG(closes) : ''}</div>
+
+    <div class="signal-row">
+      <span class="signal-label ${combined.cls}">${combined.label}</span>
+      <span class="signal-pct">${combined.composite.toFixed(0)}%</span>
+    </div>
+    <p class="band-note">${BAND_NOTE[combined.cls]}</p>
+
+    <div class="bars">
+      <div class="bar-row">
+        <div class="bar-head">
+          <span class="bar-label">Live chart signals</span>
+          <span class="bar-val">${techPctDisplay} / 100</span>
+        </div>
+        <span class="bar-track"><span class="bar-fill" style="width:${techPctDisplay}%; background:var(--gold);"></span></span>
+        <div class="bar-sub">Moving averages, RSI, MACD and 7-day momentum, computed in your browser. 55% of the score.</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-head">
+          <span class="bar-label">News and macro read</span>
+          <span class="bar-val">${macroPctDisplay} / 100</span>
+        </div>
+        <span class="bar-track"><span class="bar-fill" style="width:${macroPctDisplay}%; background:var(--slate);"></span></span>
+        <div class="bar-sub">Written score ${macroSigned} on a −2 to +2 scale — ${macroWord(coin.macroScore)}. 45% of the score.</div>
+      </div>
+    </div>
+
+    <details>
+      <summary>Why this read</summary>
+      <div class="detail-body">
+        <div class="sect-label">What the live chart says</div>
+        <ul>${tech.notes.map(n=>`<li>${n}</li>`).join('')}</ul>
+        <div class="sect-label">The news read, as of ${AS_OF}</div>
+        <p>${coin.summary}</p>
+        <div class="sect-label">Catalysts to watch</div>
+        <ul>${coin.catalysts.map(c=>`<li><b>${c.date}</b> — ${c.text}</li>`).join('')}</ul>
+      </div>
+    </details>
+    <div class="card-footer-note">Composite = 55% live technical + 45% dated fundamental read. A heuristic, and it can be wrong.</div>
+  </div>
+  `;
+}
+
+async function loadAll(){
+  const btn = document.getElementById('refreshBtn');
+  const status = document.getElementById('statusRow');
+  const grid = document.getElementById('assetGrid');
+  btn.disabled = true;
+  status.innerHTML = '<div class="loading-row">Fetching live prices &amp; computing indicators…</div>';
+
+  try {
+    const markets = await fetchMarkets();
+    const byId = {};
+    markets.forEach(m => byId[m.id] = m);
+
+    const chartResults = await Promise.allSettled(COINS.map(c => fetchChart(c.id)));
+
+    status.innerHTML = '';
+    grid.innerHTML = COINS.map((coin, i) => {
+      const marketRow = byId[coin.id];
+      const chartRes = chartResults[i];
+      const closes = chartRes.status === 'fulfilled' ? chartRes.value : null;
+      return renderCard(coin, marketRow, closes);
+    }).join('');
+
+    document.getElementById('lastUpdated').textContent = 'prices updated ' + new Date().toLocaleTimeString();
+  } catch (err) {
+    status.innerHTML = `<div class="error-row">Couldn't fetch live data (${err.message}). Check your connection and try refreshing.</div>`;
+    document.getElementById('lastUpdated').textContent = 'fetch failed';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* =========================================================
+   ROTATION WATCH — perp DEX narrative
+   Live: CoinGecko market data + DefiLlama TVL.
+   Dated research layer (30d volume / fees / revenue): DefiLlama, Sept 5 2026.
+   ========================================================= */
+const ROTATION_ASOF = 'Sept 5, 2026';
+const RIVALS = [
+  { key:'HYPE',  cgId:'hyperliquid', llama:'hyperliquid', name:'Hyperliquid',
+    vol30d: 213.86e9, fees30d: 72.03e6, rev30d: 55.45e6,
+    unlock:'Core-contributor vesting opens 2027–28 (~23.8% of supply)' },
+  { key:'ASTER', cgId:'aster-2', llama:'aster', name:'Aster',
+    vol30d: 53.17e9, fees30d: 5.33e6, rev30d: 4.38e6,
+    unlock:'Team cliff pushed to Sept 17, 2027 (400M, 5% of max)' },
+  { key:'LIT',   cgId:'lighter', llama:'lighter', name:'Lighter',
+    vol30d: 46.35e9, fees30d: 4.75e6, rev30d: 3.57e6,
+    unlock:'Team + investor cliff (~50% of supply) from Dec 30, 2026 TGE anniversary' }
+];
+
+function fmtUsd(v){
+  if (v == null || !isFinite(v)) return '—';
+  if (v >= 1e9) return '$' + (v/1e9).toFixed(2) + 'B';
+  if (v >= 1e6) return '$' + (v/1e6).toFixed(1) + 'M';
+  if (v >= 1e3) return '$' + (v/1e3).toFixed(1) + 'K';
+  return '$' + v.toFixed(2);
+}
+function pct(v){ return (v == null || !isFinite(v)) ? '—' : v.toFixed(1) + '%'; }
+
+async function fetchRotationLive(){
+  const ids = RIVALS.map(r => r.cgId).join(',');
+  const mkRes = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=' + ids);
+  if (!mkRes.ok) throw new Error('market data ' + mkRes.status);
+  const markets = await mkRes.json();
+  const byId = {}; markets.forEach(m => byId[m.id] = m);
+
+  const tvls = await Promise.allSettled(
+    RIVALS.map(r => fetch('https://api.llama.fi/tvl/' + r.llama).then(x => x.ok ? x.json() : null))
+  );
+
+  return RIVALS.map((r, i) => {
+    const m = byId[r.cgId] || {};
+    const tvl = tvls[i].status === 'fulfilled' ? Number(tvls[i].value) : null;
+    const annRev = r.rev30d * (365/30);
+    return {
+      ...r,
+      price: m.current_price ?? null,
+      mcap: m.market_cap ?? null,
+      fdv: m.fully_diluted_valuation ?? null,
+      circPct: (m.circulating_supply && m.total_supply) ? (m.circulating_supply/m.total_supply)*100 : null,
+      fromAth: m.ath_change_percentage ?? null,
+      tvl: (tvl && isFinite(tvl)) ? tvl : null,
+      takeBps: (r.fees30d / r.vol30d) * 10000,
+      annRev,
+      mcapRev: m.market_cap ? m.market_cap / annRev : null
+    };
+  });
+}
+
+function renderRotation(rows){
+  const sum = (f) => rows.reduce((a,r) => a + (r[f] || 0), 0);
+  const volTot = sum('vol30d'), revTot = sum('rev30d'), tvlTot = sum('tvl');
+  rows.forEach(r => {
+    r.volShare = volTot ? (r.vol30d/volTot)*100 : null;
+    r.revShare = revTot ? (r.rev30d/revTot)*100 : null;
+    r.tvlShare = tvlTot ? (r.tvl/tvlTot)*100 : null;
+    r.monet = (r.volShare && r.revShare) ? r.revShare / r.volShare : null;
+  });
+  const lead = rows[0];
+
+  /* ---- table ---- */
+  const cols = [
+    ['Token',            r => `<span class="tok">${r.key}</span>`],
+    ['Price',            r => r.price != null ? '$' + (r.price >= 1 ? r.price.toFixed(2) : r.price.toFixed(4)) : '—'],
+    ['Mkt cap',          r => fmtUsd(r.mcap)],
+    ['FDV',              r => fmtUsd(r.fdv)],
+    ['Circ/total',       r => pct(r.circPct)],
+    ['TVL',              r => fmtUsd(r.tvl)],
+    ['TVL share',        r => pct(r.tvlShare)],
+    ['Perp vol 30d',     r => fmtUsd(r.vol30d)],
+    ['Vol share',        r => pct(r.volShare)],
+    ['Fees 30d',         r => fmtUsd(r.fees30d)],
+    ['Take rate',        r => r.takeBps.toFixed(2) + ' bps'],
+    ['Rev share',        r => pct(r.revShare)],
+    ['Monetisation',     r => r.monet != null ? r.monet.toFixed(2) + 'x' : '—'],
+    ['Mcap/ann. rev',    r => r.mcapRev != null ? r.mcapRev.toFixed(1) + 'x' : '—'],
+    ['From ATH',         r => pct(r.fromAth)]
+  ];
+  document.getElementById('rotTable').innerHTML =
+    '<thead><tr><th>Metric</th>' + rows.map(r => `<th>${r.key}</th>`).join('') + '</tr></thead><tbody>' +
+    cols.slice(1).map(([label, fn]) =>
+      `<tr><td>${label}</td>` + rows.map(r => `<td class="${r.key==='HYPE'?'lead':''}">${fn(r)}</td>`).join('') + '</tr>'
+    ).join('') + '</tbody>';
+
+  /* ---- triggers ---- */
+  const challengers = rows.slice(1);
+  const bestMonet = Math.max(...challengers.map(c => c.monet || 0));
+  const bestTake  = Math.max(...challengers.map(c => c.takeBps || 0));
+  const bestTvl   = Math.max(...challengers.map(c => c.tvlShare || 0));
+  const cheapest  = Math.min(...challengers.map(c => c.mcapRev || Infinity));
+
+  const triggers = [
+    {
+      name: 'Share erosion',
+      desc: "Hyperliquid's share of perp volume across the three falls below 55%. Above that, the leader is still setting the terms.",
+      fired: lead.volShare < 55,
+      nums: `HYPE volume share ${pct(lead.volShare)} — threshold 55%`
+    },
+    {
+      name: 'Monetisation convergence',
+      desc: 'A challenger earns at least as large a share of revenue as it does of volume (ratio ≥ 1.0). Below 1.0 it is buying volume it cannot charge for.',
+      fired: bestMonet >= 1.0,
+      nums: challengers.map(c => `${c.key} ${c.monet != null ? c.monet.toFixed(2)+'x' : '—'}`).join('  ·  ') + '  — threshold 1.00x'
+    },
+    {
+      name: 'Take-rate convergence',
+      desc: 'A challenger sustains a take rate above 2.5 bps. That would mean it can charge real fees rather than rent volume with incentives — the actual moat test.',
+      fired: bestTake > 2.5,
+      nums: rows.map(c => `${c.key} ${c.takeBps.toFixed(2)}bps`).join('  ·  ') + '  — threshold 2.50 bps'
+    },
+    {
+      name: 'Valuation gap',
+      desc: 'A challenger trades below half of HYPE’s market cap per dollar of annualised revenue. Cheap on revenue, not cheap versus its old high.',
+      fired: lead.mcapRev != null && cheapest < lead.mcapRev * 0.5,
+      nums: rows.map(c => `${c.key} ${c.mcapRev != null ? c.mcapRev.toFixed(1)+'x' : '—'}`).join('  ·  ') +
+            `  — threshold ${lead.mcapRev != null ? (lead.mcapRev*0.5).toFixed(1)+'x' : '—'}`
+    },
+    {
+      name: 'Liquidity migration',
+      desc: 'A challenger holds more than 25% of the trio’s TVL. Capital moves before volume does, so this one tends to lead the others.',
+      fired: bestTvl > 25,
+      nums: rows.map(c => `${c.key} ${pct(c.tvlShare)}`).join('  ·  ') + '  — threshold 25.0%'
+    }
+  ];
+
+  document.getElementById('rotTriggers').innerHTML = triggers.map(t => `
+    <div class="trigger">
+      <div class="tstate ${t.fired ? 'fired' : 'hold'}">${t.fired ? 'FIRED' : 'HOLD'}</div>
+      <div class="tbody">
+        <div class="tname">${t.name}</div>
+        <div class="tdesc">${t.desc}</div>
+        <div class="tnums">${t.nums}</div>
+      </div>
+    </div>`).join('');
+
+  const firedCount = triggers.filter(t => t.fired).length;
+  const verdict = firedCount === 0
+    ? { label:'HOLD HYPE — 0 of 5 triggers fired',
+        text:`Hyperliquid still takes ${pct(lead.revShare)} of the revenue on ${pct(lead.volShare)} of the volume, and monetises every dollar traded at ${lead.takeBps.toFixed(2)} bps against ${challengers.map(c=>c.takeBps.toFixed(2)).join(' and ')} bps for the challengers. Neither ASTER nor LIT is cheaper per dollar of earnings. Nothing here says rotate.` }
+    : { label:`REVIEW — ${firedCount} of 5 triggers fired`,
+        text:'At least one moat condition has changed. Re-read the table before acting — one trigger is a prompt to look, not a signal to rotate. Two or more firing together is the case for trimming.' };
+
+  document.getElementById('rotVerdict').innerHTML =
+    `<div class="rot-verdict"><div class="vlabel">${verdict.label}</div><div class="vtext">${verdict.text}</div></div>`;
+
+  document.getElementById('rotMethod').innerHTML = `
+    <details class="panel rot-method">
+      <summary>Methodology &amp; standing notes</summary>
+      <div class="detail-body">
+
+        <h4>How to read the triggers</h4>
+        <div class="rule"><b>0 fired</b><span>Hold. The leader is still setting the terms of the market.</span></div>
+        <div class="rule"><b>1 fired</b><span>A prompt to re-read the table — not a signal to act.</span></div>
+        <div class="rule"><b>2+ fired</b><span>The case for trimming into whichever challenger fired them.</span></div>
+
+        <h4>Why these watch the leader, not the challenger</h4>
+        <p>A challenger rallying inside the same narrative is higher beta on a trade you already own. ASTER and
+        LIT move with the same driver as HYPE — perp-DEX volume and the same liquidity cycle — so buying one
+        alongside HYPE adds correlation and execution risk rather than diversification. Rotating on a
+        challenger's price momentum concentrates the bet. Rotating on measurable erosion in the leader's moat
+        is the only version that actually changes what you own.</p>
+
+        <h4>Supply cliffs — independent of every trigger above</h4>
+        ${RIVALS.map(r => `<div class="cliff"><b>${r.key}</b> — ${r.unlock}</div>`).join('')}
+        <p class="flag">Do not rotate into LIT ahead of Dec 30, 2026 without pricing that cliff in. Roughly half
+        of supply becomes claimable on the TGE anniversary — buying in front of known supply is the same mistake
+        as buying a challenger because it looks cheap against its old high.</p>
+
+        <h4>Live watch item — LIT</h4>
+        <p class="watch">The February 2026 Circle partnership on ~$920M of USDC deposits was projected to add
+        roughly $40M of annualised revenue against a base near $43M. If that shows up in the fee data it would
+        roughly halve LIT's market cap per dollar of revenue and move the valuation-gap trigger materially.
+        Aster has no equivalent catalyst. This is the single development most likely to turn a HOLD into a REVIEW.</p>
+
+        <h4>What the numbers mean</h4>
+        <p>Take rate = fees ÷ perp volume, in basis points: what the venue actually earns per dollar traded.
+        Monetisation = revenue share ÷ volume share; below 1.0x a venue is buying volume it cannot charge for.
+        Mcap/ann. revenue annualises the trailing 30-day figure — a rough multiple, not a forecast.</p>
+
+      </div>
+    </details>`;
+
+  document.getElementById('rotNote').innerHTML =
+    `Market cap, FDV, supply and TVL are live on page load. Perp volume, fees and revenue are a dated research ` +
+    `layer (DefiLlama, as of ${ROTATION_ASOF}) — DefiLlama moved those series behind a paid plan, so they refresh ` +
+    `when the deck is refreshed, not on page load. A heuristic framework for watching a moat, not a forecast.`;
+}
+
+async function loadRotation(){
+  try {
+    const rows = await fetchRotationLive();
+    renderRotation(rows);
+  } catch (err) {
+    document.getElementById('rotVerdict').innerHTML =
+      `<div class="error-row">Couldn't load rotation data (${err.message}).</div>`;
+  }
+}
+
+/* On a phone the primer would push the data a full screen down, so it starts closed there
+   and open on anything with room for it. One tap either way. */
+if (window.innerWidth < 900) document.querySelector('.primer').removeAttribute('open');
+
+document.getElementById('refreshBtn').addEventListener('click', () => { loadAll(); loadRotation(); });
+renderMacro();
+loadAll();
+loadRotation();
+</script>
+</body>
+</html>
