@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-24 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-10-25 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -33,6 +33,60 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   built file. Never report success on exit status alone. Pages takes ~1 minute; re-check.
 
 ## 2. Score baseline
+
+As published 2026-10-25 02:00 UTC (**SIX HOLDS — and the finding is a NEGATIVE one that is new to this
+deck: THE CUT THIS ROUTINE FORECAST DID NOT FIRE, AND NOTHING ABOUT THE WORLD CHANGED.**
+**(1) THE CALENDAR BEAT THE CONDITION.** The 10-24 run's first carry-forward item read *SOL CUTS NEXT
+RUN UNLESS ONE FUND PRINTS MORE THAN +$22.6M.* It did not cut, because **VSOL printed nothing at
+all**: `/sol/` Friday Oct 23 still reads **0.0 with VSOL dashed**, identical to 24 hours ago, since
+**Saturday is not a trading day and this build stamps on a Sunday morning.** The condition is
+untouched and still unmeetable (`Maximum` +$3.3M, whole-life `Total` +$20.4M against an ask of
++$22.6M). **No ETF row settled anywhere: all four month-to-date figures are unchanged.**
+**(2) TWO PROVISIONAL ROWS NOW HAVE BLANKS BOUNDED OUT OF MATTERING, ON TWO TABLES AT ONCE AND IN THE
+DIRECTION OF NOT FIRING.** BTC Oct 23 filled in to **-$137.9M** (IBIT reported -$110.3M; -27.6 - 110.3
+= -137.9 exactly) with **HODL alone blank**: it would need **under -$162.1M** for the -$300M bar
+against a whole-life `Minimum` of **-$38.4M**, so **the single-session clause is dead on that row** —
+but **under -$12.1M clears the -$150M pair bar and is well inside range.** ETH Oct 23 held at
+**+$4.4M** with **ETHA and ETHB both reporting 0.0 and the total not moving**; **ETHV alone** is left,
+bounding the settled row to **[-$14.3M, +$24.2M]**, so **it cannot be half of a pair and the ETH pair
+restarts from Oct 26 and Oct 27.**
+**(3) THE TAPE IS THE REASON THIS RUN IS NOT A SKIP: FIVE FRESH 21-DAY LOWS, AND ALL SIX LOWS IN ONE
+HOURLY CANDLE.** BTC **79,107**, ETH **2,275.94**, SOL **98.51**, XRP **1.2530**, HYPE **74.33** — all
+fresh; **BNB alone held**, above the 704.95 it set Oct 18. **Every one of the six printed its low of
+the day in the candle opening Oct 24 15:00 UTC**, then closed above it. **The 10-24 leading-edge item
+is closed: it resolved by NEW TRADING**, as the 10-20 rule predicted, and the lows now sit 10 hours
+before the stamp. **All six vs-21d-low readings IMPROVED on the day five of them set a fresh low** —
+and the mechanism is not uniform (five left a lower low behind; BNB simply closed higher), which check
+9 scoped.
+**(4) THE BRENT ITEM CLOSES ON A REUTERS SETTLE, AND IT CORRECTS THIS DECK'S OWN FIGURE.** Brent
+**$116.72, +$3.55, +3.14%, highest since April 29**; WTI **$103.27, +$3.80**. The 10-24 build published
+WTI as **103.44 from an equities screen**; both agree on Thursday's 99.47 base, so the whole 17-cent
+gap is **close versus settle**. **The 10-21 rule fired on this deck's own output.**
+**(5) A NEW DATED ETH CATALYST SITS BESIDE THIS DECK'S OWN CLAUSE AND FIRES NOTHING.** Glamsterdam was
+**pulled from the Hoodi testnet**, due **Oct 26 17:42:48 UTC**, **no new date**, after ChainSecurity
+flagged **insufficient gas griefing** in **EIP-8037/8038** and found **13 live contracts** exposed.
+**The leg names Sepolia and the EIP-7732 builder-griefing vector, and that clause is SPENT.** Different
+vector, different proposals, different network. **It also corrects this file: §3 carried Hoodi as
+Oct 27.**
+**(6) ONE FED ROUTE MOVED AND THE OTHER IS WEEKEND-FROZEN.** Polymarket **4.5% (-3.0pt, `updatedAt`
+02:12Z today)**, centralbank.watch **10.0% unchanged under an Oct 23 stamp**. Governing route **4.5%,
+70.5pt short**. **The 5.5pt spread is an artefact of the clock and must NOT enter the spread series.**
+**(7) CHECK 9 RETURNED ELEVEN CORRECTIONS, TWO OF THEM REAL ERRORS OF FACT** — the first a claim **this
+file had already killed on 10-23** (ETHA and ETHB as *the two largest funds*; ETHB is fourth), carried
+by four separate strings; the second a **weekday counted back wrongly** about this deck's own earlier
+claim. **(8) CHECK 10 PASSED AT ALL THREE WIDTHS ON THE FIRST ATTEMPT**, settled on poll 1, zero page
+errors, zero page-level overflow. **(9) THIS RUN ALSO CARRIED A USER-REQUESTED DESIGN CHANGE**, so
+check 7 ran in its swapped form: **22/22 blocks byte-identical, and the body HTML and footer
+byte-identical too.**)
+
+| Asset | Score | Branch state |
+|-------|------|--------------|
+| BTC   | **-0.5** | Flow leg re-armed from the Oct 22 baseline. **Oct 23 PROVISIONAL -$137.9M with HODL ALONE dashed** (IBIT reported -$110.3M overnight; -27.6 - 110.3 = -137.9 exactly, reported lines summing to the stated total). **The single-session clause CANNOT fire on it**: HODL would need **under -$162.1M** against a whole-life `Minimum` of **-$38.4M**, 4.2x out of reach. **The pair clause CAN**: under **-$12.1M** puts the row past -$150M, and **Oct 26 would then have to clear the same bar**. Thursday is unavailable — it paid the 10-24 cut (10-17 re-arm rule). October **-$175.6M / 16 settled, unchanged**. Fed leg: routes **4.5% / 10.0%**, governing (lower) route **70.5pt short**; restore side cleared a **24th** run. Hormuz: **no new observation for a FOURTH run**, lag **~7 days**, Oct 12-18 = 3, 7, 3, 2, 7, 0, 4 = **3.71/day**, **fires nothing**. Tape: **-0.04% to 80,791.18**, **a fresh 21-day low of 79,107 at Oct 24 15:00 UTC**, ending **2.13% above it**; **best of six against its own 21-day high at -7.13%, nameable by 1.22pt**; **furthest above its pre-break mark at +4.55%, nameable by 1.57pt**; **lowest of six above its own 21-day low at +2.13%, nameable by 1.10pt**. |
+| ETH   | +0.4 | Flow leg: **Oct 23 held at +$4.4M and the two blanks that reported were ETHA and ETHB, BOTH at 0.0 — the total did not move at all.** **ETHV alone** is left, bounding the settled row to **[-$14.3M, +$24.2M]** (`Minimum` -$18.7M, `Maximum` +$19.8M), so **it cannot be half of a qualifying pair and the earliest pair is Oct 26 + Oct 27, from scratch**. October **-$1,180.2M / 16 settled, unchanged**. **Outside corroboration on the right object: +$4.35M attributed to two issuers where this table has exactly two funds carrying a number, and October's inflow COUNT of three matches (Oct 13, 21, 23).** **ETHA and ETHB are NOT the two biggest ETH funds — ETHB is FOURTH; a draft said otherwise in four strings and check 9 cut all four.** Roadmap leg **SPENT**, and **its replacement is now overdue: the Hoodi fork due Oct 26 17:42:48 UTC was WITHDRAWN with no new date**, on a griefing vector this leg does not name. Tape: **-0.73% to 2,361.51**, the weakest of six on the day but **DECLINED at 0.4459pt**; **fresh 21-day low 2,275.94**; **furthest below its pre-break mark at -5.83% — the 10-24 straddle has REOPENED to 2.0746pt, so the claim is RE-EARNED but deliberately NOT republished this run.** |
+| SOL   | +0.2 | Flow leg: **the deciding week Oct 19-23 still reads -$17.6M** (-6.7, -2.6, +0.6, -8.9, **Friday 0.0 PROVISIONAL with VSOL dashed for a SECOND run**) against a **+$5M** floor. **THE FORECAST CUT DID NOT FIRE AND THE REASON IS THE CALENDAR, NOT THE WORLD** — no row settled over a weekend. The blank still cannot reverse it: VSOL needs **more than +$22.6M**, `Maximum` **+$3.3M**, whole-life `Total` **+$20.4M**. A firing takes SOL to **+0.1** and **the band word does not change**. October **-$67.9M / 16 settled, unchanged**. **An outside publisher called Friday the first quiet session of the month, which matches every row VISIBLE on this table (Oct 6-22 all non-zero) — scoped, not asserted for Oct 1-5.** Tape: **-0.11% to 102.36**; **fresh 21-day low 98.51**; its 21-day reading **-14.79%** and HYPE's **-14.42%** are **0.3712pt apart — DECLINED, and the card asserts no bottom**. |
+| BNB   | +0.1 | Relative branch, upside. **Margin +4.4477pt from +4.2442pt, step +0.2034pt — the SMALLEST of the nine steps since the +3.8633pt baseline was set, and the third positive in a row.** Decomposes **roll-off -0.4538pt + new information +0.6573pt** (sum 0.203431 = the step exactly): **the day did all of it and more, against a window pulling the other way.** **SECOND run above the baseline, and the upside stays the nearer edge: +8.8633pt is 4.4156pt away, cut -1.1367pt is 5.5844pt.** Median identity **ETH -> SOL, changed inside the ROLL-OFF half** (yday ETH, hybrid SOL, today SOL); series across four runs XRP -> SOL -> ETH -> SOL. Mean-of-five margin **+4.4447pt**, gap **0.0029pt — the NARROWEST of eleven readings by 42x, and the two methods are indistinguishable today**. Tape: **+0.54% to 742.66**; **the ONLY one of six that set no fresh 21-day low**, holding above the **704.95** of Oct 18; **furthest above its own 21-day low at +5.35%, nameable by 1.14pt**; **best of six over seven days at +3.34%, nameable by 2.63pt**; **best against its own 7-day high at -1.14%, nameable by 3.65pt**. **38th burn UNDATED for a FIFTH run, and this week's coverage describes the 33rd — declined, publish no size, no countdown.** |
+| XRP   | -0.1 | Window-closed branch **spent**; nothing can fire before **Nov 9**; Senate out to **Nov 6**; motion to proceed failed **49 to 50 on Sept 15 2026** (date tightened this run from the file's looser *mid-September*). Ledger: validated **107,883,828**, build **3.4.1**, **107 / 97 / 10 / 0 — a SIXTEENTH consecutive identical read**, confirmed twice independently. `Majorities` length **1**; `fixCleanup3_4_0` **`enabled: false`**, `CloseTime` **845909182 = Oct 21 14:46:22 UTC — a THIRD consecutive unchanged reading, no second reset**; earliest activation **Nov 4 14:46:22 UTC**, **10.52 days** out. **The 10-23 falsifiable claim remains correct two days on.** Ripple's Oct 20 comment letter stands; no final-rule timetable. Tape: **+1.24% to 1.3058 — the STRONGEST of six on the day, nameable by 0.70pt**, and **the ONLY one of six to improve its 21-day reading** (-13.40% -> -12.25%); still set a **fresh 21-day low of 1.2530** on Saturday; **back TOWARD its pre-break mark, -4.94% -> -3.76%**, where the other two below it went further below. |
+| HYPE  | -0.1 | 2026-09-21 (disclosure handicap). Revenue leg: **Q3 2026 $173.9713M over 92 days, a TWELFTH identical read**; ratios **0.766 / 0.760 / 0.737** (re-derived this run) give **$227.12M / $228.91M / $236.05M**, inside the **$150M / $260M** corridor on every scaling. **Q4 2026 reads $52.0803M over 24 days** and is **NOT readable**. **The revised Oct 21 row held a SECOND time at $2,251,711 and the quarter extended cleanly by the Oct 24 print of $2,022,702** (50.0576 + 2.0227 = 52.0803, exact). The reported-quarterly series the bars are calibrated in still carries **$356.7M / $201.8M** and **has not published Q3 2026**. Disclosure leg: nothing new on the **named** deployment. **`/hyp/` Oct 23 SETTLED at exactly 0.0 on all three products, unchanged; October -$33.8M across SEVENTEEN settled sessions.** **STILL NO HYPE FLOW LEG, an open item TWENTY-TWO days old.** **OBJECT CHECK: coverage this week describes the 33rd burn at 1.44M BNB — the most recent here is the 37th, Oct 19. A stale event presented as current; declined.** Tape: **-0.29% to 76.73**; **fresh 21-day low 74.33**; **furthest below its own 21-day high at -19.46%, nameable by 3.18pt**; **worst of six against its own 7-day high at -6.94% but DECLINED at 0.3290pt**. |
 
 As published 2026-10-24 02:00 UTC (**ONE SCORE MOVED — BTC -0.4 -> -0.5 — AND IT MOVED ON THE EXACT
 FIGURE THIS DECK PUBLISHED AS ITS CONDITION THE DAY BEFORE.**
@@ -1262,6 +1316,19 @@ this table, **not** against the served page — the served page can be stale (se
   so the re-arm question does not arise on this side either.
 - **ETH roadmap leg** — activation *and finality* on Sepolia Oct 6 adds 0.1; a slip, or a failure
   to finalise (including via the builder-griefing vector on enshrined PBS), cuts 0.1.
+
+  **2026-10-25 — THE DATE THIS FILE CARRIED FOR HOODI WAS WRONG, AND HOODI IS NOW GONE ANYWAY.** This
+  file recorded the remaining clause as *Hoodi, Oct 27*. The scheduled slot was **Oct 26 17:42:48
+  UTC**, and on **Oct 23 it was WITHDRAWN with no new date** after ChainSecurity flagged **insufficient
+  gas griefing** in **EIP-8037 and EIP-8038** and found **13 live contracts** exposed. Glamsterdam
+  mainnet was targeted for end-2026 and has no date either.
+  > **IT FIRES NOTHING, FOR TWO INDEPENDENT REASONS, AND THE OBJECT CHECK IS THE POINT.** (a) The leg
+  > names **Sepolia Oct 6**, and that clause **fired on the upside on 10-07 and is spent**. (b) The leg
+  > names **the builder-griefing vector on enshrined PBS (EIP-7732)**; this is a **different griefing
+  > vector on different proposals on a different network**. **Name the EIP, never the word.**
+  **THE REPLACEMENT CLAUSE IS NOW OVERDUE.** The 10-07 entry asked for a Hoodi/mainnet clause or an
+  explicit declaration that the leg is spent. **The Hoodi half of that proposal no longer exists.**
+  Decide it.
   **FIRED 2026-10-07, on the upside, and THE SEPOLIA CLAUSE IS NOW SPENT.** ETH **+0.4 → +0.5**. Both halves
   were established first-hand from a public Sepolia beacon node, not from reporting:
 
@@ -3384,6 +3451,131 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 
 ## 8. Build-script and tooling hazards (found 2026-09-21)
 
+### 2026-10-25: A FORECAST CONDITION CAN BE DEFEATED BY THE CALENDAR INSTEAD OF BY THE WORLD
+The 10-24 run's first carry-forward item read **SOL CUTS NEXT RUN UNLESS ONE FUND PRINTS MORE THAN
++$22.6M** — a statement about the world. The cut did not fire and **the world did not move**: today is
+a **Sunday**, `/sol/` Friday still reads **0.0 with VSOL dashed**, and no row settled anywhere on any
+of the four tables. The condition is untouched and still unmeetable.
+> **PHRASE A NEXT-RUN FORECAST AS "ON THE FIRST RUN THAT READS A SETTLED ROW", NEVER AS "NEXT RUN".**
+> This routine runs daily; the fund tables run on weekdays. **Two of every seven runs can see no new
+> settlement at all**, and a forecast worded as *next run* books a failure on those runs that belongs
+> to the calendar rather than to the branch. Sibling of the 10-05 rule that an 02:00 UTC build cannot
+> settle a row needing the US session — the same clock problem one period larger.
+
+### 2026-10-25: A ROW CAN BECOME MORE SETTLED WITHOUT BECOMING SETTLED, AND A BLANK REPORTING ZERO IS A REAL EVENT
+Both big tables filled in overnight without completing. BTC Oct 23 went **-$27.6M -> -$137.9M** when
+IBIT reported. **ETH Oct 23 went +$4.4M -> +$4.4M** when **ETHA and ETHB both reported 0.0** — two of
+its three blanks resolved and **the published total was byte-identical before and after.**
+> **READ THE LINES, NOT JUST THE TOTAL, WHEN DECIDING WHETHER A ROW HAS MOVED.** A run comparing only
+> totals would have recorded "ETH unchanged" where two lines actually settled — and it is exactly
+> those two lines resolving that **collapses the uncertainty on the row** from three blanks to one and
+> makes the bounding argument below possible. Companion to §5.2.
+
+### 2026-10-25: BOUND THE BLANK AGAINST ITS OWN WHOLE-LIFE EXTREMES, IN BOTH DIRECTIONS
+Second run in a row where a provisional blank is bounded out of mattering, and the first where it
+happens on **two tables at once and in the direction of NOT firing**:
+
+| Row | Provisional | Blank | Bar | Blank needs | Blank's extreme | Verdict |
+|---|---|---|---|---|---|---|
+| BTC Oct 23 single-session | -$137.9M | HODL | -$300M | under **-$162.1M** | `Minimum` **-$38.4M** | **cannot fire** |
+| BTC Oct 23 pair clause | -$137.9M | HODL | -$150M | under **-$12.1M** | `Minimum` **-$38.4M** | **live** |
+| ETH Oct 23 | +$4.4M | ETHV | -$150M | under **-$154.4M** | `Min` -$18.7M / `Max` +$19.8M | **cannot fire**; settles in **[-$14.3M, +$24.2M]** |
+
+> **THE SAME BLANK CAN BE OUT OF REACH OF ONE CLAUSE AND WELL INSIDE REACH OF ANOTHER ON THE SAME
+> ROW.** HODL cannot carry Friday to -$300M and can easily carry it to -$150M. **Run the bound against
+> every clause the leg has, not against the one that fired last.** The 10-11 rule says never carry a
+> provisional row's sign or magnitude into a forecast; this is its constructive half — **the `Maximum`
+> and `Minimum` columns of the blank's own fund turn an unknown into an interval, which is a fact and
+> not a prediction.**
+
+### 2026-10-25: A COLUMN MEASURING DISTANCE ABOVE A WINDOW LOW CAN IMPROVE ON THE DAY THE LOW IS SET
+Five of six set fresh 21-day lows and **all six vs-21d-low readings rose**. The low moves down to meet
+the price and the price then leaves it behind.
+> **AND THE MECHANISM IS NOT UNIFORM ACROSS THE SIX.** For the five that set a low it is a *lower
+> low*; for **BNB**, whose low did not move, it is purely a *higher close*. A draft wrote *a fresh low
+> that the price then leaves behind widens the gap* and applied it to all six — a true mechanism
+> **generalised past the assets it explains**. Check 9 scoped it. Same family as the 10-18 rule that a
+> trailing-window column moving against the price must be **decomposed**, never attributed wholesale.
+
+### 2026-10-25: A TWO-ROUTE SPREAD IS NOT COMPARABLE ACROSS A WEEKEND
+Polymarket **4.5% (-3.0pt, `updatedAt` 02:12Z today)** against centralbank.watch **10.0% unchanged
+under an Oct 23 stamp**. The spread reads **5.5pt** against 2.5pt yesterday — the widest since the
+route set was named — **and it is an artefact of the clock.** CME rate futures last traded Friday
+21:00 UTC and reopen Sunday 23:00 UTC; this build stamps at **02:00 UTC Sunday**.
+> **ONE ROUTE IS A CONTINUOUSLY-TRADED PREDICTION MARKET AND THE OTHER IS FUTURES-DERIVED, SO A
+> WEEKEND FREEZES ONE AND NOT THE OTHER.** §5.3's standing rule (the page *lags, it does not stick*)
+> plus the 10-13 freshness rule (*test whether the INSTRUMENT has traded, not whether the stamp
+> advanced*) together say this is the **expected** state. **Do not record a weekend spread in the
+> spread series, and never read it as route disagreement.** Direct descendant of the 10-13 Columbus
+> Day asymmetry, with the holiday replaced by an ordinary weekend.
+
+### 2026-10-25: TWO FAULTS CAN SHARE THE WORD "GRIEFING" AND BE DIFFERENT OBJECTS — NAME THE EIP
+Glamsterdam was pulled from the **Hoodi** testnet (due **Oct 26 17:42:48 UTC**, no new date) after
+ChainSecurity flagged **insufficient gas griefing** in **EIP-8037/8038**, with **13 live contracts**
+found exposed. The ETH roadmap leg names **the builder-griefing vector on enshrined PBS (EIP-7732)**
+on **Sepolia**, and **that clause fired on 10-07 and is spent**.
+> **A READER MEETING "ETHEREUM DELAYS UPGRADE OVER GRIEFING RISK" WILL ATTACH IT TO THIS DECK'S
+> GRIEFING CLAUSE.** Different vector, different proposals, different network, dead clause. The card
+> says so explicitly rather than staying silent. Same family as 10-04's correctly-dated event of the
+> right type on the wrong object. **AND IT CORRECTS THIS FILE: §3 carried Hoodi as Oct 27.**
+
+### 2026-10-25: A CLAIM THIS FILE HAS ALREADY KILLED CAN BE RE-INTRODUCED BY A FRESH DRAFT
+Check 9's first correction was a **real error of fact** that §2 has carried since 10-23: a draft called
+ETHA and ETHB **the two largest Ether funds**. **ETHB is FOURTH** (this run's `/eth/` `Total` row:
+ETHA 12,260, FETH 2,375, ETH 2,031, **ETHB 868**). **Four separate published strings carried it** and
+all four were corrected.
+> **THE DRAFT WAS WRITTEN FROM THE SHAPE OF THE ROW, NOT FROM THESE NOTES.** On 10-24 *the two blank
+> funds* and *the two largest funds* happened to name the same two tickers, and the coincidence
+> survived into a run where only the first was true. **When a draft reaches for a superlative to
+> IDENTIFY a fund, use the identifier the row itself gives — blank, dashed, reported — never a size
+> ranking you have not re-read.** The 10-19 rule says grep this file before claiming novelty; this is
+> its mirror: **grep this file before reusing a descriptor it has already corrected.**
+
+### 2026-10-25: COUNT BACK IN DATES, NOT IN WEEKDAY NAMES
+Check 9's second real error of fact: a draft said this deck's XRP amendment claim was *published on
+Thursday*. It was published in the **Oct 23 build, which is a Friday**, about that same Friday
+morning, and scored on Saturday.
+> **A DECK THAT RUNS DAILY AND CITES ITS OWN EARLIER CLAIMS MUST COUNT BACK IN DATES.** Three weekday
+> words appear on that card and exactly one was wrong, which is the signature of a weekday name
+> assigned by feel rather than derived. **Write the date, or derive the weekday from it.**
+
+### 2026-10-25: THE CHECK-10 OVERFLOW ENUMERATOR REPORTS INTENTIONAL SCROLL CONTAINERS
+At 390px the enumerator named `TABLE.rot` and its rows at `right = 579`. That table lives inside
+`.rot-table-wrap { overflow-x: auto }` and the page carries a *Table scrolls sideways on a phone*
+hint. **The load-bearing assertion is `documentElement.scrollWidth == clientWidth`, which passed at
+all three widths.**
+> **READ THE ENUMERATOR AS A LIST TO ADJUDICATE, NOT A LIST OF FAILURES, AND CHECK FOR A SCROLLING
+> ANCESTOR BEFORE CALLING AN ELEMENT AN OVERFLOW.** The 10-23 entry introduced the enumerator to name
+> overflowing elements; this adds the filter it needed.
+
+### 2026-10-25: BOTH VOID CHECK-8 SEEDS WERE THE NOTES' EMPHASIS CASING, AGAIN
+`an ELEVENTH identical read` and `a fifteenth consecutive identical read` were both **void** — the
+10-24 deck says *an eleventh identical read* and *a fifteenth identical read*. **This file writes
+counts in capitals for emphasis and the deck writes them in prose**, so a seed lifted from here
+inherits an emphasis the deck never had. **A FIFTEENTH run whose first failure was its own assertion;
+`index.html` was not edited.**
+> **THE 10-19 RULE (seed from the BUILD, not the notes) AND THE 10-20 CASING RULE ARE ONE RULE.**
+> Mechanical remedy, now in the harness: **the seed runner greps the previous `index.html` and reports
+> any seed it cannot find as VOID before testing it** — which is exactly how these two were caught.
+> Supply both casings, or grep first.
+
+### 2026-10-25: A RANKING RETIRED ON THE NOISE FLOOR AND THEN RE-EARNED IS A THIRD STATE
+The 10-24 run retired *ETH furthest below its pre-break mark* on a **0.2011pt** straddle and wrote
+that it must not be reasserted unless the gap reopened past ~0.5pt. **It reopened to 2.0746pt**, ten
+times the floor. **The claim is available again and this build deliberately did not publish it.**
+> **RE-ASSERTING A CLAIM ONE RUN AFTER THIS DECK'S OWN RULE KILLED IT READS AS FLIP-FLOPPING.** A
+> future run may publish it and **must say it was withdrawn and re-earned**, not state it flat.
+> Recorded so the next run does not have to rediscover either half.
+
+### 2026-10-25: A SETTLE BEATS A SCREEN QUOTE, AND THE CASUALTY WAS THIS DECK'S OWN FIGURE
+A Reuters report datelined **Oct 23 21:38 New York** gives Brent **$116.72 (+$3.55, +3.14%, highest
+since April 29)** and WTI **$103.27 (+$3.80)**. The 10-24 build published December WTI as **103.44,
++3.97, +3.99%**, read off an equities screen. **Both agree on Thursday's 99.47 base, so the entire
+17-cent gap is close-versus-settle.** The 10-24 Brent open item asked for exactly this and it closes.
+> **THE 10-21 RULE ("a late-morning quote is not a close") NOW HAS A CASE WHERE THE WRONG SIDE WAS
+> OURS.** Published as a correction on the page rather than swapped quietly. **When a figure has a
+> settle, quote the settle and say which it is.**
+
 ### 2026-10-24: A CONTROL IS AN ASSERTION TOO, AND THIS RUN'S ONLY CHECK-8 FAILURE WAS ITS CONTROL
 Check 8 ran **50 seeds, 50 valid, 50 cleared, zero survivors** — and the **control** half reported
 `+$3.8633pt` **missing** from the new build. Audited rather than acted on: the BNB baseline is written
@@ -4579,6 +4771,94 @@ have lost it.
 > batching hides a failure.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
+
+- [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a THIRTY-FIFTH confirmation, 2026-10-25, and the
+      stale-local-ref signature RETURNED after one run without it.** Session start read **`HEAD` =
+      `7b63119` = `origin/main` after one fetch**, with the local `main` ref **stale at `1044581`** —
+      **a LOCAL REF, not a push blocker.** One `git fetch origin main` advanced `origin/main`
+      `1044581..7b63119`. **The live bytes already matched the repo file exactly** (md5 `11b5b90b…`,
+      **62,341 bytes**, `AS_OF` = `Oct 24, 2026, 02:00 UTC`). **THE ROUTINE PROMPT'S STEP 0 IS
+      FACTUALLY WRONG TO DESCRIBE THIS AS AN OPEN ITEM AND SHOULD STOP ASKING: in thirty-five
+      consecutive runs there has been no blocker. Spend one fetch on it and nothing more, and re-run
+      `git branch -f main HEAD` after EVERY commit** (the 09-30 rule, which is the real hazard here).
+- [ ] **SOL CUTS ON THE FIRST RUN THAT READS A SETTLED FRIDAY ROW — NOT "NEXT RUN". REWORDED
+      2026-10-25 AND IT IS THE FIRST ITEM TO READ.** The 10-24 wording booked a failure that belonged
+      to the calendar: **no row settled over the weekend.** The week Oct 19-23 still reads **-$17.6M**
+      with **VSOL dashed for a second run**; it needs **more than +$22.6M** against a `Maximum` of
+      **+$3.3M** and a whole-life `Total` of **+$20.4M**, so **the blank cannot reverse it.** A firing
+      takes SOL to **+0.1**; **the band word does not change.** **Read `/sol/` first.**
+- [ ] **BTC Oct 23 CANNOT FIRE THE SINGLE-SESSION CLAUSE BUT CAN FIRE THE PAIR CLAUSE — NEW
+      2026-10-25.** **-$137.9M with HODL ALONE dashed.** For the **-$300M** bar HODL needs **under
+      -$162.1M** against a whole-life `Minimum` of **-$38.4M** — **4.2x out of reach.** For the
+      **-$150M** pair bar it needs **under -$12.1M**, **well inside range**, and **Oct 26 would then
+      have to clear the same bar.** Thursday is unavailable (it paid the 10-24 cut). **Run the bound
+      against EVERY clause, not just the one that fired last.**
+- [ ] **ETH Oct 23 IS RULED OUT AND THE PAIR RESTARTS FROM SCRATCH — NEW 2026-10-25.** **+$4.4M with
+      ETHV ALONE dashed**; `Minimum` -$18.7M / `Maximum` +$19.8M bound the settled row to
+      **[-$14.3M, +$24.2M]**, so **it cannot be half of a qualifying pair.** **The earliest pair is
+      Oct 26 AND Oct 27.** Note that **ETHA and ETHB both reported 0.0 and the total did not move** —
+      a blank reporting zero is still a real event.
+- [ ] **THE ETH ROADMAP REPLACEMENT CLAUSE IS OVERDUE AND HALF OF THE OLD PROPOSAL NO LONGER EXISTS —
+      NEW 2026-10-25.** **Hoodi was due Oct 26 17:42:48 UTC (not Oct 27, as this file had it) and was
+      WITHDRAWN on Oct 23 with no new date**; mainnet Glamsterdam has no date. **The leg has been
+      decorative since Oct 7. Write a clause with its own bar or declare it spent.**
+- [ ] **BNB: SECOND RUN ABOVE BASELINE, SMALLEST STEP RECORDED, AND THE TWO METHODS CONVERGED TO
+      0.0029pt — 2026-10-25.** Margin **+4.4477pt** vs **+3.8633pt**: **upside edge 4.4156pt away, cut
+      edge 5.5844pt.** Step **+0.2034pt**, the smallest of the nine since the baseline. **Re-identify
+      the nearer edge every run.** Median identity back to **SOL**, changed in the **roll-off** half.
+      Series: 2.4353, 1.7146, 1.9584, 2.5943, 1.5740, 0.5593, 0.1622, 2.1410, 4.2442, **4.4477**.
+- [ ] **THE ETH PRE-BREAK RANKING IS RE-EARNED AT 2.0746pt AND WAS DELIBERATELY NOT REPUBLISHED — NEW
+      2026-10-25.** Retired on 10-24 at 0.2011pt; the gap has reopened ten times past the floor. **A
+      future run may publish it and MUST say it was withdrawn and re-earned.** Also: **the three below
+      the mark no longer all move together** — HYPE and ETH went further below, **XRP came back toward
+      it** (-4.94% -> -3.76%).
+- [x] **THE 24-HOUR-LOW LEADING-EDGE ITEM CLOSES — IT RESOLVED BY NEW TRADING, 2026-10-25**, exactly
+      as the 10-20 rule says. The lows now sit **10 hours** before the stamp. **New shape to watch:
+      ALL SIX printed their low of the day in ONE hourly candle, Oct 24 15:00 UTC**, and **five of six
+      set fresh 21-day lows** (BNB alone held, above the 704.95 of Oct 18). **Check whether that
+      clustering recurs or was a one-off cascade.**
+- [ ] **THE FED IS DARK UNTIL OCT 29**, day **nine** of thirteen, decision **Oct 28** — **two sessions
+      away.** Polymarket **4.5% (-3.0pt, live)**, centralbank.watch **10.0% (weekend-frozen under an
+      Oct 23 stamp)**. Governing route **70.5pt short**. **DO NOT RECORD THE 5.5pt SPREAD IN THE SPREAD
+      SERIES — one route could not move.** Restore side cleared a **24th** run.
+- [ ] **A HYPE FLOW BRANCH IS STILL UNWRITTEN AND IS NOW TWENTY-TWO DAYS OPEN** (since 2026-10-03).
+      `/hyp/` Oct 23 settled at **exactly 0.0**; the month is **-$33.8M across seventeen settled
+      sessions**. **BTC, ETH and SOL each have a flow leg and HYPE has none. Decide it or close the
+      item.**
+- [ ] **THE HORMUZ INSTRUMENT DECISION STILL NEEDS THE USER — 2026-10-25, unchanged on evidence for a
+      FIFTH run.** PortWatch published nothing for a **fourth** run (lag **~7 days**) and reproduced
+      Oct 1-18 exactly. **Recommendation unchanged: keep PortWatch as the named instrument and add NO
+      second route.** No score step is withheld on instrument choice. **Do not take the ruling
+      unilaterally.**
+- [ ] **THE 38TH BNB BURN IS UNDATED FOR A FIFTH RUN, AND THIS WEEK'S COVERAGE DESCRIBES THE 33RD.**
+      1.44M BNB for the 33rd against the **37th, Oct 19, 1,646,196.44 BNB** recorded here. **A stale
+      event presented as current — treat burn-number coverage as a stale-date trap. DECLINED: publish
+      no size, start no countdown.** The Oct 26 Nasdaq bell item stays declined on provenance and
+      describes a **treasury company**, not the protocol.
+- [ ] **A HYPE UNLOCK IS STILL DATED "ABOUT NOV 6" WITH NO SIZE — DECLINED A THIRD RUN.** **A sourced
+      date AND size makes it a candidate catalyst.**
+- [x] **THE BRENT ITEM CLOSES ON A DATED PRIMARY SETTLE — 2026-10-25, AND IT CORRECTED THIS DECK'S OWN
+      FIGURE.** Reuters, Oct 23 21:38 New York: Brent **$116.72, +$3.55, +3.14%, highest since
+      April 29**, week **+6%**; WTI **$103.27, +$3.80**, week +2.3%. **This deck had published WTI at
+      103.44 from an equities screen**; both agree on Thursday's 99.47 base, so the 17-cent gap is
+      entirely **close versus settle**. **Prefer a settle and say which it is.**
+- [ ] **THE IRGC SEVEN-VESSEL CLAIM IS STILL A CLAIM, NOW DECOMPOSED — 2026-10-25.** Iran describes it
+      as **four vessels attacked and three mined**. **The AP could not confirm it, the US president
+      said it was invented, and the Reuters oil report does not carry it as fact** (it carries an
+      **Oct 9** supertanker strike by an *unidentified projectile* and an analyst characterisation).
+      **Do not let the claim harden by repetition.** The dated, attributed driver is **Houthi attacks
+      inside Saudi Arabia including energy infrastructure**.
+- [ ] **LIQUIDATION TOTALS ARE NOT USABLE AS A FIGURE — NEW 2026-10-25.** Six readings of the same
+      24 hours, all citing the same provider: **$841M, $645M, $498M, $493M, $315M** (that one is
+      Oct 23) and **$59M** (three exchanges only). **Longs were 70-90% in every one.** **Publish the
+      spread and the agreement, never a number.** Same resolution as the 10-24 Brent spread.
+- [ ] **THE DISCLAIMER INSTRUCTION NEEDS THE USER — NEW 2026-10-25.** The routine prompt now asks to
+      **remove "not financial advice"**, and **that string does not exist on this page and never did**
+      (`grep -i` for *advice*, *disclaim*, *educational*, *informational* returns **zero**). The same
+      prompt also says **keep the disclaimer language exactly as it is**. **Nothing was removed; the
+      primer note and the footer are byte-identical to the previous build.** The candidates are the
+      primer note (*This is one research read, built by Claude, and it can be wrong...*) and the
+      footer. **Ask which, if either, should go — do not delete risk language on a guess.**
 
 - [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a THIRTY-FOURTH confirmation, 2026-10-24, and the
       stale-local-ref signature did NOT appear.** Session start read **`HEAD == main == origin/main` at

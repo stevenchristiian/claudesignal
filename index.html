@@ -17,8 +17,8 @@
     --line: #2a2f3d;
     --line-soft: #222634;
     --text: #edece7;
-    --text-2: #b4b9c7;
-    --text-3: #888e9f;
+    --text-2: #c6cad6;
+    --text-3: #9aa1b2;
     --gold: #d4af61;
     --gold-dim: #8a7238;
     --jade: #5ac795;
@@ -27,11 +27,13 @@
     --rust-dim: #7a382a;
     --slate: #98a0b5;
 
-    --step--1: clamp(0.78rem, 0.76rem + 0.10vw, 0.84rem);
-    --step-0:  clamp(0.94rem, 0.91rem + 0.15vw, 1.02rem);
-    --step-1:  clamp(1.05rem, 1.00rem + 0.25vw, 1.20rem);
-    --step-2:  clamp(1.25rem, 1.15rem + 0.50vw, 1.55rem);
-    --step-3:  clamp(1.75rem, 1.45rem + 1.50vw, 2.60rem);
+    --step--1: clamp(0.90rem, 0.87rem + 0.14vw, 0.98rem);
+    --step-0:  clamp(1.00rem, 0.97rem + 0.16vw, 1.09rem);
+    --step-1:  clamp(1.12rem, 1.06rem + 0.28vw, 1.28rem);
+    --step-2:  clamp(1.32rem, 1.20rem + 0.55vw, 1.65rem);
+    --step-3:  clamp(1.85rem, 1.50rem + 1.60vw, 2.75rem);
+    /* smallest tier on the page — captions, sublabels, table headers */
+    --step--2: clamp(0.82rem, 0.80rem + 0.10vw, 0.88rem);
 
     --gap: clamp(14px, 2.2vw, 20px);
     --section-gap: clamp(38px, 6vw, 68px);
@@ -45,10 +47,14 @@
     color: var(--text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: var(--step-0);
-    line-height: 1.6;
+    line-height: 1.65;
     padding-bottom: clamp(48px, 8vw, 88px);
     overflow-x: hidden;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
   }
+  p, li, dd{ text-wrap: pretty; }
+  h1, h2, h3{ text-wrap: balance; }
   a{ color: var(--gold); }
   h1, h2, h3{ font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
   .mono{ font-family: 'IBM Plex Mono', ui-monospace, monospace; }
@@ -111,10 +117,12 @@
   .primer{ margin-top: clamp(18px, 3vw, 26px); }
   .primer-grid{
     display: grid; gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+    grid-template-columns: 1fr;
   }
+  @media (min-width: 600px){ .primer-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1000px){ .primer-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); } }
   .primer-item h3{ font-size: var(--step-0); margin: 0 0 4px 0; color: var(--gold); }
-  .primer-item p{ margin: 0; color: var(--text-2); font-size: var(--step--1); line-height: 1.65; }
+  .primer-item p{ margin: 0; color: var(--text-2); font-size: var(--step--1); line-height: 1.7; max-width: 60ch; }
   .primer-note{
     margin: 16px 0 0 0; padding-top: 14px; border-top: 1px solid var(--line-soft);
     color: var(--text-3); font-size: var(--step--1);
@@ -124,7 +132,7 @@
   section{ margin-top: var(--section-gap); }
   .sect-head{ margin-bottom: clamp(16px, 2.5vw, 22px); }
   .sect-head h2{ font-size: var(--step-2); margin: 0 0 6px 0; color: var(--text); }
-  .sect-head .lede{ margin: 0; color: var(--text-2); font-size: var(--step--1); max-width: 68ch; }
+  .sect-head .lede{ margin: 0; color: var(--text-2); font-size: var(--step--1); max-width: 66ch; line-height: 1.7; }
   .stamp{
     display: inline-block; margin-top: 8px;
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -133,40 +141,56 @@
 
   /* ---------- Macro strip ---------- */
   .macro-grid{
-    display: grid; gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    display: grid; gap: 12px;
+    grid-template-columns: 1fr;
     margin-bottom: clamp(18px, 3vw, 26px);
   }
+  @media (min-width: 620px){ .macro-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px){ .macro-grid{ grid-template-columns: repeat(3, 1fr); } }
   .macro-cell{
     background: var(--surface); border: 1px solid var(--line-soft);
-    border-radius: var(--radius); padding: 14px 16px;
+    border-left: 3px solid var(--line); border-radius: var(--radius);
+    padding: 14px 16px 15px 15px;
   }
   .macro-cell .label{
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--text-3); margin-bottom: 6px;
+    font-size: var(--step--2); letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 7px; line-height: 1.4;
   }
-  .macro-cell .value{ font-size: var(--step--1); line-height: 1.55; color: var(--text); }
-  .macro-cell .value.warn{ color: var(--rust); }
-  .macro-cell .value.ok{ color: var(--jade); }
+  .macro-cell .value{ font-size: var(--step--1); line-height: 1.6; color: var(--text); }
+  /* The read is carried by the cell edge and the label, not by colouring the sentence:
+     long runs of coloured body text are the hardest thing on this page to read. */
+  .macro-cell:has(.value.warn){ border-left-color: var(--rust); }
+  .macro-cell:has(.value.ok){ border-left-color: var(--jade); }
+  .macro-cell:has(.value.warn) .label{ color: var(--rust); }
+  .macro-cell:has(.value.ok) .label{ color: var(--jade); }
 
-  .catalysts-row{ display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); }
+  .catalysts-row{
+    display: grid; gap: 2px 22px; grid-template-columns: 1fr;
+  }
+  @media (min-width: 760px){ .catalysts-row{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1040px){ .catalysts-row{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .catalyst-chip{
-    display: flex; gap: 10px; align-items: baseline;
-    border-left: 2px solid var(--line); padding: 7px 0 7px 12px;
-    font-size: var(--step--1); color: var(--text-2); line-height: 1.55;
+    display: block; min-width: 0;
+    border-left: 2px solid var(--line); padding: 9px 0 10px 13px;
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.6;
   }
   .catalyst-chip b{
+    display: block; margin-bottom: 2px;
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    color: var(--gold); font-weight: 600; font-size: 0.74rem;
-    white-space: nowrap; flex-shrink: 0; padding-top: 1px;
+    color: var(--gold); font-weight: 600; font-size: var(--step--2);
+    letter-spacing: 0.01em; line-height: 1.45;
+    /* wraps rather than forcing the page wider — see the 2026-10-23 overflow */
+    white-space: normal; overflow-wrap: anywhere;
   }
 
   /* ---------- Asset cards ---------- */
   .grid{
     display: grid; gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+    grid-template-columns: 1fr;
   }
+  @media (min-width: 700px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1080px){ .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .card{
     background: var(--surface); border: 1px solid var(--line-soft);
     border-top: 3px solid var(--slate); border-radius: var(--radius);
@@ -203,7 +227,7 @@
   .signal-label.bearish{ color: var(--rust); }
   .signal-label.neutral{ color: var(--gold); }
   .signal-pct{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step-1); }
-  .band-note{ font-size: var(--step--1); color: var(--text-3); margin: 8px 0 14px 0; line-height: 1.5; }
+  .band-note{ font-size: var(--step--1); color: var(--text-3); margin: 9px 0 14px 0; line-height: 1.6; }
 
   .bars{ display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
   .bar-row .bar-head{
@@ -213,7 +237,7 @@
   .bar-row .bar-val{ font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1); color: var(--text-3); }
   .bar-track{ display: block; height: 6px; background: var(--bg); border-radius: 999px; position: relative; overflow: hidden; }
   .bar-fill{ position: absolute; left: 0; top: 0; height: 100%; border-radius: 999px; }
-  .bar-sub{ font-size: 0.72rem; color: var(--text-3); margin-top: 4px; }
+  .bar-sub{ font-size: var(--step--2); color: var(--text-3); margin-top: 5px; line-height: 1.5; }
 
   .card details{ margin-top: auto; }
   .card summary{
@@ -225,17 +249,17 @@
   .card details[open] summary::before{ content: "–"; }
   .detail-body{
     margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--line-soft);
-    font-size: var(--step--1); color: var(--text-2); line-height: 1.7;
+    font-size: var(--step--1); color: var(--text-2); line-height: 1.75;
   }
   .detail-body ul{ margin: 6px 0 12px 0; padding-left: 18px; }
   .detail-body li{ margin-bottom: 5px; }
   .detail-body p{ margin: 6px 0 12px 0; }
   .detail-body .sect-label{
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+    font-size: var(--step--2); letter-spacing: 0.04em; text-transform: uppercase;
     color: var(--text-3); margin-top: 12px;
   }
-  .card-footer-note{ margin-top: 12px; font-size: 0.72rem; color: var(--text-3); line-height: 1.5; }
+  .card-footer-note{ margin-top: 12px; font-size: var(--step--2); color: var(--text-3); line-height: 1.5; }
 
   /* ---------- Rotation watch ---------- */
   .rot-verdict{
@@ -248,7 +272,7 @@
     font-weight: 600; letter-spacing: 0.03em; color: var(--gold); margin-bottom: 6px;
   }
   .rot-verdict .vtext{ font-size: var(--step--1); color: var(--text-2); line-height: 1.65; }
-  .scroll-hint{ font-size: 0.72rem; color: var(--text-3); margin: 0 0 6px 0; }
+  .scroll-hint{ font-size: var(--step--2); color: var(--text-3); margin: 0 0 6px 0; }
   .rot-table-wrap{
     overflow-x: auto; -webkit-overflow-scrolling: touch;
     border: 1px solid var(--line-soft); border-radius: var(--radius);
@@ -261,7 +285,7 @@
   table.rot th, table.rot td{
     padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line-soft); white-space: nowrap;
   }
-  table.rot th{ color: var(--text-3); font-weight: 500; font-size: 0.72rem; background: var(--surface-2); }
+  table.rot th{ color: var(--text-3); font-weight: 500; font-size: var(--step--2); background: var(--surface-2); }
   table.rot th:first-child, table.rot td:first-child{ text-align: left; color: var(--text-2); }
   table.rot tr:last-child td{ border-bottom: none; }
   table.rot td.lead{ color: var(--text); }
@@ -273,7 +297,7 @@
     display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap;
   }
   .trigger .tstate{
-    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.68rem; font-weight: 600;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--2); font-weight: 600;
     letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; border: 1px solid; flex-shrink: 0;
   }
   .tstate.hold{ color: var(--jade); border-color: var(--jade-dim); }
@@ -282,37 +306,39 @@
   .trigger .tname{ font-size: var(--step-0); color: var(--text); margin-bottom: 3px; }
   .trigger .tdesc{ font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
   .trigger .tnums{
-    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--2);
     color: var(--text-3); margin-top: 7px; line-height: 1.6; overflow-wrap: anywhere;
   }
   .rot-method{ margin-top: 4px; }
   .rot-method h4{
-    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.72rem; font-weight: 600;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--2); font-weight: 600;
     letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-3); margin: 18px 0 6px 0;
   }
   .rot-method h4:first-child{ margin-top: 0; }
   .rot-method p{ margin: 0 0 10px 0; }
   .rot-method .rule{ display: flex; gap: 12px; margin-bottom: 6px; align-items: baseline; flex-wrap: wrap; }
   .rot-method .rule b{
-    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem; color: var(--gold);
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--2); color: var(--gold);
     flex-shrink: 0; width: 66px;
   }
   .rot-method .cliff{ margin-bottom: 8px; }
   .rot-method .cliff b{ font-family: 'Fraunces', Georgia, serif; color: var(--text); font-size: var(--step-0); }
   .rot-method .flag{ border-left: 2px solid var(--rust-dim); padding-left: 12px; }
   .rot-method .watch{ border-left: 2px solid var(--jade-dim); padding-left: 12px; }
-  .rot-note{ font-size: 0.74rem; color: var(--text-3); margin-top: 16px; max-width: 78ch; line-height: 1.65; }
+  .rot-note{ font-size: var(--step--2); color: var(--text-3); margin-top: 16px; max-width: 78ch; line-height: 1.65; }
 
   /* ---------- Glossary ---------- */
   .glossary-grid{
     display: grid; gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: 1fr;
   }
+  @media (min-width: 600px){ .glossary-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1000px){ .glossary-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   .glossary-grid dt{
     font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: var(--step--1);
     color: var(--gold); margin-bottom: 3px;
   }
-  .glossary-grid dd{ margin: 0 0 14px 0; font-size: var(--step--1); color: var(--text-2); line-height: 1.6; }
+  .glossary-grid dd{ margin: 0 0 16px 0; font-size: var(--step--1); color: var(--text-2); line-height: 1.7; max-width: 58ch; }
 
   .loading-row{
     color: var(--text-3); font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -324,18 +350,26 @@
   }
 
   footer{
-    margin-top: var(--section-gap); padding-top: 22px;
+    margin-top: var(--section-gap); padding-top: 24px;
     border-top: 1px solid var(--line-soft);
-    font-size: 0.76rem; color: var(--text-3); line-height: 1.7; max-width: 82ch;
+    font-size: var(--step--2); color: var(--text-3); line-height: 1.75; max-width: 74ch;
   }
 
   @media (max-width: 640px){
     .header-row{ align-items: flex-start; }
     .meta-col{ width: 100%; }
-    #refreshBtn{ width: 100%; }
+    #refreshBtn{ width: 100%; min-height: 48px; }
     .card-top{ align-items: center; }
-    table.rot th, table.rot td{ padding: 9px 11px; }
+    table.rot th, table.rot td{ padding: 10px 12px; }
+    details.panel > summary, .card summary{ min-height: 48px; }
+    .trigger{ padding: 14px; }
+    .rot-method .rule b{ width: auto; }
   }
+  /* Nothing on the page may set its own width wider than the column it sits in. */
+  .macro-cell, .catalyst-chip, .card, .trigger, .rot-verdict, .primer-item, .glossary-grid > div{
+    min-width: 0;
+  }
+  .macro-cell .value, .catalyst-chip span, .tnums, .bar-sub{ overflow-wrap: anywhere; }
   @media (prefers-reduced-motion: reduce){
     *{ transition: none !important; }
   }
@@ -485,102 +519,102 @@
 <script>
 /* Single source of truth for the build stamp — every "as of" label on the page
    reads from here, so a refresh cannot leave one of them stale. */
-const AS_OF = 'Oct 24, 2026, 02:00 UTC';
+const AS_OF = 'Oct 25, 2026, 02:00 UTC';
 
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
     macroScore: -0.5,
-    summary: "Cut to -0.5 from -0.4, and the condition this card published yesterday fired exactly as it was written. Thursday read -$381.5M provisional with BlackRock blank, and this leg cuts 0.1 on one settled session below -$300M, so the card said BlackRock had to report under +$81.5M for it to fire. It reported -$254.1M, which is $335.6M under that figure, and the settled row is -$635.6M: six funds moved, every line on the row carries a number rather than a dash, and the twelve lines sum to the total exactly. It clears the bar by $335.6M, and it is the largest single session of either sign on this table in October, past Monday's +$526.7M and the -$484.9M of Oct 7. It is not a record for the product, whose own minimum row reads -$1,113.7M. The month turned over with it, from +$460.0M yesterday to -$175.6M across sixteen settled sessions. The band word does not move: -0.5 still reads mildly cautious, so the number changed and the label did not. Friday is provisional at -$27.6M with BlackRock and one other fund blank, and those two together would have to report under -$272.4M to put that row past the same bar. The Fed leg went the other way and fires nothing: October hike odds rose to 7.5% and 10.0%, the lower route governs and sits 67.5pt short of 75%. The strait gauge published nothing for a third run. BTC fell 0.50% to 80,823.40, and of the other five only ETH fell less while BNB did not fall at all.",
+    summary: "Holds at -0.5 after yesterday's cut, and the Friday row that could extend it cannot. That row has moved from -$27.6M to -$137.9M overnight, because BlackRock reported -$110.3M, and it is still not settled: one fund is blank. This leg cuts 0.1 on a single settled session below -$300M, so that blank would have to print under -$162.1M. Its worst session in its whole life is -$38.4M, which is a quarter of what the row needs, so the single-session clause cannot fire here however the line lands. The pair clause is a different matter: two consecutive settled sessions each below -$150M would do it, and the blank only needs to print under -$12.1M to put Friday past that bar, which is well inside its range. Monday would then have to clear the same bar. The leg cannot reach backwards to Thursday, because that is the session that paid yesterday's cut. October still reads -$175.6M across sixteen settled sessions, unchanged, because nothing settled over the weekend. The Fed leg fires nothing: October hike odds on the live route fell to 4.5% from 7.5%, the lower route governs and sits 70.5pt short of 75%. The strait gauge published nothing for a fourth run. BTC fell 0.04% to 80,791.18, having traded as low as 79,107 on Saturday afternoon, a fresh three-week low on this venue, and it ended 2.13% back above it.",
     catalysts: [
-      {date:'The cut fired on a settled row', text:'Thursday settled at minus 635.6M against a bar of minus 300M, so this card goes to minus 0.5 from minus 0.4'},
-      {date:'And on the figure published here', text:'This card said BlackRock had to print under plus 81.5M for that cut, and it printed minus 254.1M'},
-      {date:'The month turned over with it', text:'October goes from plus 460.0M to minus 175.6M across sixteen settled sessions, and the whole swing is that one row'}
+      {date:'The Friday row filled in but did not settle', text:'It moves from minus 27.6M to minus 137.9M after BlackRock reported minus 110.3M, with one fund still blank'},
+      {date:'And that blank cannot fire the single-session cut', text:'It would have to print under minus 162.1M, where its worst session ever is minus 38.4M, so the clause is out of reach'},
+      {date:'It can still reach the pair bar', text:'Under minus 12.1M puts Friday past minus 150M, and Monday would then have to clear the same bar for a pair'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
     macroScore: 0.4,
-    summary: "Holds at +0.4, and Thursday settled on the wrong side of the bar for a pair to be built. The row read -$17.9M provisional with its largest fund and one other blank. The largest reported -$75.5M and the other -$17.2M, so the settled total is -$110.6M and the two blank lines were again the whole of the move. This leg cuts 0.1 only on two consecutive settled sessions each worse than -$150M, and -$110.6M is $39.4M short of that bar on its own. Wednesday was an inflow of +$14.9M, so nothing can pair backwards, and a qualifying pair now has to be built out of Friday and Monday from scratch. Friday is provisional at +$4.4M with those same two funds blank and a third beside them. An outside publisher read the session as -$110.6M with the two blanks at -$75.5M and -$17.2M, matching this table on all three figures. October outflows are -$1,180.2M across sixteen settled sessions, against Bitcoin at -$175.6M in the same month. One claim is retired here rather than repeated: this card published ETH as the furthest of six below its pre-break mark for two runs, and today it reads -5.14% against XRP at -4.94%, which is 0.20pt apart and inside the half point this deck treats as noise, so no ranking is published at that end. Three of the six remain below that line and all three moved further below it. ETH fell 0.43% to 2,378.92.",
+    summary: "Holds at +0.4, and the Friday row is now settled enough to rule out. It still reads +$4.4M, unchanged, but the two funds that were blank yesterday have both since reported zero, so the total did not move and one small fund is the last line out. That fund has never gained or lost more than about $20M in a session, so Friday will settle somewhere between roughly -$14M and +$24M. This leg cuts 0.1 only on two consecutive settled sessions each worse than -$150M, and a row in that range cannot be half of such a pair, so the earliest a pair can now be built is Monday and Tuesday, from scratch. An outside publisher read the same session as +$4.35M, attributed it to two issuers where this table has exactly two funds carrying a number, and counted it as October's third inflow, which this table also shows. October outflows hold at -$1,180.2M across sixteen settled sessions, unchanged over the weekend. Separately, and firing nothing: developers pulled the Glamsterdam upgrade from the Hoodi test network on Friday, with no new date, after an auditor flagged a gas griefing risk in two of its proposals and found thirteen live contracts exposed. This card names a griefing vector of its own, on a different network and different proposals, and that clause was spent on Oct 7. Mainnet is unaffected. ETH fell 0.73% to 2,361.51 and set a fresh 21-day low of 2,275.94 on Saturday.",
     catalysts: [
-      {date:'The blanks were the whole move again', text:'Thursday read minus 17.9M and settled at minus 110.6M once the two blank funds reported minus 75.5M and minus 17.2M'},
-      {date:'And it is short of the bar alone', text:'The pair clause needs two settled sessions each under minus 150M, and this one is 39.4M short with an inflow behind it'},
-      {date:'A two-run ranking is retired here', text:'ETH reads minus 5.14% against its pre-break mark and XRP minus 4.94%, too close to name either as the furthest below'}
+      {date:'Two blanks reported zero and nothing moved', text:'The Friday row holds at plus 4.4M with both of its blank funds now in at zero, leaving one small fund as the last line out'},
+      {date:'Which rules that row out of the pair', text:'It will settle near zero either way, so the two sessions this leg needs must now be built from Monday and Tuesday'},
+      {date:'A test upgrade was pulled on Friday', text:'Glamsterdam was withdrawn from the Hoodi test network with no new date, on a gas risk that is not the vector this card names'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.2,
-    summary: "Holds at +0.2, and the week that decides this leg is already past its floor with one line unreported. The rule re-cuts 0.1 when a completed week prints below +$5M, and the week to Friday reads -$17.6M: -$6.7M, -$2.6M, +$0.6M, -$8.9M, and Friday itself at 0.0 so far. Friday is not settled — six of the seven funds have reported and one has not — and this rule reads settled periods, so nothing fires today. What is different from every earlier case of this kind on this deck is that the blank cannot change the answer. For the week to clear +$5M that one fund would have to report more than +$22.6M, and it has never had a session above +$3.3M, with a cumulative total across its whole life of +$20.4M. So what gets published is the condition and not the answer, together with the plain statement that the cut is expected next run. A cut takes SOL to +0.1 and the band word would not change, because +0.1 and +0.2 both read balanced. October stands at -$67.9M across sixteen settled sessions with Friday still to come. An outside piece counted twelve consecutive outflow sessions through Oct 20 and put the last of them entirely on Grayscale's fund, which is this table session for session. SOL fell 1.38% to 102.47. Its weekly column is the only one of six that got worse, because the lower close took more off it than the window gave back, and it sits at the bottom of the 21-day column 0.38pt from HYPE, too close to rank.",
+    summary: "Holds at +0.2, and the cut this card said was coming did not arrive — because the row did not settle, not because anything changed. The rule re-cuts 0.1 when a completed week prints below +$5M. The week to Friday still reads -$17.6M: -$6.7M, -$2.6M, +$0.6M, -$8.9M, and Friday at 0.0 with one of the seven funds still unreported, exactly as it stood yesterday. Saturday is not a trading day for these funds, so nothing settled overnight and the week stayed open for a second run. What has not changed is that the blank cannot rescue it: for the week to clear +$5M that one fund would have to report more than +$22.6M, where its best session on record is +$3.3M and everything it has ever gathered totals +$20.4M. So the condition stands exactly as published, and so does the expectation that the cut fires once the row settles. A cut takes SOL to +0.1 and the band word does not change, because +0.1 and +0.2 both read balanced. October holds at -$67.9M across sixteen settled sessions. An outside publisher read Friday as the first quiet session of the month for these funds, which matches every row visible on this table. SOL fell 0.11% to 102.36 after a fresh 21-day low of 98.51 on Saturday afternoon, Its 21-day reading of -14.79% and HYPE at -14.42% are 0.37pt apart, too close to name either as the weaker.",
     catalysts: [
-      {date:'The week is past its floor already', text:'Minus 6.7M, minus 2.6M, plus 0.6M, minus 8.9M and Friday at 0.0 make minus 17.6M, against a floor of plus 5M'},
-      {date:'But Friday is not settled yet', text:'One of the seven funds has not reported, and this rule reads settled periods, so the cut waits for the row'},
-      {date:'And that line cannot change it', text:'It would have to add more than plus 22.6M, where its best session ever is plus 3.3M and its whole life totals plus 20.4M'}
+      {date:'The expected cut did not arrive', text:'Not because the week improved, but because Friday still has one fund unreported and this rule reads completed weeks'},
+      {date:'A Saturday settles nothing', text:'These funds do not trade at the weekend, so the deciding row stood unchanged for a second consecutive run'},
+      {date:'And the open line still cannot save it', text:'It would need to add more than plus 22.6M, where its best session ever is plus 3.3M and its whole life totals plus 20.4M'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'Binance Coin',
     macroScore: 0.1,
-    summary: "Holds at +0.1, and the measurement crossed its own baseline for the first time since that baseline was set. The branch compares BNB over seven days with the middle performer of the other five and needs a fresh 5.00pt divergence from +3.8633pt. The margin rose to +4.2442pt from +2.1410pt, a step of +2.1033pt, which is the largest recorded here and the second positive one in a row. Taking it apart, old hours leaving the back of the window cost -0.0872pt and the last day of trading added +2.1905pt, and the two sum to the step exactly: the day did all of the work and more, where yesterday both halves helped. Because +4.2442pt now sits above the +3.8633pt baseline, the nearer edge has changed sides for the first time. The upside sits 4.6191pt away and the cut 5.3809pt, where yesterday the cut was the nearer at 3.2777pt. Better measurement, still no score move, and the move it is now nearest to is the upward one. BNB is the only riser of the six on the day, up 0.87% where the next reads -0.43%, and the only one still up over seven days at +2.68%. It leads five of the seven tape readings this deck tracks, the narrowest of those leads being 0.55pt. The middle performer changed from XRP to ETH with Solana in between, three different names in one step. Against the average of the five the margin is +4.3675pt, a gap of 0.1232pt and the narrowest of the ten readings recorded. The 38th burn is undated for a fourth run and no size is published here.",
+    summary: "Holds at +0.1, with the measurement above its baseline for a second run and the smallest step yet recorded. The branch compares BNB over seven days with the middle performer of the other five and needs a fresh 5.00pt divergence from +3.8633pt. The margin rose to +4.4477pt from +4.2442pt, a step of +0.2034pt, the third positive in a row, the smallest of the nine steps since that baseline was set, and a fraction of yesterday's +2.1033pt. Taking it apart, old hours leaving the back of the window cost -0.4538pt and the last day of trading added +0.6573pt, and the two sum to the step exactly: the day did all of the work again, this time against a window pulling the other way. The upside edge stays the nearer one at 4.4156pt away, against 5.5844pt to the cut. Against the average of the other five rather than the middle one, the margin is +4.4447pt — a gap of 0.0029pt, which is by a wide margin the narrowest of the eleven readings recorded here and small enough that the two methods are indistinguishable today. The middle performer changed back to Solana from Ethereum, and it changed inside the window half rather than on the day. BNB is the only one of the six that did not set a fresh 21-day low on Saturday, holding above the 704.95 it made on Oct 18, and it is the furthest above its own low at +5.35%. It is up 3.34% over seven days where the next reads +0.71%. The 38th burn is undated for a fifth run and no size is published here.",
     catalysts: [
-      {date:'Above its branch baseline at last', text:'The margin reads plus 4.2442pt against a baseline of plus 3.8633pt, the first reading above it since Oct 13'},
-      {date:'So the nearer edge has changed sides', text:'The upside now sits 4.6191pt away and the cut 5.3809pt, where yesterday the cut was nearer at 3.2777pt'},
-      {date:'The only riser of six, twice over', text:'Up 0.87% on the day against minus 0.43% for the next, and the only one of six still up over seven days'}
+      {date:'A second run above the branch baseline', text:'The margin reads plus 4.4477pt against a baseline of plus 3.8633pt, and the upside stays the nearer edge at 4.42pt'},
+      {date:'A small step, and the day did all of it', text:'Plus 0.2034pt breaks into minus 0.4538pt from the window rolling and plus 0.6573pt from the last day of trading'},
+      {date:'The only one of six with no fresh low', text:'It held above the 704.95 it set on Oct 18 where the other five all took out their 21-day lows on Saturday'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: -0.1,
-    summary: "Holds at -0.1, and the checkable claim this card made yesterday held. An amendment on this ledger needs the support of eighty per cent of validators held continuously for two weeks before it can switch on. The pending one had its clock reset to Oct 21 at 14:46:22 UTC, which put the earliest activation at Nov 4, against a piece published Oct 22 at 13:00 UTC that still gave about 09:34 UTC on Oct 23. Read first-hand this morning, the amendment is still pending and not enabled, the timestamp is unchanged so there was no second reset, and Nov 4 at 14:46:22 UTC stands, about eleven and a half days out. The ledger was right and the published date was wrong by twelve days, and a miss would have been reported here in these same words. It fires nothing either way. Nothing in this branch can move before Nov 9: the clause that cut it is spent, the one clause left pays 0.2 for a second cloture vote passing, the motion to proceed failed 49 to 50 in mid-September with none rescheduled, and the Senate sits out until Nov 6. Ripple filed a comment letter on Oct 20 backing the proposed federal crypto rules, on the day that comment window closed, and no timetable for a final rule has been published. The ledger read 107,861,809 on build 3.4.1 with 107 entries and 97 enabled, a fifteenth identical read, confirmed twice over. XRP fell 1.62% to 1.2898 and is the furthest of six below its own seven-day high at -7.75%.",
+    summary: "Holds at -0.1, and nothing in this branch can move before Nov 9. The clause that cut it is spent; the one clause left pays 0.2 for a second cloture vote passing; the motion to proceed failed 49 to 50 on Sept 15 with none rescheduled; and the Senate sits out until Nov 6. Read first-hand this morning, the ledger stands at 107,883,828 on build 3.4.1 with 107 entries and 97 enabled, a sixteenth consecutive identical read, confirmed twice over from the feature registry and from the ledger entry itself. The one pending amendment is still not enabled and its two-week clock still dates from Oct 21 at 14:46:22 UTC, unchanged for a third reading, which puts the earliest possible activation at Nov 4 at 14:46:22 UTC, about ten and a half days out. The claim this card published on Friday — that it could not switch on that same morning, against a piece dated Oct 22 that said it would — remains correct two days later, and the clock has not been reset a second time. Ripple filed a comment letter on Oct 20 backing the proposed federal crypto rules, on the day that comment window closed, and no timetable for a final rule has been published. XRP was the strongest of the six on the day, up 1.24% to 1.3058, and the only one to improve its 21-day reading. It still set a fresh 21-day low of 1.2530 on Saturday before recovering.",
     catalysts: [
-      {date:'The claim held and is scored here', text:'This card said the amendment could not switch on yesterday, and the ledger still has it pending and not enabled'},
-      {date:'With no second clock reset', text:'The two-week clock still dates from Oct 21 at 14:46:22 UTC, so Nov 4 at 14:46:22 UTC stands as the earliest'},
-      {date:'A fifteenth identical ledger read', text:'107 entries and 97 enabled, confirmed twice over from the feature registry and from the ledger entry itself'}
+      {date:'A sixteenth identical ledger read', text:'107 entries and 97 enabled, confirmed twice over from the feature registry and from the ledger entry itself'},
+      {date:'The amendment clock has not reset again', text:'It still dates from Oct 21 at 14:46:22 UTC, so Nov 4 at the same minute stands as the earliest activation'},
+      {date:'Strongest of the six on the day', text:'Up 1.24% to 1.3058 and the only one of six to improve its 21-day reading, after a fresh low of 1.2530 on Saturday'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Holds at -0.1, and both of its branches read as they did yesterday. The revenue leg restores 0.1 above $260M for a completed quarter and cuts a further 0.1 below $150M. The vendor this deck can read puts the completed third quarter at $173.9713M across 92 days, an eleventh identical read, which scales to between $227.12M and $236.05M and sits inside that corridor on every scaling. Yesterday this card reported that the same vendor had revised a figure after this deck published it; read again this morning, the revised row holds at $2,251,711 and the quarter has extended cleanly to $50.0576M over 23 days, which is still too little of a 92-day quarter to read. The disclosure leg has nothing new on the named deployment. The funds settled at exactly 0.0 on all three products on Friday with no blanks anywhere, so a real session moved October by nothing and the month holds at -$33.8M across seventeen settled sessions. A reader may meet a buyback headline from Friday: the Nasdaq-listed treasury company that holds HYPE raised its repurchase limit to $100M, and that is a company rather than the protocol, so it moves nothing here. A monthly unlock is still being dated to about Nov 6 by sources that give no size, and it stays unpublished until one does. HYPE fell 0.74% to 76.95. It is the weakest of six over seven days at -3.60% against -1.63% for the next, and the furthest below its own 21-day high at -19.23%.",
+    summary: "Holds at -0.1, and both branches read as they did yesterday. The revenue leg restores 0.1 above $260M for a completed quarter and cuts a further 0.1 below $150M. The vendor this deck can read puts the completed third quarter at $173.9713M across 92 days, a twelfth identical read to the last decimal, which scales onto this branch's own series at between $227.12M and $236.05M and sits inside that corridor on every scaling. The fourth quarter extended cleanly again, to $52.0803M over 24 days, and the row this vendor revised after publication two days ago is still unchanged at $2,251,711 — a second clean hold, though two of those do not restore a streak and none is claimed. Twenty-four days of a ninety-two day quarter is still far too little to read. The disclosure leg has nothing new on the named deployment. The funds settled at exactly 0.0 on all three products on Friday with no blanks, so October holds at -$33.8M across seventeen settled sessions, unchanged over the weekend. A quarterly burn figure circulating this week describes the 33rd burn at 1.44 million tokens, where the most recent one here is the 37th, on Oct 19, and the 38th is still undated, so no size and no countdown is published here. A monthly unlock is still being dated to about Nov 6 with no size attached. HYPE fell 0.29% to 76.73 and set a fresh 21-day low of 74.33 on Saturday.",
     catalysts: [
-      {date:'A settled session of exactly zero', text:'All three products reported 0.0 on Friday with no blanks, so a real session moved October by nothing at all'},
-      {date:'And the revenue series extended cleanly', text:'The row revised yesterday holds at 2,251,711 and the quarter reads 50.0576M over 23 days, too few to read'},
-      {date:'A buyback headline is not this token', text:'The Nasdaq-listed treasury company that holds HYPE raised its repurchase limit to 100M, and that is not the protocol'}
+      {date:'A twelfth identical quarterly read', text:'The completed quarter holds at 173.9713M, inside this branch corridor on all three of the scalings it is read through'},
+      {date:'And the revised row held a second time', text:'The figure this vendor changed after publication is still 2,251,711, and the quarter extends cleanly to 52.0803M'},
+      {date:'A burn figure going round is the wrong one', text:'It describes the 33rd burn at 1.44 million tokens; the 37th was Oct 19 and the 38th still has no date or size'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'One score moved', value:'Bitcoin is cut to -0.5 from -0.4, because Thursday settled at minus 635.6M and this leg cuts on any settled session below minus 300M', cls:'warn'},
-  {label:'On the figure published here', value:'Yesterday this deck said BlackRock had to report under plus 81.5M for that cut to fire, and it reported minus 254.1M, which is 335.6M under it', cls:'warn'},
-  {label:'And Bitcoin October turned over', value:'The month goes from plus 460.0M to minus 175.6M across sixteen settled sessions, and the whole 635.6M swing is that single row', cls:'warn'},
-  {label:'Hike odds rose and five still fell', value:'October reads 7.5% and 10.0% against 5.5% and 8.1%, the ten-year gave back 4bp of its record rally to 5.00%, and five of these six fell anyway', cls:'ok'},
-  {label:'A Solana cut needs one line', value:'Its week reads minus 17.6M with Friday unsettled, and the one fund that has not reported would need more than plus 22.6M against a best session ever of plus 3.3M', cls:'warn'},
-  {label:'Oil carried the other half of it', value:'The December WTI contract rose 3.99% past 103 dollars as traders priced wider fighting in the region, with Iran saying seven vessels were hit near the strait and the Associated Press unable to verify it', cls:'warn'}
+  {label:'No score moved today', value:'All six hold. The Solana cut this deck called for yesterday did not arrive, because Friday still has one fund unreported and the rule reads completed weeks', cls:'ok'},
+  {label:'A weekend settles nothing', value:'No fund row completed on any of the four tables overnight, so every month-to-date figure here is unchanged, and the bond market and the share market were shut all day', cls:'ok'},
+  {label:'Five of six hit fresh 21-day lows', value:'Bitcoin 79,107, Ether 2,275.94, Solana 98.51, XRP 1.2530 and Hyperliquid 74.33, with only BNB holding above its own. All six made their low of the day in the same hour', cls:'warn'},
+  {label:'Then the prices came back up', value:'Every one of the six closed above the low it set, and the two that gained on the day were XRP at plus 1.24% and BNB at plus 0.54%', cls:'ok'},
+  {label:'Hike odds fell on the live route', value:'The prediction market reads 4.5% for October against 7.5% yesterday, and the lower of the two routes governs, 70.5pt short of the 75% this branch needs', cls:'ok'},
+  {label:'Oil settled at a six-month high', value:'Brent closed Friday at 116.72 dollars, up 3.55 and 3.14%, the highest since April 29, after attacks on Saudi Arabian energy sites, and the week gained 6%', cls:'warn'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'One score moved', text:'Bitcoin goes to minus 0.5 from minus 0.4 on a settled session of minus 635.6M, against a bar of minus 300M'},
-  {date:'On the figure published here', text:'This deck said BlackRock had to print under plus 81.5M for the cut, and it printed minus 254.1M, 335.6M under it'},
-  {date:'And the row carries no dashes', text:'Six funds moved and all twelve lines sum to minus 635.6M exactly, which is the test this deck uses for a settled row'},
-  {date:'Largest October session either way', text:'Past the plus 526.7M of Monday and the minus 484.9M of Oct 7, and still not a record: the fund table reads minus 1,113.7M'},
-  {date:'Bitcoin October is now minus 175.6M', text:'Sixteen settled sessions, where fifteen read plus 460.0M yesterday, so one row moved the month by 635.6M'},
-  {date:'An outside count matched it exactly', text:'A publisher put Thursday at minus 635.6M with BlackRock at minus 254.1M, both matching this table to the decimal'},
-  {date:'And matched Ether line for line', text:'Minus 110.6M on the same day with its two blank funds at minus 75.5M and minus 17.2M, each exact against this table'},
-  {date:'Hike odds went back up', text:'October reads 7.5% and 10.0% against 5.5% and 8.1% yesterday, and the lower route governs, 67.5pt short of 75%'},
-  {date:'The link held in neither direction', text:'Odds fell yesterday and all six fell; odds rose today and five of six fell, so the link held in neither direction'},
-  {date:'Selling prices moved the curve', text:'The October flash survey reported the fastest rise in selling prices since August 2022, and the ten-year rose 4bp to 5.00%'},
-  {date:'Which gives back a quarter of it', text:'Yesterday the ten-year fell 17bp, the largest one-day fall of 2026, and today it took 4bp of that back'},
-  {date:'But not across the whole curve', text:'The one, two and three-month bills held exactly, the six-week rose 1bp, and everything from four months out rose 1bp to 5bp'},
-  {date:'The survey itself was mixed', text:'Services slipped to 57.9 in line with expectations, manufacturing rose to 56.0 above them, and the composite fell to 57.6'},
-  {date:'Oil is the other half of the day', text:'The December WTI contract rose 3.99% to 103.44 dollars, a gain of 3.97 on the day, read off the same screen as the index closes'},
-  {date:'On a claim nobody can verify', text:'Iran said it hit or mined seven vessels near the strait, the Associated Press could not confirm it, and the US president said the claim was invented'},
-  {date:'And the strait gauge is silent again', text:'It still ends Oct 18 at 3, 7, 3, 2, 7, 0 and 4 a day, a third run with nothing new, and the step it needs is 20'},
-  {date:'A Solana cut needs one line', text:'Its week reads minus 17.6M with Friday unsettled, so the one fund that has not reported must add more than plus 22.6M'},
-  {date:'Which it has never come near', text:'That fund has never had a session above plus 3.3M and its whole life totals plus 20.4M, so the deck waits rather than calls it'},
-  {date:'The XRP claim made here held', text:'It said the amendment could not switch on yesterday, and the ledger still has it pending with the clock dated Oct 21'},
-  {date:'BNB is above its branch baseline', text:'For the first time since that baseline was set on Oct 13, so the upside edge is the nearer one at 4.62pt against 5.38pt'},
-  {date:'Five weekly columns improved anyway', text:'On a day five of six fell, because the back of the window rolled off cheaper prices on all six, and only Solana ended worse'}
+  {date:'No score moved today', text:'All six hold, and the Solana cut this deck called for yesterday did not arrive, because the week is still open'},
+  {date:'The deciding row did not settle', text:'Friday still shows one Solana fund unreported, a second run in that state, and this rule reads completed weeks only'},
+  {date:'And that line still cannot save it', text:'It would need to add more than plus 22.6M where its best session ever is plus 3.3M, so only the timing is in doubt'},
+  {date:'A weekend settles nothing', text:'No fund row completed overnight on any of the four tables, so every month-to-date figure on this deck is unchanged'},
+  {date:'But two rows did fill in further', text:'BlackRock reported minus 110.3M on the Bitcoin Friday row, and both of the blank Ether funds reported zero'},
+  {date:'Bitcoin Friday is now minus 137.9M', text:'From minus 27.6M yesterday, with one fund still blank, and that fund has never had a session worse than minus 38.4M'},
+  {date:'So that row cannot reach the cut bar', text:'It would need the blank to print under minus 162.1M, which is four times the worst session that fund has ever had'},
+  {date:'It can still reach the pair bar', text:'Under minus 12.1M puts it past minus 150M, and Monday would then have to clear the same bar for a pair to fire'},
+  {date:'Ether Friday held at plus 4.4M', text:'Both funds that were blank reported zero and the total did not move, leaving one small fund as the last line out'},
+  {date:'A publisher matched that row exactly', text:'It gave plus 4.35M and named two issuers, where exactly two funds carry a number on this table'},
+  {date:'Five of six made fresh 21-day lows', text:'Bitcoin 79,107, Ether 2,275.94, Solana 98.51, XRP 1.2530 and Hyperliquid 74.33, with only BNB holding above its own'},
+  {date:'All six in the same single hour', text:'Every one of the six printed its low of the day in the candle opening 15:00 UTC on Saturday, then traded back up'},
+  {date:'And all six ended further above it', text:'The five that set one left it behind and BNB simply closed higher, so that column improved for all six'},
+  {date:'Only crypto was open for any of it', text:'The bond market and the share market were both shut all weekend, so no new macro reading accompanied the move'},
+  {date:'Liquidation totals are not usable', text:'Readings for the same day run from 59M to 841M across publishers, so no figure is named here, only that longs led'},
+  {date:'Hike odds fell on the live route', text:'The prediction market reads 4.5% for October against 7.5% yesterday, and the lower of the two routes governs'},
+  {date:'The other route is weekend-frozen', text:'It still reads 10.0% under a Friday stamp, which is the expected state when no futures contract has traded since'},
+  {date:'Oil settled at a six-month high', text:'Brent closed Friday at 116.72 dollars, up 3.55 and 3.14%, the highest since April 29, and the week gained 6%'},
+  {date:'A figure published here is corrected', text:'This deck gave Friday WTI as 103.44 from a screen quote; the settle was 103.27, up 3.80, and a settle governs'},
+  {date:'Ethereum pulled a test upgrade', text:'The Glamsterdam fork due on the Hoodi test network on Monday was withdrawn on Friday with no new date set'},
+  {date:'On a gas risk, not the one here', text:'An auditor found thirteen live contracts exposed by two of its proposals, a different vector on a different network'}
 ];
 
 function renderMacro(){
