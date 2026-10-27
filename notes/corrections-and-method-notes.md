@@ -13,6 +13,12 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-10-27 publish, verified:** commit `f9f5554`, push `534309c..f9f5554  main -> main`, live md5
+  `90bff1414bf419980963b3fe1d658240` at **63,985 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Oct 27, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` after one fetch. **Pages
+  served the new build on the FIRST 30-second poll** — the fastest propagation recorded here. The
+  designated branch `claude/beautiful-franklin-6kwet2` was pushed to the same commit.
+
 - Repo: `stevenchristiian/claudesignal`. Pages serves **`index.html` on `main`**, nothing else.
 - **A snapshot file is not a publish.** On 2026-09-21 the repo contained
   `signal-deck-2026-09-21-0100utc.html`, a complete and more recent build uploaded as a *separate
