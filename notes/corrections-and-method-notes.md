@@ -13,6 +13,18 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-10-28 publish, verified:** commit `2b7732a`, push `ffe0184..2b7732a  main -> main`, live md5
+  `28ebd0f415b2142a225aefe0736e0678` at **64,457 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Oct 28, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `2b7732a` after one fetch,
+  confirmed against `git ls-remote origin main`. **Pages served the new build on the SECOND 30-second
+  poll.** The designated branch `claude/beautiful-franklin-cxbjrs` was pushed to the same commit (a new
+  remote branch this session).
+  > **HARNESS QUIRK, RECORDED SO IT IS NOT MISREAD AS A REPO FAULT:** `git rev-parse --short HEAD main
+  > origin/main` in this container answers **`fatal: Needed a single revision`** even when all three refs
+  > resolve individually. It broke the publish command chain twice and **both times the push had already
+  > succeeded.** **Verify the three refs with separate invocations** (and `git ls-remote origin main` as the
+  > independent check) — which is the 09-30 rule's own point: **read the refs, not the exit status.**
+
 - **2026-10-27 publish, verified:** commit `f9f5554`, push `534309c..f9f5554  main -> main`, live md5
   `90bff1414bf419980963b3fe1d658240` at **63,985 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Oct 27, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` after one fetch. **Pages
