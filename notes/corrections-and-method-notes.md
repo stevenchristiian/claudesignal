@@ -13,8 +13,13 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
-- **2026-10-29 publish:** see the publish-record commit for the verified live md5, byte count and
-  `cmp` result. Session start read **`HEAD` = `origin/main` = `d1b82cf`** after one
+- **2026-10-29 publish, verified:** commit `cb17038`, push `d1b82cf..cb17038  main -> main`, live md5
+  `cdbcc39e965d8a94a4cb6019c5689842` at **64,038 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Oct 29, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `cb17038`, each ref read
+  in a separate invocation and confirmed against `git ls-remote origin main`. **Pages served the new
+  build on the FIRST 30-second poll**, tying the 10-27 record. The designated branch
+  `claude/beautiful-franklin-obqgq3` was pushed to the same commit (a new remote branch this session).
+  Session start read **`HEAD` = `origin/main` = `d1b82cf`** after one
   `git fetch origin main` (which advanced `origin/main` `534309c..d1b82cf`), with the local `main` ref
   **stale at `534309c`** — **a LOCAL REF, not a push blocker**, for a fourth run in five. The live bytes
   already matched the repo file exactly (md5 `28ebd0f4…`, **64,457 bytes**, `AS_OF` = `Oct 28, 2026,
