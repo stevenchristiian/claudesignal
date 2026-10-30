@@ -13,6 +13,25 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-10-30 publish, verified:** commit `501d518`, push `687d4cf..501d518  main -> main`, live md5
+  `06a159f846283b1c8ce93d5d62a4dac6` at **64,385 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Oct 30, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `501d518`, each ref
+  read in a **separate invocation** and confirmed against `git ls-remote origin main`. **Pages served the
+  new build on the FOURTH 30-second poll** (polls 1-3 still returned the Oct 29 bytes). Session start read
+  **`HEAD` = `origin/main` = `687d4cf`** after one `git fetch origin main` (which advanced
+  `origin/main` `534309c..687d4cf`), with the local `main` ref **stale at `534309c`** — **a LOCAL
+  REF, not a push blocker**, for a fifth run in six. The live bytes already matched the repo file exactly
+  (md5 `cdbcc39e…`, **64,038 bytes**, `AS_OF` = `Oct 29, 2026, 02:00 UTC`, `cmp` IDENTICAL).
+  **FORTIETH consecutive confirmation that there is no push blocker.**
+  > **THE DESIGNATED BRANCH IS THE CHECKED-OUT BRANCH, AND `git branch -f` ON IT FAILS — recorded so the
+  > next run does not read the error as a push problem.** `git branch -f claude/... HEAD` answers
+  > **`fatal: cannot force update the branch ... used by worktree`**. It needs no update: the session
+  > commits ON that branch, so it already points at `HEAD`. **Just push it** — it went up as a new remote
+  > branch at `501d518`. **And because that branch and `main` are the same commit, there is no diff to
+  > open a pull request from, so none was opened; the work is already on `main`, which is what Pages
+  > serves.** Same family as the 10-28 `rev-parse` quirk: **an alarming git error on the publish path that
+  > is not about publishing.**
+
 - **2026-10-29 publish, verified:** commit `cb17038`, push `d1b82cf..cb17038  main -> main`, live md5
   `cdbcc39e965d8a94a4cb6019c5689842` at **64,038 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Oct 29, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `cb17038`, each ref read
