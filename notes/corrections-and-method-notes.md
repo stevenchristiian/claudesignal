@@ -13,6 +13,27 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-10-31 publish, verified:** commit `03ce5dc`, push `ca86a7d..03ce5dc  main -> main`, live md5
+  `170aad398fed7f82069138fe92a420ad` at **64,163 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Oct 31, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `03ce5dc`, each ref read
+  in a **separate invocation** and confirmed against `git ls-remote origin main`. **The served bytes
+  were also checked for `macroScore: 0.0,` on Solana** — the one field that had to change — rather than
+  inferring it from the commit. **Pages served the new build on the SECOND 30-second poll** (poll 1
+  returned the Oct 30 bytes). Session start read **`HEAD` = `main` = `origin/main` = `ca86a7d`** after
+  one `git fetch origin main`, with **the local `main` ref NOT stale** for the first time in six runs.
+  The live bytes already matched the repo file exactly (md5 `06a159f8…`, **64,385 bytes**, `AS_OF` =
+  `Oct 30, 2026, 02:00 UTC`, `cmp` IDENTICAL). **FORTY-FIRST consecutive confirmation that there is no
+  push blocker.**
+  > **AND THE 10-30 `git branch -f` ERROR IS NOW FULLY EXPLAINED, NOT JUST RECORDED.** That run hit
+  > `fatal: cannot force update the branch ... used by worktree` and filed it as a quirk. **The cause is
+  > simply that it was applied to the CHECKED-OUT `claude/` branch, which never needs updating because
+  > the session commits on it.** **The 09-30 rule asks for `git branch -f main HEAD` — on `main`, which
+  > is not checked out — and that succeeded without comment this run.** **An alarming git error on the
+  > publish path that was never about publishing, and the fix is to apply the rule to the ref it names.**
+  Designated branch `claude/beautiful-franklin-2gk5cq` pushed to the same commit (a new remote branch
+  this session); it is identical to `main`, so there is no diff to open a pull request from and none was
+  opened.
+
 - **2026-10-30 publish, verified:** commit `501d518`, push `687d4cf..501d518  main -> main`, live md5
   `06a159f846283b1c8ce93d5d62a4dac6` at **64,385 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Oct 30, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `501d518`, each ref
