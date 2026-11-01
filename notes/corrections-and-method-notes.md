@@ -13,8 +13,23 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
-- **2026-11-01 publish, verified:** see the end of this bullet block for the live-byte confirmation
-  recorded after the push. Session start read **`HEAD` = `origin/main` = `694ac00`** after one
+- **2026-11-01 publish, VERIFIED.** Commit `e067d95`, push `694ac00..e067d95  main -> main`, live md5
+  `d79837fae9518ac042e1b9872b1cfb08` at **64,447 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 1, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `e067d95`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`. **The served bytes were
+  also checked for the two fields that had to change** — `macroScore: -0.6,` on Bitcoin and
+  `macroScore: 0.0,` on Binance Coin — **rather than inferred from the commit, and the banned-phrase
+  grep was re-run against the SERVED bytes** (all five zero, and `advice|disclaim|educational|informational`
+  **0**). **Pages served the new build on the SECOND 30-second poll** (poll 1 returned the Oct 31 bytes).
+  > **AND `git branch -f main HEAD` FAILED AGAIN, FOR THE REASON THE 10-31 ENTRY GAVE.** This run began
+  > on `claude/beautiful-franklin-4e1snj`, where `git branch -f main HEAD` **succeeded**; after
+  > `git checkout main` and the commit, the same command returned **`fatal: cannot force update the
+  > branch 'main' used by worktree`**. **That is correct behaviour and needs no fix: a checked-out
+  > branch cannot be force-updated, and it does not need to be, because the commit advanced it.**
+  > **The rule: run `git branch -f main HEAD` only while NOT on main. Once checked out onto main, the
+  > commit does the work and the error is expected.** Third run on which this has been met and the
+  > second on which it is fully explained.
+  Session start read **`HEAD` = `origin/main` = `694ac00`** after one
   `git fetch origin main` (which advanced `origin/main` `ca86a7d..694ac00`), with **the local `main`
   ref STALE at `ca86a7d`** — the hazard §9 names, back after one clean run. **The live bytes already
   matched the repo file exactly** (md5 `170aad398fed7f82069138fe92a420ad`, **64,163 bytes**, `AS_OF` =
