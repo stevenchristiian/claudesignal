@@ -13,6 +13,32 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-02 publish, VERIFIED.** Commit `9e09490`, push `1ad93a4..9e09490  main -> main`, live md5
+  `656a35344434b0dbadfe5264f33d0faf` at **64,575 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 2, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `9e09490`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`. **Pages served the new
+  build on the FIRST 30-second poll**, tying the 10-27 and 10-29 record.
+  **The SERVED BYTES were checked field by field rather than inferred from the commit:** all six
+  `macroScore` values read back off the live file as **-0.6, 0.4, 0.0, 0.0, -0.1, -0.1** (a hold run,
+  so the assertion is that none moved), both CSS changes present (`--step--2: clamp(0.90rem` and the
+  stacked `.card-top` rule), and the banned-phrase grep re-run on the served bytes — **`not financial
+  advice` 0 and `advice|disclaim|educational|informational` 0.**
+  > **AND THE SECOND SERVED FILE WAS VERIFIED TOO, WHICH IS NEW.** `signal-deck-2026-09-21-0100utc.html`
+  > was re-fetched from Pages (**HTTP 200**, 49,910 bytes), `cmp`'d against the repo file **IDENTICAL**,
+  > and checked both ways: **`not financial advice` now 0**, and **`not a recommendation to buy or
+  > sell` still 1**, so the three-word label is gone and the substance is intact. **A publish that
+  > touches two served files has to verify two served files.**
+  Session start read **`HEAD` = `origin/main` = `1ad93a4`** after one `git fetch origin main` (which
+  advanced `origin/main` `ca86a7d..1ad93a4`), with **the local `main` ref STALE at `ca86a7d`** — the
+  hazard §9 names, present again. **The live bytes already matched the repo file exactly** (md5
+  `d79837fae9518ac042e1b9872b1cfb08`, **64,447 bytes**, `AS_OF` = `Nov 1, 2026, 02:00 UTC`, `cmp`
+  IDENTICAL). **FORTY-THIRD consecutive confirmation that there is no push blocker. The routine
+  prompt's step 0 is still factually wrong to describe this as an open item.**
+  `git branch -f main HEAD` was run **while not on main** and succeeded, per the 11-01 rule; the
+  commit itself then advanced the ref after checkout. The designated branch
+  `claude/beautiful-franklin-a7alkq` was pushed to the same commit (a new remote branch this session);
+  it is identical to `main`, so there is no diff to open a pull request from and none was opened.
+
 - **2026-11-01 publish, VERIFIED.** Commit `e067d95`, push `694ac00..e067d95  main -> main`, live md5
   `d79837fae9518ac042e1b9872b1cfb08` at **64,447 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 1, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `e067d95`, each ref read in
