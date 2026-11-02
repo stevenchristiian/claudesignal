@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-01 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-02 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -127,6 +127,53 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   built file. Never report success on exit status alone. Pages takes ~1 minute; re-check.
 
 ## 2. Score baseline
+
+
+As published 2026-11-02 02:00 UTC (**SIX HOLDS, AND THE CAUSE IS THE CALENDAR: Oct 31 was a Saturday
+and Nov 1 a Sunday, so the three flow legs had NO NEW SETTLED SESSION TO TEST.** Nothing else came
+near a bar.
+**(1) ALL SIX SCORES AND ALL SIX BAND WORDS ARE UNCHANGED, AND BOTH BUILDS WERE RENDERED TO PROVE
+IT.** Old and new read back identically out of two DOMs at 1440px: *−0.6 mildly cautious, +0.4 mildly
+supportive, 0.0 balanced, 0.0 balanced, −0.1 balanced, −0.1 balanced.* **The 11-01 standing addition
+asks for this on a score-move run; done here on a hold run because it costs one page load.**
+**(2) A REAL ERROR OF FACT IN THE 11-01 BUILD, ON OIL, AND IT IS CORRECTED ON THE PAGE.** That build
+said the $117 Brent reading was *an intraday level in Asian trade, against a close nearer 113.4*. A
+front-month Brent daily series reads **Oct 27 113.88, Oct 28 115.32, Oct 29 114.88, Oct 30 117.64**,
+so **117.64 IS a settle on that series and 113.4 matches none of the four closes read.** The 11-01 run
+was right to refuse a bad explanation and wrong to adopt an unchecked substitute.
+**(3) THE *NOT FINANCIAL ADVICE* INSTRUCTION FINALLY HAD A REFERENT, AFTER THIRTY-FIVE RUNS OF
+REPORTING IT UNMATCHED — AND IT WAS NEVER `index.html`.** The phrase lives in
+`signal-deck-2026-09-21-0100utc.html`, a stale snapshot in the repo root that **Pages also serves**
+(**HTTP 200**, confirmed this run). **Removed from there; the rest of that paragraph untouched;
+`index.html` byte-identical in both disclaimer regions.** See the new §8 entry.
+**(4) THE PAGE WAS RE-TYPED FOR A PHONE, IN THREE CSS HUNKS AND NOTHING ELSE.** Smallest tier at
+390px **13.2px -> 14.4px**, secondary prose **14.5px -> ~15.7px**, body **16.1px -> 16.8px**; nothing
+under 14.5px at 768 or 1440; **zero horizontal overflow at every width, before and after.** Check 7
+was swapped and proved all 22 computation blocks byte-identical.
+**(5) THE TWO WINDOWS DISAGREED ON ALL SIX NAMES, IN OPPOSITE DIRECTIONS.** All six **7-day**
+roll-offs HELPED and all six **21-day** roll-offs HURT. **Twelve roll figures, one sign per window,
+opposite on every name — the cleanest instance of this yet** (10-30 had all twelve one way).
+**BTC's 7-day improved 2.2748pt and 1.3916pt of that, 61%, was the base rolling off.**
+**(6) ZERO FRESH 21-DAY LOWS FOR A SECOND CONSECUTIVE RUN**, and XRP's 21-day high **rolled off on
+schedule**, 1.4251 -> **1.4196**.
+**(7) THE 24-HOUR LOW CLUSTERING FLIPPED TO LEADING-EDGE ON FIVE OF SIX, AND THE EXCEPTION IS THE
+RISER** — BNB alone trailing, BNB the strongest of six. **The *is the exception always the riser*
+question is testable for the first time in three runs and the answer is yes, on an n of 1.**
+**(8) FARSIDE IS BLIND FOR A THIRD RUN AND IT COST NOTHING**, because the instrument published
+nothing. **A method risk at full size with a realised cost of zero.**
+**(9) CHECK 9 RETURNED FOUR CORRECTIONS AND THE FIRST WAS A REAL ERROR OF FACT** — a roll-off call
+attributed to the deck that only THIS FILE ever made, with the grep returning a decoy `1.43` on a
+different object entirely.)
+
+| Asset | Score | Last moved / basis |
+|-------|-------|--------------------|
+| BTC   | -0.6 | 2026-11-01 (flow leg, single-session clause). **HOLD: no settled session exists.** Oct 31 and Nov 1 are a weekend. Pair clause re-armed from Oct 30 needs **Nov 2 AND Nov 3**, readable on the **Nov 4** build, a **Wednesday**. October closed at **-$516.1M / 22 settled** against an outside **~-$515.9M**, agreement claimed only to the carried figure's own rounding. |
+| ETH   | +0.4 | 2026-10-09 (flow leg). **HOLD, and the leg STILL HOLDS HALF A PAIR.** Oct 30 at **-$155.85M** is past the **-$150M** bar by **$5.85M**; **consecutive means consecutive SESSIONS, so the weekend does not break it.** Nov 2 is the second half, readable on the **Nov 3** build, a **TUESDAY**. A firing takes ETH to **+0.3**, still *mildly supportive*. |
+| SOL   | 0.0 | 2026-10-31 (flow leg, fourth firing). **HOLD.** Leg re-armed; next completed week **Nov 2-6 STARTS TODAY**, readable on the **Nov 7** build, a **Saturday**. Further firings to **-0.1** and **-0.2** are both still *balanced*. |
+| BNB   | 0.0 | 2026-11-01 (relative branch). **HOLD, and the baseline STAYS -1.5181pt because the branch did not fire.** Margin **-1.6100pt**, step **-0.0919pt**, **eighteenth reading since the +3.8633pt baseline, third below zero.** Edges **-6.5181pt** (cut, nearer by 0.1838pt, **4.9081pt away**) and **+3.4819pt**. Median identity ETH -> BTC; next-nearest candidate gives **-2.2343pt**, also far short. Mean-of-five margin **-3.9144pt**, gap **2.3044pt**, **same sign** a third run. |
+| XRP   | -0.1 | 2026-10-01 (window closed unused). **Nothing before Nov 9.** Ledger **108,057,597** via `xrplcluster.com`, **107 entries / 97 enabled — a TWENTY-FOURTH identical read**; **ten not enabled, exactly ONE carrying a Majority** (`98433DD0…`), close time **2026-10-21 14:46:22 UTC unchanged for an ELEVENTH read**, activation **Nov 4 14:46:22 UTC, 2.52 days out**. |
+| HYPE  | -0.1 | 2026-09-23 (revenue leg written). Q3 2026 **$173,971,251 / 92 days — a TWENTIETH identical read**; the three ratios scale it to **$227.03M / $228.84M / $236.18M**, inside the **$150M / $260M** corridor on every scaling. **Q4 now $70,357,447 / 32 days** (October complete at $69,132,852 / 31, plus Nov 1 at $1,224,595). |
+
 
 
 As published 2026-11-01 02:00 UTC (**TWO SCORES CUT AND NEITHER BAND WORD MOVED — BTC -0.5 -> -0.6 on
@@ -3817,6 +3864,64 @@ commented constant so no future run has to reverse-engineer them again.
 
 ## 7. Pre-publish checklist (run in order; audit a failing assertion before editing the file)
 
+> **Standing addition (2026-11-02): A NEGATIVE GREP IS A CLAIM ABOUT THE FILES YOU SEARCHED, NOT
+> ABOUT THE SITE.** For **thirty-five runs** this file recorded that *not financial advice* does not
+> exist on the page, and every one of those runs was correct about its own grep — **of
+> `index.html`.** **Pages serves the whole repo root**, and the phrase was sitting in
+> `signal-deck-2026-09-21-0100utc.html`, reachable at **HTTP 200**. **Mechanical form: when an
+> instruction is about what the SITE says, enumerate what the site SERVES — `ls *.html` — before
+> reporting that nothing matches.** Strongest relative of the 10-28 exhaustive-search rule: there the
+> unexamined set was the windows on a table, here it was the files in a directory, and both times the
+> negative result was a statement about a set nobody had opened.
+
+> **Standing addition (2026-11-02): MEASURE THE PAGE BEFORE REDESIGNING IT.** The brief was *easy to
+> read for beginners, optimized for phone or laptop, clean*. **A headless probe at 390 / 768 / 1440px
+> found no horizontal overflow, correct grid collapse at every breakpoint, 44px touch targets, and a
+> primer and glossary already written for a beginner.** Exactly **one** thing measured badly — the
+> `clamp()` **floors**, which had been set as a shrink from the laptop size rather than as a phone
+> target, putting most of the page's own prose at **14.5px** and its captions at **13.2px** on a
+> phone. **Three CSS hunks, not a redesign.** **A redesign brief is not evidence that the page is
+> badly designed; probe first and change what the probe indicts.**
+
+> **Standing addition (2026-11-02): ON AN INTENTIONAL DESIGN RUN, DIFF THE NON-SCRIPT HALF IN FULL AS
+> WELL AS SWAPPING CHECK 7.** The swapped form proves the **22 computation blocks** byte-identical,
+> which is what it was written for — **and it says nothing at all about the markup.** On this run the
+> prompt also required the disclaimer language unchanged, and the only way to show that was to diff
+> everything before `<script>` and read the hunks. **It came to exactly the three intended CSS hunks**,
+> which simultaneously proved the primer note and the footer untouched. **One command, and it turns
+> *I only meant to change the CSS* into a demonstration.**
+
+> **Standing addition (2026-11-02): REFUSING A BAD EXPLANATION DOES NOT LICENSE AN UNCHECKED
+> SUBSTITUTE.** The 11-01 run correctly rejected a search summary attributing the $117 Brent print to
+> a contract-roll difference, because the primary source did not support it — **and then adopted a
+> screen quote of 113.4 as *the close*, which reconciles with nothing: the four closes read for
+> Oct 27-30 are 113.88, 115.32, 114.88 and 117.64.** **A replacement figure needs its own series, its
+> own date and its own test, exactly as the figure it replaces did.** **The decline was the cheap half
+> of the work and the run stopped after it.**
+
+> **Standing addition (2026-11-02): TWO FLOW FIGURES THAT DIFFER BY BILLIONS ARE NOT A CONTRADICTION
+> WHEN THEY MEASURE DIFFERENT WINDOWS — AND PREFER THE ONE THAT CLOSES AGAINST ITS OWN PARTS.**
+> Binance's restart gave **~$4.65bn out against ~$1.01bn in from 06:00 to 15:30 UTC, a net ~$3.64bn**
+> (**4.65 - 1.01 = 3.64 exactly**) and a separate **~$5.8bn** net **over 24 hours**. **The first is
+> led with because its own components reconcile to it; the second is printed beside it with its window
+> attached, not against it.** Extends the 10-30 hunt-for-the-sub-figures rule: **the tie-break between
+> two live figures is which one contains its own check.**
+
+> **Standing addition (2026-11-02): A COUNT OF *THE Nth BLIND RUN* IS NOT A COUNT OF WHAT THE OUTAGE
+> COST.** Farside has been 403 for three runs. **10-31 had to settle a SOL week without it; 11-01 took
+> two score moves without it; 11-02 had nothing to read, because Saturday and Sunday publish no
+> session.** **A method risk and a realised cost are different quantities, and a run can carry the
+> first at full size with the second at zero.** Adds a cheaper member to the 10-30 ordering, below
+> *unreadable by any branch*: **unreadable on a day the instrument itself published nothing.**
+
+> **Standing addition (2026-11-02): WHEN A GREP FOR A BACKWARD REFERENCE RETURNS A HIT, READ WHAT THE
+> HIT IS ABOUT.** Check 9 cut a draft XRP chip saying *this page said the 1.43 high would leave the
+> window today.* **The previous build never said it — this file's §9 did** (the 10-29 rule, fourth
+> instance). **But the grep for `1.43` in the old build DID return a line**: *the next name 1.43 points
+> back*, on the **HYPE-versus-21-day-low margin**, a completely different object. **A hit is not a
+> confirmation. The first three instances of this rule failed on an empty grep; this one would have
+> failed on a full one.**
+
 > **Standing addition (2026-11-01): THE NOISE FLOOR SUPPRESSES RANKINGS, NEVER BAR COMPARISONS.** The
 > BNB branch fired with the margin only **0.3814pt** past its bar — inside the **~0.5pt** floor §6
 > sets. **A run could read that as grounds to withhold, and it is not.** The floor exists because an
@@ -4799,6 +4904,53 @@ value. Both spans reading `—` means `renderMacro()` did not run.
 `ROTATION_ASOF` (`'Sept 5, 2026'`) is **not** an as-of label. Do not touch it.
 
 ## 8. Build-script and tooling hazards (found 2026-09-21)
+
+### 2026-11-02: THE *NOT FINANCIAL ADVICE* STRING WAS IN THE REPO ALL ALONG, IN A FILE NOBODY GREPPED
+**Thirty-five runs reported the instruction unmatched. All thirty-five were correct about
+`index.html` and none of them had looked at the rest of the directory Pages serves.**
+
+```
+$ ls *.html
+index.html  live1.html  live2.html  signal-deck-2026-09-21-0100utc.html
+$ grep -icE 'not financial advice' *.html
+index.html:0  live1.html:0  live2.html:0  signal-deck-2026-09-21-0100utc.html:1
+$ curl -sS -o /dev/null -w '%{http_code}' .../signal-deck-2026-09-21-0100utc.html
+200
+```
+The snapshot's band read `<strong>Not financial advice.</strong> Every score below is a heuristic — …`.
+**The three-word label was removed and the whole remainder of the paragraph was left in place**, so
+*not a statistically calibrated probability of price movement, not a recommendation to buy or sell,
+and it can be wrong* all still stand. **`index.html` was not touched in either disclaimer region, and
+the check-7 non-script diff proves it**, so the prompt's *keep the disclaimer language exactly as it
+is* holds for the live deck at the same time.
+> **AND NOTE THE SHAPE OF THE THIRTY-FIVE-RUN MISS: EVERY RUN RAN THE RIGHT COMMAND ON THE WRONG
+> SCOPE, AND EACH ONE INHERITED THE SCOPE FROM THE RUN BEFORE.** The first run to check reached for
+> `index.html` because the routine is about `index.html`, which is sound; the error was that the
+> INSTRUCTION is about the site. **Whenever an item survives many runs as *nothing matches*, the
+> cheapest next move is to re-derive the SEARCH SPACE rather than re-run the search.**
+> **Two stale builds, `live1.html` and `live2.html`, are also served from the repo root and were NOT
+> deleted, because nothing asked for it. Flagged to the user.**
+
+### 2026-11-02: THE PORTWATCH POST RECIPE PAID FIRST TRY, BUT `resultRecordCount` IS REJECTED
+The 11-01 POST form worked immediately. **Adding `--data-urlencode "resultRecordCount=20"` returned
+`{"error":{"code":400,"message":"Cannot perform query. Invalid query parameters."}}` on HTTP 200** —
+the same lying-200 shape the 11-01 entry describes, and this time the parameter named in no message
+really was the culprit. **Drop it: the unlimited query returns 1,000 rows and sorting client-side is
+free.** Working form is unchanged from 11-01 otherwise.
+
+### 2026-11-02: THE CHECK-10 429 FAULT REAPPEARED AND THE PRESCRIBED REMEDY WORKED
+A 1440px pass polling for **30 seconds** returned **`#assetGrid` 0**, with a 1440px probe **either
+side of it** returning **6**. **Transport, not page** — the 10-13 diagnosis, confirmed again by
+bracketing rather than argued from. **The fix is the stored one: poll longer** (a 120-second poll
+returned 6 immediately after). **Record the brackets, not just the retry** — a failure with a success
+on each side of it is a different piece of evidence from a failure followed by a success.
+
+### 2026-11-02: A SHELL-QUOTING-FREE CHECK 8 PASSED FIRST PASS WITH NO VOID SEEDS
+Check 8's seeds have been voided by shell quoting on four separate runs. **This run put the seeds in
+a JS array inside a file and compared with `String.split().length-1`, so no seed ever touched a shell
+argument.** Twelve seeds, twelve present-once-in-old and absent-from-new; six controls, all present.
+**The 10-08 entry said the fix is a MECHANISM rather than more care. It is, and this is the second
+run to prove it.**
 
 ### 2026-11-01: THE ARCGIS QUERY NEEDS **POST**, AND A GET RETURNS A LYING ERROR
 The stored PortWatch recipe uses `curl -G` with `--data-urlencode`. **Through this container's proxy
@@ -6476,6 +6628,98 @@ have lost it.
 > batching hides a failure.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
+
+- [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a FORTY-THIRD confirmation, 2026-11-02.** Session start
+      read **`HEAD` = `origin/main` = `1ad93a4`** after one `git fetch origin main` (which advanced
+      `origin/main` `ca86a7d..1ad93a4`), confirmed against `git ls-remote origin main`, with the local
+      `main` ref **STALE at `ca86a7d`** — the real hazard, present again. **The live bytes already
+      matched the repo file exactly** (md5 `d79837fae9518ac042e1b9872b1cfb08`, **64,447 bytes**,
+      `AS_OF` = `Nov 1, 2026, 02:00 UTC`, `cmp` IDENTICAL). **THE ROUTINE PROMPT'S STEP 0 IS STILL
+      FACTUALLY WRONG TO DESCRIBE THIS AS AN OPEN ITEM: in forty-three consecutive runs there has
+      been no blocker.** `git branch -f main HEAD` was run while **not** on main and succeeded; after
+      checkout it is the commit that advances the ref, and the `used by worktree` error there is
+      expected.
+- [x] **THE DISCLAIMER INSTRUCTION IS CLOSED AFTER THIRTY-SIX RUNS, AND IT WAS NEVER ABOUT
+      `index.html`.** *Not financial advice* existed in `signal-deck-2026-09-21-0100utc.html`, a
+      stale snapshot the repo root serves at **HTTP 200**. **Removed; the rest of that paragraph
+      untouched; `index.html` byte-identical in both disclaimer regions.** See the new §8 entry.
+      **Residual for the user: `live1.html` and `live2.html` are also stale public pages and were NOT
+      deleted.**
+- [ ] **ETH IS THE LIVE BRANCH. PUBLISHED CONDITION — NOV 2 MUST SETTLE BELOW -$150M.** Oct 30 at
+      **-$155.85M** is the first half, and **the weekend does not break the pair, because consecutive
+      means consecutive SESSIONS.** Earliest firing is the **Nov 3** build, a **TUESDAY**. A firing
+      takes ETH to **+0.3**, still *mildly supportive*.
+- [ ] **BTC: THE PAIR CLAUSE NEEDS NOV 2 AND NOV 3**, readable on the **Nov 4** build, a
+      **WEDNESDAY**. The single-session clause has no candidate until Nov 2 settles.
+      **`macroWord(-0.7)`, (-0.8) and (-0.9) are all still *mildly cautious*.**
+- [ ] **BNB: THE BASELINE STAYS -1.5181pt — the branch did NOT fire.** Margin **-1.6100pt**, step
+      **-0.0919pt**. Edges **-6.5181pt** (cut, **nearer by 0.1838pt**, **4.9081pt away**) and
+      **+3.4819pt**. **Re-identify the nearer edge every run.** Mean-of-five margin **-3.9144pt**,
+      gap **2.3044pt**, **same sign a third consecutive run**.
+- [ ] **SOL: THE WEEK NOV 2-6 STARTS TODAY**, readable on the **Nov 7** build, a **SATURDAY**.
+      A further sub-$5M week takes SOL to **-0.1**, still *balanced*, as is **-0.2**.
+- [ ] **FARSIDE IS BLIND FOR A THIRD CONSECUTIVE RUN AND IT STILL NEEDS THE USER — BUT THIS RUN IT
+      COST NOTHING.** **403** on both `/btc/` and `/eth/`; SoSoValue **403** and a **502** tunnel
+      failure; the stored UA recipe **not attempted** (denied as bot-check circumvention on the two
+      previous runs). **The calendar supplied no row to lose.** Candidates unchanged: **(a)** re-point
+      the BTC and ETH legs at SoSoValue explicitly; **(b)** keep Farside and accept blind runs;
+      **(c)** write the component-sum fallback into §3. **Do not re-point a named instrument
+      unilaterally.**
+- [ ] **TWO SCORE DECISIONS STILL NEED THE USER. (1) BNB** is relative-price-only. **This run is the
+      third shape of the same gap: a HOLD on the day the news was unambiguously GOOD** (withdrawals
+      reopened, coverage ~80% -> 90% -> ~95%) **and BNB was the strongest of six.** 10-30/10-31 feared
+      a hold reading as *safe*, 11-01 feared a cut reading as *unsafe*, **11-02 is a hold beside good
+      news.** **(2) THE FED LEG is spent as written and re-pointing would fire nothing for a FIFTH
+      consecutive day** (69.5% quarter-point / 70.95% any-rise, and 68.7%, against a 75% bar).
+- [ ] **THE MIDTERMS ARE TOMORROW AND NO BRANCH ON THIS DECK READS AN ELECTION.** The XRP leg reads
+      one Senate procedural vote and nothing else. **Decide before Wednesday whether that is a gap
+      worth a written clause or a refusal worth recording.**
+- [ ] **THE POLYMARKET LEG CONVENTION IS NOW BEING RECORDED.** Today: **quarter-point rise 69.5%**,
+      **any rise 70.95%**, model route **68.7%**. **Two runs of leg-labelled readings exist; the
+      stored 79.5 / 70.5 / 70.4 / 68.6 remain unidentified**, so no two-route record is claimable.
+- [ ] **A SECOND OBSERVATION ABOUT THE MODEL ROUTE, HELD AS TWO READINGS AND NOT A LAW.** Fed: current
+      **3.88%**, theoretical **4.71%**, hike **68.7%**. BoE: current **3.75%**, theoretical **6.49%**,
+      hike **94.9%** for **Nov 5**, where market commentary expects a hold. **The wider that model's
+      theoretical-minus-current gap, the higher its hike probability — on two points.** Nothing on the
+      deck depends on it; **collect a third before anyone re-points a leg at this route.**
+- [ ] **ZERO FRESH 21-DAY LOWS FOR A SECOND CONSECUTIVE RUN**, and **none sits at the rolling edge.**
+      Position series: 10-30 five of six replaced, 10-31 BTC alone, 11-01 none, **11-02 none.**
+- [ ] **ETH's AND SOL's 21-DAY HIGHS ROLL OFF ON THE NOV 3 BUILD** (Oct 12 07:00 and Oct 12 05:00).
+      **XRP's rolled off today exactly as predicted, 1.4251 -> 1.4196.** Trailing-edge, so the 10-20
+      trap does not apply — **but the columns change for a reason that is not trading, and the
+      decomposition must say so.**
+- [ ] **THE 24-HOUR LOW CLUSTERING FLIPPED TO LEADING-EDGE AT FIVE OF SIX, AND THE EXCEPTION IS THE
+      RISER.** BNB alone trailing (Nov 1 03:00) and BNB the strongest of six. **The *is the exception
+      always the riser* question is testable for the first time in three runs and the answer is YES —
+      on an n of 1, recorded as one.**
+- [ ] **HORMUZ: A FIFTH BUILD ENDING AT OCT 25, THE FOURTH WITH NO NEW DAY, LAG 8 DAYS.** Oct 19-25 =
+      **4, 3, 3, 4, 5, 2, 2** reproduced a **fifth** time; `n_tanker` **1, 1, 0, 1, 1, 1, 1**, also a
+      fifth. **Fires nothing on all three clauses for a reason about the world.** **Keep PortWatch,
+      add NO second route, POST the query, and do NOT send `resultRecordCount`.**
+- [ ] **THE OIL FIGURE IS CORRECTED AND THE CONTRACT-ROLL QUESTION IS OPEN.** Front-month Brent reads
+      **Oct 30 = 117.64** and **113.4 matches none of the Oct 27-30 closes**. **Brent rolls contracts
+      around end-October, so the Oct 30 value may belong to an expiring contract; this run could not
+      settle which, and the page names its series rather than saying *Brent*.**
+- [ ] **A HYPE FLOW BRANCH IS STILL UNWRITTEN AND IS NOW THIRTY DAYS OPEN** (since 2026-10-03).
+      **BTC, ETH and SOL each have a flow leg and HYPE has none. Decide it or close the item.**
+- [ ] **HYPE: Q4 AT $70,357,447 / 32 DAYS**, October complete at **$69,132,852 / 31** plus Nov 1 at
+      **$1,224,595**. **Unlock dates left to test: Nov 6** (**9,916,667**, 0.99% of max supply, plus a
+      separate **180,000** team distribution the same day — **testable on the Nov 7 build**) **and
+      Nov 29** (given elsewhere as 14.18M). **A $923.63M valuation of the Nov 6 tranche implies
+      $93.14 a token, 6.5% ABOVE today's close** — published with the token count beside it.
+- [ ] **THE HYPE *VENUE* BRANCH IS STILL ARGUABLE AND UNDECIDED.** ICE/Trade[XYZ] remains the right
+      kind of event on the wrong object, and the fee split remains undisclosed.
+- [ ] **TWO LEGS REMAIN SPENT-BUT-UNWRITTEN:** the **ETH roadmap** leg and the **BTC Fed** leg.
+      **Write clauses with their own bars or declare both spent.**
+- [ ] **XRP: NOTHING BEFORE NOV 9.** Registry **107/97** for a **twenty-fourth** read; **ten not
+      enabled, exactly one with a Majority**; `CloseTime` unchanged for an **eleventh** read; earliest
+      activation **Nov 4 14:46:22 UTC, 2.52 days out**. **Midterms Nov 3, one day out.**
+- [ ] **THE 38TH BNB BURN IS UNDATED FOR A THIRTEENTH RUN.** **Publish no size, no date, start no
+      countdown.**
+- [ ] **THE TYPE FLOORS ARE NOW A PHONE TARGET, NOT A SHRINK FROM THE LAPTOP SIZE.** Nothing renders
+      below **~14.4px at 390px**; secondary prose **~15.7px**; body **~16.8px**; nothing under 14.5px
+      at 768 or 1440. **Re-probe at 390 / 768 / 1440 on any future run that touches the CSS, and diff
+      the non-script half in full.**
 
 - [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a FORTY-SECOND confirmation, 2026-11-01.** Session start
       read **`HEAD` = `origin/main` = `694ac00`** after one `git fetch origin main` (which advanced

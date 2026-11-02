@@ -18,7 +18,7 @@
     --line-soft: #222634;
     --text: #edece7;
     --text-2: #c6cad6;
-    --text-3: #9aa1b2;
+    --text-3: #a9b0c1;
     --gold: #d4af61;
     --gold-dim: #8a7238;
     --jade: #5ac795;
@@ -27,13 +27,18 @@
     --rust-dim: #7a382a;
     --slate: #98a0b5;
 
-    --step--1: clamp(0.90rem, 0.87rem + 0.14vw, 0.98rem);
-    --step-0:  clamp(1.00rem, 0.97rem + 0.16vw, 1.09rem);
-    --step-1:  clamp(1.12rem, 1.06rem + 0.28vw, 1.28rem);
-    --step-2:  clamp(1.32rem, 1.20rem + 0.55vw, 1.65rem);
-    --step-3:  clamp(1.85rem, 1.50rem + 1.60vw, 2.75rem);
+    /* Type scale. The FLOOR of each step is what a phone gets, so the floors are set
+       for a phone first: nothing on this page renders below ~14.4px at 390px wide, and
+       body copy lands near 16.8px there. The ceilings are what a laptop gets. Raised
+       2026-11-02 — the previous floors put most of the page's own prose at 14.5px and
+       its captions at 13.2px on a phone, which is small for a first-time reader. */
+    --step--1: clamp(0.98rem, 0.955rem + 0.11vw, 1.02rem);
+    --step-0:  clamp(1.05rem, 1.020rem + 0.13vw, 1.10rem);
+    --step-1:  clamp(1.18rem, 1.120rem + 0.26vw, 1.32rem);
+    --step-2:  clamp(1.38rem, 1.260rem + 0.52vw, 1.68rem);
+    --step-3:  clamp(1.85rem, 1.500rem + 1.60vw, 2.75rem);
     /* smallest tier on the page — captions, sublabels, table headers */
-    --step--2: clamp(0.82rem, 0.80rem + 0.10vw, 0.88rem);
+    --step--2: clamp(0.90rem, 0.880rem + 0.09vw, 0.94rem);
 
     --gap: clamp(14px, 2.2vw, 20px);
     --section-gap: clamp(38px, 6vw, 68px);
@@ -359,7 +364,11 @@
     .header-row{ align-items: flex-start; }
     .meta-col{ width: 100%; }
     #refreshBtn{ width: 100%; min-height: 48px; }
-    .card-top{ align-items: center; }
+    /* On a phone the symbol and the price fought for one row, and a long change
+       string wrapped its own parenthetical onto a third line. Stack them instead
+       so each gets the full column width (2026-11-02). */
+    .card-top{ flex-direction: column; align-items: flex-start; gap: 6px; }
+    .price-block{ text-align: left; }
     table.rot th, table.rot td{ padding: 10px 12px; }
     details.panel > summary, .card summary{ min-height: 48px; }
     .trigger{ padding: 14px; }
@@ -519,103 +528,104 @@
 <script>
 /* Single source of truth for the build stamp — every "as of" label on the page
    reads from here, so a refresh cannot leave one of them stale. */
-const AS_OF = 'Nov 1, 2026, 02:00 UTC';
+const AS_OF = 'Nov 2, 2026, 02:00 UTC';
 
 const COINS = [
   {
     id: 'bitcoin', symbol: 'BTC', name: 'Bitcoin',
     macroScore: -0.6,
-    summary: "Cut from -0.5 to -0.6. The rule is one line: a single settled session of US Bitcoin fund flows worse than -$300M takes another 0.1 away. Friday settled at -$643.33M, which clears that bar by $343.33M. Read the row before the verdict, because this one needs no estimate. Five of the twelve funds reported money leaving, at $233.70M, $201.04M, $129.55M, $53.32M and $25.72M, and those five add to $643.33M exactly, which means the other seven net to nothing between them. One publisher adds that no fund took money in at all. For scale, it is $7.7M past the -$635.6M of Oct 22 that this page had carried as the deepest session of its own window, and a publisher calls it the biggest single day out since June. It is not a record for the product: the worst session on this table is -$1,113.7M, a figure carried from an earlier read rather than taken today. Two checks came free. Thursday is reported at +$17.07M against the +$17.1M this page published yesterday, and October now reads -$516.1M across twenty-two settled sessions, where an outside tally puts the month near -$515M. The band word does not move with the number: both -0.5 and -0.6 read as mildly cautious here, so a reader watching only the label would see no change at all. Bitcoin rose 0.4464% to 77,586.09, kept its 21-day low of 76,141.02, and is the nearest of six to its own low at 1.90% above it, with the next name 1.43 points back.",
+    summary: "Holds at -0.6, and the reason is the calendar rather than the tape. The rule that cut this score yesterday needs one settled session of US Bitcoin fund flows worse than -$300M, and Saturday and Sunday have no US trading session at all, so the flow table gained no new row to test. Friday's -$643.33M was already counted in yesterday's build. The rule's other half — two sessions in a row each worse than -$150M — re-arms from Friday, which means it needs Monday and Tuesday together, and the earliest build that can read both is Nov 4, a Wednesday. October is now closed on this table. This page carries +$127.2M across twenty-one settled sessions, and Friday's -$643.33M takes the month to -$516.1M across twenty-two, where an outside tally states about -$515.9M. The two agree only as closely as the carried figure's own rounding allows, which is not to the last decimal. One thing worth saying plainly: the flow tables have been unreadable from here for three runs running, and this is the first of the three on which that cost nothing, because the weekend supplied no row to lose. Bitcoin rose 0.9065% to 78,289.43, kept its 21-day low of 76,141.02, and sits 1.31% above the fixed mark this page measures against, up from 0.40% yesterday.",
     catalysts: [
-      {date:'Cut on one session of outflows', text:'Friday settled at minus 643.33M dollars against a minus 300M bar, which clears it by 343.33M and takes this score to minus 0.6'},
-      {date:'The row closes on its own parts', text:'Five reported lines add to the stated total exactly, so the other seven net to nothing and no estimate is needed to read the row'},
-      {date:'Minus 0.6 is still mildly cautious', text:'The band word under this score is the same as under minus 0.5, so the number moved today and its label did not move with it'}
+      {date:'The weekend had no session', text:'The single-session clause needs a settled trading day under minus 300M dollars, and Saturday and Sunday supply none to test'},
+      {date:'The pair needs Monday and Tuesday', text:'Both would have to settle under minus 150M dollars, so the earliest build that can fire this leg again is Nov 4, a Wednesday'},
+      {date:'Three runs without the table', text:'Both flow pages answer with a block page and two backup routes are shut. This is the first of the three runs it cost nothing'}
     ]
   },
   {
     id: 'ethereum', symbol: 'ETH', name: 'Ethereum',
     macroScore: 0.4,
-    summary: "Holds at +0.4, and its rule now holds half of what it needs. The leg wants two settled sessions in a row each worse than -$150M. Friday settled at -$155.85M, which is past that bar by $5.85M, so Friday is the first half of a pair. Monday would be the second half, and the earliest build that can read Monday is Nov 3, which is a Tuesday. Friday shows that is possible: those figures published about seventeen minutes before the stamp on this page yesterday. The row reads without an estimate too. Six funds reported $76.64M, $34.14M, $21.51M, $19.51M, $3.33M and $0.72M leaving, and those six add to $155.85M exactly. A second set of figures for the two Grayscale funds is circulating and cannot be reconciled to the same total, so this page does not use it. On the month, this page carried about -$1,451M before Friday, and adding -$155.85M gives -$1,606.85M across twenty-two settled sessions, where a publisher states the same month at -$1,606.9M independently. They agree to within the rounding of the carried figure, which is as fine as the coarser number allows. Three streak counts are also circulating for one question: Friday is called a fifth consecutive day of outflows, an eleventh, and a twenty-third called the longest since launch. They cannot all count the same series, and none is adopted here. ETH rose 1.17% to 2,266.86, the strongest of six on the day by 0.73 points, kept its 21-day low, and is the furthest of six below the fixed mark this page measures against, at -9.61%.",
+    summary: "Holds at +0.4, with its rule still holding exactly half of what it needs. The leg wants two settled sessions in a row each worse than -$150M. Friday's -$155.85M is past that bar by $5.85M and counts as the first half. The second half has to be Monday, because Saturday and Sunday are not trading sessions, and consecutive here means consecutive sessions rather than consecutive days. The earliest build that can read Monday is Nov 3, a Tuesday, and last week showed that is possible: Friday's figures published about seventeen minutes before yesterday's stamp. If it does fire, the score goes to +0.3, which still reads as mildly supportive, so that move would change the number and leave the word alone. On the month, this page carries about -$1,451M before Friday, and adding -$155.85M gives -$1,606.85M across twenty-two settled sessions, against a publisher's -$1,606.9M for the same month. Nothing arrived over the weekend to change either figure, and nothing could have. ETH rose 0.8849% to 2,286.92, kept its 21-day low of 2,170.03, and is still the furthest of the six below the fixed mark on this page at -8.81%, with the next name 1.22 points nearer. Its 21-day high of 2,576.89, set on Oct 12, leaves the window on tomorrow's build, so that column will change without any new trading.",
     catalysts: [
-      {date:'Half of a pair, for the first time', text:'Friday settled at minus 155.85M dollars, past the minus 150M bar by 5.85M. A second such session in a row would fire the cut'},
-      {date:'A month figure met from two ends', text:'This page adds minus 155.85M to its carried minus 1,451M and gets minus 1,606.85M. A publisher states the month at 1,606.9M'},
-      {date:'Three counts for one streak', text:'Friday is called a fifth day of outflows, an eleventh and a twenty-third by three publishers. None of them is adopted here'}
+      {date:'Half a pair, waiting on Monday', text:'Friday at minus 155.85M dollars is the first half. Saturday and Sunday are not sessions, so Monday is the next one that counts'},
+      {date:'A firing would keep the label', text:'It would take this score to plus 0.3, which still reads as mildly supportive, so the number would move and the word would not'},
+      {date:'Its 21-day high rolls off next', text:'The 2,576.89 print from Oct 12 leaves the window on tomorrow build, so that column changes without any new trading at all'}
     ]
   },
   {
     id: 'solana', symbol: 'SOL', name: 'Solana',
     macroScore: 0.0,
-    summary: "Holds at 0.0, after yesterday cut it from +0.1, and nothing can fire on this card until Friday. The rule reads completed trading weeks of net fund flow, and a week printing below +$5M takes another 0.1 away. The week of Oct 26 to 30 is the one that fired yesterday, at -$71.6M, and the leg has re-armed, so the next test is the week of Nov 2 to 6. That week completes on Friday, and on the evidence of the last two days the figures are likely to publish the same evening, so the Nov 7 build, a Saturday, should be able to read it rather than waiting for the Monday after. Two things worth saying plainly while the card is quiet. A further firing would take this score to -0.1, and -0.1 reads as balanced on this page, as does -0.2, so the next two steps on this leg would each move the number and leave the word alone. And the weakness here is not new: SOL is again the weakest of six over 21 days, at -13.12%, with the next name 2.48 points away, so that is this page naming an extreme rather than splitting hairs over a close call. On the day SOL fell 1.04% to 95.52, held its 21-day low of 92.14 and sits 3.67% above it. It set no new low on that window, and neither did any of the other five.",
+    summary: "Holds at 0.0 and nothing on this card can fire until Friday. The rule reads completed trading weeks of net fund flow, and a week printing below +$5M takes another 0.1 away. The week that fired was Oct 26 to 30, at -$71.6M, and the leg re-armed on it, so the next test is the week of Nov 2 to 6 — which starts today and completes on Friday. Last week established that the Friday figures can publish the same evening, so the Nov 7 build, a Saturday, should be able to read the week rather than waiting until the Monday after. Two things are worth stating plainly while the card is quiet. A further firing would take this score to -0.1, and -0.1 reads as balanced on this page, as does -0.2, so the next two steps on this leg would each move the number and leave the label exactly where it is. And the weakness here is not a close call: SOL is again the weakest of the six over 21 days, at -14.97%, with the next name 4.34 points back, which is wide enough to name outright rather than hedge. On the day SOL fell 0.7538% to 94.80, held its 21-day low of 92.14 and sits 2.89% above it. Its own 21-day high, set on Oct 12, rolls out of the window on tomorrow's build.",
     catalysts: [
-      {date:'Nothing fires here until Friday', text:'The leg has re-armed and reads completed weeks only. The week of Nov 2 to 6 is the next test, and the Nov 7 build should read it'},
-      {date:'Weakest of six over 21 days', text:'Down 13.12% on that window with the next name 2.48 points back, which is wide enough for this page to name it outright'},
-      {date:'The next two steps keep the word', text:'Minus 0.1 and minus 0.2 both read as balanced here, so two further firings on this leg would change numbers and not labels'}
+      {date:'The next test starts today', text:'This rule reads completed weeks only. Nov 2 to 6 is the week that counts, and the Nov 7 build, a Saturday, should read it'},
+      {date:'Still the weakest over 21 days', text:'Down 14.97% on that window with the next name 4.34 points back, wide enough for this page to name it rather than hedge it'},
+      {date:'Two more steps keep the word', text:'Minus 0.1 and minus 0.2 both read as balanced here, so two further firings on this leg would change numbers and not labels'}
     ]
   },
   {
     id: 'binancecoin', symbol: 'BNB', name: 'Binance Coin',
     macroScore: 0.0,
-    summary: "Cut from +0.1 to 0.0, and the first thing to say is what did not cause it. The rule on this card compares BNB over seven days against the middle performer of the other five, and it reads prices and nothing else, so it cannot see an exchange breach. The Binance news in fact improved today: its own third update, dated Saturday, says 90% of stolen assets have been replenished, up from about 80% a day earlier, and it provides a proof of reserves snapshot. This cut is about trading, not about safety. The gap had to reach 5.00 points below the +3.8633pt level it was last set at, which puts the edge at -1.1367pt, and it now reads -1.5181pt, past that edge by 0.3814pt. Yesterday this page published the exact figure required, a further 1.1068 points of underperformance, and the single day since delivered 1.4881 points, an excess of 0.3813. Those are the same quantity read from opposite ends, and they differ in the last place only because the two stored figures behind them are themselves rounded. Of the step, 0.5475 points came from the window moving on and 0.9406 points from trading. The middle performer changed hands from Bitcoin to Ethereum, and those two candidates sit 0.04 points apart, so the rule fires on either of them. The word does not move: both +0.1 and 0.0 read as balanced. BNB fell 0.58% to 701.62 and is the closest of six to its own 21-day high, 7.83% below it.",
+    summary: "Holds at 0.0, and the first thing to say is what this rule did not read. The card compares BNB over seven days against the middle performer of the other five, and nothing else. Over the weekend Binance reopened withdrawals in phases — its own fourth recovery update is dated Sunday — and coverage of the stolen assets is reported at about 95%, up from 90% the day before. BNB rose 1.6205%, the strongest of the six, with the next name 0.71 points back. None of that is visible to the rule, in either direction. What the rule does read is a gap of -1.6100 points, measured against the -1.5181pt level it re-armed at on yesterday's build, so a full day moved it by 0.0919 points. The cut edge sits at -6.5181pt and the restore edge at +3.4819pt; the cut is the nearer of the two, and it is 4.9081 points away. In plain terms, BNB would have to underperform the middle of the other five by a further 4.91 points before this score moves again. The middle performer changed hands from Ethereum to Bitcoin, and running the same test on the next-nearest candidate gives -2.2343 points, also far short of either edge, so the answer does not depend on which one the script picked. BNB closed at 712.99 and is the closest of the six to its own 21-day high, 6.33% below it.",
     catalysts: [
-      {date:'Cut on a price gap, not on the hack', text:'The gap to the middle of the other five reads minus 1.5181 points, past the minus 1.1367 point edge by 0.3814 points'},
-      {date:'The figure was published in advance', text:'Yesterday this page said a further 1.1068 points would fire it. The day since delivered 1.4881, the same quantity both ways'},
-      {date:'Coverage improved on the same day', text:'Binance says 90 percent of stolen assets are replenished, from about 80 percent, with withdrawals targeted to restart today'}
+      {date:'The rule did not read the news', text:'Withdrawals reopening and coverage near 95% are invisible to it. It reads seven-day prices against the middle of the other five'},
+      {date:'It is 4.91 points from firing', text:'The gap reads minus 1.6100 points against a cut edge of minus 6.5181, so a further 4.91 points of weakness is needed first'},
+      {date:'The answer survives the swap', text:'The middle performer moved from Ethereum to Bitcoin. Using the next candidate gives minus 2.2343 points, also far short'}
     ]
   },
   {
     id: 'ripple', symbol: 'XRP', name: 'XRP',
     macroScore: -0.1,
-    summary: "Holds at -0.1, and nothing on this branch can move before Nov 9. The single clause left pays 0.2 if a second procedural vote passes in the Senate, the Senate is out until Nov 6, and no floor date for such a vote exists. Read first-hand this morning, the ledger stands at 108,035,791 on build 3.4.1, with 107 entries of which 97 are enabled, a twenty-third consecutive identical reading. Ten of those entries are not yet enabled and exactly one of the ten carries the majority it needs. Both numbers are printed here on purpose, because the word pending reads as the larger one while the rule cares about the smaller. That one amendment still dates from Oct 21 at 14:46:22 UTC, a tenth unchanged reading, so the earliest it could activate stays Nov 4 at that same minute, now 3.53 days out. The election is two days away, and its date is fixed by statute as the first Tuesday after the first Monday in November, which this year is Nov 3. On the tape XRP fell 0.18% to 1.2507 and held its 21-day low. Its seven-day window worked against it, as it did for BNB: the day that window picked up was higher than the day it dropped, and those two are the only names of the six where that happened. XRP is still 7.82% below the fixed mark this page measures against.",
+    summary: "Holds at -0.1, and nothing can move it before Nov 9. The only live rule on this card is a second Senate cloture vote on the crypto market structure bill: the motion passing adds 0.2, the motion failing cuts 0.1. The first attempt failed on Sept 15 by 49 votes to 50, short of the 60 that a cloture motion needs, and a tracker describes the bill as stalled rather than dead, reporting that one senator switched a vote to keep the option of bringing it back open. The Senate is out until Nov 6, so the first week in which a vote is even possible is the one beginning Nov 9. Tomorrow's midterm elections matter to this card indirectly and not through the rule: whichever party wins a chamber chairs the committees that would write the bill, which is a reason to watch the result and not a reason for this score to move on it. On the ledger itself nothing has changed. A public node reads 107 amendment entries with 97 enabled, a twenty-fourth identical read; ten are not enabled, and exactly one of those ten carries a Majority, whose two-week clock still points at Nov 4 at 14:46 UTC, now 2.5 days out. That close time has been unchanged for eleven reads. XRP rose 0.2479% to 1.2538 and kept its 21-day low of 1.1975.",
     catalysts: [
-      {date:'A twenty-third identical read', text:'Ledger 108,035,791 on build 3.4.1, with 107 entries and 97 of them enabled, read first-hand from the network this morning'},
-      {date:'Ten not enabled, one with a majority', text:'Both counts are printed, because the word pending reads as the larger one while the rule on this card cares about the smaller'},
-      {date:'The amendment clock has not reset', text:'Still dated Oct 21 at 14:46:22 UTC for a tenth reading, so Nov 4 at that minute stands as the earliest activation, 3.53 days out'}
+      {date:'Nothing can fire before Nov 9', text:'The Senate is out until Nov 6, so the first week in which a second cloture vote is possible begins on Nov 9'},
+      {date:'The ledger reads the same again', text:'107 entries and 97 enabled for a twenty-fourth time. Ten are not enabled and exactly one of those carries a Majority'},
+      {date:'Its 21-day high rolled off today', text:'The 1.4251 print from Oct 11 left the window on this build, so that column now reads 1.4196 for a reason that is not trading'}
     ]
   },
   {
     id: 'hyperliquid', symbol: 'HYPE', name: 'Hyperliquid',
     macroScore: -0.1,
-    summary: "Holds at -0.1. The working rule here reads completed quarters of protocol revenue, and the completed third quarter is unchanged at $173,971,251 over 92 days, a nineteenth consecutive identical reading. Scaled onto the series the bars were set in, by three separate ratios, that quarter is worth $227.03M, $228.84M or $236.18M, and all three sit inside the corridor between the $150M cut bar and the $260M restore bar, so it fires nothing on any scaling. The fourth quarter now contains one complete calendar month: October closed at $69,132,852 over 31 days, as Saturday added $1,237,968 to the $67,894,884 this page carried yesterday, and that addition is exact. A complete month is still not a complete quarter, so the fourth quarter cannot be set against a bar until the end of December. On the unlocks, the 6.43M figure once carried for today stays dropped, because its only source states two things about that number that cannot both be true and no second publisher carries it. The next dated release this page can confirm is Nov 6, at 9,916,667 tokens or about 1% of total supply, alongside a separate 180,000 token distribution to team members on the same day. HYPE fell 1.31% to 88.24 and is the only one of six positive on either window, at +15.00% over seven days and +3.16% over 21.",
+    summary: "Holds at -0.1. The working rule reads reported quarterly protocol revenue: a completed quarter above $260M restores 0.1, and one below $150M cuts a further 0.1. The instrument is unchanged and so is the reading — the third quarter of 2026 sums to $173,971,251 across 92 days, a twentieth identical read — and scaled onto the convention those bars were written in, using the three ratios this page stores, it comes to $227.03M, $228.84M and $236.18M. All three sit inside the corridor, so the rule fires nothing on any scaling. The fourth quarter cannot be read until the end of December. It now holds one complete calendar month, October at $69,132,852 across 31 days, plus a single November day at $1,224,595, for $70,357,447 across 32 days. The dated item ahead is Friday: 9,916,667 tokens unlock to core contributors, about 0.99% of the one billion maximum supply, alongside a separate 180,000-token distribution to team members the same day. One write-up values that larger tranche at $923.63M, which works out at $93.14 a token — 6.5% above where HYPE closed today, so the dollar figure is priced off a level this page has not seen for a week. Separately the project reports 49.87M tokens permanently burned, which is 4.99% of maximum supply and checks against itself. HYPE fell 0.9066% to 87.44 and is the only one of the six positive over either window.",
     catalysts: [
-      {date:'A nineteenth identical quarter', text:'The completed third quarter reads 173,971,251 dollars over 92 days, and it scales inside the corridor on all three ratios'},
-      {date:'October closed at 69,132,852', text:'Saturday added 1,237,968 dollars to the 67,894,884 carried yesterday, exactly. A full month is still not a full quarter'},
-      {date:'Only one of six up on both windows', text:'Plus 15.00% over seven days and plus 3.16% over 21, where the other five names are negative on both of those columns'}
+      {date:'The revenue read is unchanged', text:'The third quarter sums to 173,971,251 dollars over 92 days for a twentieth time, and all three scalings sit inside the corridor'},
+      {date:'Friday unlocks about 1% of supply', text:'9,916,667 tokens go to core contributors, with a separate 180,000 to team members the same day. Neither has to be sold'},
+      {date:'A dollar tag above the tape', text:'One write-up values the Friday tranche at 923.63M dollars, which is 93.14 a token, 6.5% above where HYPE closed today'}
     ]
   }
 ];
 
 const MACRO_SNAPSHOT = [
-  {label:'Two scores moved today', value:'Bitcoin went from minus 0.5 to minus 0.6 on a single session of fund outflows, and BNB from plus 0.1 to zero on a price rule. The other four held', cls:'warn'},
-  {label:'And not one label moved too', value:'All six plain-English words on this page read exactly as they did yesterday, because both scores that moved stayed inside their own band. Read the numbers', cls:'warn'},
-  {label:'Bitcoin funds had a 643M day out', value:'Five of twelve funds had money leave on Friday, and the five reported lines add to the stated total exactly. One publisher says none took money in', cls:'warn'},
-  {label:'BNB was not cut for the breach', value:'The rule on that card reads seven-day prices against the other five and nothing else. The Binance news improved today, from about 80 to 90 percent covered', cls:'warn'},
-  {label:'December is still under the bar', value:'A quarter-point rise in December is priced at 69.5% on the market route and 68.7% on the model route, both read this morning. The 75% bar is met on neither', cls:'ok'},
-  {label:'Yesterday oil outlier is explained', value:'This page set a 117 dollar Brent reading aside as an outlier. Its own publisher calls it an intraday level in Asian trade, against a close nearer 113.4', cls:'ok'}
+  {label:'All six scores held today', value:'Not one written rule was met, so every news score and every plain-English label is the same as yesterday. Four of the six prices rose, led by BNB at plus 1.62%', cls:'ok'},
+  {label:'No fund session existed to read', value:'Saturday and Sunday have no US trading, so the fund flow tables could gain no new row. The Friday session was already counted in yesterday build', cls:'ok'},
+  {label:'Binance reopened withdrawals', value:'Its own fourth recovery update, dated Sunday, restarted withdrawals in phases. Coverage of the stolen assets is reported near 95%, up from 90%', cls:'ok'},
+  {label:'US midterms are one day away', value:'Nov 3 is fixed by statute. Whichever party wins a chamber chairs the committees that would write crypto market rules, so this is the live policy date', cls:'warn'},
+  {label:'A December rise is under the bar', value:'A quarter-point rise on Dec 9 is priced at 69.5% on the market route and 68.7% on the model route. The 75% bar this page uses is met on neither', cls:'ok'},
+  {label:'Oil gave the Friday spike back', value:'A front month Brent series settled at 117.64 dollars on Friday and trades at 110.89 now, 5.74% lower, while Iran and Qatar talk about reopening the strait', cls:'ok'}
 ];
 
 const GLOBAL_CATALYSTS = [
-  {date:'Bitcoin is cut to minus 0.6', text:'Friday settled at minus 643.33M dollars of net fund flow against a minus 300M bar, clearing it by 343.33M and firing the rule'},
-  {date:'No fund is reported to have bought', text:'One publisher says not a single fund took money in. The five reported outflows add to the total, so the other seven net to zero'},
-  {date:'Deeper than the Oct 22 session', text:'By 7.7M dollars, and a publisher calls it the biggest single day out since June. The worst on this table is still 1,113.7M'},
-  {date:'October ends negative on this table', text:'Twenty-one settled sessions stood at plus 127.2M. Friday takes the month to minus 516.1M, and an outside tally says near 515M'},
-  {date:'The Thursday figure matched', text:'A publisher reports Thursday at plus 17.07M dollars where this page published plus 17.1M, which is a free check on both of them'},
-  {date:'BNB is cut from 0.1 to zero', text:'Its seven-day gap to the middle of the other five reads minus 1.5181 points, past the minus 1.1367 point edge the rule sets'},
-  {date:'Yesterday this page named it first', text:'It published that a further 1.1068 points of underperformance would fire the cut. The day since delivered 1.4881 points'},
-  {date:'The cut did not come from the hack', text:'That rule reads prices and nothing else. It cannot see an exchange breach, so the cut is about trading and not about safety'},
-  {date:'Binance coverage went 80 to 90', text:'Its own third update, dated Saturday, says 90 percent of stolen assets are replenished and gives a proof of reserves snapshot'},
-  {date:'Withdrawals were due back today', text:'Binance said it was on track to restart on Sunday in phases, subject to security checks, without naming a time. Not yet confirmed'},
-  {date:'The reported cause is one laptop', text:'Coverage of its own update says a compromised engineer laptop let an attacker reach a service container and send withdrawals'},
-  {date:'Ethereum has half of a pair now', text:'Friday settled at minus 155.85M dollars, which is past the minus 150M bar by 5.85M. A second such session in a row would cut 0.1'},
-  {date:'That row also closes exactly', text:'Six funds reported 76.64, 34.14, 21.51, 19.51, 3.33 and 0.72 million out, and those six add to 155.85 exactly'},
-  {date:'Three streak counts, one question', text:'One publisher calls Friday a fifth day of outflows, another an eleventh, a third a twenty-third. None of them is adopted here'},
-  {date:'A December rise is near 69 percent', text:'The market route prices a quarter-point rise at 69.5%, or 71.1% for a rise of any size, against 68.7% on the model route'},
-  {date:'Wider numbers are quoted elsewhere', text:'Coverage puts a third route near 73% and one bank near 55%. A house view is not a traded price, and the two are kept apart'},
-  {date:'The 117 dollar oil print explained', text:'Yesterday this page declined it as an outlier. Its own publisher calls it an intraday level in Asian trade, with Brent near 113.4'},
-  {date:'The mine account is disputed', text:'A naval report describes two devices attached to a hull by a small boat. Iran says mines. US forces say the lanes were cleared'},
-  {date:'The strait count still ends Oct 25', text:'A fourth build running ends there, so the series cannot see this week. Oct 19 to 25 reads 4, 3, 3, 4, 5, 2, 2 for a fourth time'},
-  {date:'US midterms are two days out', text:'Nov 3 is fixed by statute and the Senate stays out until Nov 6, which is why nothing on the XRP card can move before Nov 9'},
-  {date:'Every 21-day low held this time', text:'None of the six set a fresh low on that window, where five of them did on Thursday night and Bitcoin alone did on Friday'}
+  {date:'Six holds, and no label moved', text:'Not one written rule was met today, so all six news scores and all six plain-English words read exactly as they did yesterday'},
+  {date:'The weekend supplied no new row', text:'Saturday and Sunday have no US fund session, so the flow tables could gain nothing. Friday was counted in yesterday build'},
+  {date:'The flow tables are still shut out', text:'A third run running, both pages answer with a block page and two backup routes are closed. This run it cost nothing at all'},
+  {date:'October closes near minus 516M', text:'Plus 127.2M over twenty-one sessions plus Friday minus 643.33M gives minus 516.1M, and an outside tally states near 515.9M out'},
+  {date:'US midterms are one day out', text:'Nov 3 is fixed by statute and the Senate stays out until Nov 6, which is why nothing on the XRP card can move before Nov 9'},
+  {date:'Bitcoin needs two more sessions', text:'The pair clause wants Monday and Tuesday both under minus 150M dollars, so the earliest it can fire is the Nov 4 build'},
+  {date:'Ethereum still holds half a pair', text:'Friday at minus 155.85M is the first half. Monday is the second, and the Nov 3 build, a Tuesday, is the first that can read it'},
+  {date:'Binance restarted withdrawals', text:'Its fourth recovery update is dated Sunday. Coverage of it says withdrawals reopened at 06:00 UTC and fifteen networks by 12:36'},
+  {date:'Coverage went 80 to 90 to 95', text:'Three updates in three days. The last 5% is described as less liquid tokens that take longer to buy in the size required'},
+  {date:'Two outflow figures, two windows', text:'About 4.65bn out against 1.01bn in from 06:00 to 15:30 UTC, a net 3.64bn. A separate 5.8bn figure covers a full day instead'},
+  {date:'North Korea is the named culprit', text:'Coverage says the FBI attributes the theft of more than 6bn dollars of virtual assets. About 3bn is reported frozen'},
+  {date:'BNB rose most on that news', text:'Up 1.62%, the strongest of six. Its rule reads seven-day prices only, and it sits 4.91 points away from firing anything at all'},
+  {date:'A December rise is near 69', text:'The market route prices a quarter-point rise at 69.5%, or 70.95% for a rise of any size, against 68.7% on the model route'},
+  {date:'A fifth day under the 75 bar', text:'Both routes have stayed short of it since the October meeting passed, so a leg pointed at December would still fire nothing'},
+  {date:'Bond yields fell on Friday', text:'Read from the Treasury own table: ten-year 4.94%, two-year 4.56%, down 4 and 5 basis points. Of eight tenors read, only the one-month held'},
+  {date:'This page had the oil close wrong', text:'Yesterday it put Brent near 113.4 for Friday. A front month settle series reads 117.64, and no Oct 27 to 30 close is near it'},
+  {date:'Brent has given the spike back', text:'It trades at 110.89 dollars now, 5.74% under the Friday settle, while Iran and Qatar hold a third straight day of talks'},
+  {date:'Iran floated a two-day plan', text:'Its foreign minister describes US compliance steps on day one and the strait reopening on day two. Nothing has been agreed'},
+  {date:'The mine account is still disputed', text:'Iran navy said on Sunday that two tankers exploded on unauthorized routes. US forces had denied the earlier mine account'},
+  {date:'The strait count still ends Oct 25', text:'A fifth build running ends there, so the series cannot see this week. Oct 19 to 25 reads 4, 3, 3, 4, 5, 2, 2 for a fifth time'},
+  {date:'Every 21-day low held again', text:'None of the six set a fresh low on that window, a second run running, and none sits where the window is about to roll'}
 ];
+
 
 function renderMacro(){
   const grid = document.getElementById('macroGrid');
