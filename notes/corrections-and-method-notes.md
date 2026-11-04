@@ -13,6 +13,40 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-04 publish, VERIFIED.** Commit `3429eac`, push `9f04bc8..3429eac  main -> main`, live md5
+  `8fb7fa51b2042b5f46703423523194dd` at **64,478 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 4, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `3429eac`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`. **Pages served the new
+  build on the SECOND 25-second poll** (poll 1 returned the Nov 2 bytes).
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.7, 0.4, 0.0, 0.0, -0.1, -0.1**, which puts
+  **the one field that had to change on the live page**; the banned-phrase grep was re-run on the
+  served bytes (**`not financial advice` 0, and `advice|disclaim|educational|informational` 0**); and
+  **both disclaimer regions were read back verbatim off the served file**, which is the strongest form
+  of *the disclaimer language is unchanged* available.
+  > **AND ALL FOUR SERVED PAGES WERE RE-FETCHED, NOT JUST THE ONE THAT CHANGED.** `live1.html`
+  > (60,579 bytes), `live2.html` (61,535) and `signal-deck-2026-09-21-0100utc.html` (49,910) each
+  > returned **HTTP 200**, `cmp`'d **IDENTICAL** against their repo copies, and each grepped **0** for
+  > the banned phrase. **The 11-02 rule says a negative grep is a claim about the files you searched;
+  > the corollary is that a publish which touches one file still has to prove the other three are as
+  > you left them.** Cost: three fetches.
+  Session start read **`HEAD` = `origin/main` = `9f04bc8`** after one `git fetch origin main` (which
+  advanced `origin/main` `ca86a7d..9f04bc8`), with **the local `main` ref STALE at `ca86a7d`** — the
+  hazard §9 names, now on seven of the last nine runs. **The live bytes already matched the repo file
+  exactly** (md5 `656a35344434b0dbadfe5264f33d0faf`, **64,575 bytes**, `AS_OF` = `Nov 2, 2026, 02:00
+  UTC`, `cmp` IDENTICAL). **FORTY-FOURTH consecutive confirmation that there is no push blocker. The
+  routine prompt's step 0 is still factually wrong to describe this as an open item.**
+  `git branch -f main HEAD` was run **while not on main** and succeeded, per the 11-01 rule. The
+  designated branch `claude/beautiful-franklin-pj6snp` was pushed to the same commit (a new remote
+  branch this session); **it is identical to `main`, so there is no diff to open a pull request from
+  and none was opened.**
+  > **A SKIPPED BUILD IS A PUBLISHING FACT AS WELL AS A PROSE ONE: the previous publish is 2026-11-02,
+  > so `origin/main` had advanced by ONE commit where the cadence implies two.** The fetch range
+  > `ca86a7d..9f04bc8` is a single step, and **the missing Nov 3 run is visible in the git history
+  > before it is visible anywhere else.** **On any run, compare the previous `AS_OF` with today's date
+  > before writing a single *yesterday*.**
+
+
 - **2026-11-02 publish, VERIFIED.** Commit `9e09490`, push `1ad93a4..9e09490  main -> main`, live md5
   `656a35344434b0dbadfe5264f33d0faf` at **64,575 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 2, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `9e09490`, each ref read in
