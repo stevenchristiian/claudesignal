@@ -13,6 +13,45 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-05 publish, VERIFIED.** Commit `612519a`, push `4b9f132..612519a  main -> main`, live md5
+  `fcc2002524b48059d56004c0df8f9332` at **65,859 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 5, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `612519a`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`. **Pages served the new
+  build on the SECOND 25-second poll** (poll 1 returned the Nov 4 bytes).
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.7, 0.4, 0.0, 0.0, -0.1, -0.1** (a hold run,
+  so the assertion is that none moved); the banned-phrase grep was re-run on the served bytes
+  (**`not financial advice` 0, and `advice|disclaim|educational|informational` 0**); and the footer,
+  the card footer note and `BAND_NOTE` were **read back verbatim off the served file.**
+  > **AND THE DISCLAIMER CLAIM WAS UPGRADED FROM A READING TO A DIFF, ON THE SERVED BYTES.** Reading a
+  > disclaimer back proves the text you looked for is there; **it cannot prove nothing else moved.**
+  > This run diffed **lines 1-530 and lines 628-end of the SERVED file against the repo file** — which
+  > together are everything outside the three content arrays — and both came back **IDENTICAL**. **So
+  > *the disclaimer language is unchanged* is now a statement about every byte of the page that is not
+  > a content array, not about the sentences a grep happened to find.** **Cheaper than the verbatim
+  > read and strictly stronger; do both, because the diff proves nothing moved and the read proves the
+  > text is what you think it is.**
+  > **ALL FOUR SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B) and
+  > `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200**, `cmp`'d **IDENTICAL**
+  > against their repo copies, and each grepped **0** for the banned phrase; the snapshot still carries
+  > **`Not investment advice.` twice**, which the routine prompt tells the run to keep.
+  Session start read **`HEAD` = `origin/main` = `4b9f132`** after one `git fetch origin main` (which
+  advanced `origin/main` `ca86a7d..4b9f132`), with **the local `main` ref STALE at `ca86a7d`** — the
+  hazard §9 names, now on **eight of the last ten runs**. **The live bytes already matched the repo
+  file exactly** (md5 `8fb7fa51b2042b5f46703423523194dd`, **64,478 bytes**, `AS_OF` = `Nov 4, 2026,
+  02:00 UTC`, `cmp` IDENTICAL). **FORTY-FIFTH consecutive confirmation that there is no push blocker.
+  The routine prompt's step 0 is still factually wrong to describe this as an open item.**
+  `git branch -f main HEAD` was run **while not on main** and succeeded, per the 11-01 rule. The
+  designated branch `claude/beautiful-franklin-7g233t` was pushed to the same commit (a new remote
+  branch this session); **it is identical to `main`, so there is no diff to open a pull request from
+  and none was opened.**
+  > **THE CADENCE WAS BACK TO ONE DAY, AND THAT WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.**
+  > The previous publish is **2026-11-04 02:00 UTC** and `origin/main` advanced by exactly the two
+  > commits that run made, so **every *since the last build* quantity on this page spans ONE day** —
+  > unlike 11-04, which spanned two. **The 11-04 standing addition asks for this comparison every run;
+  > here it came back clean, which is the outcome that makes the check invisible and worth keeping.**
+
+
 - **2026-11-04 publish, VERIFIED.** Commit `3429eac`, push `9f04bc8..3429eac  main -> main`, live md5
   `8fb7fa51b2042b5f46703423523194dd` at **64,478 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 4, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `3429eac`, each ref read in
