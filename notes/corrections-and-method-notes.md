@@ -13,6 +13,51 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-06 publish, VERIFIED.** Commit `ef1067b`, push `d6b8aa2..ef1067b  main -> main`, live md5
+  `e1fea2a0ef175a2764804b19b7dddbc0` at **66,126 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 6, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `ef1067b`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`. **Pages served the new
+  build on the THIRD 25-second poll** (polls 1 and 2 returned the Nov 5 bytes — the slowest propagation
+  in the recent sequence, which has run first-or-second poll).
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.7, 0.4, 0.0, 0.0, -0.1, -0.1** (a hold run, so
+  the assertion is that none moved); the banned-phrase grep was re-run on the served bytes (**`not
+  financial advice` 0, `not investment advice` 0, `financial advice` 0, `investment advice` 0,
+  `Netlify` 0, and `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back
+  **`Sept 5, 2026`**; and the disclaimer paragraph was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES, TWICE OVER.** Blanking the three content
+  > arrays in the **served** file and in the **repo** file gives **byte-identical** results, and
+  > blanking the served file against the **11-05 build** leaves **exactly TWO differing lines, which
+  > are the two halves of the `AS_OF` change.** **So *the disclaimer language is unchanged* is a
+  > statement about every byte of the served page outside the three content arrays — the `<style>`
+  > block, all markup, the primer note, the glossary, `BAND_NOTE`, `RIVALS`, the rotation thresholds
+  > and the footer — and not about the sentences a grep happened to find.** Both the diff and the
+  > verbatim read were run, per the 11-05 rule: the diff proves nothing moved, the read proves the text
+  > is what you think it is.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B)
+  > and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d
+  > **IDENTICAL** against their repo copies, with the phrase count **0** in all three; the snapshot
+  > still carries **`Not investment advice.` twice**, which the routine prompt tells the run to keep.
+  > **A BAND_NOTE grep returned EMPTY and it was the ASSERTION, not the file.** The pattern assumed a
+  > backtick-delimited template literal; `BAND_NOTE` is an **object**. Two hits confirm it is present,
+  > and **the whole-file diff above already proves it byte-identical** — which is why the diff is the
+  > load-bearing check and the verbatim reads are the corroboration. **Audit a failing assertion before
+  > touching the file: §7, applied to a verification step rather than a build step.**
+  Session start read **`HEAD` = `origin/main` = `d6b8aa2`** after one `git fetch origin main` (which
+  advanced `origin/main` `ca86a7d..d6b8aa2`), with **the local `main` ref STALE at `ca86a7d`** — the
+  hazard §9 names, now on **nine of the last eleven runs**. **The live bytes already matched the repo
+  file exactly** (md5 `fcc2002524b48059d56004c0df8f9332`, **65,859 bytes**, `AS_OF` = `Nov 5, 2026,
+  02:00 UTC`, `cmp` IDENTICAL). **FORTY-SIXTH consecutive confirmation that there is no push blocker.
+  The routine prompt's step 0 is still factually wrong to describe this as an open item.**
+  `git branch -f main HEAD` was run **while not on main** and succeeded, per the 11-01 rule. The
+  designated branch `claude/beautiful-franklin-mrcwdo` was pushed to the same commit (a new remote
+  branch this session); **it is identical to `main`, so there is no diff to open a pull request from,
+  `list_pull_requests` returns an empty set, and none was opened.**
+  > **THE CADENCE WAS ONE DAY AND THAT WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.** The
+  > previous publish is **2026-11-05 02:00 UTC** and `origin/main` advanced by exactly the two commits
+  > that run made, so **every *since the last build* quantity on this page spans ONE day.** **The 11-04
+  > standing addition asks for this every run; here it came back clean.**
+
 - **2026-11-05 publish, VERIFIED.** Commit `612519a`, push `4b9f132..612519a  main -> main`, live md5
   `fcc2002524b48059d56004c0df8f9332` at **65,859 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 5, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `612519a`, each ref read in
