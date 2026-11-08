@@ -13,6 +13,67 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-08 publish, VERIFIED.** Commit `c0a3169`, push `2f4ff11..c0a3169  main -> main`, live md5
+  `596a00a29c6bb6ba2caeb22ae6dcaeca` at **67,273 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 8, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `c0a3169`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`
+  (`c0a3169a1dfa2a79f3a38d69a04f7326361eba1c`). **Pages served the new build on the THIRD 25-second
+  poll** (polls 1 and 2 returned the Nov 7 bytes).
+  > **A `git push` REPORTED *Everything up-to-date* WHILE THE COMMIT WAS UNPUBLISHED, AND THIS IS A NEW
+  > HAZARD WORTH THE SECTION.** The session began on the designated branch `claude/beautiful-franklin-3ehkqe`
+  > (not on `main`), so `git commit` put the build on **that** branch at `c0a3169` while local `main`
+  > stayed at `2f4ff11`. **`git push -u origin main` then pushed the UNCHANGED local `main` and exited 0
+  > with *Everything up-to-date*** — a success string, a zero exit status, and nothing published.
+  > **The routine prompt's *never report success on exit status alone* caught it: the ref read that
+  > follows every push showed `main` at `2f4ff11` against `HEAD` at `c0a3169`.** Fixed with
+  > `git merge-base --is-ancestor origin/main HEAD` (confirming a fast-forward was safe), then
+  > `git branch -f main HEAD` **run while not on main** per the 11-01 rule, then `git push origin main`,
+  > which reported `2f4ff11..c0a3169`. **Mechanical form: `git push origin <branch>` pushes the NAMED
+  > REF, not `HEAD` — so on any run that commits while not on `main`, advance `main` BEFORE pushing, and
+  > treat *Everything up-to-date* as a FAILURE signal whenever a commit was just made.** **This is the
+  > mirror of the stale-local-`main` hazard §9 has recorded on ten of the last twelve runs: that one
+  > made `main` stale behind the remote, this one made it stale behind HEAD, and the same ref read finds
+  > both.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.9, 0.4, -0.1, 0.1, -0.1, -0.1**, which puts
+  **both fields that had to change on the live page**; the banned-phrase grep was re-run on the served
+  bytes (**`not financial advice` 0, `not investment advice` 0, `financial advice` 0, `investment
+  advice` 0, `Netlify` 0, and `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read
+  back **`Sept 5, 2026`**; and the footer was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES, TWICE OVER.** Blanking the three content
+  > arrays in the **served** file and in the **repo** file gives **byte-identical** results, and
+  > blanking the served file against the **11-07 build** leaves **exactly ONE differing line, which is
+  > `AS_OF`.** **So *the disclaimer language is unchanged* is a statement about every byte of the served
+  > page outside the three content arrays — the `<style>` block, all markup, the primer note, the
+  > glossary, `BAND_NOTE`, `macroWord`, `RIVALS`, the rotation thresholds and the footer — and not about
+  > the sentences a grep happened to find.**
+  > **AND A SELECTOR FOR THE DISCLAIMER RETURNED EMPTY; THE ASSERTION WAS AUDITED RATHER THAN THE
+  > FILE.** A `<p class="disclaimer">` match found **nothing**, because **there is no such node: the
+  > disclaimer language lives in `<footer>`**, which read back verbatim and unchanged. **An empty
+  > selector result looked like missing disclaimer text and was a wrong guess about the markup** — the
+  > 11-07 *prove your selector matches something before believing a negative* rule, for a second
+  > consecutive run and on a different node.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B)
+  > and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d
+  > **IDENTICAL** against their repo copies, with the banned phrase **0** in all three. **The snapshot
+  > still carries `Not investment advice.` TWICE (which the routine prompt tells the run to keep) and
+  > `Netlify` SEVEN times across five lines in a `netlify-deploy` meta tag. This run changed none of
+  > them, and nothing on this run used Netlify for anything.**
+  Session start read **`HEAD` = `main` = `origin/main` = `2f4ff11`** after one `git fetch origin main`,
+  confirmed against `git ls-remote origin main`, **with the local `main` ref NOT stale for the first
+  time in twelve runs** — so no `git branch -f` was needed at session start (it was needed at publish
+  time instead, for the different reason above). **The live bytes already matched the repo file exactly**
+  (md5 `90c3f8b2258416d8561f24f144fd4fb3`, **67,015 bytes**, `AS_OF` = `Nov 7, 2026, 02:00 UTC`, `cmp`
+  IDENTICAL). **FORTY-EIGHTH consecutive confirmation that there is no push blocker. The routine
+  prompt's step 0 is still factually wrong to describe this as an open item.**
+  The designated branch `claude/beautiful-franklin-3ehkqe` was pushed to the same commit (a new remote
+  branch this session); **it is identical to `main`, so there is no diff to open a pull request from and
+  none was opened.**
+  > **THE CADENCE WAS ONE DAY AND THAT WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.** The
+  > previous publish is **2026-11-07 02:00 UTC** and `origin/main` advanced by exactly the two commits
+  > that run made, so **every *since the last build* quantity on this page spans ONE day.** **Today is a
+  > SUNDAY, so the last settled fund session is Friday Nov 6 — which is the row that moved two scores.**
+
 - **2026-11-07 publish, VERIFIED.** Commit `8d60687`, push `7d99411..8d60687  main -> main`, live md5
   `90c3f8b2258416d8561f24f144fd4fb3` at **67,015 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 7, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `8d60687`, each ref read in
