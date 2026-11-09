@@ -13,6 +13,62 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-09 publish, VERIFIED.** Commit `fc3dcea`, push `18b738e..fc3dcea  main -> main`, live md5
+  `959d2e80de10edbe9dd1f5f9fa65cce7` at **67,583 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 9, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `fc3dcea`, each ref read in a
+  **separate invocation** and confirmed against `git ls-remote origin main`
+  (`fc3dcea57292ae325a0d22c4289b83aa5b60ca0a`). **Pages served the new build on the FIRST 25-second poll**
+  — the fastest propagation this file records.
+  > **THE 11-08 PUSH HAZARD RECURRED EXACTLY AS WRITTEN, AND THE WRITTEN FIX CAUGHT IT BEFORE THE PUSH.**
+  > The session began on the designated branch `claude/beautiful-franklin-acbwme` (not on `main`), so
+  > `git commit` put the build on **that** branch at `fc3dcea` while local `main` stayed at `18b738e`.
+  > **The 11-08 entry's mechanical form — *on any run that commits while not on `main`, advance `main`
+  > BEFORE pushing* — was followed, so the ref read happened BEFORE the push rather than after it:**
+  > `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward, `git branch -f main HEAD`
+  > ran **while not on main** per the 11-01 rule, and `git push origin main` then reported
+  > `18b738e..fc3dcea`. **No *Everything up-to-date* was ever emitted, because the condition that produces
+  > it was removed first.** **A hazard written down one run and avoided the next is the only evidence that
+  > this file does any work, so it is worth saying plainly: the 11-08 run found this by accident after the
+  > fact; this one prevented it on purpose beforehand.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.9, 0.4, -0.1, 0.1, -0.1, -0.1**, which is the
+  full six-hold set; the banned-phrase grep was re-run on the served bytes (**`not financial advice` 0,
+  `not investment advice` 0, `financial advice` 0, `investment advice` 0, `Netlify` 0, and
+  `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**; and the
+  footer was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES, TWICE OVER.** Blanking the three content arrays
+  > in the **served** file and in the **repo** file gives **byte-identical** results, and blanking the
+  > served file against the **11-08 build** leaves **exactly ONE differing line, which is `AS_OF`.** **So
+  > *the disclaimer language is unchanged* is a statement about every byte of the served page outside the
+  > three content arrays — the `<style>` block, all markup, the primer note, the glossary, `BAND_NOTE`,
+  > `macroWord`, `RIVALS`, the rotation thresholds and the footer — and not about the sentences a grep
+  > happened to find.** Both the diff and the verbatim read were run, per the 11-05 rule.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B) and
+  > `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d **IDENTICAL**
+  > against their repo copies, with the banned phrase **0** in all three. **AND THIS RUN CORRECTED THIS
+  > FILE'S OWN RESIDUAL FIGURE: the snapshot carries the capitalised string `Not investment advice.`
+  > ONCE, not TWICE** — the case-insensitive phrase `investment advice` appears twice, in two different
+  > sentences (`...sub-scores. Not investment advice.` and `...Heuristic framework, not investment
+  > advice.`). **`Netlify` verified at 7 OCCURRENCES on 5 LINES with `grep -o | wc -l`, where the stored
+  > figure had been obtained with `grep -c`, which counts lines and could not have shown it.** This run
+  > changed none of them, and nothing on this run used Netlify for anything.
+  Session start read **`HEAD` = `origin/main` = `18b738e`** after one `git fetch origin main` (which
+  advanced `origin/main` `2f4ff11..18b738e`), confirmed against `git ls-remote origin main`, **with the
+  local `main` ref STALE at `2f4ff11`** — the hazard §9 names, now on **ELEVEN of the last thirteen
+  runs**, and fixed with one `git branch -f main HEAD` at session start as well as at publish time. **The
+  live bytes already matched the repo file exactly** (md5 `596a00a29c6bb6ba2caeb22ae6dcaeca`, **67,273
+  bytes**, `AS_OF` = `Nov 8, 2026, 02:00 UTC`, `cmp` IDENTICAL). **FORTY-NINTH consecutive confirmation
+  that there is no push blocker. The routine prompt's step 0 is still factually wrong to describe this as
+  an open item.**
+  The designated branch `claude/beautiful-franklin-acbwme` was pushed to the same commit (a new remote
+  branch this session); **it is identical to `main`, so there is no diff to open a pull request from and
+  none was opened.**
+  > **THE CADENCE WAS ONE DAY AND THAT WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.** The previous
+  > publish is **2026-11-08 02:00 UTC** and `origin/main` advanced by exactly the two commits that run
+  > made, so **every *since the last build* quantity on this page spans ONE day.** **Today is a MONDAY, so
+  > the last settled fund session is still Friday Nov 6 — which the 11-08 build already consumed, and
+  > which is why no flow leg could fire.**
+
 - **2026-11-08 publish, VERIFIED.** Commit `c0a3169`, push `2f4ff11..c0a3169  main -> main`, live md5
   `596a00a29c6bb6ba2caeb22ae6dcaeca` at **67,273 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 8, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `c0a3169`, each ref read in
