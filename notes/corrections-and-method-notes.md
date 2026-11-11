@@ -13,6 +13,56 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-11 publish, VERIFIED.** Commit `c3ab0b1`, push `051e851..c3ab0b1  main -> main`, live md5
+  `c422086d9646e6405d13f6a72bf97be1` at **68,183 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 11, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `c3ab0b1`, each ref read in a
+  **separate invocation** and confirmed against `git ls-remote origin main`
+  (`c3ab0b19a4291b598fcd90f9adcb19765f89661b`). **Pages served the new build on the THIRD 25-second poll**
+  — polls 1 and 2 returned the Nov 10 bytes, so the **never report success on exit status alone** rule
+  earned its keep for a fifth consecutive run.
+  > **THE PUSH HAZARD RECURRED EXACTLY AS WRITTEN AND THE WRITTEN FIX CAUGHT IT BEFORE THE PUSH, FOR A
+  > THIRD CONSECUTIVE RUN.** The session began on the designated branch `claude/beautiful-franklin-3hmtdj`
+  > (not on `main`), so `git commit` put the build on **that** branch at `c3ab0b1` while local `main`
+  > stayed at `051e851`. **The 11-08 mechanical form — *on any run that commits while not on `main`,
+  > advance `main` BEFORE pushing* — was followed:** `git merge-base --is-ancestor origin/main HEAD`
+  > confirmed the fast-forward, `git branch -f main HEAD` ran **while not on main** per the 11-01 rule, and
+  > `git push -u origin main` then reported `051e851..c3ab0b1`. **No *Everything up-to-date* was emitted,
+  > because the condition that produces it was removed first.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-0.9, 0.4, -0.1, 0.1, -0.1, -0.1**, the full
+  six-hold set; the banned-phrase grep was re-run on the served bytes (**`not financial advice` 0, `not
+  investment advice` 0, `financial advice` 0, `investment advice` 0, `Netlify` 0, and
+  `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**; and the
+  footer was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-10 build** leaves **exactly ONE differing line in 1,030, and it is
+  > `AS_OF`.** **So *the disclaimer language is unchanged* is a statement about every byte of the served
+  > page outside the three content arrays — the `<style>` block, all markup, the primer note, the glossary,
+  > `BAND_NOTE`, `macroWord`, `RIVALS`, the rotation thresholds and the footer — and not about the
+  > sentences a grep happened to find.** Both the diff and the verbatim read were run, per the 11-05 rule.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B) and
+  > `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d **IDENTICAL**
+  > against their repo copies. **This run changed none of them, and nothing on this run used Netlify for
+  > anything.**
+  Session start read **`HEAD` = `origin/main` = `051e851`** after one `git fetch origin main` (which
+  advanced `origin/main` `2f4ff11..051e851`), confirmed against `git ls-remote origin main`, **with the
+  local `main` ref STALE at `2f4ff11`** — the hazard §9 names, now on **THIRTEEN of the last fifteen
+  runs** — and fixed with one `git branch -f main HEAD` at session start as well as at publish time. **The
+  live bytes already matched the repo file exactly** (md5 `813d7269f7ff5be8847499868413c749`, **67,572
+  bytes**, `AS_OF` = `Nov 10, 2026, 02:00 UTC`, `cmp` IDENTICAL), **which confirms the 11-10 publish from
+  the outside.** **FIFTY-FIRST consecutive confirmation that there is no push blocker. The routine prompt
+  step 0 is still factually wrong to describe this as an open item.**
+  The designated branch `claude/beautiful-franklin-3hmtdj` was pushed to the same commit (a new remote
+  branch this session, confirmed by `git ls-remote` at `c3ab0b1`); **it is identical to `main`, so there is
+  no diff to open a pull request from and none was opened. The push to `main` was NOT rejected, so the
+  prompt fallback path did not apply.**
+  > **THE CADENCE WAS ONE DAY AND THAT WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.** The previous
+  > publish is **2026-11-10 02:00 UTC** and `origin/main` advanced by exactly the two commits that run
+  > made, so **every *since the last build* quantity on this page spans ONE day.** **Today is a WEDNESDAY,
+  > so Monday Nov 9 settled and Tuesday Nov 10 is the part-reported session both flow pairs are waiting
+  > on.**
+
+
 - **2026-11-10 publish, VERIFIED.** Commit `65e5890`, push `64e3671..65e5890  main -> main`, live md5
   `813d7269f7ff5be8847499868413c749` at **67,572 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 10, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `65e5890`, each ref read in a
