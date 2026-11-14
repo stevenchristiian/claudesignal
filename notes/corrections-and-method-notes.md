@@ -13,6 +13,59 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-14 publish, VERIFIED, AND IT CARRIED THE FIRST SCORE MOVE SINCE 11-08.** Commit `07249ff`,
+  push `ac06d72..07249ff  main -> main`, live md5 `0da3ee109bd3f975cb40865e12df0e27` at **72,148 bytes**,
+  `cmp` against the repo file **IDENTICAL**, `AS_OF` = `Nov 14, 2026, 02:00 UTC`, and `HEAD` = `main` =
+  `origin/main` = `07249ff`, each ref read in a **separate invocation** and confirmed against
+  `git ls-remote origin main` (`07249ff2c3d64c525e578c047f1a3b08ea0e9ce8`). **Pages served the new build on
+  the SECOND 25-second poll** — poll 1 returned the Nov 13 bytes, so the **never report success on exit
+  status alone** rule earned its keep for an **EIGHTH consecutive run**.
+  > **THE PUSH HAZARD RECURRED EXACTLY AS WRITTEN AND THE WRITTEN FIX CAUGHT IT BEFORE THE PUSH, FOR A
+  > SIXTH CONSECUTIVE RUN.** The session began on the designated branch `claude/beautiful-franklin-twtynp`
+  > (not on `main`), so `git commit` put the build on **that** branch at `07249ff` while local `main`
+  > stayed at `ac06d72`. **The 11-08 mechanical form — *on any run that commits while not on `main`,
+  > advance `main` BEFORE pushing* — was followed:** `git merge-base --is-ancestor origin/main HEAD`
+  > confirmed the fast-forward, `git branch -f main HEAD` ran **while not on main** per the 11-01 rule, and
+  > `git push -u origin main` then reported `ac06d72..07249ff`. **No *Everything up-to-date* was emitted,
+  > because the condition that produces it was removed first.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT, AND ON THIS BUILD
+  THAT CHECK CARRIES THE SCORE MOVE:** all six `macroScore` values read back off the live file as
+  **-1.0, 0.4, -0.1, 0.1, -0.1, -0.1** — **so the cut to -1.0 is confirmed on the SERVED page and not only
+  in the repo**; the banned-phrase grep was re-run on the served bytes (**`not financial advice` 0, `not
+  investment advice` 0, `financial advice` 0, `investment advice` 0, `Netlify` 0, and
+  `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**; both
+  `class="asOf"` nodes present; `class="disclaimer"` **0 nodes**; and the footer was **read back verbatim
+  off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE BUILT BYTES.** Blanking the three content arrays in the new
+  > file and in the **11-13 build** leaves **exactly ONE differing line in 1,030, and it is `AS_OF`.**
+  > **So *the disclaimer language is unchanged* is a statement about every byte of the page outside the
+  > three content arrays — the `<style>` block, all markup, the primer note, the glossary, `BAND_NOTE`,
+  > `macroWord`, `combine`, `RIVALS`, the rotation thresholds and the footer — and not about the sentences
+  > a grep happened to find.** **This matters more than usual here: `macroWord` is the function that turns
+  > -1.0 into *cautious*, and the diff proves it was not touched — the word changed because the SCORE
+  > crossed its threshold.**
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B) and
+  > `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d **IDENTICAL**
+  > against their repo copies, with the banned phrase **0** in all three. **This run changed none of them,
+  > and nothing on this run used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-twtynp` was pushed to the same commit (confirmed by
+  `git ls-remote` at `07249ff`); **it is identical to `main`, so there is no diff to open a pull request
+  from and none was opened. The push to `main` was NOT rejected, so the prompt fallback path did not
+  apply.**
+  Session start read **`HEAD` = `origin/main` = `ac06d72`** after one `git fetch origin main` (which
+  advanced `origin/main` `2f4ff11..ac06d72`), confirmed against `git ls-remote origin main`
+  (`ac06d72982c6a296c5c8aaf1389ea01543744113`), **with the local `main` ref STALE at `2f4ff11`** — the
+  hazard §9 names, now on **SIXTEEN of the last EIGHTEEN runs** — fixed with one `git branch -f main HEAD`
+  **while not on main**, per the 11-01 rule, at session start as well as at publish time. **The live bytes
+  already matched the repo file exactly** (md5 `da1800a1f4e75aa635641da2eed210ee`, **70,277 bytes**,
+  `AS_OF` = `Nov 13, 2026, 02:00 UTC`, `cmp` IDENTICAL), **which confirms the 11-13 publish from the
+  outside. FIFTY-FOURTH consecutive confirmation that there is no push blocker. The routine prompt step 0
+  is still factually wrong to describe this as an open item.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.** The
+  > previous build is 11-13 02:00 UTC and this one is 11-14 02:00 UTC. **The deciding fund session is
+  > Thursday Nov 12, read on a Saturday stamp, and the next pair needs NOV 13 AND NOV 16 because Nov 14-15
+  > is a weekend** — counted in dates rather than in weekday names, per the 10-25 rule.
+
 - **2026-11-13 publish, VERIFIED.** Commit `4c37432`, push `e208995..4c37432  main -> main`, live md5
   `da1800a1f4e75aa635641da2eed210ee` at **70,277 bytes**, `cmp` against the repo file **IDENTICAL**,
   `AS_OF` = `Nov 13, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `4c37432`, each ref read in a
