@@ -76,6 +76,20 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   > 10-25 rule: the newest settled fund session is still **FRIDAY NOV 13**, the same row the 11-15
   > build read, and the next readable one is **Nov 16 on the Nov 17 build.**
 
+  > **THE HAZARD FIRES ONCE PER COMMIT, NOT ONCE PER RUN, AND THIS RUN PROVED IT THE EXPENSIVE WAY
+  > (found 2026-11-16).** The 11-08 form was applied correctly before the first push
+  > (`2b202df..e53a67a`). The run then made its **second** commit — the verified-publish record —
+  > which landed on the designated branch at `cf4b0eb` while `main` sat at `e53a67a`, and
+  > `git push origin main` reported **`Everything up-to-date`**: a push that succeeded by exit
+  > status and moved nothing. **`git branch -f main HEAD` was run a second time and the push then
+  > reported `e53a67a..cf4b0eb`.**
+  > **Mechanical form, corrected: advance `main` immediately BEFORE EVERY `git push origin main`,
+  > not once per run. Every commit made while not on `main` re-creates the divergence, so a run
+  > that commits twice must advance twice.** **And *Everything up-to-date* is the signature of this
+  > failure, never of success — if a push that is supposed to carry a new commit emits it, the
+  > local ref is behind.** This is why the §1 refs are read in separate invocations and checked
+  > against `git ls-remote` after the push rather than before it.
+
 
 - **2026-11-14 publish, VERIFIED, AND IT CARRIED THE FIRST SCORE MOVE SINCE 11-08.** Commit `07249ff`,
   push `ac06d72..07249ff  main -> main`, live md5 `0da3ee109bd3f975cb40865e12df0e27` at **72,148 bytes**,
