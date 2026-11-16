@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-14 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-16 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -12,6 +12,70 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 ---
 
 ## 1. Repository and publishing
+
+- **2026-11-16 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD THAT STILL EARNED ITS PLACE.** Commit
+  `e53a67a`, push `2b202df..e53a67a  main -> main`, live md5
+  `1927007bd452ce9e992bf01a39264435` at **70,014 bytes**, `cmp` against the repo file
+  **IDENTICAL**, `AS_OF` = `Nov 16, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` =
+  `e53a67a`, each ref read in a **separate invocation** and confirmed against
+  `git ls-remote origin main` (`e53a67a0580be0590fed5b4466e7866ad76db411`). **Pages served the new
+  build on the THIRD 25-second poll** — polls 1 and 2 returned the Nov 15 bytes at 68,932, so the
+  **never report success on exit status alone** rule earned its keep for a **NINTH consecutive
+  run.**
+  > **THE PUSH HAZARD RECURRED AND THE WRITTEN FIX CAUGHT IT BEFORE THE PUSH, FOR A SEVENTH
+  > CONSECUTIVE RUN.** The session began on the designated branch
+  > `claude/beautiful-franklin-z5ue9m` (not on `main`), so `git commit` put the build on **that**
+  > branch at `e53a67a` while local `main` stayed at `2b202df`. **The 11-08 mechanical form — *on
+  > any run that commits while not on `main`, advance `main` BEFORE pushing* — was followed:**
+  > `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward, `git branch -f main
+  > HEAD` ran **while not on main** per the 11-01 rule, and `git push -u origin main` then reported
+  > `2b202df..e53a67a`. **No *Everything up-to-date* was emitted, because the condition that
+  > produces it was removed first.**
+  > **NOTE THE SPLIT BETWEEN THE TWO HALVES OF THE HAZARD, WHICH THIS RUN SEPARATES CLEANLY.** At
+  > **session start** the local `main` ref was **NOT stale** — `HEAD` = `main` = `origin/main` =
+  > `2b202df` after a single fetch, so the §9 stale-ref item did **not** fire on entry, standing at
+  > **seventeen of the last twenty runs** rather than eighteen of twenty. **At commit time the
+  > divergence appeared anyway, because committing on a non-`main` branch creates it.** **Standing
+  > form: these are two different failures that share a symptom. A clean session start says nothing
+  > about whether `main` needs advancing before the push — check it both times.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT, AND ON A
+  SIX-HOLD BUILD THAT CHECK IS DOING MORE WORK THAN USUAL:** all six `macroScore` values read back
+  off the live file as **-1.0, 0.4, -0.2, 0.1, -0.1, -0.1**, the full six-hold set — **so the holds
+  are confirmed on the SERVED page and not only in the repo, which matters because a build with no
+  score move has no visible change to expose a regression**; the banned-phrase grep was re-run on
+  the served bytes (**`not financial advice` 0, `not investment advice` 0, `financial advice` 0,
+  `investment advice` 0, `Netlify` 0, and `advice|disclaim|educational|informational` 0**);
+  `ROTATION_ASOF` read back **`Sept 5, 2026`**; both `class="asOf"` nodes present;
+  `class="disclaimer"` **0 nodes**; and the footer was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-15 build** leaves **exactly ONE differing line in 1,032, and it
+  > is `AS_OF`.** **So *the disclaimer language is unchanged* is a statement about every byte of the
+  > served page outside the three content arrays — the `<style>` block, all markup, the primer note,
+  > the glossary, `BAND_NOTE`, `macroWord`, `combine`, `RIVALS`, the rotation thresholds and the
+  > footer — and not about the sentences a grep happened to find.** The diff was run on the built
+  > file **before** the push and on the **served** file after it, and both give one line.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html`
+  > (61,535 B) and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and
+  > `cmp`'d **IDENTICAL** against their repo copies, with the banned phrase **0** in the first two
+  > and the stored **2** in the snapshot. **This run changed none of them, and nothing on this run
+  > used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-z5ue9m` was pushed to the same commit (confirmed
+  by `git ls-remote` at `e53a67a`); **`git diff --stat main claude/beautiful-franklin-z5ue9m` is
+  EMPTY, so it is identical to `main`, there is no diff to open a pull request from and none was
+  opened. The push to `main` was NOT rejected, so the prompt fallback path did not apply.**
+  Session start read **`HEAD` = `main` = `origin/main` = `2b202df`** after one
+  `git fetch origin main`, confirmed against `git ls-remote origin main`. **The live bytes already
+  matched the repo file exactly** (md5 `aa436fa857a0f3854c9bbda2b9a2228b`, **68,932 bytes**,
+  `AS_OF` = `Nov 15, 2026, 02:00 UTC`, `cmp` IDENTICAL), **which confirms the 11-15 publish from
+  the outside. FIFTY-SIXTH consecutive confirmation that there is no push blocker. The routine
+  prompt step 0 is still factually wrong to describe this as an open item.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS
+  > WRITTEN.** Previous publish **2026-11-15 02:00 UTC**; this one **2026-11-16 02:00 UTC**.
+  > **TODAY IS A MONDAY and the stamp is 02:00 UTC, so Monday Nov 16 — the session all three flow
+  > legs are waiting on — had NOT settled.** Counted in dates rather than weekday names, per the
+  > 10-25 rule: the newest settled fund session is still **FRIDAY NOV 13**, the same row the 11-15
+  > build read, and the next readable one is **Nov 16 on the Nov 17 build.**
+
 
 - **2026-11-14 publish, VERIFIED, AND IT CARRIED THE FIRST SCORE MOVE SINCE 11-08.** Commit `07249ff`,
   push `ac06d72..07249ff  main -> main`, live md5 `0da3ee109bd3f975cb40865e12df0e27` at **72,148 bytes**,
