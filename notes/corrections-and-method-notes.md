@@ -11207,7 +11207,11 @@ have lost it.
       STALE LOCAL REF DID NOT RECUR FOR A SECOND CONSECUTIVE RUN.** Session start read **`HEAD` =
       `main` = `origin/main` = `8098e72`** after one `git fetch origin main`, each ref in a separate
       invocation, confirmed against `git ls-remote origin main`
-      (`8098e725825853a4e346f1bfae3920326a081323`). **Local `main` was ALREADY current, so
+      (`8098e725825853a4e346f1bfae3920326a081323`). **PUBLISH VERIFIED FROM THE OUTSIDE: commit
+      `cbf8f61` fast-forwarded `main` with no rejection, and the live URL then served HTTP 200,
+      70,536 bytes, md5 `93be290792cee50671ccce2507d77b94`, `AS_OF` = `Nov 18, 2026, 02:00 UTC`,
+      `cmp` IDENTICAL to the repo file — the 11-18 publish confirmed from outside the run.**
+      **Local `main` was ALREADY current, so
       `git branch -f main HEAD` was not needed and the hazard stands at SEVENTEEN of the last
       TWENTY-ONE runs.** **The live bytes already matched the repo file exactly** (md5
       `8fb4949e34562e7354e400986bec1993`, **72,171 bytes**, `AS_OF` = `Nov 17, 2026, 02:00 UTC`,
