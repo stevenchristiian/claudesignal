@@ -13,6 +13,67 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-19 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD WHOSE HEADLINE IS A FED LEG THAT FELL
+  WHILE THE RISE GOT LIKELIER.** Commit `be18085`, push `9f8865a..be18085  main -> main`, live md5
+  `592ec0e564d4f0f0f32ee2cab7092160` at **66,097 bytes**, `cmp` against the repo file
+  **IDENTICAL**, `AS_OF` = `Nov 19, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` =
+  `be18085`, each ref read in a **separate invocation** and confirmed against
+  `git ls-remote origin main` (`be180850437faeaeca85c808c2ece6f0111e10c4`). **Pages served the new
+  build on the SECOND 25-second poll** — poll 1 returned the Nov 18 bytes at 70,536, so the **never
+  report success on exit status alone** rule earned its keep for an **ELEVENTH consecutive run.**
+  **The file SHRANK from 70,536 to 66,097 bytes**, which is the content arrays being shorter and
+  nothing else — check 7 proves it.
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-1.0, 0.4, -0.2, 0.0, -0.1, -0.1**, the full
+  six-hold set; the banned-phrase grep was re-run on the served bytes (**`not financial advice` 0,
+  `not investment advice` 0, `financial advice` 0, `investment advice` 0, `Netlify` 0, and
+  `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**;
+  both `class="asOf"` nodes present; `class="disclaimer"` **0 nodes**; and the footer was **read
+  back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-18 build** leaves **exactly ONE differing line in 1,033, and it
+  > is `AS_OF`.** **So *the disclaimer language is unchanged* is a statement about every byte of the
+  > served page outside the three content arrays — the `<style>` block, all markup, the primer note,
+  > the glossary, `BAND_NOTE`, `macroWord`, `combine`, `RIVALS`, the rotation thresholds and the
+  > footer — and not about the sentences a grep happened to find.** The diff was run on the built
+  > file **twice before** the push (once after the check-9 pass, once after the final label edit) and
+  > on the **served** file after it, and all three give one line.
+  > **THIS IS ALSO THE PROOF FOR THE APPENDED USER ASKS, FOR A THIRD RUN.** The routine prompt asks
+  > for beginner readability, phone and laptop layout, a clean deck and the removal of *not financial
+  > advice*. **All four were already true, each re-measured first-hand this run, and check 7 proves
+  > nothing that delivers them was disturbed.** See the new §8 entry.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html`
+  > (61,535 B) and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and
+  > `cmp`'d **IDENTICAL** against their repo copies. **This run changed none of them, and nothing on
+  > this run used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-5q1ipk` was pushed to the same commit;
+  **`git diff --stat main claude/beautiful-franklin-5q1ipk` is EMPTY, so it is identical to `main`,
+  there is no diff to open a pull request from and none was opened. The push to `main` was NOT
+  rejected, so the prompt fallback path did not apply.**
+  Session start read **`HEAD` = `main` = `origin/main` = `9f8865a`** after one `git fetch origin
+  main`, confirmed against `git ls-remote origin main`, **with the local `main` ref NOT stale** — a
+  **THIRD consecutive clean session start**, so the §9 hazard stands at seventeen of the last
+  twenty-two runs. **The live bytes already matched the repo file exactly** (md5
+  `93be290792cee50671ccce2507d77b94`, **70,536 bytes**, `AS_OF` = `Nov 18, 2026, 02:00 UTC`, `cmp`
+  IDENTICAL), **which confirms the 11-18 publish from outside the run that made it. FIFTY-EIGHTH
+  consecutive confirmation that there is no push blocker. The routine prompt step 0 is still
+  factually wrong to describe this as an open item.**
+  > **THE PER-COMMIT HALF OF THE HAZARD FIRED EXACTLY AS THE 11-16 ENTRY SAYS IT WOULD, AND THE
+  > WRITTEN FIX CAUGHT IT.** The session began on the designated branch (not on `main`), so
+  > `git commit` put the build on **that** branch at `be18085` while local `main` sat at `9f8865a`.
+  > `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward, `git branch -f main
+  > HEAD` ran **while not on main** per the 11-01 rule, and `git push -u origin main` then reported
+  > `9f8865a..be18085`. **No *Everything up-to-date* was emitted, because the condition that
+  > produces it was removed first.** **Note the split the 11-16 entry insists on: the session start
+  > was CLEAN and the divergence appeared anyway at commit time. A clean start says nothing.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS
+  > WRITTEN.** Previous publish **2026-11-18 02:00 UTC**; this one **2026-11-19 02:00 UTC**.
+  > **TODAY IS A THURSDAY and the stamp is 02:00 UTC, so TUESDAY NOV 17 had traded, settled AND
+  > been published, while WEDNESDAY NOV 18 had traded and closed but NOT been published** — rung
+  > (i) for a third consecutive build, one day later each time. Counted in dates rather than weekday
+  > names, per the 10-25 rule.
+
+
 - **2026-11-17 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD WITH THREE PRE-REGISTERED TESTS DUE.**
   Commit `b7980cf`, push `f92a7e2..b7980cf  main -> main`, live md5
   `8fb4949e34562e7354e400986bec1993` at **72,171 bytes**, `cmp` against the repo file
