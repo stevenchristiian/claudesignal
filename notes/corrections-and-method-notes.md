@@ -13,8 +13,43 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
-- **2026-11-21 publish — SEE THE VERIFICATION BLOCK APPENDED AT THE END OF THIS ENTRY AFTER THE PUSH.**
-  Session start read **`HEAD` = `origin/main` = `88098c4`** after one `git fetch origin main` (which
+- **2026-11-21 publish, VERIFIED, AND IT IS A SCORE-MOVE BUILD WHOSE RULE FIRED ON ONE CLAUSE
+  BECAUSE THE OTHER WAS UNAVAILABLE.** Commit `f07c974`, push `88098c4..f07c974  main -> main`, live
+  md5 `24b64dff873704902058c959b1d66ad3` at **67,572 bytes**, `cmp` against the repo file
+  **IDENTICAL**, `AS_OF` = `Nov 21, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` =
+  `f07c974`, each ref read in a **separate invocation** and confirmed against
+  `git ls-remote origin main` (`f07c97447cca295498f4f05087cb8bbffbe287b8`). **Pages served the new
+  build on the SECOND 25-second poll** — poll 1 returned the Nov 20 bytes at 66,855, so the **never
+  report success on exit status alone** rule earned its keep for a **THIRTEENTH consecutive run.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-1.2, 0.4, -0.2, 0.0, -0.1, -0.1** — **the CUT
+  is confirmed on the SERVED page and not only in the repo**; the banned-phrase grep was re-run on the
+  served bytes (**`not financial advice` 0, `not investment advice` 0, `financial advice` 0,
+  `investment advice` 0, `Netlify` 0, and `advice|disclaim|educational|informational` 0**);
+  `ROTATION_ASOF` read back **`Sept 5, 2026`**; both `class="asOf"` nodes present;
+  `class="disclaimer"` **0 nodes**; and the footer was **read back verbatim off the served file.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-20 build** leaves **exactly ONE differing line in 1,030, and it is
+  > `AS_OF`.** **So *the disclaimer language is unchanged* is a statement about every byte of the
+  > served page outside the three content arrays — the `<style>` block, all markup, the primer note,
+  > the glossary, `BAND_NOTE`, `macroWord`, `combine`, `RIVALS`, the rotation thresholds and the
+  > footer — and not about the sentences a grep happened to find.** The diff was run on the built file
+  > **twice before** the push (once on the first build, which **FAILED and exposed a deleted blank
+  > line in the file itself**, and once after the check-9 correction pass) and on the **served** file
+  > after it.
+  > **THIS IS ALSO THE PROOF FOR THE APPENDED USER ASKS, FOR A FIFTH RUN.** The routine prompt asks
+  > for beginner readability, phone and laptop layout, a clean deck and the removal of *not financial
+  > advice*. **All four were already true, each re-measured first-hand this run, and check 7 proves
+  > nothing that delivers them was disturbed.** See §10.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html`
+  > (61,535 B) and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and
+  > `cmp`'d **IDENTICAL** against their repo copies. **This run changed none of them, and nothing on
+  > this run used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-v3dlk8` was pushed to the same commit (confirmed by
+  `git ls-remote` at `f07c974`); **`git diff --stat main claude/beautiful-franklin-v3dlk8` is EMPTY,
+  so it is identical to `main`, there is no diff to open a pull request from and none was opened. The
+  push to `main` was NOT rejected, so the prompt fallback path did not apply.**
+  **BOTH HALVES OF THE §9 HAZARD FIRED ON ONE RUN AGAIN.** Session start read **`HEAD` = `origin/main` = `88098c4`** after one `git fetch origin main` (which
   advanced `origin/main` `9f8865a..88098c4`), each ref read in a **separate invocation** and confirmed
   against `git ls-remote origin main` (`88098c4e5526b2fc7588b3836d7edf4a2cd5e86a`), **with the local
   `main` ref STALE at `9f8865a`** — the §9 hazard, now at **NINETEEN of the last TWENTY-FOUR runs.**
@@ -26,8 +61,17 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   **`claude/beautiful-franklin-v3dlk8`** — changed again, so the branch named in a previous run note
   is never the branch a new session is given.
   **THE SESSION ALSO COMMITTED WHILE NOT ON `main`** (on the designated branch), which is the second
-  half of the 11-16 hazard and would re-create the divergence even from a clean start, so
-  `git branch -f main HEAD` was run **while not on main** and **immediately before the push**.
+  half of the 11-16 hazard and would re-create the divergence even from a clean start.
+  `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward, `git branch -f main
+  HEAD` ran **while not on main** per the 11-01 rule and **immediately before the push** per the
+  11-16 rule, and `git push origin main` then reported `88098c4..f07c974`. **No *Everything
+  up-to-date* was emitted, because the condition that produces it was removed first.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.**
+  > Previous publish **2026-11-20 02:00 UTC**; this one **2026-11-21 02:00 UTC**. **TODAY IS A
+  > SATURDAY and the stamp is 02:00 UTC, so THURSDAY NOV 19 had traded, settled AND been published —
+  > which is what resolved the pre-registered pair and rung (j) at once — while FRIDAY NOV 20 had
+  > traded and closed and is unpublished on every flow route read here (rung (i)), and Nov 21 and
+  > Nov 22 settle nothing.** Counted in dates rather than weekday names, per the 10-25 rule.
 
 - **2026-11-20 publish, VERIFIED, AND IT IS A SCORE-MOVE BUILD WHOSE RULE FIRED ON BOTH OF ITS
   CLAUSES AT ONCE.** Commit `7a46421`, push `85ddf40..7a46421  main -> main`, live md5
