@@ -13,6 +13,73 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-22 publish, VERIFIED, AND IT IS A SCORE-MOVE BUILD WHOSE RULE MOVED A BAND WORD FOR THE
+  FIRST TIME ON THAT CARD.** Commit `0739041`, push `3446928..0739041  main -> main`, live md5
+  `438ad0fa7c981ac2f792e1ce8f3a8dbf` at **68,025 bytes**, `cmp` against the repo file **IDENTICAL**,
+  `AS_OF` = `Nov 22, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `0739041`, each ref read in
+  a **separate invocation** and confirmed against `git ls-remote origin main`
+  (`07390410809d16469e28cb963d0c2127e3bb027c`). **Pages served the new build on the SECOND 25-second
+  poll** — poll 1 returned the Nov 21 bytes at 67,572, so the **never report success on exit status
+  alone** rule earned its keep for a **FOURTEENTH consecutive run.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-1.2, 0.4, -0.3, 0.0, -0.1, -0.1** — **the SOLANA
+  CUT is confirmed on the SERVED page and not only in the repo**; the banned-phrase grep was re-run on
+  the served bytes (**`not financial advice` 0, `not investment advice` 0, `financial advice` 0,
+  `investment advice` 0, `Netlify` 0, and `advice|disclaim|educational|informational` 0**);
+  `ROTATION_ASOF` read back **`Sept 5, 2026`**; both `class="asOf"` nodes present;
+  `class="disclaimer"` **0 nodes**; and the footer was **diffed against the previous build ON THE
+  SERVED FILE and is IDENTICAL.**
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-21 build** leaves **exactly ONE differing line, and it is `AS_OF`**,
+  > with **EQUAL LINE COUNTS (1,026) on both sides.** **So *the disclaimer language is unchanged* is a
+  > statement about every byte of the served page outside the three content arrays — the `<style>`
+  > block, all markup, the primer note, the glossary, `BAND_NOTE`, `macroWord`, `combine`, `RIVALS`, the
+  > rotation thresholds and the footer — and not about the sentences a grep happened to find.** The diff
+  > was run on the built file **three times before** the push (once on the first build, once after the
+  > check-9 correction pass, once after the macro-tile swap) and on the **served** file after it, and all
+  > four give one line. **It PASSED FIRST TIME this run, unlike 11-21 where it caught a deleted blank
+  > line.**
+  > **THE BLANKED-DIFF DENOMINATOR CHANGED AND THE PAGE DID NOT.** This run reports *one line in 1,026*
+  > against 11-21's *one line in 1,030*, because this run blanks the three arrays with **one** marker
+  > line. **N is a property of the blanking method, not of the page; do not compare it across runs.** See
+  > the new §7 entry.
+  > **THIS IS ALSO THE PROOF FOR THE APPENDED USER ASKS, FOR A SIXTH RUN.** The routine prompt asks for
+  > beginner readability, phone and laptop layout, a clean deck and the removal of *not financial
+  > advice*. **All four were already true, each re-measured first-hand this run, and check 7 proves
+  > nothing that delivers them was disturbed.** See §10.
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B)
+  > and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d
+  > **IDENTICAL** against their repo copies. **This run changed none of them, and nothing on this run
+  > used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-w15der` was pushed to the same commit and created on
+  the remote as a new branch; **`git diff --stat main claude/beautiful-franklin-w15der` is EMPTY, so it
+  is identical to `main`, there is no diff to open a pull request from and none was opened. The push to
+  `main` was NOT rejected, so the prompt fallback path did not apply.**
+  **BOTH HALVES OF THE §9 HAZARD FIRED ON ONE RUN AGAIN.** Session start read **`HEAD` = `origin/main` =
+  `3446928`** after one `git fetch origin main` (which advanced `origin/main` `9f8865a..3446928`), each
+  ref read in a **separate invocation** and confirmed against `git ls-remote origin main`
+  (`3446928f39ec8011f517468198dc0a67f56fc84c`), **with the local `main` ref STALE at `9f8865a`** — the
+  §9 hazard, now at **TWENTY of the last TWENTY-FIVE runs.** **The live bytes already matched the repo
+  file exactly** (HTTP 200, **67,572 bytes**, md5 `24b64dff873704902058c959b1d66ad3`, `AS_OF` =
+  `Nov 21, 2026, 02:00 UTC`, `cmp` **IDENTICAL**), **which confirms the 11-21 publish from outside the
+  run that made it. SIXTY-FIRST consecutive confirmation that there is no push blocker. The routine
+  prompt step 0 is still factually wrong to describe this as an open item.** Designated branch this
+  session: **`claude/beautiful-franklin-w15der`** — changed again, so the branch named in a previous run
+  note is never the branch a new session is given.
+  **THE SESSION ALSO COMMITTED WHILE NOT ON `main`** (on the designated branch), which is the second
+  half of the 11-16 hazard and would re-create the divergence even from a clean start.
+  `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward, `git branch -f main HEAD`
+  ran **while not on main** per the 11-01 rule and **immediately before the push** per the 11-16 rule,
+  and `git push origin main` then reported `3446928..0739041`. **No *Everything up-to-date* was emitted,
+  because the condition that produces it was removed first.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.**
+  > Previous publish **2026-11-21 02:00 UTC**; this one **2026-11-22 02:00 UTC**. **TODAY IS A SUNDAY and
+  > the stamp is 02:00 UTC, so FRIDAY NOV 20 had traded, closed and been PART-REPORTED on both the
+  > bitcoin and the ether books — which is rung (d), not rung (i) — while Nov 21 and Nov 22 settle no ETF
+  > session, and the Nov 22 DAILY CANDLE exists and is two hours old, which is why the seventh weekly
+  > fall is still not a fact.** Counted in dates rather than weekday names, per the 10-25 rule.
+
+
 - **2026-11-21 publish, VERIFIED, AND IT IS A SCORE-MOVE BUILD WHOSE RULE FIRED ON ONE CLAUSE
   BECAUSE THE OTHER WAS UNAVAILABLE.** Commit `f07c974`, push `88098c4..f07c974  main -> main`, live
   md5 `24b64dff873704902058c959b1d66ad3` at **67,572 bytes**, `cmp` against the repo file
