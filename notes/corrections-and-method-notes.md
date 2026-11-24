@@ -13074,6 +13074,10 @@ have lost it.
       WHILE NOT ON MAIN immediately before every push to it — the hazard is dormant, not removed.**
       Designated branch this session: **`claude/beautiful-franklin-7kpi46`** — changed again, so the
       branch named in a previous run note is never this session's branch.
+      **PUBLISH VERIFIED: commit `9e5b5c3` pushed `732532f..9e5b5c3`, `ls-remote` confirming it, and
+      the served page re-fetched to md5 `7fd71d20e1aecbf6a1993163d693d605` = the repo file, `cmp`
+      IDENTICAL, 68,874 bytes, `AS_OF` = `Nov 24, 2026, 02:00 UTC`.** **THE FIRST FETCH 25s AFTER THE
+      PUSH STILL SERVED THE OLD BUILD — re-check, never report on one fetch or on exit status.**
 - [x] **THE *NOT FINANCIAL ADVICE* INSTRUCTION STAYS CLOSED — a FIFTY-FOURTH run — AND THE CLAIM IS A
       DIFF, NOT A GREP.** Phrase count **0** in `index.html`, `live1.html` and `live2.html` for every
       casing; `advice|disclaim|educational|informational` **0** over the whole of `index.html`;
