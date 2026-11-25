@@ -13279,6 +13279,13 @@ have lost it.
       REAL and recurred this run, so keep `git branch -f main HEAD` WHILE NOT ON MAIN immediately
       before every push to it.** Designated branch this session: **`claude/beautiful-franklin-frh0sb`**
       — changed again, so the branch named in any previous run note is never this session's branch.
+      **PUBLISH VERIFIED: commit `3dc6381` pushed `b75e6bc..3dc6381`, `git ls-remote origin main`
+      confirming it, and the served page re-fetched TWICE to md5
+      `c989f500856555129e7eee8a8b65aa32` = the repo file, `cmp` IDENTICAL, 67,954 bytes, `AS_OF` =
+      `Nov 25, 2026, 02:00 UTC`, and `macroScore: -1.4` present in the served bytes.**
+      **TEN FETCHES IN THE FIRST ~40 SECONDS AFTER THE PUSH ALL SERVED THE OLD BUILD (68,874 bytes,
+      `Nov 24`); the first poll 15s later served the new one. Pages lag is REAL — never report a
+      publish on one fetch or on exit status.**
 - [x] **THE *NOT FINANCIAL ADVICE* INSTRUCTION STAYS CLOSED — a FIFTY-FIFTH run.** Phrase count **0** in
       `index.html`, `live1.html` and `live2.html` for every casing;
       `advice|disclaim|educational|informational` **0** over each whole file; `class="disclaimer"`
