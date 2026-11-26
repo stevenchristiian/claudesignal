@@ -13,6 +13,72 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 
 ## 1. Repository and publishing
 
+- **2026-11-26 publish, VERIFIED, AND ITS MOST IMPORTANT WORK WAS A LIVE-DATA REGRESSION THIS RUN HAD
+  INTRODUCED ITSELF AND CHECK 10 CAUGHT.** Commit `d0dea63`, push `e101147..d0dea63  main -> main`,
+  live md5 `84f4c0be023afb64ac10a2379d96add9` at **68,983 bytes**, `cmp` against the repo file
+  **IDENTICAL**, `AS_OF` = `Nov 26, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `d0dea63`,
+  each ref read in a **separate invocation** and confirmed against `git ls-remote origin main`
+  (`d0dea63a5009a3e438aeb0e075d66437b3bf5138`). **Pages served the new build on the SECOND 25-second
+  poll** — poll 1 returned the Nov 25 bytes at 67,954, so the **never report success on exit status
+  alone** rule earned its keep for a **SIXTEENTH consecutive run.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-1.4, 0.4, -0.3, 0.0, -0.1, -0.1** — **six holds
+  confirmed on the SERVED page**; **all six `(id, symbol, name)` triples read back off the SERVED bytes
+  with `id: 'binancecoin'` present, which is the regression fix confirmed in the published file and not
+  only in the repo**; the banned-phrase grep was re-run on the served bytes (**`not financial advice` 0,
+  `not investment advice` 0, `financial advice` 0, `investment advice` 0, `Netlify` 0, and
+  `advice|disclaim|educational|informational` 0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**; both
+  `class="asOf"` nodes present; `class="disclaimer"` **0 nodes**; and the page was fetched **TWICE
+  independently** to the same md5.
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays in the
+  > **served** file and in the **11-25 served** file leaves **exactly ONE differing line, and it is
+  > `AS_OF`**, with **EQUAL LINE COUNTS (1,030) and EQUAL LENGTHS (48,041 characters) on both sides.**
+  > The diff was run on the built file **three times before** the push (first build, after the id fix,
+  > after the check-9 pass) and on the **served** file after it, and all four give one line. The
+  > `<footer>` element (**681 bytes**) and the `<style>` block were **also compared directly on the
+  > served files and are IDENTICAL.**
+  > **AND THE FOOTER ASSERTION FAILED FIRST, ON A CORRECT FILE — audit the assertion, a FAMILIAR
+  > SHAPE.** A footer extractor using `rfind('<footer')` reported the footers DIFFERENT while the
+  > blanked diff reported one differing line. **The extractor was wrong: `<footer` occurs ONCE and
+  > opens BEFORE the inline `<script>`, so the slice from it swallowed the entire script, 23,496
+  > characters, and the *difference* it found was the `AS_OF` line again.** **Match `<footer\b.*?
+  > </footer>` or rely on the blanked diff, which already proves the footer identical BY CONTAINMENT.**
+  > **THIS IS ALSO THE PROOF FOR THE APPENDED USER ASKS, FOR AN EIGHTH RUN.** The routine prompt asks
+  > for beginner readability, phone and laptop layout, a clean deck and the removal of *not financial
+  > advice*. **All four were already true, each re-measured first-hand this run, and check 7 proves
+  > nothing that delivers them was disturbed.** **With one qualification this run earns: check 7 would
+  > have proved exactly that while the BNB card showed no live price at all. See §10.**
+  > **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED.** `live1.html` (60,579 B), `live2.html` (61,535 B)
+  > and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each returned **HTTP 200** and `cmp`'d
+  > **IDENTICAL** against their repo copies. **This run changed none of them, and nothing on this run
+  > used Netlify for anything.**
+  The designated branch `claude/beautiful-franklin-jlmtik` was pushed to the same commit and created on
+  the remote as a new branch; **it is identical to `main`, so there is no diff to open a pull request
+  from and none was opened. The push to `main` was NOT rejected, so the prompt fallback path did not
+  apply.**
+  **BOTH HALVES OF THE §9 HAZARD FIRED ON ONE RUN AGAIN.** Session start read **`HEAD` = `e101147`**
+  with **`origin/main` AND local `main` BOTH STALE at `732532f`**; one `git fetch origin main` advanced
+  `origin/main` (`732532f..e101147`) to equal `HEAD`, each ref read in a **separate invocation** and
+  confirmed against `git ls-remote origin main`, **with the local `main` ref left STALE** — the §9
+  hazard, now at **TWENTY-TWO of the last TWENTY-SEVEN runs.** **The live bytes already matched the
+  repo file exactly** (HTTP 200, **67,954 bytes**, md5 `c989f500856555129e7eee8a8b65aa32`, `AS_OF` =
+  `Nov 25, 2026, 02:00 UTC`, `cmp` **IDENTICAL**), **which confirms the 11-25 publish from outside the
+  run that made it. SIXTY-FIFTH consecutive confirmation that there is no push blocker. The routine
+  prompt step 0 is still factually wrong to describe this as an open item.** Designated branch this
+  session: **`claude/beautiful-franklin-jlmtik`** — changed again.
+  **THE SESSION ALSO COMMITTED WHILE NOT ON `main`** (on the designated branch), the second half of the
+  11-16 hazard. `git merge-base --is-ancestor origin/main HEAD` confirmed the fast-forward,
+  `git branch -f main HEAD` ran **while not on main** per the 11-01 rule and **immediately before the
+  push** per the 11-16 rule, and `git push origin main` then reported `e101147..d0dea63`. **No
+  *Everything up-to-date* was emitted, because the condition that produces it was removed first.**
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.**
+  > Previous publish **2026-11-25 02:00 UTC**; this one **2026-11-26 02:00 UTC**. **TODAY IS A THURSDAY
+  > AND IT IS THANKSGIVING, so NOV 26 SETTLES NO US ETF SESSION AT ALL** — which is why the ether pair
+  > runs Nov 25 + Nov 27 rather than Nov 25 + Nov 26, and why the Solana week will be four sessions.
+  > **TUESDAY NOV 24 settled and is the newest readable row; WEDNESDAY NOV 25 traded and closed but had
+  > not published at this stamp; the NOV 25 DAILY CANDLE IS COMPLETE.** Counted in dates rather than
+  > weekday names, per the 10-25 rule.
+
 - **2026-11-23 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD WHOSE MOST IMPORTANT WORK WAS A
   SUPERLATIVE CHECK 9 REVERSED OUTRIGHT.** Commit `243d9b7`, push `402a7a5..243d9b7  main -> main`,
   live md5 `e80347920a6c41ffaa11f568248e9408` at **67,631 bytes**, `cmp` against the repo file
