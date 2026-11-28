@@ -14,9 +14,23 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 ## 1. Repository and publishing
 
 - **2026-11-28 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD WHOSE MOST IMPORTANT WORK WAS A CHECK-9
-  CATCH THAT INVERTED A PUBLISHED CLAIM.** Commit and push recorded in `notes/runs/2026-11-28-0200utc.md`
-  §7, with the served bytes re-fetched, `cmp`'d against the repo file, and the six `macroScore` values
-  read back off the live file field by field.
+  CATCH THAT INVERTED A PUBLISHED CLAIM.** Commit `d38a35b`, push `578c9a7..d38a35b  main -> main`,
+  live md5 `cd52825a9d1fd4ecdb4f213c510e3a7d` at **68,777 bytes**, `cmp` against the repo file
+  **IDENTICAL**, `AS_OF` = `Nov 28, 2026, 02:00 UTC`, and `HEAD` = `main` = `origin/main` = `d38a35b`,
+  each ref read in a **separate invocation** and confirmed against `git ls-remote origin main`
+  (`d38a35b04b30c31b25b77ab7a7a878cffe23e109`). **Pages served the new build on the THIRD 25-second
+  poll** — polls 1 and 2 returned the Nov 27 bytes at 69,085, so the **never report success on exit
+  status alone** rule earned its keep for an **EIGHTEENTH consecutive run.**
+  **THE SERVED BYTES WERE CHECKED FIELD BY FIELD RATHER THAN INFERRED FROM THE COMMIT:** all six
+  `macroScore` values read back off the live file as **-1.5, 0.4, -0.3, 0.0, -0.1, -0.1** — **six holds
+  confirmed on the SERVED page**; all six `(id, symbol, name)` triples read back with
+  **`id: 'binancecoin'` present**; the banned-phrase grep re-run on the served bytes (**all six counts
+  0**); `ROTATION_ASOF` read back **`Sept 5, 2026`**; both `class="asOf"` nodes present;
+  `class="disclaimer"` **0 nodes**; and the page fetched **TWICE independently** to the same md5.
+  **ALL THREE OTHER SERVED PAGES WERE RE-FETCHED** — `live1.html` (60,579 B), `live2.html` (61,535 B)
+  and `signal-deck-2026-09-21-0100utc.html` (49,910 B) each HTTP 200 and `cmp` **IDENTICAL**.
+  **The designated branch was pushed to the same commit and is identical to `main`, so there is no diff
+  to open a pull request from and none was opened. The push to `main` was NOT rejected.**
   > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays leaves
   > **exactly ONE differing line, and it is `AS_OF`**, with **EQUAL LINE COUNTS (1,029) AND EQUAL
   > LENGTHS (48,041 characters) on both sides.** The diff was run **three times** on the built file
