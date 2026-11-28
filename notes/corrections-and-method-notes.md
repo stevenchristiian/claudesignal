@@ -3,7 +3,7 @@
 Standing method file for the scheduled refresh of `index.html`, published by GitHub Pages
 at https://stevenchristiian.github.io/claudesignal/.
 
-**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-27 02:00 UTC. The routine prompt instructs the run to
+**Status of this file:** created 2026-09-21 06:00 UTC; last updated 2026-11-28 02:00 UTC. The routine prompt instructs the run to
 read this file and the newest file in `notes/runs/` first. Before this date **neither existed** —
 the `notes/` tree was absent from every branch of the repo, so the first several runs had to
 back their baseline out of the deck prose itself. Everything below is reconstructed from the
@@ -12,6 +12,38 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
 ---
 
 ## 1. Repository and publishing
+
+- **2026-11-28 publish, VERIFIED, AND IT IS A SIX-HOLD BUILD WHOSE MOST IMPORTANT WORK WAS A CHECK-9
+  CATCH THAT INVERTED A PUBLISHED CLAIM.** Commit and push recorded in `notes/runs/2026-11-28-0200utc.md`
+  §7, with the served bytes re-fetched, `cmp`'d against the repo file, and the six `macroScore` values
+  read back off the live file field by field.
+  > **THE DISCLAIMER CLAIM IS A DIFF ON THE SERVED BYTES.** Blanking the three content arrays leaves
+  > **exactly ONE differing line, and it is `AS_OF`**, with **EQUAL LINE COUNTS (1,029) AND EQUAL
+  > LENGTHS (48,041 characters) on both sides.** The diff was run **three times** on the built file
+  > (first build, after the check-9 pass, and again at the end) and gave one line every time.
+  > Declarations after the arrays **22 vs 22, set difference EMPTY, ORDER IDENTICAL**.
+  > **THIS IS ALSO THE PROOF FOR THE APPENDED USER ASKS, FOR A TENTH RUN.** The routine prompt asks for
+  > beginner readability, phone and laptop layout, a clean deck and the removal of *not financial
+  > advice*. **All four were already true, each re-measured first-hand this run, and check 7 proves
+  > nothing that delivers them was disturbed.** See §10.
+  **THE §9 HAZARD FIRED ON BOTH HALVES AGAIN.** Session start read **`HEAD` = `578c9a7`** with
+  **`origin/main` AND local `main` BOTH STALE at `732532f`**; one `git fetch origin main` advanced
+  `origin/main` (`732532f..578c9a7`) to equal `HEAD`, each ref read in a **separate invocation** and
+  confirmed against `git ls-remote origin main`
+  (`578c9a78e1d23350a1097e47af0d19cd267b6be0`), **with the local `main` ref left STALE** — now
+  **TWENTY-FOUR of the last TWENTY-NINE runs.** **The live bytes already matched the repo file exactly**
+  (HTTP 200, **69,085 bytes**, md5 `f20c7f04769ce5a4af666e41a3f7ea06`, `AS_OF` =
+  `Nov 27, 2026, 02:00 UTC`, `cmp` **IDENTICAL**), **which confirms the 11-27 publish from outside the
+  run that made it. SIXTY-SEVENTH consecutive confirmation that there is no push blocker. The routine
+  prompt step 0 is still factually wrong to describe this as an open item.** Designated branch this
+  session: **`claude/beautiful-franklin-b5fiau`** — changed again.
+  > **THE CADENCE WAS ONE DAY AND THE CALENDAR WAS CHECKED BEFORE A SINGLE *YESTERDAY* WAS WRITTEN.**
+  > Previous publish **2026-11-27 02:00 UTC**; this one **2026-11-28 02:00 UTC**. **FRIDAY NOV 27 WAS A
+  > SHORTENED SESSION (equities 13:00 ET, bonds 14:00 ET) AND IT TRADED AND CLOSED, so there IS a new
+  > equity close and a new Treasury session — the first since WEDNESDAY NOV 25, because THURSDAY NOV 26
+  > WAS THANKSGIVING.** **BUT NO US FUND-FLOW ROUTE HAS SETTLED NOV 27**, so the deck carries a new
+  > equity session and NO new flow session on the same build. **TODAY IS A SATURDAY; the next session
+  > of any kind is MONDAY NOV 30.** Counted in dates rather than weekday names, per the 10-25 rule.
 
 - **2026-11-27 publish, VERIFIED, AND IT IS A SCORE-MOVE BUILD WHOSE RULE FIRED ON BOTH OF ITS CLAUSES
   ON ONE SESSION FOR THE FIRST TIME.** Commit and push recorded in `notes/runs/2026-11-27-0200utc.md` §7,
@@ -1236,6 +1268,22 @@ Sept 16 and Sept 21 builds plus this run's own verification. Keep it current.
   built file. Never report success on exit status alone. Pages takes ~1 minute; re-check.
 
 ## 2. Score baseline
+
+### 2026-11-28 02:00 UTC (SIX HOLDS — and check 9 inverted a published claim about the emissions step)
+
+| Asset | Score | Basis |
+|-------|-------|-------|
+| BTC   | **-1.5** | HOLD. **Nov 25 (-$453.12M) is SPENT; Nov 26 settled nothing; NOV 27 IS UNSETTLED ON EVERY DOLLAR ROUTE.** The only Friday reading is a **coin count, about -323 BTC / -$19.81M**, which fires nothing on its own and is not the instrument the rule reads. **Next candidate single session FRIDAY NOV 27 (readable NOV 30); next candidate PAIR NOV 27 + NOV 30 (readable DEC 1).** Month to date unchanged at **$5.39bn through Nov 25**, the largest monthly redemption on record. Fed leg fires nothing for a **30th** day (names OCTOBER). Transit leg fires nothing (max `n_total` **6** vs 20/day). Tape **-0.8656% to 60,119.76**; low unchanged **55,106**; **cushion 9.0984%, BACK UNDER 10**. `macroWord(-1.5)` = *cautious*, read off the rendered node at three widths. |
+| ETH   | **+0.4** | HOLD, and the clause took a **THIRD distinct shape: ARMED AND UNAVAILABLE.** Three builds died on a first leg; this one **cannot read either leg** — **Farside carries a NOV 27 row and it is EMPTY.** Preliminary coin route **+23 ETH (~+$39,750)**, a tiny inflow pointing against the run. **Streak counts still disagree (8 vs 9) — NONE adopted**; run size agreed at about **$523M**. **Next pair NOV 27 + NOV 30, readable DEC 1.** Tape **-1.8656% to 1,668.05 — worst of six by EXACTLY 1.0000pt**; **furthest below own 21d high (margin 4.7586)**; **widest 21d range (margin 3.7068)**; cushion **8.6416%, BACK UNDER 10**. |
+| SOL   | **-0.3** | HOLD, **sixth** build. Week **NOV 23-27** is **COMPLETE and UNREADABLE**, four sessions (Thanksgiving settled nothing). Three settled: **-$3.8M / about +$0.7M / $0.00M ≈ -$3.1M**; **FRIDAY MUST BEAT +$8.1M**. **A single carrier reports BSOL giving back about $4.7M on Friday, which would put the week near -$7.8M and FIRE the leg to -0.4 — NOT adopted, unsettled day, one route.** **Readable NOV 30.** Tape **+0.9664% to 72.09**, second rising day; cushion **11.2328%**, **order against XRP (10.9662%) NOT named, gap 0.2666**. Nine-vs-seven open, **sixteenth** build. |
+| BNB   | **0.0** | HOLD. Margin **-1.5123** = BNB 7d **+3.3387%** minus median (**XRP +4.8510%**). **5.7642 from the cut edge (-7.2765), 4.2358 from the lift edge (+2.7235).** **Forty-third reading, step -0.0051:** own **+6.2478**, median VALUE **-3.4602**, median IDENTITY **-2.7926**, **sum exact.** **THE SIXTH NAME CHANGE CAME FROM A NAME THE 11-27 WATCH DID NOT NAME: the watch said SOL above and ETH below; the new median is XRP, which was at the TOP of the five and fell into the middle.** **The whole order reversed: worst-to-best HYPE, ETH, BTC, SOL, XRP yesterday against BTC, ETH, XRP, SOL, HYPE today.** Variants: BTC +1.2803, ETH +0.5642, SOL -1.6111, XRP -1.5123, **HYPE -3.4438 (well inside the lift edge after one build at +1.0836)**, mean-of-five -0.9445, mean-of-four ex-HYPE -0.3197. **Branch names the MEDIAN, NOT re-pointed.** Tape **+0.0378% to 555.90**. |
+| XRP   | **-0.1** | HOLD. **THREE majorities now running, where yesterday there was ONE.** `LendingProtocol` and `LendingProtocolV1_1` both **`majority: 849104522` = Nov 27 14:22:02 UTC**, mark **Dec 11 14:22:02 UTC**, ~**11.8h** in. `SingleAssetVault` **`848950731` = Nov 25 19:38:51 UTC, byte-identical on a THIRD consecutive read**, ~**54.5h**, mark **Dec 9 19:38:51 UTC**. Unchanged: **98 of 107 enabled, nine not, same nine BY NAME, all supported, none vetoed.** **Secondary carriers gave THREE validator counts (29/35, 30/34, 28/35) — NONE adopted; the stamps were read first-hand.** Ledger **108,618,191** (**+21,752**), build **3.4.1**, read **02:11:24 UTC**. **ALL THREE legislative routes HTTP 403 again, probed first-hand** (third build). **1bn XRP leaves escrow DEC 1, the LAST of 2026; ~700M of 1bn re-locked in November is a HABIT, not a rule.** Weekly XRP ETF flow about **-$19.13M**, worst since March — unscored. Tape **+0.5273% to 0.9532**; **narrowest 21d range (margin 0.7421) TAKEN in notes, NOT published on the card.** |
+| HYPE  | **-0.1** | HOLD. Q3 **$173,971,251 / 92 days — a FORTY-FIFTH identical read**, inside the $150M-$260M corridor. **Re-differencing CLEAN a THIRD build: `137,535,534 + 2,626,777 = 140,162,311` over 58 days, exactly.** Friday **$2,626,777, +42.82%, rank 18 of 58**; **the RISE ranks 12 of 57**. **THE TEACHING PAIR: -42.01% then +42.82% leaves revenue 17.19% BELOW Wednesday, because a rise is computed on the smaller base.** Zero zero-days over 58; Nov 5 **$2,717,000** still the only exact multiple of 1,000; run-rate **$222.33M**. **SUPPLY ABSOLUTES STORED: `circulatingSupply` 301,304,822.1127577424 · `totalSupply` 998,663,923.1263734102 · `futureEmissions` 409,566,444.5353606939.** **TWENTIETH emissions step 26,666.4043533206 — OUTSIDE the span and BELOW ALL PRIORS; the span WIDENS 169.2133 -> 301.4208466794.** **The NINETEENTH step is PERMANENTLY LOST (the 11-26 absolute was never written down).** Cumulative reduction **1,336,076.8736265898**, gaining **4,883.1033146382** = the totalSupply step exactly. Tape **+2.8521% to 64.55 — TOOK FOUR COLUMNS** (largest 24h rise by 1.8857, best 7d by 1.8327, best 21d by 0.6131, largest cushion by 4.5727). |
+
+**Read off the RENDERED `.bar-sub` node at 390 / 768 / 1440:** **−1.5 / +0.4 / −0.3 / 0.0 / −0.1 /
+−0.1** and *cautious, mildly supportive, mildly cautious, balanced, balanced, balanced* —
+**identical at all three widths. SIX HOLDS CONFIRMED ON THE SERVED/RENDERED MARKUP and NO band word
+moved.**
 
 ### 2026-11-27 02:00 UTC (BITCOIN CUT TO -1.5 — the rule fired on BOTH clauses on one session, a first)
 
@@ -3435,6 +3483,78 @@ Scale is **-2 to +2**. Move a score only when a written branch threshold below f
 this table, **not** against the served page — the served page can be stale (see 1).
 
 ## 3. Live branch thresholds
+
+- **BTC FLOW LEG: A FOURTH DISTINCT NON-FIRING SHAPE — *NO ROUTE HAS SETTLED THE SESSION AT ALL*
+  (2026-11-28). BTC HOLDS -1.5.** Rule unchanged: re-cut on **one settled session below -$300M**, or
+  **two consecutive sessions each below -$150M**. **Nov 25 is SPENT** (it fired on 11-27 and a session
+  that has produced a cut cannot produce a second one). **Nov 26 settled nothing.** **Nov 27 traded a
+  shortened session and has NO dollar row on ANY route**, including the vendor the rule names.
+  > **THE ONLY FRIDAY NUMBER IS A COIN COUNT, AND A COIN COUNT IS A DIFFERENT INSTRUMENT.** About
+  > **-323 BTC (~-$19.81M)** for bitcoin and **+23 ETH (~+$39,750)** for ether. **Both are preliminary,
+  > they point in OPPOSITE directions, and neither is the settled dollar row the rule reads.** The
+  > 11-08 precedent (a +12.2 Farside row DECLINED on a search summary) and the 11-04 precedent (a
+  > +208 BTC coin-count route labelled preliminary) both apply. **Report the coin count, label it, and
+  > fire nothing on it.**
+  **PRE-REGISTERED FOR THE NEXT BUILDS: the next candidate single session is FRIDAY NOV 27, readable
+  NOV 30; the next candidate PAIR is NOV 27 + NOV 30, readable DEC 1. A further firing takes BTC to
+  -1.6, still *cautious*.**
+
+- **AN ETH CONJUNCTIVE CLAUSE TOOK A THIRD SHAPE: *ARMED AND UNAVAILABLE ON BOTH LEGS* (2026-11-28).
+  ETH HOLDS +0.4.** Three builds running the clause resolved on its FIRST leg. **This build cannot
+  read EITHER leg**, because Nov 27 is unsettled and Nov 30 has not happened. **Farside carries a
+  NOV 27 ROW AND IT IS EMPTY**, which is the cheapest possible proof that the day exists and has not
+  settled — stronger than an absent row, because an absent row is also what a wrong URL returns.
+  **Next possible pair NOV 27 + NOV 30, readable DEC 1.** **Adopt NO streak count: one carrier counts
+  eight consecutive withdrawal sessions and another nine.**
+
+- **BNB RELATIVE LEG HOLDS 2026-11-28, AND THE SIXTH NAME CHANGE REFUTED THE WATCH'S FRAMING.**
+  Margin **-1.5123** = BNB 7d **+3.3387%** minus the median of the other five (**XRP +4.8510%**).
+  **Forty-third reading, step -0.0051** from the -2.2765 baseline. Split: own **+6.2478**, median
+  VALUE **-3.4602**, median IDENTITY **-2.7926**, **sum exact.**
+  > **THE 11-27 WATCH NAMED THE TWO NEIGHBOURS AND THE CHANGE CAME FROM NEITHER.** It said a sixth
+  > change was live on **both** sides, with **SOL 0.5273 above and ETH 0.5722 below**. **The new median
+  > is XRP, which was at the TOP of the five.** The whole order reversed in one build: worst-to-best
+  > **HYPE, ETH, BTC, SOL, XRP** became **BTC, ETH, XRP, SOL, HYPE**, so **the worst name became the
+  > best and the best fell to the middle.**
+  > **STANDING AMENDMENT to the 11-27 fix: a median changes name when the ORDER changes, and a name
+  > can reach the middle by crossing TWO others rather than by being a neighbour that steps across.
+  > Watching only the two adjacent gaps under-describes the risk. Publish both neighbour gaps AND
+  > note that a distant name moving far enough can land in the middle.**
+  All seven variants against BOTH edges: BTC **+1.2803**, ETH **+0.5642**, SOL **-1.6111**, XRP
+  **-1.5123**, **HYPE -3.4438 — well inside the +2.7235 lift edge after ONE build at +1.0836**,
+  mean-of-five **-0.9445**, mean-of-four ex-HYPE **-0.3197**. **Neighbours now ETH 2.0765 below and
+  SOL 0.0988 above, so a SEVENTH change is live and the SOL gap is tiny. Branch names the MEDIAN and
+  is NOT re-pointed.**
+
+- **THE 11-14 OVERROUND RULE IS CONFIRMED A TWELFTH TIME, WITH THE SIGN RESTORED (2026-11-28).**
+  Polymarket's five December legs sum **100.60%** — an **OVERROUND**, after the 11-27 reading which was
+  the only **underround** on record here. Any-rise reads **96.25% by addition** against **95.65% by
+  subtraction**, so **addition beats subtraction by exactly the 0.60pt.**
+  > **ONE READING EITHER SIDE OF 100 IN CONSECUTIVE BUILDS IS THE STRONGEST FORM THIS RULE HAS TAKEN.**
+  > The rule is *the two routes differ by exactly the book's distance from 100, and the sign of that
+  > distance says which route is higher* — and it has now been seen with the distance on both sides on
+  > back-to-back builds.
+  > **AND 95.65% SURVIVED THE NUMERIC STALE DIFF WITH ITS ROUTE SWAPPED.** Yesterday 95.65% was the
+  > **addition** figure; today it is the **subtraction** figure. **A survivor can be correct by
+  > coincidence while meaning something different, which is why the survivor list is audited line by
+  > line and never pattern-matched.**
+  **THE MAIN LEG MOVED FOR THE FIRST TIME IN FOUR BUILDS: 93.50% -> 94.50%**, after three builds frozen
+  at exactly 93.50%. No change **3.65 -> 3.95%**, 50bp+ **2.15 -> 1.75%**, both cut legs unchanged.
+
+- **A ROUTE GAP CAN REOPEN FROM THE OTHER SIDE, AND IT DID — THE MIRROR OF 11-27 (2026-11-28).** The
+  Polymarket / centralbank.watch gap went from **0.05-0.35pt** to **1.20-1.50pt** in one build.
+  **This time Polymarket moved and centralbank.watch did not move at all** — every figure on it is
+  identical to yesterday's reading and its stamp is still **NOV 25, now THREE days behind.**
+  > **Mechanical form: a divergence is as two-sided as a convergence. Two consecutive builds have now
+  > each had exactly ONE route move, in opposite directions. Publish which side moved, or publish
+  > neither** — and note that *the slow route did not move* can mean *it has not been republished*
+  > rather than *it holds a view.*
+
+- **THE SHORTENED-SESSION ASYMMETRY IS A BRANCH-LEVEL FACT WORTH WRITING DOWN (2026-11-28).** A
+  shortened Friday **produced a full equity and Treasury close** but **no settled fund-flow row on any
+  route.** **So one build can carry a NEW market session and NO new flow session at the same time**,
+  and the deck has to say which is which or a reader will date the whole page from whichever they
+  notice first.
 
 - **BTC FLOW LEG FIRED A TWELFTH TIME 2026-11-27, AND IT FIRED ON BOTH CLAUSES AT ONCE — THE FIRST TIME
   THAT HAS HAPPENED. BTC -1.4 -> -1.5.** Rule unchanged: re-cut on **one settled session below -$300M**,
@@ -7464,6 +7584,49 @@ Sept 21, which settles after the US close (~20:00-21:00 UTC) — well after an e
 
 ## 5. Source traps
 
+### THE PORTWATCH ORG ID IS PART OF THE ENDPOINT, AND AN ELLIPSIS IN THESE NOTES COST THREE PROBES (2026-11-28)
+The 11-27 entry stored the service and the field but wrote the host path as
+`services9.arcgis.com/.../Daily_Chokepoints_Data/FeatureServer/0/query`. **A guessed org id on the
+right host returns `HTTP 200` with `{"error":{"code":400,"message":"Invalid URL"}}` on EVERY query —
+including a `returnCountOnly`, a `LIKE` filter and the LAYER METADATA ROOT (`/0?f=json`).**
+**THE FULL URL, STORED:**
+`https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query`
+with `where=portname='Strait of Hormuz' AND date >= DATE 'YYYY-MM-01'`, `outFields=date,n_total,n_tanker`,
+`orderByFields=date DESC`, `f=json`.
+> **THE DISCRIMINATOR IS THE METADATA ROOT.** An **org-id or service fault fails `/0?f=json` too**; a
+> **field or value fault returns a well-formed empty result** from a root that works. **Probe the root
+> first and the error tells you which layer of the URL is wrong.** This is one level above the 11-27
+> `Daily_Chokepoints_Data` / `PortWatch_chokepoints_database` trap, which was a wrong SERVICE on a
+> right host returning a well-formed 200.
+> **AND THE GENERAL RULE: never store an endpoint with an ellipsis in it.** A path fragment that
+> cannot be pasted is not a stored endpoint.
+**Series STALLED a THIRD build at NOV 22, lag SIX days. All 22 stored November rows reproduce EXACTLY.
+Max `n_total` 6 (Nov 6 and Nov 9) against a 20/day bar, no zero — fires NOTHING.**
+
+### A FRESH ARTICLE CAN CARRY AN OLDER RELEASE, AND THE RELEASE DATE IS THE ONE THAT COUNTS (2026-11-28)
+Several carriers explain Friday Nov 27's yield rise by *third-quarter GDP revised up to 4.3% from
+3.4%.* **The BEA second estimate was released WEDNESDAY NOV 25.** The articles are Friday-dated and
+the datum is not.
+> **Sibling of the 11-18 rule that a date line on a roundup is not the date of the numbers inside it —
+> but a narrower and nastier shape: here the article is genuinely about Friday and the CAUSE it names
+> is two days old.** **Date the RELEASE, not the explanation.** A chip on the deck says so in those words.
+
+### TWO COMPATIBLE STATEMENTS ARE NOT A CONTRADICTION (2026-11-28)
+A tanker was hit off Oman on Thursday Nov 26. **The naval authority said all crew were accounted for;
+a security firm said one crew member was seriously injured.** **Both can be true: *accounted for* is
+about location and *injured* is about condition.**
+> **This is the MIRROR of the 11-26 tanker-date trap and the 11-27 timezone trap, where three labels
+> really were one object and three dates really were three claims.** **Before publishing a *sources
+> disagree* sentence, check whether the two statements are even about the same predicate.** IRGC mine
+> claims remain **unconfirmed by the naval authority, the owner or CENTCOM** and are NOT carried.
+
+### A RIVAL MONTH-TO-DATE CAN BE A CORRECT FIGURE WEARING THE WRONG DATE (2026-11-28)
+A carrier gives US bitcoin fund outflows as **$4.71bn "through November 24."** **This deck established
+4,706.7 through NOV 23 and `4,706.7 + 231.56 = 4,938.26` through NOV 24.** **So $4.71bn is the NOV 23
+figure with a Nov 24 label**, not a rival measurement.
+> **The running-total instrument identifies WHICH DAY a figure belongs to, not only whether it is
+> right.** Nothing was adopted; the deck still publishes **$5.39bn through Nov 25** and **adds only.**
+
 ### A TIMEZONE LABEL IS NOT A DATE DISAGREEMENT — CONVERT BEFORE COUNTING EVENTS (2026-11-27)
 Three carriers gave the Khasab tanker strike as **13:00 UK time**, **1300 UTC** and **5pm Emirates
 time**. **In November those are ONE instant** (the UK is on UTC; the Emirates are UTC+4), so the three
@@ -9175,6 +9338,71 @@ These reproduce that build's published figures to within 0.01pt. Consider promot
 commented constant so no future run has to reverse-engineer them again.
 
 ## 7. Pre-publish checklist (run in order; audit a failing assertion before editing the file)
+
+### A DECLARATION EXTRACTOR THAT RETURNS 17 IS MISSING `async`, AND THAT IS NOW DIAGNOSABLE AT A GLANCE (2026-11-28)
+Check 7's declaration half returned **17 against the stored 22** on BOTH sides of the diff. **The file
+was fine and the extractor was wrong: the regex matched `^(?:function|const|let|var)` and the five
+missing names are EXACTLY the five `async function` declarations — `fetchMarkets`, `fetchChart`,
+`fetchRotationLive`, `loadAll`, `loadRotation`.** Adding `async\s+function` returns **22 vs 22, set
+difference EMPTY, ORDER IDENTICAL.**
+> **THE STORED 22-NAME LIST IS ITS OWN DIAGNOSTIC.** §7 already records that an old **17**-name list
+> was wrong. **A fresh extractor reproducing that same 17 is almost certainly reproducing the same
+> cause.** **If the count is 17, check for `async` before touching the file.** Thirteenth-plus run in
+> the audit-the-assertion family, and the first in which the FAILING NUMBER ITSELF named the fault.
+
+### A `const` INSIDE `eval` DOES NOT LEAK, SO EVALUATE THE ARRAYS WITH `new Function` AND RETURN THEM (2026-11-28)
+Check 2's harness called `eval(block)` and then read `COINS`, which threw `ReferenceError: COINS is not
+defined`. **`const` and `let` in an indirect `eval` are scoped to the eval, unlike `var`.**
+> **STANDING FIX: `new Function(block + "; return {COINS,MACRO_SNAPSHOT,GLOBAL_CATALYSTS,AS_OF};")()`.**
+> One invocation, one return value, no scope guessing — and it is the same transform for both sides of
+> check 7, which satisfies the 10-13 *both sides prepared the same way* rule for free.
+
+### A STEP CLAIMED *INSIDE THE RANGE* MUST BE CHECKED AGAINST THE STORED RANGE, NOT AGAINST A FEELING (2026-11-28 — the check-9 catch of the run, and a REAL ERROR)
+A draft said the HYPE future-emissions step *fell inside the range every earlier step has fallen in.*
+**It is BELOW EVERY STEP THIS FILE HAS RECORDED.** Stored steps: **26,967.8252** (16th, which widened
+the span **154.6715 -> 169.2133**), **26,885.9937** (17th), **26,805.4111** (18th), plus **26,805.6963**
+and **26,880.7807** — so the span runs **26,798.6119 to 26,967.8252.** **Today's 26,666.4043533206 is
+132.21 below the bottom and WIDENS THE SPAN TO 301.4208466794.**
+> **THE WORD *RANGE* IS A STORED OBJECT IN THIS FILE AND IT HAS NUMBERS. GREP THEM.** The draft
+> reached for a reassuring sentence about a figure that was close to the others in magnitude; **close
+> in magnitude is not inside a band whose edges are written down.** Same family as the 11-26 *the only
+> X* catch and the 11-27 *seven of twelve* catch: a claim about membership of a set whose members are
+> on record.
+
+### A DISTANCE IS NOT A MARGIN, AND *BY* IS THE WORD THAT CONFUSES THEM (2026-11-28)
+A draft read *the furthest of the six below its own three-week high, **by** 25.8120%.* **25.8120% is
+the DISTANCE below the high; the MARGIN over the next name is 4.7586.** Corrected to *at 25.8120%
+under it.*
+> **STANDING FIX: reserve *by* for the gap to the next name and use *at* for the level.** A ranking
+> sentence carries two numbers and the floor test applies to only one of them.
+
+### *HAS NOT HAPPENED BEFORE* IS A GREP, AND IT FAILED THE GREP (2026-11-28)
+A draft said all six seven-day readings flipping negative to positive *has not happened on this page
+before.* **`grep -rn "flipped" notes/runs/` returns `2026-10-22-0200utc.md` §(d): ALL SIX SEVEN-DAY
+COLUMNS FLIPPED FROM NEGATIVE TO POSITIVE IN ONE RUN.** Rewritten to name Oct 22 — **a stronger
+sentence than the false one**, because it lets a reader compare the two builds and see the same
+mechanism twice.
+> **The 11-24 rule stands and is now at its clearest: BEFORE ANY *FIRST TIME* CLAIM, GREP THE CLAIM.
+> The archive is the cheapest refutation instrument this routine has, and it costs one command.**
+
+### A BUILD COUNT IS A COUNT OF READS, NOT OF STAMPS (2026-11-28)
+A draft said the XRP majority stamp was *unchanged for a second build running.* **The 11-26 build read
+it, the 11-27 build read it unchanged, and this build is the THIRD identical read.** Corrected.
+> **Count the READS in the notes, not the days since the stamp.** A stamp dated Nov 25 has been read
+> three times by Nov 28 and that is the number a reader is being told.
+
+### SCOPE A UNIVERSAL TO WHAT WAS ACTUALLY CHECKED (2026-11-28)
+Two drafts read *the only Friday figure* and *the only Friday reading **anywhere***. **Three searches
+and two direct fetches is not *anywhere*.** Both were scoped to **this build found**.
+> Same family as the 10-15 *name the span* rule: **a universal needs its domain stated, and the honest
+> domain is usually the set of routes the run actually probed.**
+
+### DISCARD THE CURRENT-HOUR CANDLE EXPLICITLY (2026-11-28)
+Coinbase returned a **02:00** hourly candle at an **02:0x** stamp. **It is the hour in progress and it
+is not a completed candle.** Every window figure on this build is computed from the **01:00** hour.
+> **A run that takes `rows[-1]` will publish an incomplete close, and the symptom is a close that
+> disagrees with a narrow re-request a minute later.** **Pin the last completed hour by CLOCK
+> ARITHMETIC — `now.replace(minute=0) - 1h` — and assert that the row you use has that timestamp.**
 
 ### "THE LARGEST X" MUST COUNT THE OTHER X'S FIRST — THE 11-26 RULE FIRED AGAIN, ON THIS RUN'S OWN CHIP
 HEADLINE (2026-11-27 — the check-9 catch of the run)
@@ -13798,6 +14026,58 @@ have lost it.
 > batching hides a failure.
 
 ## 9. Open items (re-verify every run; correct them when they go stale)
+
+### Status 2026-11-28 02:00 UTC
+
+- [x] **THE GITHUB PUSH BLOCKER IS CLOSED — a SIXTY-SEVENTH confirmation, 2026-11-28 — AND THE STALE
+      REFS FIRED AGAIN, HARMLESSLY.** Session start read **`HEAD` = `578c9a7`** with **`origin/main`
+      AND local `main` BOTH STALE at `732532f`**; one `git fetch origin main` advanced `origin/main`
+      (`732532f..578c9a7`) to equal `HEAD`, each ref read in a **separate invocation** and confirmed
+      against `git ls-remote origin main`. **The live bytes already matched the repo file exactly**
+      (HTTP 200, **69,085 bytes**, md5 `f20c7f04769ce5a4af666e41a3f7ea06`, `AS_OF` =
+      `Nov 27, 2026, 02:00 UTC`, `cmp` **IDENTICAL**), **confirming the 11-27 publish from outside the
+      run that made it.** **THE ROUTINE PROMPT STEP 0 REMAINS FACTUALLY WRONG TO DESCRIBE THIS AS AN
+      OPEN ITEM: in SIXTY-SEVEN consecutive runs there has been no push blocker.** **The stale local
+      `main` is REAL and recurred, so keep `git branch -f main HEAD` WHILE NOT ON MAIN immediately
+      before every push to it.** Designated branch this session:
+      **`claude/beautiful-franklin-b5fiau`**.
+- [x] **THE BTC AND ETH PRE-REGISTRATIONS BOTH RESOLVED INTO *UNREADABLE*, WHICH IS A NEW OUTCOME FOR
+      BOTH.** A shortened Friday traded and settled no fund-flow row on any route. **The practice of
+      pre-registering still paid: the candidate days were named in advance and the only work this
+      build had to do was establish that they are unsettled.** **Close the test, keep the practice.**
+- [x] **THE WINDOW-EDGE PRE-REGISTRATION LANDED ON ALL SIX TO THE CENT, A THIRD BUILD RUNNING.** Each
+      floor was a LOWER bound and each landed EXACTLY on it. **Close the test, keep the `(base, last]`
+      boundary and the per-name rule.**
+- [x] **THE BNB SIXTH NAME CHANGE CAME FROM A NAME THE WATCH DID NOT NAME** (XRP, from the top of the
+      five). **The watch's framing is amended in §3: a median can be reached by crossing two names.**
+- [x] **THE XRP MAJORITY CLOCK DID NOT RESET AND TWO MORE CLOCKS STARTED.** `848950731` byte-identical
+      on a third read; `LendingProtocol` and `LendingProtocolV1_1` both at `849104522`. **Three marks
+      now: Dec 9 19:38:51 and Dec 11 14:22:02 UTC.** **A persisting stamp is a POSITIVE reading.**
+- [x] **THE 11-14 OVERROUND RULE IS CONFIRMED A TWELFTH TIME, WITH THE SIGN RESTORED** — five legs sum
+      **100.60%**, so **addition (96.25%) beats subtraction (95.65%) by exactly the 0.60pt.** See §3.
+- [x] **THE HYPE SUPPLY-ABSOLUTES WATCH ITEM WORKED AS DESIGNED.** The 11-27 note stored all three
+      absolutes and the step was computable today. **The NINETEENTH step is permanently lost because
+      the 11-26 absolute was never written down — that loss is now closed as unrecoverable.**
+- [ ] **HYPE: THE EMISSIONS SPAN HAS A NEW BOTTOM AT 26,666.4043533206 AND IS 301.4208466794 WIDE.**
+      **Watch whether the next step returns inside the old 26,798.6119-26,967.8252 band. One step
+      below a band is a step, not a direction** (the 11-25 rule, applied the other way up).
+- [ ] **PORTWATCH HAS NOT ADVANCED FOR THREE BUILDS, lag SIX days.** **The full endpoint including the
+      org id `weJ1QsnbMYJlCHdG` is now stored in §5 — paste it, never rebuild it.**
+- [ ] **XRP: THE ROW COUNT IS STILL UNRECONCILED AT 2,194 AGAINST 2,227.** Not re-derived this run.
+      **Neither is published and neither should be until a narrower step settles it.**
+- [ ] **FOUR RULE EDITS BELONG TO THE USER, AND ONE HAS BECOME LOAD-BEARING.** (a) **re-aim the BTC Fed
+      leg at December** — it names **OCTOBER** and has fired nothing for **30** days while the pricing
+      it reads sits at 94.50% for December; (b) **write or close the HYPE flow branch**, **56** days
+      open; (c) **write the MIDTERM branch** — **twenty-seventh** run of asking, **and carriers now
+      describe an incoming Democratic majority from January, which is exactly the premise the
+      unwritten branch would read**; (d) **retire the ETH roadmap leg**, spent since 10-07. **This
+      routine cannot make any of them.**
+- [ ] **BNB: THE OCT 29 BINANCE BREACH IS STILL NOT CARRIED AS STANDING TEXT, and the 38th burn is
+      UNDATED for a THIRTY-SEVENTH run.** **DECISION FOR THE USER.**
+- [ ] **THE 09-21 ARCHIVE** still carries `not investment advice` on **2** lines and `Netlify` on **5**,
+      re-counted this run with `ls *.html` enumerating all four served pages. **`index.html`,
+      `live1.html` and `live2.html` are ZERO on every banned phrase.** **USER DECISION: delete, scrub,
+      or leave.**
 
 ### Status 2026-11-27 02:00 UTC
 
@@ -19668,6 +19948,87 @@ page errors** — the fallback path works. **Band labels verified in the render 
 *balanced*.
 
 ## 10. Design contract (standing user instruction, 2026-09-22)
+
+  **Re-asserted 2026-11-28, VERIFIED, and the FIFTY-EIGHTH consecutive restatement.** §10 was read
+  first, as the 10-21 entry demands, and it again saved the detour: the amendment reads *make it easy to
+  read for beginners, optimise for phone or laptop, remove "not financial advice"* — against the same
+  prompt *do not touch the design* and *keep the disclaimer language exactly as they are*.
+  **§10 resolves it in one read: the phrase has never existed in `index.html`, the deck is already
+  beginner-first and already responsive, and the work is to VERIFY AND MEASURE. Nothing was redesigned
+  and nothing was removed.**
+  **Check 8d: banned phrases ZERO in all casings** — `not financial advice`, `not investment advice`,
+  `financial advice`, `investment advice`, `Netlify` — and
+  `advice|disclaim|educational|informational` returns **0** over the whole file, for a fifty-eighth run,
+  **with `ls *.html` enumerating all four served pages and the phrase count 0 in `index.html`,
+  `live1.html` and `live2.html`.** **The 09-21 snapshot carries `not investment advice` on 2 lines and
+  `Netlify` on 5, exactly as stored.**
+  **Check 7 passed in its STANDARD (blanked) form at full strength, THREE TIMES: EXACTLY ONE differing
+  line and it is `AS_OF`, with EQUAL LINE COUNTS (1,029) AND EQUAL LENGTHS (48,041 characters) on both
+  blanked files** — so the `<style>` block, all markup, the primer note, the glossary, `BAND_NOTE`,
+  `macroWord`, `combine`, `RIVALS`, `ROTATION_ASOF`, the five rotation thresholds, the disclaimer
+  language and the footer are **byte-identical.** Declarations after the arrays **22 vs 22, set
+  difference EMPTY, ORDER IDENTICAL**; `renderCatalysts` **0**; `favicon` **0**; `ROTATION_ASOF`
+  untouched at `Sept 5, 2026`; thresholds HEAD vs NEW `< 55` 1/1, `>= 1.0` 1/1, `> 2.5` 1/1, `* 0.5`
+  **2/2**, `> 25` 1/1; and **`class="disclaimer"` matches 0 nodes** in source and in the rendered DOM at
+  all three widths. **Check 7d: all six `(id, symbol, name)` triples read back correct, with
+  `id: 'binancecoin'` present.**
+  **(Do NOT compare the blanked line count, the declaration count or the label count across runs — each
+  is a property of the extractor. The load-bearing facts are EQUAL counts on both sides and one
+  differing line.)**
+
+  **Responsive floor, measured on the built file at 390 / 768 / 1440:** `#macroGrid` **6**,
+  `#catalystsRow` **21**, `#assetGrid` **6**, `.bar-sub` **12**, `.primer` **1**, `.glossary` **1**,
+  `#rotTable` **15 rows** at every width. Smallest rendered text **14.4310 / 14.7712 / 15.0400px**, body
+  **16.8270 / 17.3184 / 17.6000px** — **a TWENTY-FOURTH consecutive reproduction of the 11-02 reading on
+  this harness.** **ZERO uncaught JS exceptions on every load at every width, ZERO page horizontal
+  scroll (390/390, 768/768, 1440/1440), and ZERO interactive elements under 44px at 390px** (narrow-set
+  minimum **48 / 45 / 45px**, selector set
+  `a,button,input,select,textarea,[role=button],[onclick],.tab,.chip`). Asset grid reflows **1 / 2 / 3**
+  columns. Both `.asOf` nodes read **`Nov 28, 2026, 02:00 UTC`** at every width. **`S&P 500` is PRESENT
+  in the DOM.** **Longest chip label is 35 characters over 39, zero duplicates, zero over the 36 bound —
+  after check 11 caught one at 38 and it was shortened.**
+  > **THE SCORES AND BAND WORDS WERE READ OFF THE RENDERED `.bar-sub` NODE, NOT OFF `macroWord()`:**
+  > **−1.5 / +0.4 / −0.3 / 0.0 / −0.1 / −0.1** and *cautious, mildly supportive, mildly cautious,
+  > balanced, balanced, balanced*, **identical at all three widths. SIX HOLDS CONFIRMED ON THE RENDERED
+  > MARKUP and no band word moved.**
+
+  **BEGINNER-FACING CARE ON THIS RUN'S SPECIFIC HAZARDS, which is what §10 is actually for:**
+  **(a) THE WORST MISREADING AVAILABLE TODAY IS *EVERY COIN IS UP ON THE WEEK, SO THE MARKET HAS
+  TURNED*.** All six seven-day readings flipped from negative to positive on one build. **Almost none of
+  it is a rally: the window start rolled onto Nov 21, the hour block in which all six set their lows,
+  and the roll term beat the price term in ALL SIX. Only TWO of six price terms are even negative.** A
+  macro tile and three chips carry it, with both terms given separately so a reader can add them.
+  **(b) THE SECOND IS *THIS HAS NEVER HAPPENED, SO SOMETHING IS DIFFERENT*.** It happened on **Oct 22**,
+  by the same mechanism. **A chip names the date**, which turns a dramatic claim into a comparable one.
+  **(c) THE THIRD IS *THE THREE-WEEK NUMBERS SHOULD HAVE MOVED THE SAME WAY*.** They did not: over three
+  weeks the **price** term is the larger in four of six and **three readings got better while three got
+  worse.** **A chip states the contrast**, because a reader who learns the roll explanation on the
+  seven-day row will over-apply it to the three-week row.
+  **(d) THE FOURTH IS *SHARES RALLIED HARD, SO CRYPTO MUST HAVE*.** Friday was reported as the biggest
+  day for US shares in over a year, Nasdaq **+2.31%**, while **bitcoin spent the session under $60,000.**
+  **A macro tile puts the two facts side by side and declines to explain the divergence away.**
+  **(e) THE FIFTH IS *THE FRIDAY FLOW NUMBERS ARE IN*.** They are not, on any asset. **A macro tile and
+  two chips say the dollar routes have published nothing, that the ONE available figure is a coin count,
+  and that the two coin counts point in OPPOSITE directions.**
+  **(f) THE SIXTH IS *A 42% FALL THEN A 42% RISE GETS YOU BACK*.** It does not: Hyperliquid revenue is
+  **17.19% below Wednesday**, because a rise is computed on the smaller base. **A chip spells out the
+  arithmetic**, and this is the single most transferable idea on the page.
+  **(g) THE SEVENTH IS *FED ODDS ROSE, SO THE RISE IS NEWLY LIKELY*.** The main leg moved **1.00pt to
+  94.50%** after three builds frozen, **and the book moved from 99.70 to 100.60**, which swapped which
+  of the two any-rise routes reads higher. **A tile gives the leg and a chip gives the book**, so a
+  reader is not left inferring a view change from an accounting change.
+  **(h) THE EIGHTH IS *THE TWO FED ROUTES DISAGREE AGAIN, SO THE MARKET IS UNSETTLED*.** The gap
+  reopened to **1.20-1.50pt** and **only the faster route moved; the slower one has not been republished
+  since Nov 25.** **A chip names which side moved**, the mirror of yesterday's chip.
+  **(i) THE NINTH IS *THREE AMENDMENTS HAVE MAJORITIES, SO LENDING IS LIVE ON XRP*.** It is not.
+  **A majority starts a two-week countdown and enables nothing**, and the three marks are **Dec 9
+  19:38:51** and **Dec 11 14:22:02 UTC**. **A chip says so and the card says no lending feature is live.**
+  **(j) THE TENTH IS *GDP 4.3% CAME OUT WITH FRIDAY'S YIELDS*.** It was released **Wednesday Nov 25**.
+  **A chip dates the release**, because the explanation and the article share a date and the datum does not.
+  **(k) THE ELEVENTH IS *ALL SIX ARE COMFORTABLY CLEAR OF THEIR LOWS*.** **Bitcoin is 9.0984% clear and
+  ether 8.6416%**, both back under 10. **The page PRINTS the retraction of its own previous sentence**
+  rather than dropping it quietly, which is the 10-09 rule doing the work it exists for.
+
 
   **Re-asserted 2026-11-27, VERIFIED, and the FIFTY-SEVENTH consecutive restatement.** §10 was read
   first, as the 10-21 entry demands, and it again saved the detour: the amendment reads *make it easy to
